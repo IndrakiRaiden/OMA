@@ -79,9 +79,58 @@ export default {
 
 <style scoped>
 .footer {
-  background-color: var(--color-primary);
+  background-color: #1a1a1a;
+  background-image: linear-gradient(
+    45deg,
+    #1a1a1a,
+    #222222 25%,
+    #1a1a1a 50%,
+    #222222 75%,
+    #1a1a1a
+  );
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
   color: var(--color-light);
   padding: 4rem 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 .footer-content {

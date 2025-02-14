@@ -38,6 +38,11 @@
       </div>
     </section>
 
+    <main>
+      <OmaInfo />
+      <Industries />
+    </main>
+    
     <Footer />
   </div>
 </template>
@@ -45,19 +50,23 @@
 <script>
 import NavBar from '~/components/NavBar.vue'
 import Footer from '~/components/Footer.vue'
+import OmaInfo from '~/components/index-components/OmaInfo.vue'
+import Industries from '~/components/index-components/Industries.vue'
 
 export default {
   name: 'HomePage',
   components: {
     NavBar,
-    Footer
+    Footer,
+    OmaInfo,
+    Industries
   },
   data() {
     return {
       services: [
         {
           icon: '🎯',
-          title: 'CNC LASE PERROPELEL',
+          title: 'CNC LASE PERROPEL',
           description: 'Precisión láser avanzada para perfiles industriales con tecnología de última generación.'
         },
         {
@@ -311,6 +320,11 @@ export default {
 .secondary-btn:hover {
   background: var(--color-secondary);
   color: var(--color-light);
+}
+
+main {
+  position: relative;
+  z-index: 1;
 }
 
 @keyframes glow {
