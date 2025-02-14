@@ -1,0 +1,10 @@
+This directory contains the following images needed for the website:
+
+1. logo.png - OMA company logo
+2. hero-bg.jpg - Hero section background image
+3. cnc-perfil.png - CNC Perroflin service icon
+4. cnc-machining.png - CNC Machining service icon
+5. presupuestacion.png - Presupuestación service icon
+6. project-management.png - Project Management service icon
+
+Please replace this file with the actual images.
