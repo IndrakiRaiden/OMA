@@ -37,7 +37,7 @@
 .origin-card {
   max-width: 800px;
   margin: 0 auto;
-  background: rgba(245, 245, 245, 0.1);
+  background: rgba(177, 177, 177, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 12px;
   overflow: hidden;
