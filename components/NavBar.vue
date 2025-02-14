@@ -7,10 +7,11 @@
       </NuxtLink>
 
       <div class="nav-links" :class="{ 'active': isMenuOpen }">
-        <NuxtLink to="/" class="nav-link">Home</NuxtLink>
-        <NuxtLink to="/best-solutions" class="nav-link">Best Solutions</NuxtLink>
-        <NuxtLink to="/project-solutions" class="nav-link">Project Solutions</NuxtLink>
-        <NuxtLink to="/solutions" class="nav-link">Solutions</NuxtLink>
+        <nav class="nav-links">
+          <NuxtLink to="/" class="nav-link">Inicio</NuxtLink>
+          <NuxtLink to="/about" class="nav-link">Sobre Nosotros</NuxtLink>
+          <NuxtLink to="/contact" class="nav-link">Contacto</NuxtLink>
+        </nav>
         <button class="contact-btn">Contact Us</button>
       </div>
 
