@@ -6,20 +6,24 @@
         <span class="brand-subtext">SOLUTIONS</span>
       </NuxtLink>
 
-      <div class="nav-links" :class="{ 'active': isMenuOpen }">
-        <nav class="nav-links">
-          <NuxtLink to="/" class="nav-link">Inicio</NuxtLink>
-          <NuxtLink to="/about" class="nav-link">Sobre Nosotros</NuxtLink>
-          <NuxtLink to="/contact" class="nav-link">Contacto</NuxtLink>
-        </nav>
-        <button class="contact-btn">Contact Us</button>
+      <div class="nav-right">
+        <button class="contact-btn">Cotiza tu Proyecto</button>
+        <button class="menu-btn" @click="toggleMenu" :class="{ 'active': isMenuOpen }">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
 
-      <button class="menu-btn" @click="toggleMenu" :class="{ 'active': isMenuOpen }">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <div class="nav-menu" :class="{ 'active': isMenuOpen }">
+        <nav class="nav-links">
+          <NuxtLink to="/" class="nav-link">Inicio</NuxtLink>
+          <NuxtLink to="/servicios" class="nav-link">Servicios</NuxtLink>
+          <NuxtLink to="/industrias" class="nav-link">Industrias</NuxtLink>
+          <NuxtLink to="/about" class="nav-link">Acerca de Nosotros</NuxtLink>
+          <NuxtLink to="/contact" class="nav-link">Contacto</NuxtLink>
+        </nav>
+      </div>
     </div>
   </nav>
 </template>
@@ -66,10 +70,11 @@ function handleScroll() {
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .nav-brand {
@@ -77,6 +82,7 @@ function handleScroll() {
   flex-direction: column;
   text-decoration: none;
   line-height: 1;
+  margin-left: -3rem;
 }
 
 .brand-text {
@@ -92,10 +98,40 @@ function handleScroll() {
   letter-spacing: 4px;
 }
 
-.nav-links {
+.nav-right {
   display: flex;
   align-items: center;
   gap: 2rem;
+  position: absolute;
+  right: -15rem;
+}
+
+.nav-menu {
+  display: none;
+  position: fixed;
+  top: 80px;
+  right: -100%;
+  background: var(--color-primary);
+  width: 250px;
+  height: calc(100vh - 80px);
+  transition: 0.3s ease;
+  padding: 2rem;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu.active {
+  display: block;
+  right: 0;
+}
+
+.nav-links {
+  display: none;
+}
+
+.nav-menu .nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .nav-link {
@@ -125,43 +161,30 @@ function handleScroll() {
   width: 100%;
 }
 
-.contact-btn {
-  background: var(--color-secondary);
-  color: var(--color-light);
-  padding: 0.5rem 1.5rem;
-  border: none;
-  border-radius: 25px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.contact-btn:hover {
-  background: var(--color-accent);
-  transform: translateY(-2px);
-}
-
 .menu-btn {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
-  height: 20px;
+  height: 21px;
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
+  z-index: 10;
 }
 
 .menu-btn span {
   width: 100%;
-  height: 2px;
-  background: var(--color-secondary);
-  transition: all 0.3s ease;
+  height: 3px;
+  background-color: var(--color-secondary);
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
 }
 
-.menu-btn.active span:nth-child(1) {
-  transform: translateY(9px) rotate(45deg);
+.menu-btn.active span:first-child {
+  transform: rotate(45deg);
 }
 
 .menu-btn.active span:nth-child(2) {
@@ -169,35 +192,39 @@ function handleScroll() {
 }
 
 .menu-btn.active span:nth-child(3) {
-  transform: translateY(-9px) rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
-@media (max-width: 768px) {
-  .menu-btn {
-    display: flex;
-  }
+.contact-btn {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+  color: var(--color-light);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
 
+.contact-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  filter: brightness(1.1);
+}
+
+.contact-btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
   .nav-links {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    right: 0;
-    background: var(--color-light);
-    padding: 2rem;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    transform: translateY(-100%);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 10px rgba(75, 110, 140, 0.1);
-  }
-
-  .nav-links.active {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
+    flex-direction: row;
   }
 }
 </style>
