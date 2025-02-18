@@ -1,3 +1,4 @@
+
 <template>
   <div class="contact-page">
     <div class="hero bg-primary-900 text-white py-20">
