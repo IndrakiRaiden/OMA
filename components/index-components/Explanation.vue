@@ -93,7 +93,7 @@
 }
 
 .bullet {
-  color: var(--color-secondary);
+  color: #FFD700 !important;
   margin-right: 1rem;
   font-size: 1.5rem;
   line-height: 1;
