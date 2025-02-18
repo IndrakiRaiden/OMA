@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="contact-wrapper">
     <Navbar />
     <div class="contact-page">
       <div class="hero text-white py-20">
@@ -135,9 +135,15 @@ export default {
 </script>
 
 <style scoped>
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .contact-page {
   background-color: var(--content-light);
-  min-height: 100vh;
+  flex: 1;
   overflow: hidden;
   position: relative;
 }

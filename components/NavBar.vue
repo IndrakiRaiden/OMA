@@ -109,11 +109,11 @@ function handleScroll() {
 .nav-menu {
   display: none;
   position: fixed;
-  top: 80px;
+  top: 64px;
   right: -100%;
   background: var(--color-primary);
   width: 250px;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 64px);
   transition: 0.3s ease;
   padding: 2rem;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
