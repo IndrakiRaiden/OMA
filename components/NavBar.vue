@@ -227,4 +227,40 @@ function handleScroll() {
     flex-direction: row;
   }
 }
+
+@media (max-width: 1200px) {
+  .nav-right {
+    right: -8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-right {
+    right: -4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-right {
+    right: 1rem;
+  }
+  
+  .nav-brand {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0 0.5rem;
+  }
+  
+  .nav-right {
+    gap: 1rem;
+  }
+  
+  .contact-btn {
+    padding: 0.6rem 1rem;
+  }
+}
 </style>

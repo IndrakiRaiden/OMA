@@ -41,7 +41,7 @@
 
 <style scoped>
 .explanation {
-  padding: 6rem 2rem;
+  padding: 4rem 1rem;
   background: var(--color-light);
   position: relative;
 }
@@ -49,22 +49,23 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .explanation-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 2rem;
   align-items: center;
 }
 
 .text-content {
-  padding-right: 2rem;
+  padding-right: 1rem;
 }
 
 .text-content h2 {
   color: var(--color-secondary);
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 600;
   margin-bottom: 1.5rem;
   line-height: 1.2;
@@ -72,7 +73,7 @@
 
 .text-content p {
   color: var(--color-dark);
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2vw, 1.1rem);
   line-height: 1.6;
   margin-bottom: 2rem;
   opacity: 0.9;
@@ -88,7 +89,7 @@
   align-items: center;
   margin-bottom: 1rem;
   color: var(--color-dark);
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
 }
 
 .bullet {
@@ -128,22 +129,61 @@
   opacity: 0.8;
 }
 
+@media (max-width: 1024px) {
+  .explanation {
+    padding: 3rem 1rem;
+  }
+  
+  .stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  
+  .stat-item .number {
+    font-size: 2rem;
+  }
+  
+  .stat-item .label {
+    font-size: 0.9rem;
+  }
+}
+
 @media (max-width: 768px) {
   .explanation-content {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2rem;
   }
-
+  
   .text-content {
     padding-right: 0;
   }
-
-  .text-content h2 {
-    font-size: 2rem;
-  }
-
+  
   .stats {
-    padding: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .explanation {
+    padding: 2rem 1rem;
+  }
+  
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .stat-item {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .stat-item .number {
+    font-size: 2.2rem;
+  }
+  
+  .stat-item .label {
+    font-size: 1rem;
   }
 }
 </style>
