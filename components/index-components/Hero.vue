@@ -22,7 +22,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: linear-gradient(45deg, var(--color-primary), var(--color-light));
+  background: var(--color-primary);
 }
 
 .hero-overlay {
@@ -31,7 +31,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(75, 110, 140, 0.05), rgba(245, 166, 35, 0.05));
+  background: linear-gradient(135deg, 
+    var(--color-primary) 0%,
+    var(--color-secondary) 100%
+  );
   z-index: 1;
 }
 
@@ -44,21 +47,24 @@
 }
 
 .glowing-text {
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 8vw, 4rem);
   font-weight: bold;
-  color: var(--color-secondary);
-  text-shadow: 0 0 10px rgba(75, 110, 140, 0.3),
-               0 0 20px rgba(75, 110, 140, 0.2),
-               0 0 30px rgba(75, 110, 140, 0.1);
+  color: var(--color-light);
+  text-shadow: 0 0 10px rgba(247, 247, 247, 0.3),
+               0 0 20px rgba(247, 247, 247, 0.2),
+               0 0 30px rgba(247, 247, 247, 0.1);
   animation: glow 2s ease-in-out infinite alternate;
+  margin-bottom: 1rem;
+  line-height: 1.2;
 }
 
 .fade-in {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
   opacity: 0;
-  animation: fadeIn 1s ease-out forwards;
+  animation: fadeIn 1s ease-out 0.5s forwards;
   margin: 2rem 0;
-  color: var(--color-gray);
+  color: var(--color-light);
+  line-height: 1.6;
 }
 
 .geometric-shapes {
@@ -70,9 +76,10 @@
 
 .shape {
   position: absolute;
-  border: 2px solid rgba(75, 110, 140, 0.2);
+  border: 2px solid var(--color-secondary);
   border-radius: 50%;
   animation: rotate 20s linear infinite;
+  opacity: 0.2;
 }
 
 .shape:nth-child(1) {
@@ -80,6 +87,7 @@
   height: 300px;
   top: 20%;
   left: 10%;
+  border-color: var(--color-secondary);
 }
 
 .shape:nth-child(2) {
@@ -88,6 +96,7 @@
   bottom: 30%;
   right: 15%;
   animation-direction: reverse;
+  border-color: var(--color-light);
 }
 
 .shape:nth-child(3) {
@@ -96,49 +105,64 @@
   bottom: 10%;
   left: 30%;
   animation-duration: 15s;
+  border-color: var(--color-secondary);
 }
 
 .primary-btn {
-  background: linear-gradient(45deg, var(--color-secondary), var(--color-accent));
+  background: var(--color-secondary);
   color: var(--color-light);
-  padding: 12px 30px;
+  padding: 1rem 2.5rem;
   border: none;
-  border-radius: 25px;
-  font-size: 1rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   position: relative;
   overflow: hidden;
+  margin-top: 2rem;
+  animation: fadeIn 1s ease-out 1s forwards;
+  opacity: 0;
 }
 
-.primary-btn::after {
+.primary-btn::before {
   content: '';
   position: absolute;
   top: 0;
-  left: 0;
-  width: 200%;
+  left: -100%;
+  width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transform: translateX(-100%);
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: 0.5s;
 }
 
-.primary-btn:hover::after {
-  transform: translateX(50%);
-  transition: transform 0.6s ease;
+.primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background: var(--color-primary);
+}
+
+.primary-btn:hover::before {
+  left: 100%;
 }
 
 @keyframes glow {
   from {
-    text-shadow: 0 0 10px rgba(75, 110, 140, 0.3),
-                 0 0 20px rgba(75, 110, 140, 0.2),
-                 0 0 30px rgba(75, 110, 140, 0.1);
+    text-shadow: 0 0 10px rgba(247, 247, 247, 0.3),
+                 0 0 20px rgba(247, 247, 247, 0.2),
+                 0 0 30px rgba(247, 247, 247, 0.1);
   }
   to {
-    text-shadow: 0 0 20px rgba(75, 110, 140, 0.4),
-                 0 0 30px rgba(75, 110, 140, 0.3),
-                 0 0 40px rgba(75, 110, 140, 0.2);
+    text-shadow: 0 0 20px rgba(247, 247, 247, 0.4),
+                 0 0 30px rgba(247, 247, 247, 0.3),
+                 0 0 40px rgba(247, 247, 247, 0.2);
   }
 }
 
@@ -163,12 +187,21 @@
 }
 
 @media (max-width: 768px) {
-  .glowing-text {
-    font-size: 2.5rem;
+  .hero {
+    height: 90vh;
   }
   
-  .fade-in {
-    font-size: 1.2rem;
+  .hero-content {
+    padding: 0 1.5rem;
+  }
+  
+  .primary-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+  
+  .shape {
+    opacity: 0.15;
   }
 }
 </style>

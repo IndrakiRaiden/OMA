@@ -1,18 +1,32 @@
 <template>
   <section class="solutions">
-    <div class="section-header">
-      <h2>SOLUTIONS · SOLUTIONS · PROJECT MANAGEMENT</h2>
-    </div>
-    <div class="service-grid">
-      <div class="service-card" v-for="(service, index) in services" :key="index">
-        <div class="service-circle">
-          <component :is="service.icon" class="service-icon" size="32" />
+    <div class="solutions-container">
+      <div class="section-header">
+        <span class="subtitle">NUESTRAS SOLUCIONES</span>
+        <h2>Servicios Especializados</h2>
+        <p>Soluciones integrales para la industria moderna</p>
+      </div>
+      <div class="cards-grid">
+        <div class="solution-card">
+          <div class="icon-wrapper">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3>Automatización Industrial</h3>
+          <p>Sistemas automatizados de última generación para optimizar procesos productivos</p>
         </div>
-        <h3>{{ service.title }}</h3>
-        <p>{{ service.description }}</p>
-        <div class="card-footer">
-          <span class="project-code">Project {{ index + 1 }}</span>
-          <button class="secondary-btn">View More</button>
+        <div class="solution-card">
+          <div class="icon-wrapper">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3>Robótica Avanzada</h3>
+          <p>Implementación de soluciones robóticas para mejorar la eficiencia operativa</p>
+        </div>
+        <div class="solution-card">
+          <div class="icon-wrapper">
+            <i class="fas fa-industry"></i>
+          </div>
+          <h3>Manufactura CNC</h3>
+          <p>Precisión y calidad en la fabricación de componentes industriales</p>
         </div>
       </div>
     </div>
@@ -28,140 +42,144 @@ export default {
     Globe,
     Zap,
     Rocket
-  },
-  data() {
-    return {
-      services: [
-        {
-          icon: 'Globe',
-          title: 'GLOBAL',
-          description: 'América · Europa · Asia'
-        },
-        {
-          icon: 'Zap',
-          title: 'INNOVACIÓN',
-          description: 'Tecnología de Vanguardia'
-        },
-        {
-          icon: 'Rocket',
-          title: 'EXPRESS',
-          description: 'Logística Internacional'
-        }
-      ]
-    }
   }
 }
 </script>
 
 <style scoped>
 .solutions {
-  padding: 4rem 2rem;
-  background: var(--color-primary);
+  padding: 6rem 2rem;
+  background-color: var(--content-light);
   position: relative;
-  z-index: 1;
 }
 
-.section-header {
-  text-align: center;
-  margin-bottom: 3rem;
-  color: var(--color-secondary);
-  font-size: 0.9rem;
-  letter-spacing: 2px;
-  opacity: 0.9;
-}
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+.solutions-container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.service-card {
-  background: var(--color-light);
-  padding: 2rem;
-  border-radius: 4px;
+.section-header {
   text-align: center;
-  border: 1px solid rgba(75, 110, 140, 0.1);
+  margin-bottom: 4rem;
+}
+
+.subtitle {
+  color: var(--content-secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.section-header h2 {
+  color: var(--content-primary);
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.section-header p {
+  color: var(--content-dark);
+  font-size: 1.1rem;
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.solution-card {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
   transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
 }
 
-.service-card:hover {
+.solution-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.25rem;
+  background: linear-gradient(90deg, var(--content-primary), var(--content-secondary));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.solution-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(75, 110, 140, 0.2);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.service-circle {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 1.5rem;
+.solution-card:hover::before {
+  transform: scaleX(1);
+}
+
+.icon-wrapper {
+  width: 80px;
+  height: 80px;
+  background: var(--content-light);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  background: var(--color-primary);
-  border: 1px solid rgba(75, 110, 140, 0.1);
-}
-
-.service-icon {
-  color: var(--color-secondary);
-  opacity: 0.9;
-}
-
-.service-card h3 {
-  color: var(--color-secondary);
-  margin: 1rem 0;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  font-weight: 500;
-}
-
-.service-card p {
-  color: var(--color-dark);
-  font-size: 0.9rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  opacity: 0.8;
-}
-
-.card-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(75, 110, 140, 0.1);
-}
-
-.project-code {
-  color: var(--color-gray);
-  font-size: 0.8rem;
-}
-
-.secondary-btn {
-  background: transparent;
-  color: var(--color-secondary);
-  border: 1px solid rgba(75, 110, 140, 0.2);
-  padding: 8px 20px;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  cursor: pointer;
+  margin: 0 auto 1.5rem;
   transition: all 0.3s ease;
 }
 
-.secondary-btn:hover {
-  background: rgba(75, 110, 140, 0.05);
-  border-color: rgba(75, 110, 140, 0.3);
+.icon-wrapper i {
+  font-size: 2rem;
+  color: var(--content-primary);
+  transition: all 0.3s ease;
+}
+
+.solution-card:hover .icon-wrapper {
+  background: var(--content-primary);
+}
+
+.solution-card:hover .icon-wrapper i {
+  color: var(--content-light);
+  transform: scale(1.1);
+}
+
+.solution-card h3 {
+  color: var(--content-primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.solution-card p {
+  color: var(--content-dark);
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.8;
 }
 
 @media (max-width: 768px) {
-  .service-grid {
+  .solutions {
+    padding: 4rem 1.5rem;
+  }
+  
+  .cards-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .solution-card {
+    padding: 2rem 1.5rem;
   }
 }
 </style>

@@ -37,13 +37,14 @@ export default {
 
 <style scoped>
 .home {
-  background-color: var(--color-primary);
-  color: var(--color-secondary);
+  background-color: var(--content-light);
+  color: var(--content-primary);
   min-height: 100vh;
 }
 
 main {
   position: relative;
   z-index: 1;
+  background-color: var(--content-light);
 }
 </style>

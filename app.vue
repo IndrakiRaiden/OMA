@@ -13,12 +13,20 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
 
 :root {
+  /* Variables originales para navbar y elementos globales */
   --color-primary: #F7F7F7;    /* Blanco Hielo - Color Principal */
   --color-secondary: #4B6E8C;  /* Azul - Color Secundario */
   --color-accent: #F5A623;     /* Amanecer Dorado */
   --color-light: #FFFFFF;      /* Blanco Puro */
   --color-dark: #5A5A5A;       /* Piedra Natural */
   --color-gray: #B1B1B1;       /* Gris Claro */
+
+  /* Variables para el contenido de las páginas */
+  --content-primary: #4B6E8C;    /* Azul - Confianza y estabilidad */
+  --content-secondary: #F5A623;  /* Amanecer Dorado - Toque cálido */
+  --content-light: #F7F7F7;      /* Blanco Hielo - Limpieza */
+  --content-dark: #5A5A5A;       /* Piedra Natural - Seriedad */
+  --content-gray: #B1B1B1;       /* Gris Claro - Elegancia suave */
 }
 
 * {
@@ -33,8 +41,8 @@ html {
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: var(--color-primary);
-  color: var(--color-secondary);
+  background-color: var(--content-primary);
+  color: var(--content-secondary);
   line-height: 1.6;
   @apply bg-light text-dark antialiased;
 }
@@ -59,8 +67,8 @@ body {
 }
 
 .btn-primary {
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
+  background-color: var(--content-secondary);
+  color: var(--content-primary);
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   font-weight: 500;
@@ -69,13 +77,13 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: var(--color-accent);
+  background-color: var(--content-accent);
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: var(--color-secondary);
-  border: 2px solid var(--color-secondary);
+  color: var(--content-secondary);
+  border: 2px solid var(--content-secondary);
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   font-weight: 500;
@@ -84,8 +92,8 @@ body {
 }
 
 .btn-secondary:hover {
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
+  background-color: var(--content-secondary);
+  color: var(--content-primary);
 }
 
 .nav-link {

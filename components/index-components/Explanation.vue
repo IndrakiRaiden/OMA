@@ -42,7 +42,7 @@
 <style scoped>
 .explanation {
   padding: 4rem 1rem;
-  background: var(--color-light);
+  background: var(--content-light);
   position: relative;
 }
 
@@ -64,7 +64,7 @@
 }
 
 .text-content h2 {
-  color: var(--color-secondary);
+  color: var(--content-primary);
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 600;
   margin-bottom: 1.5rem;
@@ -72,11 +72,10 @@
 }
 
 .text-content p {
-  color: var(--color-dark);
+  color: var(--content-dark);
   font-size: clamp(1rem, 2vw, 1.1rem);
   line-height: 1.6;
   margin-bottom: 2rem;
-  opacity: 0.9;
 }
 
 .features {
@@ -88,12 +87,12 @@
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
-  color: var(--color-dark);
+  color: var(--content-dark);
   font-size: clamp(0.9rem, 2vw, 1.1rem);
 }
 
 .bullet {
-  color: #FFD700 !important;
+  color: var(--content-secondary) !important;
   margin-right: 1rem;
   font-size: 1.5rem;
   line-height: 1;
@@ -104,10 +103,10 @@
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 2rem;
   text-align: center;
-  background: var(--color-primary);
+  background: var(--content-primary);
   padding: 3rem;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .stat-item {
@@ -119,14 +118,15 @@
 .number {
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--color-secondary);
+  color: var(--content-light);
   margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .label {
-  color: var(--color-dark);
+  color: var(--content-light);
   font-size: 0.9rem;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 @media (max-width: 1024px) {
@@ -137,6 +137,7 @@
   .stats {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+    padding: 2rem;
   }
   
   .stat-item .number {
@@ -171,11 +172,14 @@
   .stats {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    padding: 1.5rem;
   }
   
   .stat-item {
     text-align: center;
     padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
   }
   
   .stat-item .number {
