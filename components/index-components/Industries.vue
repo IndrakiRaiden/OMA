@@ -42,7 +42,7 @@ export default {
       { icon: Zap, title: 'Energía' }
     ];
 
-    // Asignar colores alternados
+    // Asignar colores alternados para los iconos
     this.industries = cards.map((card, index) => ({
       ...card,
       lineColor: index % 2 === 0 ? '#4B6E8C' : '#FFD700'
@@ -56,7 +56,7 @@ export default {
   padding: 6rem 2rem 4rem;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+  background: var(--color-primary);
 }
 
 .industries::before {
@@ -69,7 +69,7 @@ export default {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.1),
+    rgba(0, 0, 0, 0.1),
     transparent
   );
 }
@@ -84,15 +84,15 @@ export default {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.1),
+    rgba(0, 0, 0, 0.1),
     transparent
   );
 }
 
 .industries-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
   max-width: 1200px;
   margin: 2rem auto 0;
   position: relative;
@@ -100,21 +100,15 @@ export default {
   padding: 0 1rem;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .industries-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 
 @media (max-width: 640px) {
   .industries {
     padding: 4rem 1rem 3rem;
-  }
-  
-  .industries-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
   }
 }
 </style>
