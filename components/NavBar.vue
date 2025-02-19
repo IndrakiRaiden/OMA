@@ -29,6 +29,12 @@
 </template>
 
 <script setup>
+import { useHead } from '#head'
+
+useHead({
+  title: 'OMA'
+})
+
 const isMenuOpen = ref(false)
 const isScrolled = ref(false)
 

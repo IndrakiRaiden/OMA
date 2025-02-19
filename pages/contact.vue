@@ -1,6 +1,6 @@
 <template>
   <div class="contact-wrapper">
-    <Navbar />
+    <NavBar />
     <div class="contact-page">
       <div class="hero text-white py-20">
         <div class="container mx-auto px-4">
@@ -108,12 +108,12 @@
 </template>
 
 <script>
-import Navbar from '../components/Navbar.vue'
+import NavBar from '../components/NavBar.vue'
 import Footer from '../components/Footer.vue'
 
 export default {
   components: {
-    Navbar,
+    NavBar,
     Footer
   },
   data() {
