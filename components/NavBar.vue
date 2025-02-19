@@ -29,7 +29,7 @@
 </template>
 
 <script setup>
-import { useHead } from '#head'
+import { useHead } from '@unhead/vue'
 
 useHead({
   title: 'OMA'
