@@ -3,20 +3,32 @@
     <div class="container">
       <div class="explanation-content">
         <div class="text-content">
-          <h2>Innovación Industrial a tu Alcance</h2>
-          <p>En OMA Industrial, transformamos la manera en que las empresas abordan sus desafíos tecnológicos. Nuestra experiencia se traduce en soluciones que impulsan la eficiencia y el crecimiento.</p>
+          <h2>Nuestra Misión</h2>
+          <p>En OMA, ofrecemos soluciones integrales para la gestión y orquestación de proyectos industriales. Nos especializamos en conectar a nuestros clientes con los proveedores más capacitados, garantizando una ejecución precisa y eficiente de sus proyectos.</p>
+          
+          <h2 class="mt-4">Nuestra Visión</h2>
+          <p>Ser la plataforma líder en la administración y orquestación de proyectos industriales, brindando soluciones innovadoras que transformen la manera en que las empresas gestionan sus necesidades industriales.</p>
+          
           <ul class="features">
             <li>
               <span class="bullet">•</span>
-              <span>Soluciones personalizadas para cada industria</span>
+              <span>Liderazgo en gestión de proyectos industriales</span>
             </li>
             <li>
               <span class="bullet">•</span>
-              <span>Tecnología de vanguardia e innovación constante</span>
+              <span>Innovación constante en soluciones y tecnologías</span>
             </li>
             <li>
               <span class="bullet">•</span>
-              <span>Soporte técnico especializado 24/7</span>
+              <span>Compromiso con la calidad y satisfacción del cliente</span>
+            </li>
+            <li>
+              <span class="bullet">•</span>
+              <span>Confianza y transparencia en cada relación</span>
+            </li>
+            <li>
+              <span class="bullet">•</span>
+              <span>Elegancia y profesionalismo en cada interacción</span>
             </li>
           </ul>
         </div>

@@ -2,9 +2,27 @@
   <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1 class="glowing-text">OMA INDUSTRIAL SOLUTIONS</h1>
-      <p class="fade-in">Transformando la industria con tecnología de vanguardia</p>
-      <button class="primary-btn hover-effect">CONTACT US</button>
+      <span class="pre-title fade-in-first">BIENVENIDOS A</span>
+      <h1 class="glowing-text">OMA SOLUTIONS</h1>
+      <div class="hero-text fade-in">
+        <p class="main-text">Soluciones integrales para la gestión y orquestación de proyectos industriales. Conectamos a nuestros clientes con los proveedores más capacitados, garantizando una ejecución precisa y eficiente.</p>
+        <p class="vision-text">Nuestra visión es ser la plataforma líder en la administración y orquestación de proyectos industriales, transformando la manera en que las empresas gestionan sus necesidades.</p>
+      </div>
+      <div class="hero-features fade-in-last">
+        <div class="feature">
+          <i class="fas fa-crown"></i>
+          <span>Liderazgo en la industria</span>
+        </div>
+        <div class="feature">
+          <i class="fas fa-lightbulb"></i>
+          <span>Innovación constante</span>
+        </div>
+        <div class="feature">
+          <i class="fas fa-handshake"></i>
+          <span>Confianza y elegancia</span>
+        </div>
+      </div>
+      <button class="primary-btn hover-effect">Inicia tu proyecto</button>
     </div>
     <div class="geometric-shapes">
       <div class="shape"></div>
@@ -67,6 +85,44 @@
   line-height: 1.6;
 }
 
+.pre-title {
+  display: block;
+  font-size: 1rem;
+  letter-spacing: 4px;
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.hero-features {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-light);
+}
+
+.feature i {
+  color: var(--color-secondary);
+}
+
+.fade-in-first {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.fade-in-last {
+  opacity: 0;
+  animation: fadeIn 1s ease-out 1s forwards;
+}
+
 .geometric-shapes {
   position: absolute;
   width: 100%;
@@ -109,48 +165,41 @@
 }
 
 .primary-btn {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   background: var(--color-secondary);
   color: var(--color-light);
-  padding: 1rem 2.5rem;
   border: none;
-  border-radius: 50px;
-  font-size: 1.1rem;
-  font-weight: 600;
+  border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  position: relative;
-  overflow: hidden;
-  margin-top: 2rem;
-  animation: fadeIn 1s ease-out 1s forwards;
-  opacity: 0;
-}
-
-.primary-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255, 255, 255, 0.3),
-    transparent
-  );
-  transition: 0.5s;
 }
 
 .primary-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  background: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.primary-btn:hover::before {
-  left: 100%;
+.hero-text {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.main-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: var(--color-light);
+}
+
+.vision-text {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--color-light);
+  opacity: 0.9;
 }
 
 @keyframes glow {

@@ -2,31 +2,31 @@
   <section class="solutions">
     <div class="solutions-container">
       <div class="section-header">
-        <span class="subtitle">NUESTRAS SOLUCIONES</span>
-        <h2>Servicios Especializados</h2>
-        <p>Soluciones integrales para la industria moderna</p>
+        <span class="subtitle">NUESTROS SERVICIOS</span>
+        <h2>Soluciones Integrales</h2>
+        <p>Conectamos y orquestamos todos los aspectos de tu proyecto industrial</p>
       </div>
       <div class="cards-grid">
         <div class="solution-card">
           <div class="icon-wrapper">
-            <i class="fas fa-cogs"></i>
+            <i class="fas fa-project-diagram"></i>
           </div>
-          <h3>Automatización Industrial</h3>
-          <p>Sistemas automatizados de última generación para optimizar procesos productivos</p>
+          <h3>Gestión de Proyectos</h3>
+          <p>Coordinación y administración integral de proyectos industriales con los más altos estándares de calidad</p>
         </div>
         <div class="solution-card">
           <div class="icon-wrapper">
-            <i class="fas fa-robot"></i>
+            <i class="fas fa-handshake"></i>
           </div>
-          <h3>Robótica Avanzada</h3>
-          <p>Implementación de soluciones robóticas para mejorar la eficiencia operativa</p>
+          <h3>Red de Proveedores</h3>
+          <p>Conexión con los proveedores más capacitados para garantizar la excelencia en cada fase del proyecto</p>
         </div>
         <div class="solution-card">
           <div class="icon-wrapper">
-            <i class="fas fa-industry"></i>
+            <i class="fas fa-check-circle"></i>
           </div>
-          <h3>Manufactura CNC</h3>
-          <p>Precisión y calidad en la fabricación de componentes industriales</p>
+          <h3>Control de Calidad</h3>
+          <p>Supervisión y garantía de calidad en cada etapa del proceso productivo</p>
         </div>
       </div>
     </div>
