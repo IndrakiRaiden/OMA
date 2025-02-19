@@ -74,9 +74,9 @@ function handleScroll() {
 }
 
 .nav-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -88,7 +88,7 @@ function handleScroll() {
   flex-direction: column;
   text-decoration: none;
   line-height: 1;
-  margin-left: -3rem;
+  margin-left: 2rem;
 }
 
 .brand-text {
@@ -108,8 +108,7 @@ function handleScroll() {
   display: flex;
   align-items: center;
   gap: 2rem;
-  position: absolute;
-  right: -15rem;
+  margin-right: 2rem;
 }
 
 .nav-menu {
@@ -240,9 +239,32 @@ function handleScroll() {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-@media (min-width: 768px) {
-  .nav-menu {
-    display: none;
+@media (max-width: 1200px) {
+  .nav-container {
+    padding: 0 1.5rem;
+  }
+  
+  .nav-brand {
+    margin-left: 1rem;
+  }
+  
+  .nav-right {
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav-container {
+    padding: 0 1rem;
+  }
+  
+  .nav-right {
+    gap: 1rem;
+  }
+
+  .contact-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -252,12 +274,15 @@ function handleScroll() {
   }
 
   .nav-right {
-    position: static;
+    margin-right: 0;
   }
 
-  .nav-menu {
-    width: 100%;
-    right: -100%;
+  .brand-text {
+    font-size: 1.75rem;
+  }
+
+  .brand-subtext {
+    font-size: 0.7rem;
   }
 }
 
@@ -267,11 +292,11 @@ function handleScroll() {
   }
 
   .brand-text {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   .brand-subtext {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 
   .contact-btn {
