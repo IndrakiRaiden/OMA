@@ -7,7 +7,7 @@
       </NuxtLink>
 
       <div class="nav-right">
-        <button class="contact-btn">Cotiza tu Proyecto</button>
+        <NuxtLink to="/cotiza" class="contact-btn">Cotiza tu Proyecto</NuxtLink>
         <button class="menu-btn" @click="toggleMenu" :class="{ 'active': isMenuOpen }">
           <span></span>
           <span></span>
@@ -114,14 +114,23 @@ function handleScroll() {
   background: var(--color-primary);
   width: 250px;
   height: calc(100vh - 64px);
-  transition: 0.3s ease;
   padding: 2rem;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 .nav-menu.active {
   display: block;
   right: 0;
+  animation: slideIn 0.3s ease-in-out;
 }
 
 .nav-links {
@@ -132,6 +141,21 @@ function handleScroll() {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.nav-menu.active .nav-links {
+  animation: fadeIn 0.3s ease-in-out 0.2s forwards;
 }
 
 .nav-link {
@@ -199,23 +223,14 @@ function handleScroll() {
   padding: 0.75rem 1.5rem;
   background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
   color: var(--color-light);
-  border: none;
+  text-decoration: none;
   border-radius: 4px;
-  cursor: pointer;
   font-weight: 600;
-  transition: all 0.2s ease;
-  white-space: nowrap;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .contact-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  filter: brightness(1.1);
-}
-
-.contact-btn:active {
-  transform: scale(0.98);
+  transform: translateY(-2px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -223,30 +238,20 @@ function handleScroll() {
   .nav-menu {
     display: none;
   }
-  .nav-links {
-    flex-direction: row;
-  }
-}
-
-@media (max-width: 1200px) {
-  .nav-right {
-    right: -8rem;
-  }
-}
-
-@media (max-width: 992px) {
-  .nav-right {
-    right: -4rem;
-  }
 }
 
 @media (max-width: 768px) {
-  .nav-right {
-    right: 1rem;
-  }
-  
   .nav-brand {
-    margin-left: 1rem;
+    margin-left: 0;
+  }
+
+  .nav-right {
+    position: static;
+  }
+
+  .nav-menu {
+    width: 100%;
+    right: -100%;
   }
 }
 
@@ -254,13 +259,17 @@ function handleScroll() {
   .nav-container {
     padding: 0 0.5rem;
   }
-  
-  .nav-right {
-    gap: 1rem;
+
+  .brand-text {
+    font-size: 1.75rem;
   }
-  
+
+  .brand-subtext {
+    font-size: 0.7rem;
+  }
+
   .contact-btn {
-    padding: 0.6rem 1rem;
+    display: none;
   }
 }
 </style>
