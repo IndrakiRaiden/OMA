@@ -1,53 +1,81 @@
 <template>
-  <section class="timeline-section">
-    <div class="section-header">
-      <span class="subtitle">PROCESO DE PRODUCCIÓN</span>
-      <h2>De la idea a la entrega</h2>
-      <p>Orquestamos todo el proceso productivo</p>
-    </div>
-    <div class="timeline-container">
-      <div class="timeline">
-        <div class="timeline-step" style="--step-index: 1">
-          <i class="fas fa-box"></i>
-          <span>Materia Prima</span>
-        </div>
-        <div class="timeline-step" style="--step-index: 2">
-          <i class="fas fa-cogs"></i>
-          <span>Fabricación</span>
-        </div>
-        <div class="timeline-step" style="--step-index: 3">
-          <i class="fas fa-flask"></i>
-          <span>Tratamientos</span>
-        </div>
-        <div class="timeline-step" style="--step-index: 4">
-          <i class="fas fa-paint-roller"></i>
-          <span>Acabados</span>
-        </div>
-        <div class="timeline-step" style="--step-index: 5">
-          <i class="fas fa-tools"></i>
-          <span>Ensamblaje</span>
-        </div>
-        <div class="timeline-step" style="--step-index: 6">
-          <i class="fas fa-truck"></i>
-          <span>Entrega</span>
+  <TimelineBackground>
+    <section ref="timelineSection" class="timeline-section" :class="{ 'is-visible': isVisible }">
+      <div class="section-header">
+        <span class="subtitle">PROCESO DE PRODUCCIÓN</span>
+        <h2>De la idea a la entrega</h2>
+        <p>Orquestamos todo el proceso productivo</p>
+      </div>
+      <div class="timeline-container">
+        <div class="timeline">
+          <div class="timeline-step" style="--step-index: 1">
+            <i class="fas fa-box"></i>
+            <span>Materia Prima</span>
+          </div>
+          <div class="timeline-step" style="--step-index: 2">
+            <i class="fas fa-cogs"></i>
+            <span>Fabricación</span>
+          </div>
+          <div class="timeline-step" style="--step-index: 3">
+            <i class="fas fa-flask"></i>
+            <span>Tratamientos</span>
+          </div>
+          <div class="timeline-step" style="--step-index: 4">
+            <i class="fas fa-paint-roller"></i>
+            <span>Acabados</span>
+          </div>
+          <div class="timeline-step" style="--step-index: 5">
+            <i class="fas fa-tools"></i>
+            <span>Ensamblaje</span>
+          </div>
+          <div class="timeline-step" style="--step-index: 6">
+            <i class="fas fa-truck"></i>
+            <span>Entrega</span>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </TimelineBackground>
 </template>
 
 <script>
+import TimelineBackground from '../backgrounds/TimelineBackground.vue'
+
 export default {
-  name: 'Timeline'
+  name: 'Timeline',
+  components: {
+    TimelineBackground
+  },
+  data() {
+    return {
+      isVisible: false
+    }
+  },
+  mounted() {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.isVisible = true
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      {
+        threshold: 0.2
+      }
+    )
+
+    observer.observe(this.$refs.timelineSection)
+  }
 }
 </script>
 
 <style scoped>
 .timeline-section {
   padding: 8rem 2rem;
-  background: linear-gradient(135deg, var(--content-primary) 0%, var(--content-secondary) 100%);
   position: relative;
-  overflow: hidden;
+  width: 100%;
 }
 
 .timeline-section .section-header {
@@ -66,7 +94,9 @@ export default {
   text-transform: uppercase;
   margin-bottom: 1rem;
   display: block;
-  animation: fadeInDown 1s ease;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.6s ease;
 }
 
 .timeline-section h2 {
@@ -74,19 +104,29 @@ export default {
   font-weight: 700;
   margin-bottom: 1rem;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  animation: fadeInUp 1s ease 0.2s both;
   background: white;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease 0.2s;
 }
 
 .timeline-section p {
   font-size: 1.2rem;
-  opacity: 0.9;
+  opacity: 0;
   max-width: 600px;
   margin: 0 auto;
-  animation: fadeIn 1s ease 0.4s both;
+  transform: translateY(20px);
+  transition: all 0.6s ease 0.3s;
+}
+
+.timeline-section.is-visible .subtitle,
+.timeline-section.is-visible h2,
+.timeline-section.is-visible p {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .timeline-container {
@@ -139,9 +179,22 @@ export default {
   min-width: 160px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
-  animation: fadeInUp 0.5s ease both;
-  animation-delay: calc(var(--step-index) * 0.2s);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s ease;
 }
+
+.timeline-section.is-visible .timeline-step {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-section.is-visible .timeline-step:nth-child(1) { transition-delay: 0.4s; }
+.timeline-section.is-visible .timeline-step:nth-child(2) { transition-delay: 0.5s; }
+.timeline-section.is-visible .timeline-step:nth-child(3) { transition-delay: 0.6s; }
+.timeline-section.is-visible .timeline-step:nth-child(4) { transition-delay: 0.7s; }
+.timeline-section.is-visible .timeline-step:nth-child(5) { transition-delay: 0.8s; }
+.timeline-section.is-visible .timeline-step:nth-child(6) { transition-delay: 0.9s; }
 
 .timeline-step:hover {
   transform: translateY(-15px);
