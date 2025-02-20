@@ -15,66 +15,66 @@
             <!-- Industry Card 1 -->
             <div class="industry-card">
               <div class="icon-wrapper mb-4">
-                <i class="fas fa-industry text-3xl"></i>
+                <i class="fas fa-cog text-3xl"></i>
               </div>
-              <h3 class="text-xl font-semibold mb-3">Manufactura</h3>
+              <h3 class="text-xl font-semibold mb-3">Mecanizado CNC</h3>
               <p class="text-gray-700">
-                Optimización de procesos y automatización para mejorar la eficiencia operativa.
+                Servicios de mecanizado de precisión con máquinas CNC para piezas complejas y de alta precisión.
               </p>
             </div>
 
             <!-- Industry Card 2 -->
             <div class="industry-card">
               <div class="icon-wrapper mb-4">
-                <i class="fas fa-hospital text-3xl"></i>
+                <i class="fas fa-cube text-3xl"></i>
               </div>
-              <h3 class="text-xl font-semibold mb-3">Salud</h3>
+              <h3 class="text-xl font-semibold mb-3">Prototipado Rápido</h3>
               <p class="text-gray-700">
-                Soluciones tecnológicas para mejorar la atención al paciente y la gestión hospitalaria.
+                Desarrollo rápido de prototipos mediante fresado CNC para validación de diseños y pruebas funcionales.
               </p>
             </div>
 
             <!-- Industry Card 3 -->
             <div class="industry-card">
               <div class="icon-wrapper mb-4">
-                <i class="fas fa-shopping-cart text-3xl"></i>
+                <i class="fas fa-tools text-3xl"></i>
               </div>
-              <h3 class="text-xl font-semibold mb-3">Retail</h3>
+              <h3 class="text-xl font-semibold mb-3">Fabricación de Moldes</h3>
               <p class="text-gray-700">
-                Transformación digital para mejorar la experiencia del cliente y aumentar las ventas.
+                Diseño y fabricación de moldes de inyección y matrices utilizando tecnología CNC de última generación.
               </p>
             </div>
 
             <!-- Industry Card 4 -->
             <div class="industry-card">
               <div class="icon-wrapper mb-4">
-                <i class="fas fa-university text-3xl"></i>
+                <i class="fas fa-microchip text-3xl"></i>
               </div>
-              <h3 class="text-xl font-semibold mb-3">Finanzas</h3>
+              <h3 class="text-xl font-semibold mb-3">Electrónica CNC</h3>
               <p class="text-gray-700">
-                Soluciones seguras y eficientes para instituciones financieras.
+                Fabricación de PCBs y componentes electrónicos mediante fresado CNC de alta precisión.
               </p>
             </div>
 
             <!-- Industry Card 5 -->
             <div class="industry-card">
               <div class="icon-wrapper mb-4">
-                <i class="fas fa-truck text-3xl"></i>
+                <i class="fas fa-drafting-compass text-3xl"></i>
               </div>
-              <h3 class="text-xl font-semibold mb-3">Logística</h3>
+              <h3 class="text-xl font-semibold mb-3">Diseño CAD/CAM</h3>
               <p class="text-gray-700">
-                Optimización de rutas y gestión de inventario para mejorar la cadena de suministro.
+                Servicios de diseño y programación CAD/CAM para optimizar la producción CNC.
               </p>
             </div>
 
             <!-- Industry Card 6 -->
             <div class="industry-card">
               <div class="icon-wrapper mb-4">
-                <i class="fas fa-graduation-cap text-3xl"></i>
+                <i class="fas fa-industry text-3xl"></i>
               </div>
-              <h3 class="text-xl font-semibold mb-3">Educación</h3>
+              <h3 class="text-xl font-semibold mb-3">Automatización CNC</h3>
               <p class="text-gray-700">
-                Plataformas digitales y herramientas para modernizar la experiencia educativa.
+                Soluciones de automatización y control numérico para procesos de manufactura avanzada.
               </p>
             </div>
           </div>
