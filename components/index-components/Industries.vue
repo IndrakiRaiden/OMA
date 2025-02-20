@@ -1,15 +1,18 @@
 <template>
   <section class="industries">
-    <SectionHeader>INDUSTRIAS · INDUSTRIES</SectionHeader>
-    <div class="industries-grid">
-      <IndustryCard
-        v-for="(industry, index) in industries"
-        :key="index"
-        :icon="industry.icon"
-        :title="industry.title"
-        :line-color="industry.lineColor"
-        :index="index"
-      />
+    <IndustriasBackground />
+    <div class="content">
+      <SectionHeader>INDUSTRIAS · INDUSTRIES</SectionHeader>
+      <div class="industries-grid">
+        <IndustryCard
+          v-for="(industry, index) in industries"
+          :key="index"
+          :icon="industry.icon"
+          :title="industry.title"
+          :line-color="industry.lineColor"
+          :index="index"
+        />
+      </div>
     </div>
   </section>
 </template>
@@ -18,6 +21,7 @@
 import { Plane, Car, Stethoscope, Zap } from 'lucide-vue-next'
 import IndustryCard from './IndustryCard.vue'
 import SectionHeader from './SectionHeader.vue'
+import IndustriasBackground from '../backgrounds/IndustriasBackground.vue'
 
 export default {
   name: 'Industries',
@@ -27,7 +31,8 @@ export default {
     Stethoscope,
     Zap,
     IndustryCard,
-    SectionHeader
+    SectionHeader,
+    IndustriasBackground
   },
   data() {
     return {
@@ -56,37 +61,12 @@ export default {
   padding: 6rem 2rem 4rem;
   position: relative;
   overflow: hidden;
-  background: var(--color-primary);
+  color: white;
 }
 
-.industries::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(0, 0, 0, 0.1),
-    transparent
-  );
-}
-
-.industries::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(0, 0, 0, 0.1),
-    transparent
-  );
+.content {
+  position: relative;
+  z-index: 1;
 }
 
 .industries-grid {
@@ -95,8 +75,6 @@ export default {
   gap: 2rem;
   max-width: 1200px;
   margin: 2rem auto 0;
-  position: relative;
-  z-index: 1;
   padding: 0 1rem;
 }
 
