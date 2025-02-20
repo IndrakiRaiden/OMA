@@ -2,12 +2,12 @@
   <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <span class="pre-title fade-in-first">BIENVENIDOS A</span>
-      <h1 class="glowing-text">OMA SOLUTIONS</h1>
-      <div class="hero-text fade-in">
+      <span class="pre-title">BIENVENIDOS A</span>
+      <h1 class="hero-title">OMA SOLUTIONS</h1>
+      <div class="hero-text">
         <p class="main-text">Soluciones integrales para proyectos industriales</p>
       </div>
-      <div class="hero-features fade-in">
+      <div class="hero-features">
         <div class="feature">
           <i class="fas fa-industry"></i>
           <span>Manufactura</span>
@@ -21,9 +21,9 @@
           <span>Ingeniería</span>
         </div>
       </div>
-      <div class="cta-buttons fade-in-last">
+      <div class="cta-buttons">
         <NuxtLink to="/cotiza" class="primary-btn hover-effect">Cotiza tu proyecto</NuxtLink>
-        <button class="secondary-btn hover-effect">Ver servicios</button>
+        <NuxtLink to="/servicios" class="secondary-btn">Ver servicios</NuxtLink>
       </div>
     </div>
     <div class="geometric-shapes">
@@ -68,16 +68,16 @@
   text-align: center;
   max-width: 800px;
   padding: 0 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.glowing-text {
+.hero-title {
   font-size: clamp(2.5rem, 8vw, 4rem);
   font-weight: bold;
   color: var(--color-light);
-  text-shadow: 0 0 10px rgba(247, 247, 247, 0.3),
-               0 0 20px rgba(247, 247, 247, 0.2),
-               0 0 30px rgba(247, 247, 247, 0.1);
-  animation: glow 2s ease-in-out infinite alternate;
   margin-bottom: 1rem;
   line-height: 1.2;
 }
@@ -96,12 +96,14 @@
   opacity: 0.9;
   max-width: 700px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .main-text {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .hero-features {
@@ -110,6 +112,7 @@
   justify-content: center;
   margin: 2rem 0;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .feature {
@@ -130,6 +133,7 @@
   gap: 1rem;
   justify-content: center;
   margin-top: 2rem;
+  width: 100%;
 }
 
 .primary-btn, .secondary-btn {
@@ -146,14 +150,13 @@
   align-items: center;
   justify-content: center;
   min-width: 200px;
+  text-decoration: none;
 }
 
 .primary-btn {
   background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-secondary) 100%);
   color: var(--color-light);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .primary-btn:hover {
@@ -166,13 +169,32 @@
   color: var(--color-light);
   border: 2px solid var(--color-light);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.3s ease, color 0s ease 0.1s;
+}
+
+.secondary-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+  transition: width 0.3s ease;
 }
 
 .secondary-btn:hover {
-  background: var(--color-light);
-  color: var(--color-primary);
+  color: var(--color-light);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.secondary-btn:hover::before {
+  width: 100%;
 }
 
 .hover-effect {
@@ -235,48 +257,12 @@
   right: 10%;
 }
 
-@keyframes glow {
-  from {
-    text-shadow: 0 0 10px rgba(247, 247, 247, 0.3),
-                 0 0 20px rgba(247, 247, 247, 0.2),
-                 0 0 30px rgba(247, 247, 247, 0.1);
-  }
-  to {
-    text-shadow: 0 0 20px rgba(247, 247, 247, 0.4),
-                 0 0 30px rgba(247, 247, 247, 0.3),
-                 0 0 40px rgba(247, 247, 247, 0.2);
-  }
-}
-
-.fade-in-first {
-  animation: fadeIn 0.8s ease-out forwards;
-}
-
-.fade-in {
-  animation: fadeIn 0.8s ease-out 0.4s forwards;
-}
-
-.fade-in-last {
-  animation: fadeIn 0.8s ease-out 0.8s forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @media (max-width: 768px) {
   .hero-content {
     padding: 0 1rem;
   }
 
-  .glowing-text {
+  .hero-title {
     font-size: clamp(2rem, 6vw, 3rem);
   }
 

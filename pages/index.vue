@@ -19,7 +19,7 @@
 <script>
 import NavBar from '~/components/NavBar.vue'
 import Footer from '~/components/Footer.vue'
-import Hero from '~/components/index-components/Hero.vue'
+import Hero from '~/components/Hero.vue'
 import Solutions from '~/components/index-components/Solutions.vue'
 import Timeline from '~/components/index-components/Timeline.vue'
 import Benefits from '~/components/index-components/Benefits.vue'
