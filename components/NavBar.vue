@@ -21,6 +21,7 @@
           <NuxtLink to="/servicios" class="nav-link">Servicios</NuxtLink>
           <NuxtLink to="/industrias" class="nav-link">Industrias</NuxtLink>
           <NuxtLink to="/about" class="nav-link">Acerca de Nosotros</NuxtLink>
+          <NuxtLink to="/faqs" class="nav-link">FAQs</NuxtLink>
           <NuxtLink to="/contact" class="nav-link">Contacto</NuxtLink>
         </nav>
       </div>
