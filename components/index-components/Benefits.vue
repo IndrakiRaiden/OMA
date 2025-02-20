@@ -9,29 +9,37 @@
         <div class="icon-wrapper">
           <i class="fas fa-industry"></i>
         </div>
-        <h3>Todo en un solo lugar</h3>
-        <p>Fabricación, Acabados, ensamblaje, tratamientos, recubrimientos y entrega sin complicaciones.</p>
+        <div class="card-content">
+          <h3>Todo en un solo lugar</h3>
+          <p>Fabricación, Acabados, ensamblaje, tratamientos, recubrimientos y entrega sin complicaciones.</p>
+        </div>
       </div>
       <div class="solution-card" style="--card-index: 2">
         <div class="icon-wrapper">
           <i class="fas fa-certificate"></i>
         </div>
-        <h3>Calidad garantizada</h3>
-        <p>Procesos certificados y precisión en cada pieza.</p>
+        <div class="card-content">
+          <h3>Calidad garantizada</h3>
+          <p>Procesos certificados y precisión en cada pieza.</p>
+        </div>
       </div>
       <div class="solution-card" style="--card-index: 3">
         <div class="icon-wrapper">
           <i class="fas fa-microchip"></i>
         </div>
-        <h3>Industria 4.0</h3>
-        <p>Tecnología avanzada en manufactura.</p>
+        <div class="card-content">
+          <h3>Industria 4.0</h3>
+          <p>Tecnología avanzada en manufactura.</p>
+        </div>
       </div>
       <div class="solution-card" style="--card-index: 4">
         <div class="icon-wrapper">
           <i class="fas fa-users"></i>
         </div>
-        <h3>Atención personalizada</h3>
-        <p>Soluciones adaptadas a cada cliente.</p>
+        <div class="card-content">
+          <h3>Atención personalizada</h3>
+          <p>Soluciones adaptadas a cada cliente.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -45,7 +53,7 @@ export default {
 
 <style scoped>
 .benefits {
-  padding: 8rem 2rem;
+  padding: 7rem 2rem;
   background: var(--content-light);
   position: relative;
   overflow: hidden;
@@ -53,7 +61,7 @@ export default {
 
 .benefits .section-header {
   text-align: center;
-  margin-bottom: 6rem;
+  margin-bottom: 5rem;
 }
 
 .benefits .subtitle {
@@ -69,7 +77,7 @@ export default {
 
 .benefits h2 {
   color: var(--content-primary);
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: 700;
   margin-bottom: 1rem;
   background: linear-gradient(135deg, var(--content-primary) 0%, var(--content-secondary) 100%);
@@ -81,90 +89,139 @@ export default {
 
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
   padding: 1rem;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
+  align-items: stretch;
 }
 
 .solution-card {
   background: white;
-  padding: 3rem;
-  border-radius: 1.5rem;
+  padding: 2.5rem;
+  border-radius: 16px;
   position: relative;
-  overflow: hidden;
-  transition: all 0.5s ease;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid #f0f0f0;
   animation: fadeIn 0.5s ease both;
-  animation-delay: calc(var(--card-index) * 0.2s);
+  animation-delay: calc(var(--card-index) * 0.15s);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
 }
 
 .solution-card::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: -2px;
+  border-radius: 16px;
   background: linear-gradient(135deg, var(--content-primary) 0%, var(--content-secondary) 100%);
   opacity: 0;
-  transition: all 0.5s ease;
-  z-index: 1;
-}
-
-.solution-card:hover::before {
-  opacity: 0.05;
-}
-
-.solution-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.4s ease;
+  z-index: -1;
 }
 
 .icon-wrapper {
-  width: 80px;
-  height: 80px;
-  background: linear-gradient(135deg, var(--content-primary) 0%, var(--content-secondary) 100%);
-  border-radius: 1rem;
+  background: var(--content-primary);
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 2rem;
   position: relative;
-  z-index: 2;
-  transition: all 0.3s ease;
-}
-
-.solution-card:hover .icon-wrapper {
-  transform: scale(1.1) rotate(10deg);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
 }
 
 .icon-wrapper i {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   color: white;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.solution-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--content-primary);
   transition: all 0.3s ease;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.solution-card p {
+  color: var(--content-dark);
+  line-height: 1.6;
+  font-size: 1rem;
+  opacity: 0.85;
+  margin: 0;
+  transition: all 0.3s ease;
+  flex-grow: 1;
+}
+
+.solution-card:hover {
+  border-color: transparent;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.solution-card:hover::before {
+  opacity: 1;
+}
+
+.solution-card:hover .icon-wrapper {
+  background: var(--content-secondary);
 }
 
 .solution-card:hover .icon-wrapper i {
   transform: scale(1.1);
 }
 
-.solution-card h3 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: var(--content-primary);
-  position: relative;
-  z-index: 2;
+.solution-card:hover h3 {
+  color: white;
 }
 
-.solution-card p {
-  color: var(--content-dark);
-  line-height: 1.6;
+.solution-card:hover h3::after {
+  width: 60px;
+  opacity: 0.3;
+}
+
+.solution-card:hover p {
+  color: white;
+  opacity: 0.9;
+}
+
+@media (max-width: 1200px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
+  .benefits {
+    padding: 5rem 1.5rem;
+  }
+  
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .benefits h2 {
+    font-size: 2.2rem;
+  }
+  
   .solution-card {
     padding: 2rem;
   }
@@ -173,7 +230,7 @@ export default {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(15px);
   }
   to {
     opacity: 1;
@@ -184,7 +241,7 @@ export default {
 @keyframes fadeInDown {
   from {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-15px);
   }
   to {
     opacity: 1;
@@ -195,7 +252,7 @@ export default {
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(15px);
   }
   to {
     opacity: 1;
