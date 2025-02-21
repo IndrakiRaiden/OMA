@@ -4,90 +4,228 @@
     <main class="contact-page">
       <BannerV1 
         title="Contáctanos" 
-        subtitle="Estamos aquí para ayudarte"
+        subtitle="¿Tienes un proyecto en mente? Hablemos de él"
         :buttons="[
-          { text: 'Enviar Mensaje', href: '#contact-form', class: 'primary-btn' },
-          { text: 'Ver Ubicación', href: '#location', class: 'secondary-btn' }
+          { text: 'Iniciar Proyecto', href: '#contact-form', class: 'primary-btn' }
         ]"
       />
-      <div id="contact-form" class="contact-content py-16">
+      
+      <section class="contact-content py-16">
         <div class="container mx-auto px-4">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="contact-form">
-              <h2 class="text-2xl font-bold mb-6">Envíanos un mensaje</h2>
-              <form @submit.prevent="handleSubmit">
-                <div class="mb-4">
-                  <label class="block text-gray-700 mb-2" for="name">Nombre</label>
-                  <input type="text" id="name" v-model="form.name" class="form-input" required>
-                </div>
-                <div class="mb-4">
-                  <label class="block text-gray-700 mb-2" for="email">Email</label>
-                  <input type="email" id="email" v-model="form.email" class="form-input" required>
-                </div>
-                <div class="mb-4">
-                  <label class="block text-gray-700 mb-2" for="message">Mensaje</label>
-                  <textarea id="message" v-model="form.message" class="form-textarea" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="primary-btn w-full">Enviar Mensaje</button>
-              </form>
+          <!-- Contact Cards -->
+          <div class="contact-cards grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            <div class="contact-card">
+              <div class="card-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <h3>Llámanos</h3>
+              <p>+52 (55) 1234-5678</p>
+              <a href="tel:+525512345678" class="card-link">
+                Llamar ahora
+                <i class="fas fa-arrow-right"></i>
+              </a>
             </div>
-            <div id="location" class="contact-info">
-              <h2 class="text-2xl font-bold mb-6">Información de Contacto</h2>
-              <div class="mb-6">
-                <h3 class="text-xl font-semibold mb-3">Dirección</h3>
-                <p class="text-gray-700">Calle Principal #123<br>Colonia Industrial<br>Ciudad de México, México</p>
+            
+            <div class="contact-card">
+              <div class="card-icon">
+                <i class="fas fa-envelope"></i>
               </div>
-              <div class="mb-6">
-                <h3 class="text-xl font-semibold mb-3">Teléfono</h3>
-                <p class="text-gray-700">+52 (55) 1234-5678</p>
+              <h3>Escríbenos</h3>
+              <p>contacto@omasolutions.com</p>
+              <a href="mailto:contacto@omasolutions.com" class="card-link">
+                Enviar email
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+            
+            <div class="contact-card">
+              <div class="card-icon">
+                <i class="fas fa-map-marker-alt"></i>
               </div>
-              <div class="mb-6">
-                <h3 class="text-xl font-semibold mb-3">Email</h3>
-                <p class="text-gray-700">contacto@omasolutions.com</p>
+              <h3>Visítanos</h3>
+              <p>Calle Principal #123, CDMX</p>
+              <a href="#map" class="card-link">
+                Ver mapa
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Contact Form -->
+            <FormFrame>
+              <div class="form-header mb-8">
+                <h2 class="text-3xl font-bold mb-3">Iniciemos tu proyecto</h2>
+                <p class="text-gray-600">Cuéntanos sobre tu proyecto y nos pondremos en contacto contigo pronto.</p>
               </div>
-              <div class="mb-6">
-                <h3 class="text-xl font-semibold mb-3">Horario</h3>
-                <p class="text-gray-700">Lunes a Viernes: 9:00 AM - 6:00 PM<br>Sábado: 9:00 AM - 2:00 PM</p>
+              
+              <form @submit.prevent="handleSubmit" class="space-y-6">
+                <div class="form-group">
+                  <label for="name">Nombre completo</label>
+                  <input 
+                    id="name" 
+                    v-model="formData.name" 
+                    type="text" 
+                    required 
+                    :class="{ 'has-value': formData.name }" 
+                    placeholder="Tu nombre completo"
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Correo electrónico</label>
+                  <input 
+                    id="email" 
+                    v-model="formData.email" 
+                    type="email" 
+                    required 
+                    :class="{ 'has-value': formData.email }" 
+                    placeholder="tu@email.com"
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">Teléfono (opcional)</label>
+                  <input 
+                    id="phone" 
+                    v-model="formData.phone" 
+                    type="tel" 
+                    :class="{ 'has-value': formData.phone }" 
+                    placeholder="Tu número de teléfono"
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="projectType">Tipo de proyecto</label>
+                  <select 
+                    id="projectType" 
+                    v-model="formData.projectType" 
+                    required 
+                    :class="{ 'has-value': formData.projectType }"
+                  >
+                    <option value="" disabled selected>Selecciona el tipo de proyecto</option>
+                    <option value="cnc">Maquinado CNC</option>
+                    <option value="3dprinting">Impresión 3D</option>
+                    <option value="design">Diseño de producto</option>
+                    <option value="other">Otro</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Mensaje</label>
+                  <textarea 
+                    id="message" 
+                    v-model="formData.message" 
+                    rows="4" 
+                    required 
+                    :class="{ 'has-value': formData.message }" 
+                    placeholder="Describe tu proyecto o idea"
+                  ></textarea>
+                </div>
+
+                <button 
+                  type="submit" 
+                  class="submit-btn" 
+                  :disabled="isSubmitting"
+                >
+                  <span v-if="!isSubmitting">Enviar mensaje</span>
+                  <span v-else class="flex items-center">
+                    <i class="fas fa-spinner fa-spin mr-2"></i>
+                    Enviando...
+                  </span>
+                </button>
+              </form>
+            </FormFrame>
+
+            <!-- Info Section -->
+            <div class="info-container">
+              <div id="map" class="map-container mb-8">
+                <div class="map-placeholder">
+                  <i class="fas fa-map-marked-alt"></i>
+                  <p>Mapa de ubicación</p>
+                </div>
+              </div>
+
+              <div class="business-hours">
+                <h3 class="text-xl font-bold mb-4">Horario de atención</h3>
+                <div class="hours-grid">
+                  <div class="day-row" v-for="(hours, day) in businessHours" :key="day">
+                    <span class="day">{{ day }}</span>
+                    <span class="hours">{{ hours }}</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
     <Footer />
   </div>
 </template>
 
 <script>
+import { ref } from 'vue'
 import NavBar from '../components/NavBar.vue'
 import Footer from '../components/Footer.vue'
 import BannerV1 from '../components/BannerV1.vue'
+import FormFrame from '~/components/FormFrame.vue'
 
 export default {
   name: 'ContactPage',
   components: {
     NavBar,
     Footer,
-    BannerV1
+    BannerV1,
+    FormFrame
   },
   data() {
     return {
-      form: {
+      isSubmitting: false,
+      formData: {
         name: '',
         email: '',
+        phone: '',
+        projectType: '',
         message: ''
+      },
+      businessHours: {
+        'Lunes': '9:00 AM - 6:00 PM',
+        'Martes': '9:00 AM - 6:00 PM',
+        'Miércoles': '9:00 AM - 6:00 PM',
+        'Jueves': '9:00 AM - 6:00 PM',
+        'Viernes': '9:00 AM - 6:00 PM',
+        'Sábado': '9:00 AM - 2:00 PM',
+        'Domingo': 'Cerrado'
       }
     }
   },
   methods: {
-    handleSubmit() {
-      // Handle form submission logic here
-      console.log('Form submitted:', this.form)
-      // Reset form
-      this.form = {
-        name: '',
-        email: '',
-        message: ''
+    async handleSubmit() {
+      this.isSubmitting = true
+      
+      try {
+        // Simulate API call
+        await new Promise(resolve => setTimeout(resolve, 1500))
+        
+        console.log('Form submitted:', this.formData)
+        
+        // Reset form
+        this.formData = {
+          name: '',
+          email: '',
+          phone: '',
+          projectType: '',
+          message: ''
+        }
+        
+        // Show success message (you could use a toast notification here)
+        alert('Mensaje enviado correctamente')
+      } catch (error) {
+        console.error('Error submitting form:', error)
+        alert('Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.')
+      } finally {
+        this.isSubmitting = false
       }
     }
   }
@@ -105,25 +243,145 @@ export default {
   z-index: 1;
 }
 
-.form-input,
-.form-textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid var(--content-gray);
-  border-radius: 0.5rem;
-  transition: border-color 0.3s ease;
-}
-
-.form-input:focus,
-.form-textarea:focus {
-  outline: none;
-  border-color: var(--content-primary);
-}
-
-.contact-info {
-  background-color: #fff;
+/* Contact Cards */
+.contact-card {
+  background: white;
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  background: rgba(var(--content-primary-rgb), 0.1);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.card-icon i {
+  font-size: 1.5rem;
+  color: var(--content-primary);
+}
+
+.contact-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--content-dark);
+}
+
+.contact-card p {
+  color: var(--content-gray);
+  margin-bottom: 1.5rem;
+}
+
+.card-link {
+  color: var(--content-primary);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: gap 0.3s ease;
+}
+
+.card-link:hover {
+  gap: 0.75rem;
+}
+
+/* Map and Business Hours */
+.info-container {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.map-container {
+  height: 300px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: rgba(var(--content-primary-rgb), 0.05);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.map-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(var(--content-primary-rgb), 0.1);
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--content-primary);
+}
+
+.map-placeholder i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.map-placeholder p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.map-container:hover .map-placeholder p {
+  opacity: 0.8;
+}
+
+.hours-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.day-row {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(var(--content-gray-rgb), 0.2);
+}
+
+.day {
+  font-weight: 500;
+  color: var(--content-dark);
+}
+
+.hours {
+  color: var(--content-gray);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 </style>
