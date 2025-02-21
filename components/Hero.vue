@@ -72,14 +72,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.hero-title {
-  font-size: clamp(2.5rem, 8vw, 4rem);
-  font-weight: bold;
-  color: var(--color-light);
-  margin-bottom: 1rem;
-  line-height: 1.2;
+  animation: fadeInUp 1s ease-out;
 }
 
 .pre-title {
@@ -89,6 +82,16 @@
   color: var(--color-secondary);
   margin-bottom: 1rem;
   font-weight: 600;
+  animation: fadeInLeft 0.8s ease-out 0.2s both;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: bold;
+  color: var(--color-light);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  animation: fadeInRight 0.8s ease-out 0.4s both;
 }
 
 .hero-text {
@@ -97,13 +100,7 @@
   max-width: 700px;
   margin: 0 auto;
   width: 100%;
-}
-
-.main-text {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-  text-align: center;
+  animation: fadeInUp 0.8s ease-out 0.6s both;
 }
 
 .hero-features {
@@ -113,6 +110,7 @@
   margin: 2rem 0;
   flex-wrap: wrap;
   width: 100%;
+  animation: fadeIn 0.8s ease-out 0.8s both;
 }
 
 .feature {
@@ -134,6 +132,7 @@
   justify-content: center;
   margin-top: 2rem;
   width: 100%;
+  animation: fadeInUp 0.8s ease-out 1s both;
 }
 
 .primary-btn, .secondary-btn {
@@ -286,6 +285,48 @@
   .primary-btn, .secondary-btn {
     width: 100%;
     padding: 0.8rem 1.5rem;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 </style>

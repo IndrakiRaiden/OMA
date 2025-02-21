@@ -14,7 +14,10 @@
              :key="index"
              class="card-wrapper"
              data-aos="fade-up"
-             :data-aos-delay="index * 100">
+             data-aos-duration="800"
+             data-aos-offset="200"
+             data-aos-easing="ease-out-cubic"
+             :data-aos-delay="index * 150">
           <IndustryCard
             :icon="industry.icon"
             :title="industry.title"

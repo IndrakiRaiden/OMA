@@ -1,44 +1,51 @@
 <template>
   <div>
     <NavBar />
-    <div class="about-page">
-      <AboutHero />
+    <main class="about-page">
+      <BannerV1 
+        title="Sobre Nosotros" 
+        subtitle="Innovación y excelencia en manufactura CNC"
+        :buttons="[
+          { text: 'Nuestra Historia', href: '#historia', class: 'primary-btn' },
+          { text: 'Contáctanos', href: '#contacto', class: 'secondary-btn' }
+        ]"
+      />
       <MissionVision />
       <OurValues />
       <OurAttributes />
       <NameOrigin />
-    </div>
+    </main>
     <Footer />
   </div>
 </template>
 
 <script>
 import { defineComponent } from 'vue'
-import AboutHero from '../components/about-components/AboutHero.vue'
 import MissionVision from '../components/about-components/MissionVision.vue'
 import OurValues from '../components/about-components/OurValues.vue'
 import OurAttributes from '../components/about-components/OurAttributes.vue'
 import NameOrigin from '../components/about-components/NameOrigin.vue'
 import NavBar from '../components/NavBar.vue'
 import Footer from '../components/Footer.vue'
+import BannerV1 from '../components/BannerV1.vue'
 
 export default defineComponent({
   name: 'AboutPage',
   components: {
-    AboutHero,
     MissionVision,
     OurValues,
     OurAttributes,
     NameOrigin,
     NavBar,
-    Footer
+    Footer,
+    BannerV1
   }
 })
 </script>
 
 <style scoped>
 .about-page {
-  background-color: #F5F5F5;
+  background-color: var(--content-light);
   overflow: hidden;
   position: relative;
   min-height: 100vh;

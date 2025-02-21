@@ -1,29 +1,27 @@
 <template>
-  <section class="banner">
-    <div class="banner-container" :class="{ 'with-buttons': showButtons }">
-      <div class="banner-content">
-        <h1 class="title">
-          {{ title }} 
-          <span v-if="highlight" class="highlight">{{ highlight }}</span>
-        </h1>
-        <p class="subtitle">{{ subtitle }}</p>
-        <div v-if="showButtons" class="button-group">
-          <button class="primary-btn">
-            Contáctanos
-            <i class="fas fa-arrow-right"></i>
-          </button>
-          <button class="secondary-btn">
-            Ver Proyectos
-            <i class="fas fa-external-link-alt"></i>
-          </button>
-        </div>
-      </div>
-      <div class="decorative-elements">
-        <div class="circle circle-1"></div>
-        <div class="circle circle-2"></div>
-        <div class="pattern-overlay"></div>
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">{{ title }}</h1>
+      <p class="hero-subtitle">{{ subtitle }}</p>
+      <div class="button-group">
+        <a v-for="(button, index) in buttons" 
+           :key="index"
+           :href="button.href" 
+           :class="button.class">
+          {{ button.text }}
+          <span class="btn-icon">
+            <i :class="button.class.includes('primary') ? 'fas fa-arrow-right' : 'fas fa-external-link-alt'"></i>
+          </span>
+        </a>
       </div>
     </div>
+    <!-- Additional decorative elements -->
+    <div class="geometric-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="gradient-overlay"></div>
   </section>
 </template>
 
@@ -37,195 +35,343 @@ defineProps({
     type: String,
     default: ''
   },
-  highlight: {
-    type: String,
-    default: ''
-  },
-  showButtons: {
-    type: Boolean,
-    default: false
+  buttons: {
+    type: Array,
+    default: () => []
   }
 })
 </script>
 
 <style scoped>
-.banner-container {
+.hero-section {
   position: relative;
-  height: 80vh;
-  min-height: 600px;
-  width: 100%;
-  background: linear-gradient(135deg, var(--content-primary) 0%, var(--content-secondary) 100%);
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  padding: 6rem 2rem;
   overflow: hidden;
-  padding: 2rem;
-  margin-top: 64px;
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  background-image: linear-gradient(
+    165deg,
+    var(--content-primary) 0%,
+    #2a4365 25%,
+    var(--content-secondary) 55%,
+    #1a365d 85%,
+    var(--content-primary) 100%
+  );
 }
 
-.banner-content {
+.hero-content {
   position: relative;
   z-index: 2;
-  text-align: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 900px;
+  animation: fadeInUp 1s ease-out;
+  padding: 0 1rem;
 }
 
-.title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+.hero-title {
   color: var(--content-light);
-  margin-bottom: 1rem;
-  line-height: 1.2;
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: slideInDown 1.2s ease-out;
+  letter-spacing: -0.02em;
 }
 
-.highlight {
-  color: var(--content-accent);
-  font-weight: 700;
-  display: block;
-  margin-top: 0.5rem;
-}
-
-.subtitle {
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
+.hero-subtitle {
   color: var(--content-light);
-  max-width: 800px;
-  margin: 0 auto 2rem;
+  font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
   line-height: 1.6;
+  animation: slideInUp 1.2s ease-out;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .button-group {
   display: flex;
   gap: 1.5rem;
   justify-content: center;
-  margin-top: 2rem;
+  animation: fadeIn 1.5s ease-out;
 }
 
 .primary-btn,
 .secondary-btn {
-  padding: 1rem 2rem;
-  border-radius: 2rem;
+  padding: 0.85rem 2rem;
   font-weight: 600;
   font-size: 1.1rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  transition: all 0.3s ease;
-  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  z-index: 1;
+}
+
+.btn-icon {
+  display: inline-flex;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
 
 .primary-btn {
-  background: var(--content-accent);
+  background: var(--content-secondary);
   color: var(--content-light);
-  border: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.primary-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, var(--content-primary), #2a4365);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(13, 28, 51, 0.3);
+}
+
+.primary-btn:hover .btn-icon {
+  transform: translateX(4px);
 }
 
 .secondary-btn {
   background: transparent;
   color: var(--content-light);
-  border: 2px solid var(--content-light);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 0;
+  padding: calc(0.85rem - 1px) calc(2rem - 1px);
 }
 
-.primary-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+.secondary-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), #e2e8f0);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s ease;
+  z-index: -1;
 }
 
 .secondary-btn:hover {
-  background: var(--content-light);
   color: var(--content-primary);
 }
 
-.decorative-elements {
+.secondary-btn:hover::before {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+.secondary-btn:hover .btn-icon {
+  transform: translate(3px, -3px);
+}
+
+/* Enhanced background elements */
+.hero-section::before,
+.hero-section::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, 
+    rgba(226, 232, 240, 0.08),
+    rgba(44, 82, 130, 0.08)
+  );
+  animation: float 20s infinite;
+}
+
+.hero-section::before {
+  top: -150px;
+  right: -100px;
+  animation-delay: -5s;
+}
+
+.hero-section::after {
+  bottom: -150px;
+  left: -100px;
+  animation-delay: -10s;
+}
+
+.geometric-shapes {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
   pointer-events: none;
 }
 
-.circle {
+.shape {
   position: absolute;
-  border-radius: 50%;
-  opacity: 0.1;
+  background: linear-gradient(135deg, 
+    rgba(226, 232, 240, 0.05),
+    rgba(44, 82, 130, 0.05)
+  );
+  backdrop-filter: blur(3px);
 }
 
-.circle-1 {
-  width: 400px;
-  height: 400px;
-  background: var(--content-light);
-  top: -100px;
-  right: -100px;
-  animation: float 8s ease-in-out infinite;
+.shape-1 {
+  width: 100px;
+  height: 100px;
+  top: 20%;
+  left: 10%;
+  transform: rotate(45deg);
+  animation: float 15s infinite, pulse 8s ease-in-out infinite;
 }
 
-.circle-2 {
-  width: 300px;
-  height: 300px;
-  background: var(--content-accent);
-  bottom: -50px;
-  left: -50px;
-  animation: float 10s ease-in-out infinite reverse;
+.shape-2 {
+  width: 150px;
+  height: 150px;
+  top: 60%;
+  right: 15%;
+  border-radius: 30%;
+  animation: float 18s infinite reverse, pulse 8s ease-in-out infinite 2s;
 }
 
-.pattern-overlay {
+.shape-3 {
+  width: 80px;
+  height: 80px;
+  bottom: 20%;
+  left: 20%;
+  border-radius: 24%;
+  animation: float 20s infinite, pulse 8s ease-in-out infinite 4s;
+}
+
+.gradient-overlay {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(var(--content-light) 1px, transparent 1px);
-  background-size: 30px 30px;
-  opacity: 0.05;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, 
+    transparent 0%, 
+    rgba(13, 28, 51, 0.2) 100%
+  );
+  pointer-events: none;
 }
 
 @keyframes float {
   0%, 100% {
-    transform: translateY(0);
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(15px, -15px) rotate(5deg);
   }
   50% {
+    transform: translate(0, -25px) rotate(-5deg);
+  }
+  75% {
+    transform: translate(-15px, -15px) rotate(3deg);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
     transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.05;
+  }
+  50% {
+    opacity: 0.1;
   }
 }
 
 @media (max-width: 768px) {
-  .banner-container {
-    height: 70vh;
-    min-height: 500px;
-    padding: 1rem;
+  .hero-section {
+    padding: 4rem 1rem;
   }
 
   .button-group {
     flex-direction: column;
     gap: 1rem;
+    padding: 0 2rem;
   }
 
   .primary-btn,
   .secondary-btn {
-    width: 100%;
     justify-content: center;
   }
-}
 
-@media (prefers-color-scheme: dark) {
-  .banner-container {
-    background: linear-gradient(135deg, #1a1f2e 0%, #121826 100%);
-  }
-
-  .subtitle {
-    color: var(--content-light-muted);
-  }
-
-  .primary-btn {
-    background: var(--content-accent-dark);
-  }
-
-  .circle-1 {
-    opacity: 0.05;
-  }
-
-  .circle-2 {
-    background: var(--content-accent-dark);
+  .geometric-shapes {
+    display: none;
   }
 }
 </style>

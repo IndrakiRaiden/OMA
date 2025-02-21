@@ -46,6 +46,8 @@
   transform-style: preserve-3d;
   perspective: 1000px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(100px) scale(0.9) rotateX(10deg);
 }
 
 .industry-card::before {
@@ -332,6 +334,21 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.reveal-card {
+  animation: revealCard 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes revealCard {
+  from {
+    opacity: 0;
+    transform: translateY(100px) scale(0.9) rotateX(10deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotateX(0);
+  }
+}
+
 @media (max-width: 768px) {
   .industry-card {
     min-height: 280px;
@@ -385,19 +402,46 @@ export default {
       required: true
     }
   },
+  data() {
+    return {
+      observer: null
+    }
+  },
   mounted() {
-    this.$el.addEventListener('mousemove', this.handleMouseMove)
+    // Initialize intersection observer for reveal animation
+    this.observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.$el.classList.add('reveal-card');
+            this.observer.unobserve(this.$el);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '50px'
+      }
+    );
+    
+    this.observer.observe(this.$el);
+
+    // Add mouse movement tracking
+    this.$el.addEventListener('mousemove', this.handleMouseMove);
   },
   beforeDestroy() {
-    this.$el.removeEventListener('mousemove', this.handleMouseMove)
+    if (this.observer) {
+      this.observer.disconnect();
+    }
+    this.$el.removeEventListener('mousemove', this.handleMouseMove);
   },
   methods: {
     handleMouseMove(e) {
-      const rect = this.$el.getBoundingClientRect()
-      const x = ((e.clientX - rect.left) / rect.width) * 100
-      const y = ((e.clientY - rect.top) / rect.height) * 100
-      this.$el.style.setProperty('--mouse-x', `${x}%`)
-      this.$el.style.setProperty('--mouse-y', `${y}%`)
+      const rect = this.$el.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      this.$el.style.setProperty('--mouse-x', `${x}%`);
+      this.$el.style.setProperty('--mouse-y', `${y}%`);
     }
   }
 }

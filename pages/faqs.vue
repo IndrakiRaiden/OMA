@@ -1,187 +1,148 @@
 <template>
   <div>
     <NavBar />
-    <div class="faqs-page">
-      <FaqsBackground>
-        <div class="hero text-white py-20 relative z-10">
-          <div class="container mx-auto px-4">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Preguntas Frecuentes</h1>
-            <p class="text-xl">Respuestas a tus dudas sobre nuestros servicios y soluciones</p>
-          </div>
-        </div>
-      </FaqsBackground>
-
-      <div class="faqs-content py-16 bg-gray-50">
+    <main class="faqs-page">
+      <BannerV1 
+        title="Preguntas Frecuentes" 
+        subtitle="Encuentra respuestas a las preguntas más comunes"
+        :buttons="[
+          { text: 'Ver Preguntas', href: '#faqs', class: 'primary-btn' },
+          { text: 'Contáctanos', href: '/contact', class: 'secondary-btn' }
+        ]"
+      />
+      <div id="faqs" class="faqs-content py-16">
         <div class="container mx-auto px-4">
-          <div class="max-w-3xl mx-auto space-y-6">
-            <!-- FAQ Item 1 -->
-            <div class="faq-item bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
-              <div class="flex items-start">
-                <div class="icon-wrapper mr-4 mt-1">
-                  <i class="fas fa-question-circle text-2xl text-content-secondary"></i>
-                </div>
-                <div>
-                  <h3 class="text-xl font-semibold mb-2 text-content-dark">¿Qué servicios ofrece OMA Solutions?</h3>
-                  <p class="text-gray-700">Ofrecemos una amplia gama de servicios de automatización y soluciones tecnológicas para diferentes industrias. Nuestros servicios incluyen desarrollo de software personalizado, integración de sistemas, y soluciones de automatización industrial.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- FAQ Item 2 -->
-            <div class="faq-item bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
-              <div class="flex items-start">
-                <div class="icon-wrapper mr-4 mt-1">
-                  <i class="fas fa-file-invoice-dollar text-2xl text-content-secondary"></i>
-                </div>
-                <div>
-                  <h3 class="text-xl font-semibold mb-2 text-content-dark">¿Cómo puedo solicitar una cotización?</h3>
-                  <p class="text-gray-700">Puede solicitar una cotización fácilmente a través de nuestra página de cotización en línea o contactándonos directamente. Evaluaremos sus necesidades específicas y le proporcionaremos una propuesta detallada.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- FAQ Item 3 -->
-            <div class="faq-item bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
-              <div class="flex items-start">
-                <div class="icon-wrapper mr-4 mt-1">
-                  <i class="fas fa-industry text-2xl text-content-secondary"></i>
-                </div>
-                <div>
-                  <h3 class="text-xl font-semibold mb-2 text-content-dark">¿En qué industrias tienen experiencia?</h3>
-                  <p class="text-gray-700">Tenemos experiencia en diversas industrias, incluyendo manufactura, logística, energía, y más. Puede consultar nuestra página de industrias para obtener más información sobre los sectores específicos en los que trabajamos.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- FAQ Item 4 -->
-            <div class="faq-item bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
-              <div class="flex items-start">
-                <div class="icon-wrapper mr-4 mt-1">
-                  <i class="fas fa-cogs text-2xl text-content-secondary"></i>
-                </div>
-                <div>
-                  <h3 class="text-xl font-semibold mb-2 text-content-dark">¿Cuál es el proceso de implementación?</h3>
-                  <p class="text-gray-700">Nuestro proceso de implementación es colaborativo y transparente. Comenzamos con una evaluación detallada de sus necesidades, desarrollamos una solución personalizada, y trabajamos estrechamente con su equipo durante toda la implementación.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- FAQ Item 5 -->
-            <div class="faq-item bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
-              <div class="flex items-start">
-                <div class="icon-wrapper mr-4 mt-1">
-                  <i class="fas fa-clock text-2xl text-content-secondary"></i>
-                </div>
-                <div>
-                  <h3 class="text-xl font-semibold mb-2 text-content-dark">¿Cuál es el tiempo promedio de entrega de un proyecto?</h3>
-                  <p class="text-gray-700">El tiempo de entrega varía según la complejidad del proyecto. Típicamente, los proyectos pequeños pueden completarse en 4-6 semanas, mientras que los proyectos más grandes pueden tomar 3-6 meses. Proporcionamos un cronograma detallado durante la fase de planificación.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- FAQ Item 6 -->
-            <div class="faq-item bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
-              <div class="flex items-start">
-                <div class="icon-wrapper mr-4 mt-1">
-                  <i class="fas fa-shield-alt text-2xl text-content-secondary"></i>
-                </div>
-                <div>
-                  <h3 class="text-xl font-semibold mb-2 text-content-dark">¿Qué garantías ofrecen para sus servicios?</h3>
-                  <p class="text-gray-700">Ofrecemos garantía en todos nuestros servicios. Esto incluye soporte técnico post-implementación, mantenimiento preventivo y correctivo, y actualizaciones de software según lo acordado en el contrato de servicio.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- FAQ Item 7 -->
-            <div class="faq-item bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
-              <div class="flex items-start">
-                <div class="icon-wrapper mr-4 mt-1">
-                  <i class="fas fa-graduation-cap text-2xl text-content-secondary"></i>
-                </div>
-                <div>
-                  <h3 class="text-xl font-semibold mb-2 text-content-dark">¿Proporcionan capacitación para el uso de sus soluciones?</h3>
-                  <p class="text-gray-700">Sí, ofrecemos programas completos de capacitación para asegurar que su equipo pueda utilizar efectivamente nuestras soluciones. Esto incluye documentación detallada, sesiones de entrenamiento presenciales o virtuales, y recursos de aprendizaje en línea.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- FAQ Item 8 -->
-            <div class="faq-item bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
-              <div class="flex items-start">
-                <div class="icon-wrapper mr-4 mt-1">
-                  <i class="fas fa-headset text-2xl text-content-secondary"></i>
-                </div>
-                <div>
-                  <h3 class="text-xl font-semibold mb-2 text-content-dark">¿Qué tipo de soporte técnico ofrecen?</h3>
-                  <p class="text-gray-700">Brindamos soporte técnico 24/7 para casos críticos, con diferentes niveles de servicio según las necesidades del cliente. Esto incluye soporte remoto, asistencia en sitio, monitoreo proactivo y mantenimiento preventivo.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- FAQ Item 9 -->
-            <div class="faq-item bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
-              <div class="flex items-start">
-                <div class="icon-wrapper mr-4 mt-1">
-                  <i class="fas fa-sync text-2xl text-content-secondary"></i>
-                </div>
-                <div>
-                  <h3 class="text-xl font-semibold mb-2 text-content-dark">¿Pueden integrar sus soluciones con sistemas existentes?</h3>
-                  <p class="text-gray-700">Sí, nuestras soluciones están diseñadas para integrarse con una amplia gama de sistemas existentes. Tenemos experiencia en integración con ERPs, CRMs, sistemas de manufactura, y otras plataformas empresariales comunes.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- FAQ Item 10 -->
-            <div class="faq-item bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
-              <div class="flex items-start">
-                <div class="icon-wrapper mr-4 mt-1">
-                  <i class="fas fa-chart-line text-2xl text-content-secondary"></i>
-                </div>
-                <div>
-                  <h3 class="text-xl font-semibold mb-2 text-content-dark">¿Cómo miden el éxito de los proyectos?</h3>
-                  <p class="text-gray-700">Utilizamos KPIs específicos para cada proyecto, que pueden incluir métricas de rendimiento, ROI, eficiencia operativa, y satisfacción del usuario. Realizamos revisiones periódicas con nuestros clientes para asegurar que se cumplan los objetivos establecidos.</p>
+          <div class="max-w-3xl mx-auto">
+            <div class="space-y-6">
+              <div v-for="(faq, index) in faqs" :key="index" class="faq-item">
+                <button 
+                  class="faq-question"
+                  :class="{ 'active': activeIndex === index }"
+                  @click="toggleFaq(index)"
+                >
+                  {{ faq.question }}
+                  <i class="fas" :class="activeIndex === index ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+                </button>
+                <div 
+                  class="faq-answer"
+                  :class="{ 'active': activeIndex === index }"
+                  v-show="activeIndex === index"
+                >
+                  {{ faq.answer }}
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </main>
     <Footer />
   </div>
 </template>
 
-<script setup>
-import { useHead } from '@unhead/vue'
-import FaqsBackground from '~/components/backgrounds/FaqsBackground.vue'
+<script>
+import NavBar from '../components/NavBar.vue'
+import Footer from '../components/Footer.vue'
+import BannerV1 from '~/components/BannerV1.vue'
 
-useHead({
-  title: 'FAQs - OMA Solutions',
-  meta: [
-    { name: 'description', content: 'Preguntas frecuentes sobre los servicios y soluciones de OMA Solutions' }
-  ]
-})
+export default {
+  name: 'FAQsPage',
+  components: {
+    NavBar,
+    Footer,
+    BannerV1
+  },
+  data() {
+    return {
+      activeIndex: null,
+      faqs: [
+        {
+          question: '¿Qué tipos de servicios de mecanizado CNC ofrecen?',
+          answer: 'Ofrecemos una amplia gama de servicios de mecanizado CNC, incluyendo fresado, torneado, corte por láser y fabricación de prototipos. Trabajamos con diversos materiales y podemos manejar proyectos de diferentes escalas.'
+        },
+        {
+          question: '¿Cuál es el tiempo promedio de entrega para un proyecto?',
+          answer: 'El tiempo de entrega varía según la complejidad del proyecto, pero generalmente manejamos plazos de 2-4 semanas para proyectos estándar. Para proyectos urgentes, podemos ofrecer tiempos de entrega más cortos.'
+        },
+        {
+          question: '¿Trabajan con materiales específicos?',
+          answer: 'Sí, trabajamos con una amplia variedad de materiales incluyendo acero, aluminio, titanio, plásticos industriales y otros materiales especializados según los requerimientos del proyecto.'
+        },
+        {
+          question: '¿Ofrecen servicios de diseño CAD/CAM?',
+          answer: 'Sí, contamos con un equipo especializado en diseño CAD/CAM que puede ayudarte a optimizar tus diseños para la producción CNC, garantizando la mejor calidad y eficiencia.'
+        },
+        {
+          question: '¿Cómo puedo solicitar una cotización?',
+          answer: 'Puedes solicitar una cotización a través de nuestro formulario en línea en la sección "Cotiza", por correo electrónico o llamándonos directamente. Te responderemos en un plazo máximo de 24 horas hábiles.'
+        },
+        {
+          question: '¿Ofrecen servicios de prototipado rápido?',
+          answer: 'Sí, ofrecemos servicios de prototipado rápido utilizando tecnología CNC de última generación. Esto nos permite crear prototipos funcionales de alta calidad en plazos cortos.'
+        }
+      ]
+    }
+  },
+  methods: {
+    toggleFaq(index) {
+      this.activeIndex = this.activeIndex === index ? null : index
+    }
+  }
+}
 </script>
 
 <style scoped>
-.hero {
-  position: relative;
+.faqs-page {
+  background-color: var(--content-light);
+  min-height: 100vh;
 }
 
-.icon-wrapper {
-  color: var(--content-secondary);
+.faqs-content {
+  position: relative;
+  z-index: 1;
 }
 
 .faq-item {
-  border-left: 4px solid var(--content-secondary);
+  background: white;
+  border: 1px solid var(--content-gray);
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 
-.faq-item:hover {
-  transform: translateY(-2px);
-  border-left-color: var(--content-accent);
+.faq-question {
+  width: 100%;
+  padding: 1.5rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--content-primary);
+  background: white;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.faq-item:hover .icon-wrapper {
-  color: var(--content-accent);
+.faq-question:hover {
+  background: #f8f9fa;
+}
+
+.faq-question.active {
+  color: var(--content-secondary);
+}
+
+.faq-answer {
+  padding: 0 1.5rem 1.5rem;
+  color: var(--content-dark);
+  line-height: 1.6;
+}
+
+.fas {
+  transition: transform 0.3s ease;
+}
+
+.faq-question.active .fas {
+  transform: rotate(180deg);
 }
 </style>

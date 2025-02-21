@@ -1,15 +1,16 @@
 <template>
   <div>
     <NavBar />
-    <div class="industries-page">
-      <div class="hero text-white py-20">
-        <div class="container mx-auto px-4">
-          <h1 class="text-4xl md:text-5xl font-bold mb-4">Industrias</h1>
-          <p class="text-xl">Soluciones especializadas para diferentes sectores</p>
-        </div>
-      </div>
-
-      <div class="industries-content py-16">
+    <main class="industries-page">
+      <BannerV1 
+        title="Industrias" 
+        subtitle="Soluciones especializadas para diferentes sectores"
+        :buttons="[
+          { text: 'Ver Industrias', href: '#industrias', class: 'primary-btn' },
+          { text: 'Contáctanos', href: '#contacto', class: 'secondary-btn' }
+        ]"
+      />
+      <div id="industrias" class="industries-content py-16">
         <div class="container mx-auto px-4">
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Industry Card 1 -->
@@ -80,7 +81,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </main>
     <Footer />
   </div>
 </template>
@@ -88,11 +89,14 @@
 <script>
 import NavBar from '../components/NavBar.vue'
 import Footer from '../components/Footer.vue'
+import BannerV1 from '../components/BannerV1.vue'
 
 export default {
+  name: 'IndustriasPage',
   components: {
     NavBar,
-    Footer
+    Footer,
+    BannerV1
   }
 }
 </script>
@@ -103,28 +107,6 @@ export default {
   min-height: 100vh;
   overflow: hidden;
   position: relative;
-}
-
-.hero {
-  background: var(--content-primary);
-  position: relative;
-}
-
-.hero::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, var(--content-primary) 0%, var(--content-dark) 100%);
-  opacity: 0.9;
-  z-index: 1;
-}
-
-.hero > div {
-  position: relative;
-  z-index: 2;
 }
 
 .industry-card {

@@ -1,12 +1,11 @@
 <template>
   <div class="home">
     <NavBar />
-    <Hero />
-    <main>
+    <main class="home-page">
+      <Hero />
       <Solutions />
       <Timeline />
       <Benefits />
-      <Explanation />
       <HowItWorks />
       <Industries />
       <Testimonials />
@@ -23,7 +22,6 @@ import Hero from '~/components/Hero.vue'
 import Solutions from '~/components/index-components/Solutions.vue'
 import Timeline from '~/components/index-components/Timeline.vue'
 import Benefits from '~/components/index-components/Benefits.vue'
-import Explanation from '~/components/index-components/Explanation.vue'
 import HowItWorks from '~/components/index-components/HowItWorks.vue'
 import Industries from '~/components/index-components/Industries.vue'
 import Testimonials from '~/components/index-components/Testimonials.vue'
@@ -38,7 +36,6 @@ export default {
     Solutions,
     Timeline,
     Benefits,
-    Explanation,
     HowItWorks,
     Industries,
     Testimonials,
@@ -51,6 +48,11 @@ export default {
 .home {
   background-color: var(--content-light);
   color: var(--content-primary);
+  min-height: 100vh;
+}
+
+.home-page {
+  background-color: var(--content-light);
   min-height: 100vh;
 }
 
