@@ -7,6 +7,8 @@
         <p class="description">Soluciones especializadas para las industrias más exigentes</p>
       </div>
       
+      <div class="spacer"></div>
+      
       <div class="industries-grid">
         <div v-for="(industry, index) in industries" 
              :key="index"
@@ -81,14 +83,14 @@ export default {
 
 .section-header {
   text-align: center;
-  margin-bottom: var(--space-16);
+  margin-bottom: var(--space-48);
 }
 
 .pre-title {
   font-size: var(--text-sm);
   font-weight: 600;
   letter-spacing: 4px;
-  color: var(--color-secondary);
+  color: #F7A01F;
   margin-bottom: var(--space-4);
   display: block;
   text-transform: uppercase;
@@ -97,29 +99,32 @@ export default {
 .title {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 700;
-  color: var(--color-primary);
+  color: #9F8E66;
   margin-bottom: var(--space-4);
   line-height: 1.2;
 }
 
 .description {
   font-size: var(--text-lg);
-  color: var(--color-gray-600);
+  color: #9F8E66;
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
+  margin-bottom: var(--space-16);
 }
 
 .industries-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 3rem;
-  margin-top: var(--space-16);
 }
 
 .card-wrapper {
   height: 100%;
-  padding: 1rem;
+}
+
+.spacer {
+  height: 6rem;
 }
 
 @media (max-width: 1200px) {

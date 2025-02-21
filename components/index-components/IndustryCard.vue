@@ -84,46 +84,61 @@
   inset: 0;
   background: radial-gradient(
     circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    rgba(255, 255, 255, 0.3),
-    rgba(255, 255, 255, 0.1),
-    transparent
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.2),
+    transparent 70%
   );
   transform: translateZ(-1px);
-  transition: opacity 0.3s ease;
+  transition: opacity 0.5s ease;
   opacity: 0;
 }
 
 .industry-card:hover .card-background {
   opacity: 1;
+  animation: moveBackground 8s infinite ease-in-out;
 }
 
 .card-glow {
   position: absolute;
   inset: -2px;
-  background: conic-gradient(
-    from 0deg at 50% 50%,
-    var(--color-primary),
-    var(--color-secondary),
-    var(--color-primary)
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.2),
+    transparent 70%
   );
   opacity: 0;
   transition: opacity 0.5s ease;
   border-radius: inherit;
   z-index: 1;
-  filter: blur(15px);
 }
 
 .industry-card:hover .card-glow {
   opacity: 0.8;
-  animation: glow 4s infinite linear;
+  animation: moveGlow 6s infinite ease-in-out;
 }
 
-@keyframes glow {
+@keyframes moveBackground {
   0% {
-    transform: rotate(0deg);
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+  50% {
+    transform: translate(50%, 50%) scale(1.5);
   }
   100% {
-    transform: rotate(360deg);
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+}
+
+@keyframes moveGlow {
+  0% {
+    transform: translate(50%, 50%) scale(1.2);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    transform: translate(50%, 50%) scale(1.2);
   }
 }
 
@@ -182,7 +197,6 @@
 .icon {
   color: white;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .industry-card:hover .icon {
