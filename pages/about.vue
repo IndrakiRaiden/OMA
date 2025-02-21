@@ -1,4 +1,4 @@
-<template>
+ <template>
   <div>
     <NavBar />
     <main class="about-page">
@@ -7,13 +7,15 @@
         subtitle="Innovación y excelencia en manufactura CNC"
         :buttons="[
           { text: 'Nuestra Historia', href: '#historia', class: 'primary-btn' },
-          { text: 'Contáctanos', href: '#contacto', class: 'secondary-btn' }
+          { text: 'Contáctanos', href: '/contact', class: 'secondary-btn' }
         ]"
       />
+      
       <MissionVision />
-      <OurValues />
-      <OurAttributes />
-      <NameOrigin />
+      <CompanyStats />
+      <TimelineSection id="historia" />
+      <TeamSection />
+      <CTASection />
     </main>
     <Footer />
   </div>
@@ -22,9 +24,10 @@
 <script>
 import { defineComponent } from 'vue'
 import MissionVision from '../components/about-components/MissionVision.vue'
-import OurValues from '../components/about-components/OurValues.vue'
-import OurAttributes from '../components/about-components/OurAttributes.vue'
-import NameOrigin from '../components/about-components/NameOrigin.vue'
+import CompanyStats from '../components/about-components/CompanyStats.vue'
+import TimelineSection from '../components/about-components/TimelineSection.vue'
+import TeamSection from '../components/about-components/TeamSection.vue'
+import CTASection from '../components/services-components/CTASection.vue'
 import NavBar from '../components/NavBar.vue'
 import Footer from '../components/Footer.vue'
 import BannerV1 from '../components/BannerV1.vue'
@@ -33,9 +36,10 @@ export default defineComponent({
   name: 'AboutPage',
   components: {
     MissionVision,
-    OurValues,
-    OurAttributes,
-    NameOrigin,
+    CompanyStats,
+    TimelineSection,
+    TeamSection,
+    CTASection,
     NavBar,
     Footer,
     BannerV1
@@ -45,60 +49,57 @@ export default defineComponent({
 
 <style scoped>
 .about-page {
-  background-color: var(--content-light);
+  background: var(--background-light);
   overflow: hidden;
   position: relative;
   min-height: 100vh;
 }
 
-/* Formas geométricas animadas */
+/* Decorative shapes */
 .about-page::before,
 .about-page::after {
   content: '';
   position: fixed;
-  background: #4B6E8C;
-  opacity: 0.03;
+  background: linear-gradient(135deg,
+    rgba(var(--content-primary-rgb), 0.1),
+    rgba(var(--content-secondary-rgb), 0.1)
+  );
+  opacity: 0.1;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  z-index: 0;
 }
 
 .about-page::before {
-  width: 50vh;
-  height: 50vh;
-  top: 20%;
-  left: -10%;
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-  animation: floatShape1 15s infinite linear;
+  width: 50vw;
+  height: 50vw;
+  top: -25vw;
+  left: -25vw;
+  animation: floatShape1 20s infinite ease-in-out;
 }
 
 .about-page::after {
-  width: 40vh;
-  height: 40vh;
-  bottom: 10%;
-  right: -5%;
-  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-  animation: floatShape2 20s infinite linear;
+  width: 40vw;
+  height: 40vw;
+  bottom: -20vw;
+  right: -20vw;
+  animation: floatShape2 25s infinite ease-in-out;
 }
 
 @keyframes floatShape1 {
-  0% {
-    transform: rotate(0deg) translateY(0);
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
   }
   50% {
-    transform: rotate(180deg) translateY(20px);
-  }
-  100% {
-    transform: rotate(360deg) translateY(0);
+    transform: translate(10vw, 5vw) rotate(60deg);
   }
 }
 
 @keyframes floatShape2 {
-  0% {
-    transform: rotate(0deg) translateX(0);
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
   }
   50% {
-    transform: rotate(-180deg) translateX(-20px);
-  }
-  100% {
-    transform: rotate(-360deg) translateX(0);
+    transform: translate(-10vw, -5vw) rotate(-60deg);
   }
 }
 </style>
