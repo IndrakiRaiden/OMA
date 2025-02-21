@@ -41,8 +41,8 @@ html {
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: var(--content-primary);
-  color: var(--content-secondary);
+  background-color: white;
+  color: var(--content-dark);
   line-height: 1.6;
   @apply bg-light text-dark antialiased;
 }
