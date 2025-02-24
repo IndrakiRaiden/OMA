@@ -15,22 +15,14 @@
         </button>
       </div>
 
-      <div class="nav-menu" :class="{ 'active': isMenuOpen }">
-        <nav class="nav-links">
-          <NuxtLink to="/" class="nav-link">Inicio</NuxtLink>
-          <NuxtLink to="/servicios" class="nav-link">Servicios</NuxtLink>
-          <NuxtLink to="/industrias" class="nav-link">Industrias</NuxtLink>
-          <NuxtLink to="/about" class="nav-link">Acerca de Nosotros</NuxtLink>
-          <NuxtLink to="/faqs" class="nav-link">FAQs</NuxtLink>
-          <NuxtLink to="/contact" class="nav-link">Contacto</NuxtLink>
-        </nav>
-      </div>
+      <SideBar :is-menu-open="isMenuOpen" />
     </div>
   </nav>
 </template>
 
 <script setup>
 import { useHead } from '@unhead/vue'
+import SideBar from './SideBar.vue'
 
 useHead({
   title: 'OMA'
@@ -112,85 +104,6 @@ function handleScroll() {
   margin-right: 2rem;
 }
 
-.nav-menu {
-  display: none;
-  position: fixed;
-  top: 64px;
-  right: -100%;
-  background: var(--color-primary);
-  width: 250px;
-  height: calc(100vh - 64px);
-  padding: 2rem;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
-.nav-menu.active {
-  display: block;
-  right: 0;
-  animation: slideIn 0.3s ease-in-out;
-}
-
-.nav-links {
-  display: none;
-}
-
-.nav-menu .nav-links {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.nav-menu.active .nav-links {
-  animation: fadeIn 0.3s ease-in-out 0.2s forwards;
-}
-
-.nav-link {
-  color: var(--color-gray);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-  position: relative;
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--color-accent);
-  transition: width 0.3s ease;
-}
-
-.nav-link:hover {
-  color: var(--color-secondary);
-}
-
-.nav-link:hover::after {
-  width: 100%;
-}
-
 .menu-btn {
   display: flex;
   flex-direction: column;
@@ -201,20 +114,18 @@ function handleScroll() {
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 10;
 }
 
 .menu-btn span {
   width: 100%;
   height: 3px;
-  background-color: var(--color-secondary);
-  transition: all 0.3s linear;
-  position: relative;
-  transform-origin: 1px;
+  background: var(--color-secondary);
+  border-radius: 3px;
+  transition: all 0.3s ease;
 }
 
-.menu-btn.active span:first-child {
-  transform: rotate(45deg);
+.menu-btn.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
 }
 
 .menu-btn.active span:nth-child(2) {
@@ -222,22 +133,31 @@ function handleScroll() {
 }
 
 .menu-btn.active span:nth-child(3) {
-  transform: rotate(-45deg);
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 .contact-btn {
   padding: 0.75rem 1.5rem;
-  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+  background: var(--color-accent);
   color: var(--color-light);
-  text-decoration: none;
   border-radius: 4px;
-  font-weight: 600;
-  transition: all 0.3s ease;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
 }
 
 .contact-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: var(--color-secondary);
+}
+
+@media (max-width: 768px) {
+  .nav-brand {
+    margin-left: 0;
+  }
+  
+  .nav-right {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -270,14 +190,6 @@ function handleScroll() {
 }
 
 @media (max-width: 768px) {
-  .nav-brand {
-    margin-left: 0;
-  }
-
-  .nav-right {
-    margin-right: 0;
-  }
-
   .brand-text {
     font-size: 1.75rem;
   }
