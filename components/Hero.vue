@@ -46,7 +46,8 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: var(--color-primary);
+  background: url('../public/images/hero/2.jpg') center/cover no-repeat;
+  background-color: var(--color-primary);
 }
 
 .hero-overlay {
@@ -55,6 +56,7 @@
   left: 0;
   right: 0;
   bottom: 0;
+  opacity: 0.85;
   background: linear-gradient(135deg, 
     var(--color-primary) 0%,
     var(--color-secondary) 100%

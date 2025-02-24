@@ -45,23 +45,33 @@ defineProps({
 <style scoped>
 .hero-section {
   position: relative;
-  min-height: 70vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 6rem 2rem;
+  padding: 5rem 2rem;
   overflow: hidden;
+  background: url('../public/images/Banners/1.jpg') center/cover no-repeat;
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-size: 400% 400%;
-  animation: gradientAnimation 15s ease infinite;
   background-image: linear-gradient(
     165deg,
-    var(--content-primary) 0%,
-    #2a4365 25%,
-    var(--content-secondary) 55%,
-    #1a365d 85%,
-    var(--content-primary) 100%
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(42, 67, 101, 0.7) 25%,
+    rgba(0, 0, 0, 0.7) 55%,
+    rgba(26, 54, 93, 0.7) 85%,
+    rgba(0, 0, 0, 0.7) 100%
   );
+  animation: gradientAnimation 15s ease infinite;
+  pointer-events: none;
 }
 
 .hero-content {
@@ -261,19 +271,6 @@ defineProps({
   left: 20%;
   border-radius: 24%;
   animation: float 20s infinite, pulse 8s ease-in-out infinite 4s;
-}
-
-.gradient-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at center, 
-    transparent 0%, 
-    rgba(13, 28, 51, 0.2) 100%
-  );
-  pointer-events: none;
 }
 
 @keyframes float {
