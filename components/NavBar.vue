@@ -108,8 +108,8 @@ function handleScroll() {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 30px;
-  height: 21px;
+  width: 24px;
+  height: 18px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -118,14 +118,15 @@ function handleScroll() {
 
 .menu-btn span {
   width: 100%;
-  height: 3px;
+  height: 2px;
   background: var(--color-secondary);
-  border-radius: 3px;
+  border-radius: 2px;
   transition: all 0.3s ease;
+  transform-origin: center;
 }
 
 .menu-btn.active span:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 6px);
+  transform: rotate(45deg) translate(6px, -6px);
 }
 
 .menu-btn.active span:nth-child(2) {
@@ -133,7 +134,7 @@ function handleScroll() {
 }
 
 .menu-btn.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
+  transform: rotate(-45deg) translate(6px, 6px);
 }
 
 .contact-btn {

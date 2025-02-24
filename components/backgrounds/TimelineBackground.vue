@@ -14,20 +14,10 @@ export default {
 
 <style scoped>
 .timeline-background {
-  background: linear-gradient(135deg, 
-    var(--content-primary) 0%, 
-    var(--content-primary) 25%,
-    var(--content-secondary) 45%,
-    var(--content-secondary) 55%,
-    var(--content-primary) 75%,
-    var(--content-primary) 100%);
-  background-size: 200% 200%;
-  animation: gradientMove 15s ease infinite;
   position: relative;
   overflow: hidden;
   width: 100%;
   display: block;
-  opacity: 0.95;
 }
 
 .timeline-background::before {
@@ -37,14 +27,38 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--content-primary);
-  opacity: 0.1;
+  background-image: url('/images/index/4.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6;
   pointer-events: none;
+  z-index: 0;
+}
+
+.timeline-background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    var(--content-primary) 0%, 
+    var(--content-primary) 25%,
+    var(--content-secondary) 45%,
+    var(--content-secondary) 55%,
+    var(--content-primary) 75%,
+    var(--content-primary) 100%);
+  background-size: 200% 200%;
+  animation: gradientMove 15s ease infinite;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .background-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 @keyframes gradientMove {

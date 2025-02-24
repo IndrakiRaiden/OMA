@@ -84,83 +84,75 @@ export default {
 .cta-section {
   position: relative;
   padding: 6rem 0;
-  background: linear-gradient(165deg, var(--content-primary) 0%, var(--content-secondary) 100%);
   overflow: hidden;
 }
 
-.cta-section.theme-primary {
-  background: var(--content-primary);
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/images/imacomps/6.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: 0;
 }
 
-.cta-section.theme-secondary {
-  background: var(--content-secondary);
+.cta-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 32, 96, 0.5) 0%,
+    rgba(0, 32, 96, 0.7) 40%,
+    rgba(255, 102, 0, 0.4) 60%,
+    rgba(0, 32, 96, 0.85) 100%
+  ), linear-gradient(
+    165deg,
+    var(--content-primary) 0%,
+    var(--content-secondary) 100%
+  );
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 1;
 }
 
-.cta-section.theme-gradient {
-  background: linear-gradient(165deg, var(--content-primary) 0%, var(--content-secondary) 100%);
+.cta-section.theme-primary::after {
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 32, 96, 0.5) 0%,
+    rgba(0, 32, 96, 0.7) 40%,
+    rgba(255, 102, 0, 0.4) 60%,
+    rgba(0, 32, 96, 0.85) 100%
+  ), var(--content-primary);
+}
+
+.cta-section.theme-secondary::after {
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 32, 96, 0.5) 0%,
+    rgba(0, 32, 96, 0.7) 40%,
+    rgba(255, 102, 0, 0.4) 60%,
+    rgba(0, 32, 96, 0.85) 100%
+  ), var(--content-secondary);
 }
 
 .cta-background {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
+  position: relative;
+  z-index: 2;
 }
 
-.background-shape {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.shape-1 {
-  width: 400px;
-  height: 400px;
-  top: -100px;
-  right: -100px;
-  animation: float 20s infinite ease-in-out;
-}
-
-.shape-2 {
-  width: 300px;
-  height: 300px;
-  bottom: -50px;
-  left: -50px;
-  animation: float 15s infinite ease-in-out reverse;
-}
-
-.shape-3 {
-  width: 200px;
-  height: 200px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: pulse 10s infinite ease-in-out;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translate(0, 0);
-  }
-  25% {
-    transform: translate(50px, -30px) rotate(5deg);
-  }
-  50% {
-    transform: translate(20px, 50px) rotate(-5deg);
-  }
-  75% {
-    transform: translate(-40px, 20px) rotate(3deg);
-  }
-}
-
-@keyframes pulse {
-  0%, 100% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0.1;
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(1.5);
-    opacity: 0.2;
-  }
+.container {
+  position: relative;
+  z-index: 3;
 }
 
 .cta-content {
@@ -278,6 +270,63 @@ export default {
   }
   to {
     opacity: 1;
+  }
+}
+
+.background-shape {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.shape-1 {
+  width: 400px;
+  height: 400px;
+  top: -100px;
+  right: -100px;
+  animation: float 20s infinite ease-in-out;
+}
+
+.shape-2 {
+  width: 300px;
+  height: 300px;
+  bottom: -50px;
+  left: -50px;
+  animation: float 15s infinite ease-in-out reverse;
+}
+
+.shape-3 {
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse 10s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(50px, -30px) rotate(5deg);
+  }
+  50% {
+    transform: translate(20px, 50px) rotate(-5deg);
+  }
+  75% {
+    transform: translate(-40px, 20px) rotate(3deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0.2;
   }
 }
 

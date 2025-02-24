@@ -23,14 +23,8 @@
           </div>
         </div>
         <div class="image-content">
-          <div class="placeholder">
-            <div class="placeholder-content">
-              <div class="placeholder-line"></div>
-              <div class="placeholder-line"></div>
-              <div class="placeholder-line"></div>
-              <div class="placeholder-circle"></div>
-            </div>
-          </div>
+          <div class="background-shape"></div>
+          <img src="/images/index/3.jpg" alt="How it works illustration" class="feature-image">
         </div>
       </div>
     </div>
@@ -50,7 +44,7 @@
 
 .content-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 45% 55%;
   gap: 4rem;
   align-items: center;
 }
@@ -97,55 +91,47 @@
 }
 
 .image-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.placeholder {
-  width: 100%;
-  aspect-ratio: 4/3;
-  background: var(--color-light);
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
   position: relative;
-}
-
-.placeholder-content {
-  width: 80%;
-  height: 80%;
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
   justify-content: center;
+  padding: 1rem;
+  margin-right: -4rem;
 }
 
-.placeholder-line {
-  height: 8px;
-  background: rgba(75, 110, 140, 0.1);
-  width: 100%;
-  border-radius: 4px;
+.background-shape {
+  position: absolute;
+  width: 110%;
+  height: 95%;
+  right: -8%;
+  bottom: -8%;
+  background: var(--color-secondary);
+  opacity: 0.1;
+  border-radius: 16px;
+  transform: rotate(-4deg);
+  z-index: 0;
+  transition: transform 0.3s ease-in-out;
 }
 
-.placeholder-line:nth-child(2) {
-  width: 80%;
+.feature-image {
+  position: relative;
+  width: 140%;
+  aspect-ratio: 16/9;
+  border-radius: 8px;
+  object-fit: cover;
+  z-index: 1;
+  margin-left: -15%;
+  transition: transform 0.3s ease-in-out;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
-.placeholder-line:nth-child(3) {
-  width: 60%;
+.feature-image:hover {
+  transform: scale(1.03) translateZ(0);
 }
 
-.placeholder-circle {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: rgba(75, 110, 140, 0.1);
-  margin-top: 1rem;
+.image-content:hover .background-shape {
+  transform: rotate(-2deg) scale(1.02);
 }
 
 @media (max-width: 768px) {
@@ -163,7 +149,7 @@
     order: -1;
   }
 
-  .placeholder {
+  .feature-image {
     max-width: 400px;
     margin: 0 auto;
   }
