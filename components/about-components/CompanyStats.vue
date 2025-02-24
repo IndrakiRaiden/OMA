@@ -1,6 +1,10 @@
 <template>
   <section class="stats-section">
     <div class="container mx-auto px-4">
+      <div class="section-header text-center mb-16">
+        <h2 class="section-title">Nuestro Impacto en Números</h2>
+        <p class="section-subtitle">Resultados que respaldan nuestro compromiso con la excelencia y la innovación</p>
+      </div>
       <div class="stats-grid">
         <div v-for="(stat, index) in stats" 
              :key="index" 
@@ -56,6 +60,23 @@ export default {
     rgba(var(--content-primary-rgb), 0.05) 0%,
     rgba(var(--content-secondary-rgb), 0.05) 100%
   );
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--content-primary);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--content-secondary);
+  max-width: 2xl;
+  margin: 0 auto;
+  opacity: 0.9;
 }
 
 .stats-grid {
@@ -134,6 +155,12 @@ export default {
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
   }
 }
 
