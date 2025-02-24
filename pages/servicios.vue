@@ -42,7 +42,7 @@ import ServiceCard from '../components/services-components/ServiceCard.vue'
 import BannerV1 from '../components/BannerV1.vue'
 import FeaturesSection from '../components/services-components/FeaturesSection.vue'
 import TestimonialsSection from '../components/services-components/TestimonialsSection.vue'
-import CTASection from '../components/services-components/CTASection.vue'
+import CTASection from '~/components/common/CTASection.vue'
 
 export default {
   name: 'ServiciosPage',
