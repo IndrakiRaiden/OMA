@@ -1,6 +1,7 @@
 <template>
   <section class="hero">
     <div class="hero-overlay"></div>
+    <div class="hero-bg"></div>
     <div class="hero-content">
       <span class="pre-title">BIENVENIDOS A</span>
       <h1 class="hero-title">OMA SOLUTIONS</h1>
@@ -8,34 +9,37 @@
         <p class="main-text">Soluciones integrales para proyectos industriales</p>
       </div>
       <div class="hero-features">
-        <div class="feature">
-          <i class="fas fa-industry"></i>
-          <span>Manufactura</span>
-        </div>
-        <div class="feature">
-          <i class="fas fa-cogs"></i>
-          <span>Automatización</span>
-        </div>
-        <div class="feature">
-          <i class="fas fa-tools"></i>
-          <span>Ingeniería</span>
+        <div class="feature" v-for="(feature, index) in features" :key="index">
+          <i :class="feature.icon"></i>
+          <span>{{ feature.text }}</span>
         </div>
       </div>
       <div class="cta-buttons">
-        <NuxtLink to="/cotiza" class="primary-btn hover-effect">Cotiza tu proyecto</NuxtLink>
-        <NuxtLink to="/servicios" class="secondary-btn">Ver servicios</NuxtLink>
+        <NuxtLink to="/cotiza" class="primary-btn">
+          Cotiza tu proyecto
+          <i class="fas fa-arrow-right"></i>
+        </NuxtLink>
+        <NuxtLink to="/servicios" class="secondary-btn">
+          Ver servicios
+          <i class="fas fa-chevron-right"></i>
+        </NuxtLink>
       </div>
     </div>
     <div class="geometric-shapes">
-      <div class="shape"></div>
-      <div class="shape"></div>
-      <div class="shape"></div>
+      <div class="shape" v-for="n in 5" :key="n"></div>
     </div>
   </section>
 </template>
 
 <script setup>
-// Component logic can be added here
+import { ref } from 'vue';
+
+const features = [
+  { icon: 'fas fa-industry', text: 'Manufactura' },
+  { icon: 'fas fa-cogs', text: 'Automatización' },
+  { icon: 'fas fa-tools', text: 'Ingeniería' },
+  { icon: 'fas fa-chart-line', text: 'Innovación' },
+];
 </script>
 
 <style scoped>
@@ -46,8 +50,17 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: url('../public/images/hero/2.jpg') center/cover no-repeat;
   background-color: var(--color-primary);
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../public/images/hero/2.jpg') center/cover no-repeat;
+  z-index: 0;
 }
 
 .hero-overlay {
@@ -59,68 +72,97 @@
   opacity: 0.85;
   background: linear-gradient(135deg, 
     var(--color-primary) 0%,
-    var(--color-secondary) 100%
+    var(--color-secondary) 50%,
+    var(--color-primary) 100%
   );
+  background-size: 400% 400%;
+  animation: gradientMove 8s ease infinite;
   z-index: 1;
+  backdrop-filter: blur(5px);
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
   text-align: center;
-  max-width: 800px;
+  max-width: 1200px;
   padding: 0 20px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: fadeInUp 1s ease-out;
 }
 
 .pre-title {
   display: block;
-  font-size: 1rem;
+  font-size: clamp(0.875rem, 2vw, 1rem);
   letter-spacing: 4px;
   color: var(--color-secondary);
   margin-bottom: 1rem;
   font-weight: 600;
-  animation: fadeInLeft 0.8s ease-out 0.2s both;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 8vw, 4rem);
-  font-weight: bold;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 800;
   color: var(--color-light);
-  margin-bottom: 1rem;
-  line-height: 1.2;
-  animation: fadeInRight 0.8s ease-out 0.4s both;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  text-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  letter-spacing: -1px;
 }
 
 .hero-text {
   color: var(--color-light);
-  opacity: 0.9;
+  opacity: 0.95;
   max-width: 700px;
   margin: 0 auto;
   width: 100%;
-  animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+.main-text {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  line-height: 1.6;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .hero-features {
   display: flex;
-  gap: 2rem;
+  gap: clamp(1rem, 3vw, 2rem);
   justify-content: center;
-  margin: 2rem 0;
+  margin: 2.5rem 0;
   flex-wrap: wrap;
   width: 100%;
-  animation: fadeIn 0.8s ease-out 0.8s both;
 }
 
 .feature {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
   color: var(--color-light);
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  padding: 0.75rem 1.5rem;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.feature:hover {
+  background: rgba(255,255,255,0.15);
 }
 
 .feature i {
@@ -130,16 +172,16 @@
 
 .cta-buttons {
   display: flex;
-  gap: 1rem;
+  gap: clamp(1rem, 3vw, 1.5rem);
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   width: 100%;
-  animation: fadeInUp 0.8s ease-out 1s both;
+  flex-wrap: wrap;
 }
 
 .primary-btn, .secondary-btn {
   padding: 1rem 2rem;
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
   font-weight: 600;
   border-radius: 50px;
   cursor: pointer;
@@ -149,20 +191,41 @@
   border: none;
   display: flex;
   align-items: center;
+  gap: 0.75rem;
   justify-content: center;
   min-width: 200px;
   text-decoration: none;
 }
 
 .primary-btn {
-  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-secondary) 100%);
+  background: linear-gradient(135deg, 
+    var(--color-accent) 0%,
+    var(--color-secondary) 50%,
+    var(--color-accent) 100%
+  );
+  background-size: 300% 300%;
   color: var(--color-light);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
 .primary-btn:hover {
-  transform: translateY(-2px);
+  animation: buttonGradient 3s ease infinite;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes buttonGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .secondary-btn {
@@ -170,105 +233,78 @@
   color: var(--color-light);
   border: 2px solid var(--color-light);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  transition: all 0.3s ease, color 0s ease 0.1s;
-}
-
-.secondary-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.2);
-  z-index: -1;
-  transition: width 0.3s ease;
 }
 
 .secondary-btn:hover {
-  color: var(--color-light);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-.secondary-btn:hover::before {
-  width: 100%;
-}
-
-.hover-effect {
-  position: relative;
-  overflow: hidden;
-}
-
-.hover-effect::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
-  transition: 0.5s;
-}
-
-.hover-effect:hover::after {
-  left: 100%;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .geometric-shapes {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 1;
+  pointer-events: none;
 }
 
 .shape {
   position: absolute;
-  background: rgba(255, 255, 255, 0.02);
   border-radius: 50%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+  backdrop-filter: blur(5px);
 }
 
 .shape:nth-child(1) {
   width: 300px;
   height: 300px;
-  top: -150px;
-  right: -150px;
+  top: -100px;
+  right: -100px;
 }
 
 .shape:nth-child(2) {
   width: 200px;
   height: 200px;
-  bottom: 50px;
-  left: -100px;
+  bottom: -50px;
+  left: -50px;
 }
 
 .shape:nth-child(3) {
   width: 150px;
   height: 150px;
-  bottom: -75px;
-  right: 10%;
+  top: 40%;
+  right: 15%;
+}
+
+.shape:nth-child(4) {
+  width: 100px;
+  height: 100px;
+  bottom: 20%;
+  left: 20%;
+}
+
+.shape:nth-child(5) {
+  width: 250px;
+  height: 250px;
+  top: 20%;
+  left: 10%;
 }
 
 @media (max-width: 768px) {
   .hero-content {
-    padding: 0 1rem;
+    padding: 0 15px;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
   }
 
-  .hero-title {
-    font-size: clamp(2rem, 6vw, 3rem);
-  }
-
-  .main-text {
-    font-size: 1.1rem;
+  .primary-btn, .secondary-btn {
+    width: 100%;
+    min-width: auto;
   }
 
   .hero-features {
@@ -276,59 +312,15 @@
   }
 
   .feature {
-    font-size: 1rem;
+    width: calc(50% - 0.5rem);
+    justify-content: center;
+    padding: 0.5rem 1rem;
   }
+}
 
-  .cta-buttons {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .primary-btn, .secondary-btn {
+@media (max-width: 480px) {
+  .feature {
     width: 100%;
-    padding: 0.8rem 1.5rem;
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
 </style>
