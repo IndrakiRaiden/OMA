@@ -139,16 +139,26 @@ function handleScroll() {
 
 .contact-btn {
   padding: 0.75rem 1.5rem;
-  background: var(--color-accent);
+  background: linear-gradient(to right, 
+    var(--color-accent),
+    var(--color-secondary),
+    var(--color-accent)
+  );
+  background-size: 200% auto;
   color: var(--color-light);
   border-radius: 4px;
   text-decoration: none;
   font-weight: 500;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .contact-btn:hover {
-  background: var(--color-secondary);
+  background-position: right center;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
 }
 
 @media (max-width: 768px) {
