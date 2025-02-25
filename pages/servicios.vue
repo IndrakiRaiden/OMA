@@ -15,9 +15,9 @@
       <section id="servicios" class="services-section py-16">
         <div class="container mx-auto px-4">
           <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Servicios Especializados</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">SERVICIOS PRINCIPALES DE OMA</h2>
             <p class="text-gray-600 max-w-2xl mx-auto">
-              Ofrecemos una gama completa de servicios de manufactura CNC y diseño, respaldados por años de experiencia y tecnología de punta.
+              Ofrecemos una gama completa de servicios de manufactura y producción, respaldados por años de experiencia y tecnología de punta.
             </p>
           </div>
           
@@ -60,51 +60,52 @@ export default {
       services: [
         {
           id: 1,
-          title: 'Mecanizado CNC',
-          description: 'Servicio de mecanizado de precisión con máquinas CNC de última generación para piezas complejas. Especialistas en materiales como aluminio, acero, titanio y más.',
+          title: 'Maquinado Convencional',
+          description: 'Flechas de hasta 10 pulgadas de diámetro, sistemas de transmisión motriz, platos, sprockets, rodillos y rectificado utilizando tornos convencionales, fresadoras y rectificadoras.',
           icon: 'fa-cog',
           image: '/images/services/cnc-machining.jpg',
-          features: ['Tolerancias precisas', 'Acabados superiores', 'Alta productividad']
+          features: ['Flechas hasta 10" de diámetro', 'Sistemas de transmisión', 'Rectificado cilíndrico y plano']
         },
         {
           id: 2,
-          title: 'Diseño CAD/CAM',
-          description: 'Diseño y programación CAD/CAM avanzada para optimizar la producción. Utilizamos software de última generación para garantizar la máxima eficiencia.',
-          icon: 'fa-drafting-compass',
-          image: '/images/services/cad-cam.jpg',
-          features: ['Modelado 3D', 'Simulación', 'Optimización']
+          title: 'Producción',
+          description: 'Trabajamos con diversos materiales como bronce, aluminio, acero y plásticos de ingeniería. Ofrecemos servicios de submaquila para procesos después de fundición e inyección.',
+          icon: 'fa-industry',
+          image: '/images/services/production.jpg',
+          features: ['Materiales diversos', 'Submaquila', 'Ingeniería de plásticos']
         },
         {
           id: 3,
-          title: 'Prototipado Rápido',
-          description: 'Desarrollo ágil de prototipos para validación de diseños. Reducimos el tiempo de llegada al mercado con prototipos funcionales de alta calidad.',
-          icon: 'fa-cube',
-          image: '/images/services/prototyping.jpg',
-          features: ['Iteración rápida', 'Validación', 'Personalización']
+          title: 'Maquinado CNC',
+          description: 'Fabricación de piezas de precisión como cilindros, pistones, poleas, chumaceras, sprockets, bujes, punzones y matrices, trabajando con diversos aceros de grado herramienta y maquinaria.',
+          icon: 'fa-tools',
+          image: '/images/services/cnc-machining.jpg',
+          features: ['Piezas de precisión', 'Aceros especializados', 'Alta calidad'],
+          link: '/servicios-design/maquinado-cnc'
         },
         {
           id: 4,
-          title: 'Control de Calidad',
-          description: 'Inspección y verificación dimensional de piezas mecanizadas con equipos de medición de última generación. Garantizamos la calidad de cada pieza.',
-          icon: 'fa-check-square',
-          image: '/images/services/quality-control.jpg',
-          features: ['Medición precisa', 'Reportes detallados', 'Certificación']
+          title: 'Corte Láser',
+          description: 'Corte preciso en materiales como acero A-36, A-572, acero inoxidable, acero 1018/1026 y aluminio, con capacidades desde calibre 18 hasta 3/4 de pulgada.',
+          icon: 'fa-laser',
+          image: '/images/services/laser-cutting.jpg',
+          features: ['Diversos materiales', 'Corte preciso', 'Calibre 18 hasta 3/4"']
         },
         {
           id: 5,
-          title: 'Consultoría CNC',
-          description: 'Asesoría especializada en procesos de manufactura CNC. Optimizamos sus procesos y mejoramos la eficiencia de producción.',
-          icon: 'fa-comments',
-          image: '/images/services/consulting.jpg',
-          features: ['Optimización', 'Capacitación', 'Mejora continua']
+          title: 'Acabados',
+          description: 'Ofrecemos tratamientos térmicos certificados para aceros herramienta, maquinaria e inoxidables, así como diversos acabados como anodizado, niquelado, powder coat, black oxide y fosfato.',
+          icon: 'fa-spray-can',
+          image: '/images/services/finishing.jpg',
+          features: ['Tratamientos térmicos', 'Recubrimientos', 'Acabados especiales']
         },
         {
           id: 6,
-          title: 'Mantenimiento',
-          description: 'Servicio integral de mantenimiento preventivo y correctivo de máquinas CNC. Maximizamos el tiempo de actividad de su equipo.',
-          icon: 'fa-tools',
-          image: '/images/services/maintenance.jpg',
-          features: ['Preventivo', 'Correctivo', 'Diagnóstico']
+          title: 'Recubrimientos',
+          description: 'Aplicamos diversos recubrimientos especializados como vulcanizado, neopreno, poliuretano, nitrilo y viton según las necesidades específicas de cada proyecto.',
+          icon: 'fa-fill-drip',
+          image: '/images/services/coatings.jpg',
+          features: ['Vulcanizado', 'Elastómeros', 'Materiales especiales']
         }
       ],
       features: [

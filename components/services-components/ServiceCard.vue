@@ -21,12 +21,12 @@
         </div>
       </div>
 
-      <button class="learn-more group">
+      <nuxt-link :to="service.link || '#'" class="learn-more group">
         <span class="btn-text">Más Información</span>
         <span class="btn-icon">
           <i class="fas fa-arrow-right"></i>
         </span>
-      </button>
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -43,7 +43,8 @@ export default {
                value.hasOwnProperty('description') &&
                value.hasOwnProperty('icon') &&
                value.hasOwnProperty('image') &&
-               value.hasOwnProperty('features')
+               value.hasOwnProperty('features') &&
+               (value.hasOwnProperty('link') || true)
       }
     }
   }
