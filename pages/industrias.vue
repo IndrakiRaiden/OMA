@@ -7,7 +7,7 @@
         subtitle="Soluciones especializadas para diferentes sectores"
         :buttons="[
           { text: 'Ver Industrias', href: '#industrias', class: 'primary-btn' },
-          { text: 'Contáctanos', href: '#contacto', class: 'secondary-btn' }
+          { text: 'Contáctanos', href: './contact', class: 'secondary-btn' }
         ]"
       />
       <div id="industrias" class="industries-content py-16">
@@ -70,8 +70,8 @@
                       'Diseño generativo y optimización topológica para componentes mecánicos.'
                     }}
                   </p>
-                  <a href="#contacto" class="learn-more">
-                    Más información
+                  <a :href="index === 0 ? '/industrias-design/mecanizado-cnc' : '#contacto'" class="learn-more">
+                    {{ index === 0 ? 'Ver Detalles' : 'Más información' }}
                     <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
@@ -101,6 +101,10 @@ export default {
 </script>
 
 <style scoped>
+html {
+  scroll-behavior: smooth;
+}
+
 .industries-page {
   background-color: var(--content-light);
   min-height: 100vh;

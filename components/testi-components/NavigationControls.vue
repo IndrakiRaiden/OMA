@@ -71,7 +71,7 @@ export default {
 
 .nav-btn:hover:not(:disabled) {
   transform: scale(1.1);
-  background: var(--content-secondary);
+  background: #F5A623;
   color: white;
 }
 
@@ -96,7 +96,7 @@ export default {
 
 .progress-indicator {
   height: 100%;
-  background: var(--content-secondary);
+  background: linear-gradient(to right, #F5A623, #4B6E8C);
   transition: width 0.3s ease;
 }
 
