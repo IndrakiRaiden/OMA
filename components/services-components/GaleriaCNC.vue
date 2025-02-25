@@ -11,23 +11,22 @@
       <!-- Filter Categories -->
       <div class="flex flex-wrap justify-center gap-3 mb-12">
         <button 
-          @click="activeFilter = 'all'" 
-          :class="['filter-btn', activeFilter === 'all' ? 'active' : '']"
-        >
-          Todos
-        </button>
-        <button 
           v-for="(category, index) in categories" 
           :key="index"
-          @click="activeFilter = category" 
-          :class="['filter-btn', activeFilter === category ? 'active' : '']"
+          @click="filterCategory(category)" 
+          :class="['filter-btn', activeCategory === category ? 'active' : '']"
         >
           {{ category }}
         </button>
       </div>
 
       <!-- Gallery Grid -->
+      <div v-if="isLoading" class="flex justify-center items-center py-20">
+        <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+      </div>
+      
       <transition-group 
+        v-else
         name="gallery-transition" 
         tag="div" 
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -63,10 +62,13 @@
       </transition-group>
 
       <!-- Show More Button -->
-      <div class="text-center mt-12" v-if="!showMoreGallery && additionalGalleryItems.length > 0">
-        <button @click="showMoreGallery = true" class="show-more-btn">
-          <span>Ver más proyectos</span>
-          <i class="fas fa-chevron-down ml-2"></i>
+      <div v-if="filteredAdditionalItems.length > 0 && !showMoreGallery" class="text-center mt-10">
+        <button @click="showMore" class="show-more-btn" :disabled="isLoadingMore">
+          <span v-if="isLoadingMore" class="inline-block animate-spin mr-2">
+            <i class="fas fa-circle-notch"></i>
+          </span>
+          <span v-else>Ver más proyectos</span>
+          <i v-if="!isLoadingMore" class="fas fa-chevron-down ml-2"></i>
         </button>
       </div>
 
@@ -152,11 +154,14 @@ export default {
   data() {
     return {
       showMoreGallery: false,
-      activeFilter: 'all',
+      activeCategory: 'Todos',
+      isLoading: false,
+      isLoadingMore: false,
       lightbox: {
         open: false,
         item: {}
       },
+      categories: ['Todos', 'Componentes', 'Automotriz', 'Moldes', 'Aeroespacial', 'Médico'],
       galleryItems: [
         {
           title: 'Componentes de precisión',
@@ -227,26 +232,50 @@ export default {
     }
   },
   computed: {
-    categories() {
-      // Extract unique categories from all gallery items
-      const allItems = [...this.galleryItems, ...this.additionalGalleryItems];
-      const categories = allItems.map(item => item.category);
-      return [...new Set(categories)];
-    },
     filteredGalleryItems() {
-      if (this.activeFilter === 'all') {
+      if (this.activeCategory === 'Todos') {
         return this.galleryItems;
       }
-      return this.galleryItems.filter(item => item.category === this.activeFilter);
+      return this.galleryItems.filter(item => item.category === this.activeCategory);
     },
     filteredAdditionalItems() {
-      if (this.activeFilter === 'all') {
+      if (this.activeCategory === 'Todos') {
         return this.additionalGalleryItems;
       }
-      return this.additionalGalleryItems.filter(item => item.category === this.activeFilter);
+      return this.additionalGalleryItems.filter(item => item.category === this.activeCategory);
     }
   },
   methods: {
+    filterCategory(category) {
+      if (this.activeCategory === category) return;
+      
+      this.isLoading = true;
+      
+      // Add a small delay to make the transition smoother
+      setTimeout(() => {
+        this.activeCategory = category;
+        // Reset visible count when changing categories
+        this.showMoreGallery = false;
+        
+        // Add a small delay to simulate loading
+        setTimeout(() => {
+          this.isLoading = false;
+        }, 300);
+      }, 50);
+    },
+    showMore() {
+      this.isLoadingMore = true;
+      
+      // Add a small delay to make the transition smoother
+      setTimeout(() => {
+        this.showMoreGallery = true;
+        
+        // Add a small delay to simulate loading
+        setTimeout(() => {
+          this.isLoadingMore = false;
+        }, 300);
+      }, 50);
+    },
     openLightbox(item) {
       this.lightbox.item = item;
       this.lightbox.open = true;
@@ -480,6 +509,31 @@ export default {
   color: var(--color-secondary);
   border-radius: 9999px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Gallery transitions */
+.gallery-transition-move {
+  transition: transform 0.6s ease-in-out;
+}
+
+.gallery-transition-enter-active {
+  transition: all 0.4s ease-out;
+  transition-delay: 0.2s;
+}
+
+.gallery-transition-leave-active {
+  transition: all 0.3s ease-in;
+  position: absolute;
+}
+
+.gallery-transition-enter-from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.gallery-transition-leave-to {
+  opacity: 0;
+  transform: scale(0.9);
 }
 
 @media (min-width: 768px) {
