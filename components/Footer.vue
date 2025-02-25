@@ -35,32 +35,27 @@
 
       <div class="footer-grid">
         <div class="footer-col">
-          <h3>Empresa</h3>
+          <h3>Navegación</h3>
           <ul>
+            <li><NuxtLink to="/">Inicio</NuxtLink></li>
             <li><NuxtLink to="/about">Nosotros</NuxtLink></li>
-            <li><NuxtLink to="/careers">Carreras</NuxtLink></li>
-            <li><NuxtLink to="/certificates">Certificaciones</NuxtLink></li>
-            <li><NuxtLink to="/partners">Partners</NuxtLink></li>
+            <li><NuxtLink to="/contact">Contacto</NuxtLink></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h3>Servicios</h3>
           <ul>
-            <li><NuxtLink to="/automation">Automatización</NuxtLink></li>
-            <li><NuxtLink to="/manufacturing">Manufactura</NuxtLink></li>
-            <li><NuxtLink to="/consulting">Consultoría</NuxtLink></li>
-            <li><NuxtLink to="/maintenance">Mantenimiento</NuxtLink></li>
+            <li><NuxtLink to="/servicios">Servicios</NuxtLink></li>
+            <li><NuxtLink to="/industrias">Industrias</NuxtLink></li>
+            <li><NuxtLink to="/cotiza">Cotiza tu Proyecto</NuxtLink></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h3>Recursos</h3>
+          <h3>Ayuda</h3>
           <ul>
-            <li><NuxtLink to="/blog">Blog</NuxtLink></li>
-            <li><NuxtLink to="/case-studies">Casos de Éxito</NuxtLink></li>
-            <li><NuxtLink to="/downloads">Descargas</NuxtLink></li>
-            <li><NuxtLink to="/faq">FAQ</NuxtLink></li>
+            <li><NuxtLink to="/faqs">FAQs</NuxtLink></li>
           </ul>
         </div>
 
@@ -92,11 +87,6 @@
       <div class="footer-bottom">
         <div class="copyright">
           <p>&copy; {{ new Date().getFullYear() }} OMA Industrial. Todos los derechos reservados.</p>
-        </div>
-        <div class="legal-links">
-          <a href="/privacy">Privacidad</a>
-          <a href="/terms">Términos</a>
-          <a href="/cookies">Cookies</a>
         </div>
       </div>
     </div>
@@ -346,22 +336,6 @@ export default {
   font-size: 0.9rem;
 }
 
-.legal-links {
-  display: flex;
-  gap: 2rem;
-}
-
-.legal-links a {
-  color: #718096;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.3s ease;
-}
-
-.legal-links a:hover {
-  color: #F5A623;
-}
-
 @media (max-width: 1024px) {
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -408,10 +382,6 @@ export default {
     flex-direction: column;
     gap: 1rem;
     text-align: center;
-  }
-
-  .legal-links {
-    justify-content: center;
   }
 }
 </style>
