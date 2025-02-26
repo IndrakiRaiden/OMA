@@ -57,29 +57,21 @@
           <ul>
             <li><NuxtLink to="/faqs">FAQs</NuxtLink></li>
           </ul>
-        </div>
-
-        <div class="footer-col newsletter-col">
-          <h3>Newsletter</h3>
-          <p>Únete a nuestra lista y mantente actualizado</p>
-          <form @submit.prevent="subscribeNewsletter" class="newsletter-form">
-            <div class="input-group">
-              <input 
-                type="email" 
-                v-model="email"
-                placeholder="Tu email"
-                required
-              >
-              <button type="submit">
-                <i class="fas fa-arrow-right"></i>
-              </button>
-            </div>
-          </form>
           <div class="social-links">
             <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
             <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
             <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
             <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Ubicación</h3>
+          <div class="location-info">
+            <div class="location-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Av. Industrial #123, Zona Industrial, Ciudad de México</span>
+            </div>
           </div>
         </div>
       </div>
@@ -102,17 +94,6 @@ export default {
     MapPin,
     Phone,
     Mail
-  },
-  data() {
-    return {
-      email: ''
-    }
-  },
-  methods: {
-    subscribeNewsletter() {
-      // Implementar lógica de suscripción
-      console.log('Subscribing:', this.email)
-    }
   }
 }
 </script>
@@ -260,50 +241,27 @@ export default {
   color: #F5A623;
 }
 
-.newsletter-col p {
+.location-info {
+  margin-bottom: 1.5rem;
+}
+
+.location-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.location-item i {
+  color: #F5A623;
+  font-size: 1.1rem;
+  margin-top: 0.2rem;
+}
+
+.location-item span {
   color: #718096;
   font-size: 0.9rem;
-  margin-bottom: 1rem;
-}
-
-.input-group {
-  display: flex;
-  background: #fff;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.input-group:focus-within {
-  border-color: #4B6E8C;
-  box-shadow: 0 0 0 3px rgba(75, 110, 140, 0.1);
-}
-
-.input-group input {
-  flex: 1;
-  padding: 0.8rem 1rem;
-  border: none;
-  background: transparent;
-  color: #2d3436;
-  font-size: 0.9rem;
-}
-
-.input-group input:focus {
-  outline: none;
-}
-
-.input-group button {
-  padding: 0.8rem 1.2rem;
-  background: #4B6E8C;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.input-group button:hover {
-  background: #F5A623;
+  line-height: 1.5;
 }
 
 .social-links {
@@ -370,11 +328,15 @@ export default {
     text-align: center;
   }
 
-  .footer-col h3 {
+  .location-item {
     justify-content: center;
   }
 
   .social-links {
+    justify-content: center;
+  }
+
+  .footer-col h3 {
     justify-content: center;
   }
 
