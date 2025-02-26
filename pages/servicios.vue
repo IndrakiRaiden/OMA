@@ -64,7 +64,8 @@ export default {
           description: 'Flechas de hasta 10 pulgadas de diámetro, sistemas de transmisión motriz, platos, sprockets, rodillos y rectificado utilizando tornos convencionales, fresadoras y rectificadoras.',
           icon: 'fa-cog',
           image: '/images/services/cnc-machining.jpg',
-          features: ['Flechas hasta 10" de diámetro', 'Sistemas de transmisión', 'Rectificado cilíndrico y plano']
+          features: ['Flechas hasta 10" de diámetro', 'Sistemas de transmisión', 'Rectificado cilíndrico y plano'],
+          link: '/servicios-design/maquinado-convencional'
         },
         {
           id: 2,
@@ -72,7 +73,8 @@ export default {
           description: 'Trabajamos con diversos materiales como bronce, aluminio, acero y plásticos de ingeniería. Ofrecemos servicios de submaquila para procesos después de fundición e inyección.',
           icon: 'fa-industry',
           image: '/images/services/production.jpg',
-          features: ['Materiales diversos', 'Submaquila', 'Ingeniería de plásticos']
+          features: ['Materiales diversos', 'Submaquila', 'Ingeniería de plásticos'],
+          link: '/servicios-design/produccion'
         },
         {
           id: 3,
@@ -89,7 +91,8 @@ export default {
           description: 'Corte preciso en materiales como acero A-36, A-572, acero inoxidable, acero 1018/1026 y aluminio, con capacidades desde calibre 18 hasta 3/4 de pulgada.',
           icon: 'fa-laser',
           image: '/images/services/laser-cutting.jpg',
-          features: ['Diversos materiales', 'Corte preciso', 'Calibre 18 hasta 3/4"']
+          features: ['Diversos materiales', 'Corte preciso', 'Calibre 18 hasta 3/4"'],
+          link: '/servicios-design/corte-laser'
         },
         {
           id: 5,
@@ -97,7 +100,8 @@ export default {
           description: 'Ofrecemos tratamientos térmicos certificados para aceros herramienta, maquinaria e inoxidables, así como diversos acabados como anodizado, niquelado, powder coat, black oxide y fosfato.',
           icon: 'fa-spray-can',
           image: '/images/services/finishing.jpg',
-          features: ['Tratamientos térmicos', 'Recubrimientos', 'Acabados especiales']
+          features: ['Tratamientos térmicos', 'Recubrimientos', 'Acabados especiales'],
+          link: '/servicios-design/acabados'
         },
         {
           id: 6,
@@ -105,7 +109,8 @@ export default {
           description: 'Aplicamos diversos recubrimientos especializados como vulcanizado, neopreno, poliuretano, nitrilo y viton según las necesidades específicas de cada proyecto.',
           icon: 'fa-fill-drip',
           image: '/images/services/coatings.jpg',
-          features: ['Vulcanizado', 'Elastómeros', 'Materiales especiales']
+          features: ['Vulcanizado', 'Elastómeros', 'Materiales especiales'],
+          link: '/servicios-design/recubrimientos'
         }
       ],
       features: [
