@@ -4,6 +4,15 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss'],
   css: ['~/assets/css/tailwind.css'],
+  build: {
+    transpile: ['axios']
+  },
+  runtimeConfig: {
+    public: {
+      strapiApiUrl: process.env.STRAPI_API_URL || 'http://localhost:1337/api',
+      strapiUrl: process.env.STRAPI_URL || 'http://localhost:1337'
+    }
+  },
   tailwindcss: {
     config: {
       theme: {

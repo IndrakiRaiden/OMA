@@ -1,7 +1,7 @@
 <template>
   <div>
     <NavBar />
-    <main v-if="service" class="corte-laser-page">
+    <main v-if="service" class="service-page">
       <BannerV1 
         :title="service.banner.title" 
         :subtitle="service.banner.subtitle"
@@ -51,8 +51,12 @@
         :buttonLink="service.cta.buttonLink"
       />
     </main>
-    <div v-else class="loading-container">
+    <div v-else-if="loading" class="loading-container">
       <p>Cargando información del servicio...</p>
+    </div>
+    <div v-else-if="error" class="error-container">
+      <p>{{ error }}</p>
+      <button @click="retryFetch" class="retry-button">Reintentar</button>
     </div>
     <Footer />
   </div>
@@ -71,7 +75,7 @@ import { getServiceModel } from '../../services/api'
 import ServiceModel from '../../models/ServiceModel'
 
 export default {
-  name: 'CorteLaserPage',
+  name: 'ServiceTemplate',
   components: {
     NavBar,
     Footer,
@@ -86,39 +90,57 @@ export default {
     return {
       service: null,
       loading: true,
-      error: null
+      error: null,
+      slug: '' // Will be set in created hook
     }
   },
+  created() {
+    // Extract the slug from the route
+    // For example, if the route is /servicios-design/maquinado-cnc
+    // the slug will be 'maquinado-cnc'
+    const path = this.$route.path
+    const segments = path.split('/')
+    this.slug = segments[segments.length - 1]
+  },
   async fetch() {
+    if (!this.slug) {
+      this.error = 'No se pudo determinar el servicio solicitado'
+      this.loading = false
+      return
+    }
+    
     try {
-      // Get the service slug from the page name
-      const slug = 'corte-laser'
-      
       // Fetch service data from Strapi
-      this.service = await getServiceModel(slug)
+      this.service = await getServiceModel(this.slug)
       
       // If no data is returned, use default data
       if (!this.service) {
-        console.warn('No service data found, using default data')
-        this.service = new ServiceModel(ServiceModel.getDefaultData(slug))
+        console.warn(`No service data found for ${this.slug}, using default data`)
+        this.service = new ServiceModel(ServiceModel.getDefaultData(this.slug))
       }
     } catch (error) {
-      console.error('Error fetching service data:', error)
+      console.error(`Error fetching service data for ${this.slug}:`, error)
       this.error = 'Error al cargar los datos del servicio'
       
       // Use default data in case of error
-      const slug = 'corte-laser'
-      this.service = new ServiceModel(ServiceModel.getDefaultData(slug))
+      this.service = new ServiceModel(ServiceModel.getDefaultData(this.slug))
     } finally {
       this.loading = false
+    }
+  },
+  methods: {
+    async retryFetch() {
+      this.loading = true
+      this.error = null
+      await this.$fetch()
     }
   },
   head() {
     if (!this.service) {
       return {
-        title: 'Corte Láser | OMA - Servicios de Manufactura',
+        title: 'Servicio | OMA - Servicios de Manufactura',
         meta: [
-          { hid: 'description', name: 'description', content: 'Servicios de corte láser de alta precisión para acero, acero inoxidable y aluminio.' }
+          { hid: 'description', name: 'description', content: 'Servicios de manufactura de alta precisión.' }
         ]
       }
     }
@@ -134,18 +156,42 @@ export default {
 </script>
 
 <style scoped>
-.corte-laser-page {
+.service-page {
   background-color: var(--background-light);
   min-height: 100vh;
 }
 
-.loading-container {
+.loading-container,
+.error-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 50vh;
   font-size: 1.2rem;
   color: var(--text-primary);
+  text-align: center;
+  padding: 2rem;
+}
+
+.error-container {
+  color: var(--color-danger, #dc3545);
+}
+
+.retry-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.retry-button:hover {
+  background-color: var(--primary-color-dark);
 }
 
 html {
