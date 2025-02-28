@@ -1,7 +1,7 @@
 <template>
-  <section class="timeline-section">
+  <section ref="timelineSection" class="timeline-section">
     <div class="container mx-auto px-4">
-      <div class="section-header text-center">
+      <div class="section-header text-center" :class="{ 'animate-fade-in': isVisible }">
         <h2 class="title">Nuestra Historia</h2>
         <p class="subtitle">Un viaje de innovación y crecimiento continuo</p>
       </div>
@@ -10,8 +10,11 @@
         <div v-for="(milestone, index) in milestones" 
              :key="index"
              class="milestone"
-             :class="{ 'milestone-right': index % 2 === 0 }"
-             :style="{ animationDelay: `${index * 200}ms` }">
+             :class="{ 
+               'milestone-right': index % 2 === 0,
+               'animate-milestone': isVisible 
+             }"
+             :style="{ animationDelay: `${index * 400 + 500}ms` }">
           <div class="milestone-content">
             <div class="milestone-year">{{ milestone.year }}</div>
             <h3 class="milestone-title">{{ milestone.title }}</h3>
@@ -62,8 +65,26 @@ export default {
           description: 'Consolidación como líderes en soluciones de manufactura CNC en México.',
           icon: 'fa-trophy'
         }
-      ]
+      ],
+      isVisible: false
     }
+  },
+  mounted() {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.isVisible = true
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      {
+        threshold: 0.2
+      }
+    )
+
+    observer.observe(this.$refs.timelineSection)
   }
 }
 </script>
@@ -82,6 +103,14 @@ export default {
 .section-header {
   text-align: center;
   margin-bottom: 4rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1.2s ease-out;
+}
+
+.animate-fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .title {
@@ -134,7 +163,14 @@ export default {
   width: 50%;
   padding: 2rem;
   opacity: 0;
-  animation: fadeInSlide 0.8s ease-out forwards;
+  transform: translateX(-30px);
+  transition: all 1.2s ease-out;
+}
+
+.animate-milestone {
+  animation: none;
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .milestone::before {
@@ -157,6 +193,11 @@ export default {
 
 .milestone:not(.milestone-right) {
   left: 0;
+  transform: translateX(30px);
+}
+
+.milestone:not(.milestone-right).animate-milestone {
+  transform: translateX(0);
 }
 
 .milestone:not(.milestone-right)::before {
@@ -169,12 +210,46 @@ export default {
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   position: relative;
-  transition: all 0.3s ease;
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 1px solid transparent;
+  overflow: hidden;
 }
 
 .milestone-content:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(var(--content-secondary-rgb), 0.3);
+}
+
+.milestone-content::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--content-primary), var(--content-secondary));
+  transition: width 0.3s ease;
+}
+
+.milestone-content:hover::after {
+  width: 100%;
+}
+
+.milestone-icon {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  color: rgba(var(--content-primary-rgb), 0.2);
+  font-size: 2rem;
+  transition: all 0.2s ease;
+  opacity: 0.6;
+}
+
+.milestone-content:hover .milestone-icon {
+  transform: translateY(-2px);
+  color: var(--content-secondary);
+  opacity: 1;
 }
 
 .milestone-year {
@@ -185,6 +260,13 @@ export default {
   border-radius: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.milestone-content:hover .milestone-year {
+  background: var(--content-secondary);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .milestone-title {
@@ -192,26 +274,17 @@ export default {
   font-weight: 600;
   color: var(--content-dark);
   margin-bottom: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.milestone-content:hover .milestone-title {
+  color: var(--content-secondary);
 }
 
 .milestone-description {
   color: var(--content-gray);
   line-height: 1.6;
   margin-bottom: 1rem;
-}
-
-.milestone-icon {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  color: rgba(var(--content-primary-rgb), 0.2);
-  font-size: 2rem;
-  transition: all 0.3s ease;
-}
-
-.milestone-content:hover .milestone-icon {
-  transform: scale(1.2);
-  color: rgba(var(--content-primary-rgb), 0.3);
 }
 
 @keyframes fadeInSlide {
@@ -241,6 +314,14 @@ export default {
 
   .milestone-right {
     left: 0;
+  }
+
+  .milestone:not(.milestone-right) {
+    transform: translateY(30px);
+  }
+
+  .milestone:not(.milestone-right).animate-milestone {
+    transform: translateY(0);
   }
 
   .title {

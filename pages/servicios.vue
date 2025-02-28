@@ -2,7 +2,7 @@
   <div>
     <NavBar />
     <main class="services-page">
-      <BannerV1 
+      <BannerV2 
         title="Nuestros Servicios" 
         subtitle="Soluciones integrales de manufactura CNC"
         :buttons="[
@@ -39,7 +39,7 @@
 import NavBar from '../components/NavBar.vue'
 import Footer from '../components/Footer.vue'
 import ServiceCard from '../components/services-components/ServiceCard.vue'
-import BannerV1 from '../components/BannerV1.vue'
+import BannerV2 from '../components/BannerV2.vue'
 import FeaturesSection from '../components/services-components/FeaturesSection.vue'
 import TestimonialsSection from '../components/services-components/TestimonialsSection.vue'
 import CTASection from '~/components/common/CTASection.vue'
@@ -50,7 +50,7 @@ export default {
     NavBar,
     Footer,
     ServiceCard,
-    BannerV1,
+    BannerV2,
     FeaturesSection,
     TestimonialsSection,
     CTASection

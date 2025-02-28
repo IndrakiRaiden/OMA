@@ -2,7 +2,7 @@
   <div>
     <NavBar />
     <main v-if="service" class="service-page">
-      <BannerV1 
+      <BannerV2 
         :title="service.banner.title" 
         :subtitle="service.banner.subtitle"
         :buttons="service.banner.buttons"
@@ -65,7 +65,7 @@
 <script>
 import NavBar from '../../components/NavBar.vue'
 import Footer from '../../components/Footer.vue'
-import BannerV1 from '../../components/BannerV1.vue'
+import BannerV2 from '../../components/BannerV2.vue'
 import DetallesServicio from '../../components/services-components/DetallesServicio.vue'
 import CapacidadesServicio from '../../components/services-components/CapacidadesServicio.vue'
 import ProcesosServicio from '../../components/services-components/ProcesosServicio.vue'
@@ -79,7 +79,7 @@ export default {
   components: {
     NavBar,
     Footer,
-    BannerV1,
+    BannerV2,
     DetallesServicio,
     CapacidadesServicio,
     ProcesosServicio,

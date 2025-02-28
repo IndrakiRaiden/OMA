@@ -183,11 +183,25 @@ export default {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  background: #f9f9f9;
+}
+
+.contact-card:hover i {
+  transform: scale(1.2);
+  color: #4B6E8C;
 }
 
 .contact-card i {
   font-size: 1.2rem;
   color: #F5A623;
+  transition: all 0.3s ease;
 }
 
 .contact-card div {
@@ -320,6 +334,34 @@ export default {
 
   .quick-contact {
     width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .contact-card {
+    min-width: 200px;
+    flex: 1;
+    justify-content: center;
+    padding: 0.75rem;
+  }
+  
+  .contact-card i {
+    font-size: 1rem;
+  }
+  
+  .contact-card div {
+    min-width: 120px;
+  }
+  
+  .contact-card span {
+    font-size: 0.7rem;
+  }
+  
+  .contact-card strong {
+    font-size: 0.85rem;
+    word-break: break-word;
   }
 
   .footer-grid {
@@ -344,6 +386,18 @@ export default {
     flex-direction: column;
     gap: 1rem;
     text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .quick-contact {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-card {
+    width: 100%;
+    max-width: 280px;
   }
 }
 </style>

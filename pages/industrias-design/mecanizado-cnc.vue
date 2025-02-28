@@ -2,7 +2,7 @@
   <div>
     <NavBar />
     <main class="mecanizado-page">
-      <BannerV1 
+      <BannerV2 
         title="Mecanizado CNC" 
         subtitle="Precisión y calidad en cada pieza manufacturada con tecnología de control numérico"
         :buttons="[
@@ -24,7 +24,7 @@
 <script>
 import NavBar from '../../components/NavBar.vue'
 import Footer from '../../components/Footer.vue'
-import BannerV1 from '../../components/BannerV1.vue'
+import BannerV2 from '../../components/BannerV2.vue'
 import CTASection from '../../components/common/CTASection.vue'
 import ServiciosMecanizado from '../../components/industrias-components/ServiciosMecanizado.vue'
 import CapacidadesMecanizado from '../../components/industrias-components/CapacidadesMecanizado.vue'
@@ -36,7 +36,7 @@ export default {
   components: {
     NavBar,
     Footer,
-    BannerV1,
+    BannerV2,
     CTASection,
     ServiciosMecanizado,
     CapacidadesMecanizado,

@@ -2,7 +2,7 @@
   <div>
     <NavBar />
     <main class="maquinado-convencional-page">
-      <BannerV1 
+      <BannerV2 
         title="Maquinado Convencional" 
         subtitle="Fabricación precisa de flechas, sistemas de transmisión, platos, sprockets y más"
         :buttons="[
@@ -29,7 +29,7 @@
 <script>
 import NavBar from '../../components/NavBar.vue'
 import Footer from '../../components/Footer.vue'
-import BannerV1 from '../../components/BannerV1.vue'
+import BannerV2 from '../../components/BannerV2.vue'
 import DetallesMaquinadoCNC from '../../components/services-components/DetallesMaquinadoCNC.vue'
 import CapacidadesCNC from '../../components/services-components/CapacidadesCNC.vue'
 import ProcesosCNC from '../../components/services-components/ProcesosCNC.vue'
@@ -41,7 +41,7 @@ export default {
   components: {
     NavBar,
     Footer,
-    BannerV1,
+    BannerV2,
     DetallesMaquinadoCNC,
     CapacidadesCNC,
     ProcesosCNC,
