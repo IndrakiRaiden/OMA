@@ -7,11 +7,11 @@
     <div class="cards-grid">
       <div class="solution-card" style="--card-index: 1">
         <div class="icon-wrapper">
-          <i class="fas fa-industry"></i>
+          <i class="fas fa-clock"></i>
         </div>
         <div class="card-content">
-          <h3>Todo en un solo lugar</h3>
-          <p>Fabricación, Acabados, ensamblaje, tratamientos, recubrimientos y entrega sin complicaciones.</p>
+          <h3>Ahorro de tiempo</h3>
+          <p>Nos encargamos de todo el proceso.</p>
         </div>
       </div>
       <div class="solution-card" style="--card-index: 2">
@@ -20,25 +20,25 @@
         </div>
         <div class="card-content">
           <h3>Calidad garantizada</h3>
-          <p>Procesos certificados y precisión en cada pieza.</p>
+          <p>Productos inspeccionados con estándares industriales.</p>
         </div>
       </div>
       <div class="solution-card" style="--card-index: 3">
         <div class="icon-wrapper">
-          <i class="fas fa-microchip"></i>
+          <i class="fas fa-tools"></i>
         </div>
         <div class="card-content">
-          <h3>Industria 4.0</h3>
-          <p>Tecnología avanzada en manufactura.</p>
+          <h3>Flexibilidad</h3>
+          <p>Trabajamos con distintos materiales y procesos.</p>
         </div>
       </div>
       <div class="solution-card" style="--card-index: 4">
         <div class="icon-wrapper">
-          <i class="fas fa-users"></i>
+          <i class="fas fa-industry"></i>
         </div>
         <div class="card-content">
-          <h3>Atención personalizada</h3>
-          <p>Soluciones adaptadas a cada cliente.</p>
+          <h3>Experiencia</h3>
+          <p>Contamos con amplia trayectoria en la industria.</p>
         </div>
       </div>
     </div>
@@ -89,8 +89,8 @@ export default {
 
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
   padding: 1rem;
   max-width: 1300px;
   margin: 0 auto;

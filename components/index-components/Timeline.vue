@@ -9,28 +9,28 @@
       <div class="timeline-container">
         <div class="timeline">
           <div class="timeline-step" style="--step-index: 1">
-            <i class="fas fa-box"></i>
-            <span>Materia Prima</span>
+            <i class="fas fa-comments"></i>
+            <span>Consulta Inicial</span>
           </div>
           <div class="timeline-step" style="--step-index: 2">
-            <i class="fas fa-cogs"></i>
-            <span>Fabricación</span>
+            <i class="fas fa-clipboard-list"></i>
+            <span>Definición del Proyecto</span>
           </div>
           <div class="timeline-step" style="--step-index: 3">
-            <i class="fas fa-flask"></i>
-            <span>Tratamientos</span>
+            <i class="fas fa-drafting-compass"></i>
+            <span>Diseño y Prototipado</span>
           </div>
           <div class="timeline-step" style="--step-index: 4">
-            <i class="fas fa-paint-roller"></i>
-            <span>Acabados</span>
+            <i class="fas fa-cogs"></i>
+            <span>Producción</span>
           </div>
           <div class="timeline-step" style="--step-index: 5">
-            <i class="fas fa-tools"></i>
-            <span>Ensamblaje</span>
+            <i class="fas fa-check-double"></i>
+            <span>Acabados y Control de Calidad</span>
           </div>
           <div class="timeline-step" style="--step-index: 6">
             <i class="fas fa-truck"></i>
-            <span>Entrega</span>
+            <span>Entrega Final</span>
           </div>
         </div>
       </div>
