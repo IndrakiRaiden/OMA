@@ -171,7 +171,7 @@ defineProps({
 .sidebar-footer {
   padding: 12px 15px;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.08);
 }
 
 .social-icons {
