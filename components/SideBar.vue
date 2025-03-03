@@ -61,10 +61,36 @@
 </template>
 
 <script setup>
-defineProps({
+import { useRoute } from 'vue-router'
+import { ref, watch, onBeforeUnmount } from 'vue'
+
+const props = defineProps({
   isMenuOpen: {
     type: Boolean,
     default: false
+  }
+})
+
+// Check if we're in browser environment
+const isBrowser = typeof window !== 'undefined'
+
+// Get current route to help with reactivity
+const route = useRoute()
+
+// Emit events when properties change or component is unmounted
+const emit = defineEmits(['unmounted', 'routeChange'])
+
+// Watch for route changes and emit event
+watch(() => route.fullPath, (newPath, oldPath) => {
+  if (newPath !== oldPath && isBrowser) {
+    emit('routeChange', newPath)
+  }
+}, { immediate: true })
+
+// Clean up when component is unmounted
+onBeforeUnmount(() => {
+  if (isBrowser) {
+    emit('unmounted')
   }
 })
 </script>

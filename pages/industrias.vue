@@ -1,6 +1,5 @@
 <template>
   <div>
-    <NavBar />
     <main class="industries-page">
       <BannerV1 
         title="Industrias" 
@@ -105,8 +104,19 @@
                       'Diseño y fabricación de componentes para maquinaria industrial y equipos especializados.'
                     }}
                   </p>
-                  <a :href="index === 0 ? '/industrias-design/automotriz' : '#contacto'" class="learn-more">
-                    {{ index === 0 ? 'Ver Detalles' : 'Más información' }}
+                  <a :href="
+                    index === 0 ? '/industrias-design/automotriz' : 
+                    index === 1 ? '/industrias-design/medica' :
+                    index === 2 ? '/industrias-design/construccion' :
+                    index === 3 ? '/industrias-design/minera' :
+                    index === 4 ? '/industrias-design/aeroespacial' :
+                    index === 5 ? '/industrias-design/alimentos' :
+                    index === 6 ? '/industrias-design/electronica' :
+                    index === 7 ? '/industrias-design/energia' :
+                    index === 8 ? '/industrias-design/agricola' :
+                    '/industrias-design/industrial'" 
+                    class="learn-more">
+                    {{ 'Ver Detalles' }}
                     <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
@@ -116,20 +126,15 @@
         </div>
       </div>
     </main>
-    <Footer />
   </div>
 </template>
 
 <script>
-import NavBar from '../components/NavBar.vue'
-import Footer from '../components/Footer.vue'
 import BannerV1 from '../components/BannerV1.vue'
 
 export default {
   name: 'IndustriasPage',
   components: {
-    NavBar,
-    Footer,
     BannerV1
   }
 }

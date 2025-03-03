@@ -1,9 +1,9 @@
 <template>
   <div>
     <NuxtLayout>
-      <transition name="page" mode="out-in">
-        <NuxtPage />
-      </transition>
+      <ClientOnly>
+        <NuxtPage :key="$route.fullPath" />
+      </ClientOnly>
     </NuxtLayout>
   </div>
 </template>
@@ -95,20 +95,16 @@ section {
   color: var(--content-primary);
 }
 
-/* Page Transition Animations */
+/* Remove page transitions that might be causing issues */
 .page-enter-active,
 .page-leave-active {
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: none;
 }
 
-.page-enter-from {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
+.page-enter-from,
 .page-leave-to {
-  opacity: 0;
-  transform: translateY(-20px);
+  opacity: 1;
+  transform: none;
 }
 
 .fade-enter-active,

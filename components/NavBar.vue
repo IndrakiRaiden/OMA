@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar" :class="{ 'scrolled': isScrolled }">
+  <nav class="navbar" :class="{ 'scrolled': isScrolled }" :key="navBarKey">
     <div class="nav-container">
       <NuxtLink to="/" class="nav-brand">
         <span class="brand-text">OMA</span>
@@ -15,13 +15,15 @@
         </button>
       </div>
 
-      <SideBar :is-menu-open="isMenuOpen" />
+      <SideBar :is-menu-open="isMenuOpen" @unmounted="handleSidebarUnmount" @routeChange="handleRouteChange" />
     </div>
   </nav>
 </template>
 
 <script setup>
 import { useHead } from '@unhead/vue'
+import { useRoute, useRouter } from 'vue-router'
+import { ref, computed, watch, onMounted, onBeforeUnmount } from 'vue'
 import SideBar from './SideBar.vue'
 
 useHead({
@@ -30,21 +32,89 @@ useHead({
 
 const isMenuOpen = ref(false)
 const isScrolled = ref(false)
+const route = useRoute()
+const router = useRouter()
+
+// Ensure NavBar is only rendered once per route
+// This helps prevent duplication during navigation
+const navBarKey = computed(() => route.fullPath)
+
+// Check if we're in browser environment
+const isBrowser = typeof window !== 'undefined'
+
+// Reset menu immediately when route changes
+// Watch for route changes to close the menu when navigating
+watch(() => route.fullPath, (newPath, oldPath) => {
+  if (newPath !== oldPath) {
+    isMenuOpen.value = false
+    
+    // Force layout recalculation - only in browser environment
+    if (isBrowser && document && document.body) {
+      document.body.style.overflow = ''
+    }
+  }
+}, { immediate: true })
 
 onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
+  if (isBrowser) {
+    window.addEventListener('scroll', handleScroll)
+    
+    // Close menu when browser back/forward buttons are used
+    window.addEventListener('popstate', () => {
+      isMenuOpen.value = false
+    })
+  }
 })
 
 onBeforeUnmount(() => {
-  window.removeEventListener('scroll', handleScroll)
+  if (isBrowser) {
+    window.removeEventListener('scroll', handleScroll)
+    window.removeEventListener('popstate', () => {
+      isMenuOpen.value = false
+    })
+  }
 })
 
 function toggleMenu() {
   isMenuOpen.value = !isMenuOpen.value
+  
+  // Prevent body scrolling when menu is open - only in browser environment
+  if (isBrowser && document && document.body) {
+    document.body.style.overflow = isMenuOpen.value ? 'hidden' : ''
+  }
 }
 
 function handleScroll() {
-  isScrolled.value = window.scrollY > 50
+  if (isBrowser) {
+    isScrolled.value = window.scrollY > 50
+  }
+}
+
+function handleSidebarUnmount() {
+  // Reset the menu state when SideBar is unmounted
+  isMenuOpen.value = false
+  
+  // Only modify DOM in browser environment
+  if (isBrowser && document && document.body) {
+    document.body.style.overflow = ''
+  }
+}
+
+function handleRouteChange() {
+  // Reset menu state when route changes via SideBar
+  isMenuOpen.value = false
+  
+  // Only modify DOM in browser environment
+  if (isBrowser && document && document.body) {
+    document.body.style.overflow = ''
+  }
+  
+  // Force a DOM update by triggering a reflow - only in browser environment
+  if (isBrowser) {
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'))
+    }, 0)
+  }
 }
 </script>
 

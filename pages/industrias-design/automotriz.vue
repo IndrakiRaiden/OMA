@@ -1,6 +1,5 @@
 <template>
   <div>
-    <NavBar />
     <main v-if="industry" class="industry-page">
       <BannerV2 
         :title="industry.banner.title" 
@@ -60,7 +59,6 @@
 </template>
 
 <script>
-import NavBar from '../../components/NavBar.vue'
 import Footer from '../../components/Footer.vue'
 import BannerV2 from '../../components/BannerV2.vue'
 import DetallesIndustria from '../../components/industrias-components/DetallesIndustria.vue'
@@ -73,7 +71,6 @@ import { IndustryModel } from '../../models/IndustryModel'
 export default {
   name: 'IndustriaAutomotriz',
   components: {
-    NavBar,
     Footer,
     BannerV2,
     DetallesIndustria,
