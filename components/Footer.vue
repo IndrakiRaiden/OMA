@@ -20,14 +20,14 @@
             <i class="fas fa-phone"></i>
             <div>
               <span>Llámanos</span>
-              <strong>+1 234 567 890</strong>
+              <strong>+52 6651219080</strong>
             </div>
           </div>
           <div class="contact-card">
             <i class="fas fa-envelope"></i>
             <div>
               <span>Escríbenos</span>
-              <strong>contact@oma.com</strong>
+              <strong>OMASOLUTIONSRH@GMAIL.COM</strong>
             </div>
           </div>
         </div>
@@ -70,7 +70,11 @@
           <div class="location-info">
             <div class="location-item">
               <i class="fas fa-map-marker-alt"></i>
-              <span>Av. Industrial #123, Zona Industrial, Ciudad de México</span>
+              <span>JOSE MARIA PINO SUAREZ #4000 TECATE BAJA CALIFORNIA</span>
+            </div>
+            <div class="location-item">
+              <i class="fas fa-clock"></i>
+              <span>Horario: 6 AM A 6 PM</span>
             </div>
           </div>
         </div>

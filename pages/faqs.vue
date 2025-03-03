@@ -145,6 +145,30 @@ export default {
           category: 'services',
           question: '¿Ofrecen servicios de prototipado rápido?',
           answer: 'Sí, ofrecemos servicios de prototipado rápido utilizando tecnología CNC de última generación. Esto nos permite crear prototipos funcionales de alta calidad en plazos cortos, ideales para validación de diseños y pruebas de concepto.'
+        },
+        {
+          id: 7,
+          category: 'quotes',
+          question: '¿Cuánto tarda una cotización?',
+          answer: 'Nuestro equipo procesa las solicitudes de cotización en un plazo máximo de 24-48 horas hábiles. Para proyectos más complejos, podría tomar hasta 72 horas para proporcionar un presupuesto detallado y preciso.'
+        },
+        {
+          id: 8,
+          category: 'timing',
+          question: '¿Cuáles son los tiempos de entrega?',
+          answer: 'Los tiempos de entrega dependen del tipo de servicio, complejidad y volumen del proyecto. Generalmente, nuestros plazos van desde 1-2 semanas para proyectos sencillos hasta 4-6 semanas para proyectos más complejos. Siempre nos esforzamos por cumplir con las fechas acordadas y mantenemos comunicación constante sobre el avance de su proyecto.'
+        },
+        {
+          id: 9,
+          category: 'materials',
+          question: '¿Qué materiales manejan?',
+          answer: 'Manejamos una amplia gama de materiales, incluyendo: metales (acero inoxidable, aluminio, latón, cobre, titanio), plásticos de ingeniería (ABS, POM, nylon, policarbonato, PEEK), y materiales especiales según requerimiento. Nuestro equipo puede asesorarle sobre el material más adecuado para su aplicación específica.'
+        },
+        {
+          id: 10,
+          category: 'services',
+          question: '¿Trabajan con pedidos pequeños?',
+          answer: 'Sí, trabajamos con pedidos de todos los tamaños, desde piezas únicas y prototipos hasta producciones en serie. Nuestro sistema de producción está optimizado para ser eficiente tanto en pedidos pequeños como en grandes volúmenes, ofreciendo siempre la mejor relación calidad-precio independientemente de la cantidad.'
         }
       ]
     }

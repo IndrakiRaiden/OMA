@@ -128,14 +128,57 @@
                     :class="{'border-red-500': errors.service}"
                   >
                     <option value="">Selecciona un servicio</option>
-                    <option value="mecanizado">Mecanizado CNC</option>
-                    <option value="prototipado">Prototipado Rápido</option>
-                    <option value="moldes">Fabricación de Moldes</option>
-                    <option value="electronica">Electrónica CNC</option>
-                    <option value="diseno">Diseño CAD/CAM</option>
-                    <option value="automatizacion">Automatización CNC</option>
+                    <option value="recubrimientos">Recubrimientos</option>
+                    <option value="acabados">Acabados</option>
+                    <option value="corte-laser">Corte Láser</option>
+                    <option value="maquinado-cnc">Maquinado CNC</option>
+                    <option value="produccion">Producción</option>
+                    <option value="maquinado-convencional">Maquinado Convencional</option>
                   </select>
                   <p v-if="errors.service" class="text-red-500 text-sm mt-1">{{ errors.service }}</p>
+                </div>
+                <div>
+                  <label class="block text-dark mb-2" for="quantity">Cantidad <span class="text-red-500">*</span></label>
+                  <input 
+                    type="number" 
+                    id="quantity" 
+                    v-model="form.quantity" 
+                    class="form-input" 
+                    :class="{'border-red-500': errors.quantity}"
+                    placeholder="Número de unidades requeridas"
+                    min="1"
+                  >
+                  <p v-if="errors.quantity" class="text-red-500 text-sm mt-1">{{ errors.quantity }}</p>
+                </div>
+                <div>
+                  <label class="block text-dark mb-2" for="material">Material <span class="text-red-500">*</span></label>
+                  <select 
+                    id="material" 
+                    v-model="form.material" 
+                    class="form-select" 
+                    :class="{'border-red-500': errors.material}"
+                  >
+                    <option value="">Selecciona un material</option>
+                    <option value="acero">Acero</option>
+                    <option value="aluminio">Aluminio</option>
+                    <option value="plastico">Plástico</option>
+                    <option value="madera">Madera</option>
+                    <option value="otro">Otro (especificar en descripción)</option>
+                  </select>
+                  <p v-if="errors.material" class="text-red-500 text-sm mt-1">{{ errors.material }}</p>
+                </div>
+                <div>
+                  <label class="block text-dark mb-2" for="specifications">Planos o especificaciones técnicas</label>
+                  <textarea 
+                    id="specifications" 
+                    v-model="form.specifications" 
+                    class="form-textarea" 
+                    :class="{'border-red-500': errors.specifications}"
+                    rows="3" 
+                    maxlength="500"
+                    placeholder="Detalla las especificaciones técnicas o menciona si incluirás planos en los archivos adjuntos (opcional)"
+                  ></textarea>
+                  <p v-if="errors.specifications" class="text-red-500 text-sm mt-1">{{ errors.specifications }}</p>
                 </div>
                 <div>
                   <label class="block text-dark mb-2" for="description">Descripción del Proyecto <span class="text-red-500">*</span></label>
@@ -145,27 +188,13 @@
                     class="form-textarea" 
                     :class="{'border-red-500': errors.description}"
                     rows="4" 
+                    maxlength="1000"
                     placeholder="Describe tu proyecto, necesidades específicas y expectativas"
                   ></textarea>
                   <p v-if="errors.description" class="text-red-500 text-sm mt-1">{{ errors.description }}</p>
                 </div>
                 <div>
-                  <label class="block text-dark mb-2" for="timeline">Tiempo Estimado <span class="text-red-500">*</span></label>
-                  <select 
-                    id="timeline" 
-                    v-model="form.timeline" 
-                    class="form-select" 
-                    :class="{'border-red-500': errors.timeline}"
-                  >
-                    <option value="">Selecciona un tiempo</option>
-                    <option value="urgente">Urgente (1-2 semanas)</option>
-                    <option value="normal">Normal (2-4 semanas)</option>
-                    <option value="flexible">Flexible (1-2 meses)</option>
-                  </select>
-                  <p v-if="errors.timeline" class="text-red-500 text-sm mt-1">{{ errors.timeline }}</p>
-                </div>
-                <div>
-                  <label class="block text-dark mb-2">Archivos Adjuntos (opcional)</label>
+                  <label class="block text-dark mb-2">Archivos Adjuntos (Dibujos, planos, etc.)</label>
                   <div class="border-2 border-dashed border-gray rounded-lg p-4 text-center">
                     <input 
                       type="file" 
@@ -280,7 +309,7 @@
                   :disabled="isSubmitting"
                 >
                   <span v-if="isSubmitting">
-                    <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                       <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
@@ -320,8 +349,10 @@ export default {
         phone: '',
         company: '',
         service: '',
+        quantity: '',
+        material: '',
+        specifications: '',
         description: '',
-        timeline: '',
         budget: '',
         files: []
       },
@@ -330,8 +361,10 @@ export default {
         email: '',
         phone: '',
         service: '',
+        quantity: '',
+        material: '',
+        specifications: '',
         description: '',
-        timeline: '',
         budget: ''
       },
       currentStep: 1,
@@ -357,8 +390,10 @@ export default {
             phone: '',
             company: '',
             service: '',
+            quantity: '',
+            material: '',
+            specifications: '',
             description: '',
-            timeline: '',
             budget: '',
             files: []
           };
@@ -408,12 +443,16 @@ export default {
           this.errors.service = 'Por favor selecciona un servicio';
           isValid = false;
         }
-        if (!this.form.description) {
-          this.errors.description = 'La descripción del proyecto es requerida';
+        if (!this.form.quantity) {
+          this.errors.quantity = 'La cantidad es requerida';
           isValid = false;
         }
-        if (!this.form.timeline) {
-          this.errors.timeline = 'Por favor selecciona un tiempo estimado';
+        if (!this.form.material) {
+          this.errors.material = 'Por favor selecciona un material';
+          isValid = false;
+        }
+        if (!this.form.description) {
+          this.errors.description = 'La descripción del proyecto es requerida';
           isValid = false;
         }
       } else if (this.currentStep === 3) {
@@ -469,6 +508,17 @@ export default {
 .form-input::placeholder,
 .form-textarea::placeholder {
   color: var(--content-gray);
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--content-gray);
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  resize: none;
+  height: auto;
 }
 
 .primary-btn {

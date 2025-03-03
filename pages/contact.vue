@@ -19,8 +19,8 @@
                 <i class="fas fa-phone-alt"></i>
               </div>
               <h3>Llámanos</h3>
-              <p>+52 (55) 1234-5678</p>
-              <a href="tel:+525512345678" class="card-link">
+              <p>+52 6651219080</p>
+              <a href="tel:+526651219080" class="card-link">
                 Llamar ahora
                 <i class="fas fa-arrow-right"></i>
               </a>
@@ -31,8 +31,8 @@
                 <i class="fas fa-envelope"></i>
               </div>
               <h3>Escríbenos</h3>
-              <p>contacto@omasolutions.com</p>
-              <a href="mailto:contacto@omasolutions.com" class="card-link">
+              <p>OMASOLUTIONSRH@GMAIL.COM</p>
+              <a href="mailto:OMASOLUTIONSRH@GMAIL.COM" class="card-link">
                 Enviar email
                 <i class="fas fa-arrow-right"></i>
               </a>
@@ -43,7 +43,7 @@
                 <i class="fas fa-map-marker-alt"></i>
               </div>
               <h3>Visítanos</h3>
-              <p>Calle Principal #123, CDMX</p>
+              <p>JOSE MARIA PINO SUAREZ #4000 TECATE BAJA CALIFORNIA</p>
               <a href="#map" class="card-link">
                 Ver mapa
                 <i class="fas fa-arrow-right"></i>
@@ -61,19 +61,31 @@
               
               <form @submit.prevent="handleSubmit" class="space-y-6">
                 <div class="form-group">
-                  <label for="name">Nombre completo</label>
+                  <label for="name">Nombre</label>
                   <input 
                     id="name" 
                     v-model="formData.name" 
                     type="text" 
                     required 
                     :class="{ 'has-value': formData.name }" 
-                    placeholder="Tu nombre completo"
+                    placeholder="Tu nombre"
                   >
                 </div>
 
                 <div class="form-group">
-                  <label for="email">Correo electrónico</label>
+                  <label for="company">Empresa</label>
+                  <input 
+                    id="company" 
+                    v-model="formData.company" 
+                    type="text" 
+                    required 
+                    :class="{ 'has-value': formData.company }" 
+                    placeholder="Nombre de tu empresa"
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Correo</label>
                   <input 
                     id="email" 
                     v-model="formData.email" 
@@ -85,30 +97,15 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="phone">Teléfono (opcional)</label>
+                  <label for="phone">Teléfono</label>
                   <input 
                     id="phone" 
                     v-model="formData.phone" 
                     type="tel" 
+                    required
                     :class="{ 'has-value': formData.phone }" 
                     placeholder="Tu número de teléfono"
                   >
-                </div>
-
-                <div class="form-group">
-                  <label for="projectType">Tipo de proyecto</label>
-                  <select 
-                    id="projectType" 
-                    v-model="formData.projectType" 
-                    required 
-                    :class="{ 'has-value': formData.projectType }"
-                  >
-                    <option value="" disabled selected>Selecciona el tipo de proyecto</option>
-                    <option value="cnc">Maquinado CNC</option>
-                    <option value="3dprinting">Impresión 3D</option>
-                    <option value="design">Diseño de producto</option>
-                    <option value="other">Otro</option>
-                  </select>
                 </div>
 
                 <div class="form-group">
@@ -184,18 +181,18 @@ export default {
       isSubmitting: false,
       formData: {
         name: '',
+        company: '',
         email: '',
         phone: '',
-        projectType: '',
         message: ''
       },
       businessHours: {
-        'Lunes': '9:00 AM - 6:00 PM',
-        'Martes': '9:00 AM - 6:00 PM',
-        'Miércoles': '9:00 AM - 6:00 PM',
-        'Jueves': '9:00 AM - 6:00 PM',
-        'Viernes': '9:00 AM - 6:00 PM',
-        'Sábado': '9:00 AM - 2:00 PM',
+        'Lunes': '6:00 AM - 6:00 PM',
+        'Martes': '6:00 AM - 6:00 PM',
+        'Miércoles': '6:00 AM - 6:00 PM',
+        'Jueves': '6:00 AM - 6:00 PM',
+        'Viernes': '6:00 AM - 6:00 PM',
+        'Sábado': '6:00 AM - 6:00 PM',
         'Domingo': 'Cerrado'
       }
     }
@@ -208,14 +205,21 @@ export default {
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 1500))
         
-        console.log('Form submitted:', this.formData)
+        // Log the form data with the new structure
+        console.log('Form submitted:', {
+          nombre: this.formData.name,
+          empresa: this.formData.company,
+          correo: this.formData.email,
+          telefono: this.formData.phone,
+          mensaje: this.formData.message
+        })
         
         // Reset form
         this.formData = {
           name: '',
+          company: '',
           email: '',
           phone: '',
-          projectType: '',
           message: ''
         }
         

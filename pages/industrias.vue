@@ -20,54 +20,48 @@
             adaptados a las necesidades específicas de cada industria.
           </p>
           <div class="industries-grid">
-            <div class="industry-card" v-for="(_, index) in 12" :key="index">
+            <div class="industry-card" v-for="(_, index) in 10" :key="index">
               <div class="card-content">
                 <div class="card-body">
                   <div class="icon-container">
                     <i :class="['fas', 
-                      index === 0 ? 'fa-cog' : 
-                      index === 1 ? 'fa-cube' :
-                      index === 2 ? 'fa-tools' :
-                      index === 3 ? 'fa-microchip' :
-                      index === 4 ? 'fa-drafting-compass' :
-                      index === 5 ? 'fa-industry' :
-                      index === 6 ? 'fa-robot' :
-                      index === 7 ? 'fa-layer-group' :
-                      index === 8 ? 'fa-microscope' :
-                      index === 9 ? 'fa-cogs' :
-                      index === 10 ? 'fa-print' :
-                      'fa-shapes']"></i>
+                      index === 0 ? 'fa-car' : 
+                      index === 1 ? 'fa-heartbeat' :
+                      index === 2 ? 'fa-hard-hat' :
+                      index === 3 ? 'fa-mountain' :
+                      index === 4 ? 'fa-plane' :
+                      index === 5 ? 'fa-utensils' :
+                      index === 6 ? 'fa-microchip' :
+                      index === 7 ? 'fa-bolt' :
+                      index === 8 ? 'fa-tractor' :
+                      'fa-industry']"></i>
                   </div>
                   <h3>
                     {{
-                      index === 0 ? 'Mecanizado CNC' :
-                      index === 1 ? 'Prototipado Rápido' :
-                      index === 2 ? 'Fabricación de Moldes' :
-                      index === 3 ? 'Electrónica CNC' :
-                      index === 4 ? 'Diseño CAD/CAM' :
-                      index === 5 ? 'Automatización CNC' :
-                      index === 6 ? 'Robótica Industrial' :
-                      index === 7 ? 'Manufactura Aditiva' :
-                      index === 8 ? 'Control de Calidad' :
-                      index === 9 ? 'Ingeniería Inversa' :
-                      index === 10 ? 'Impresión 3D' :
-                      'Diseño Paramétrico'
+                      index === 0 ? 'Automotriz' :
+                      index === 1 ? 'Médica' :
+                      index === 2 ? 'Construcción' :
+                      index === 3 ? 'Minera' :
+                      index === 4 ? 'Aeroespacial' :
+                      index === 5 ? 'Alimentos' :
+                      index === 6 ? 'Electrónica' :
+                      index === 7 ? 'Energía' :
+                      index === 8 ? 'Agrícola' :
+                      'Maquinaria y equipos industriales'
                     }}
                   </h3>
                   <p>
                     {{
-                      index === 0 ? 'Servicios de mecanizado de precisión con máquinas CNC para piezas complejas y de alta precisión.' :
-                      index === 1 ? 'Desarrollo rápido de prototipos mediante fresado CNC para validación de diseños y pruebas funcionales.' :
-                      index === 2 ? 'Diseño y fabricación de moldes de inyección y matrices utilizando tecnología CNC de última generación.' :
-                      index === 3 ? 'Fabricación de PCBs y componentes electrónicos mediante fresado CNC de alta precisión.' :
-                      index === 4 ? 'Servicios de diseño y programación CAD/CAM para optimizar la producción CNC.' :
-                      index === 5 ? 'Soluciones de automatización y control numérico para procesos de manufactura avanzada.' :
-                      index === 6 ? 'Implementación de sistemas robóticos para automatización de procesos industriales.' :
-                      index === 7 ? 'Tecnologías avanzadas de fabricación por capas para geometrías complejas.' :
-                      index === 8 ? 'Inspección y verificación dimensional con equipos de medición de alta precisión.' :
-                      index === 9 ? 'Digitalización y reconstrucción 3D de piezas para documentación y mejora.' :
-                      index === 10 ? 'Servicios de impresión 3D profesional para prototipos y piezas finales.' :
-                      'Diseño generativo y optimización topológica para componentes mecánicos.'
+                      index === 0 ? 'Soluciones de manufactura de precisión para componentes y piezas del sector automotriz.' :
+                      index === 1 ? 'Fabricación especializada para dispositivos e instrumentos médicos con altos estándares de calidad.' :
+                      index === 2 ? 'Servicios de manufactura para elementos estructurales y componentes utilizados en la industria de la construcción.' :
+                      index === 3 ? 'Soluciones robustas para equipos y componentes utilizados en la exigente industria minera.' :
+                      index === 4 ? 'Fabricación de alta precisión para componentes aeroespaciales con estrictos controles de calidad.' :
+                      index === 5 ? 'Manufactura de equipos y componentes para la industria alimentaria con materiales de grado alimenticio.' :
+                      index === 6 ? 'Servicios especializados para componentes y carcasas de dispositivos electrónicos.' :
+                      index === 7 ? 'Fabricación de componentes para sistemas de generación y distribución de energía.' :
+                      index === 8 ? 'Soluciones de manufactura para maquinaria y equipos utilizados en el sector agrícola.' :
+                      'Diseño y fabricación de componentes para maquinaria industrial y equipos especializados.'
                     }}
                   </p>
                   <a :href="index === 0 ? '/industrias-design/mecanizado-cnc' : '#contacto'" class="learn-more">

@@ -10,36 +10,36 @@
           <div class="frame-icon">
             <i class="fas fa-cogs"></i>
           </div>
-          <h3 class="frame-title">Tecnología de Punta</h3>
+          <h3 class="frame-title">Gestión integral del proyecto</h3>
           <p class="frame-text">
-            Utilizamos la última tecnología en maquinaria CNC y software de diseño para garantizar la máxima precisión.
+            Ofrecemos una gestión completa de su proyecto desde el diseño hasta la entrega final.
           </p>
         </div>
         <div class="frame">
           <div class="frame-icon">
             <i class="fas fa-users"></i>
           </div>
-          <h3 class="frame-title">Equipo Experto</h3>
+          <h3 class="frame-title">Red de proveedores confiables</h3>
           <p class="frame-text">
-            Nuestro equipo altamente capacitado cuenta con años de experiencia en la industria manufacturera.
+            Contamos con una red de proveedores de confianza que garantizan materiales de alta calidad.
           </p>
         </div>
         <div class="frame">
           <div class="frame-icon">
             <i class="fas fa-chart-line"></i>
           </div>
-          <h3 class="frame-title">Mejora Continua</h3>
+          <h3 class="frame-title">Capacidad de respuesta rápida</h3>
           <p class="frame-text">
-            Constantemente buscamos formas de mejorar nuestros procesos y servicios.
+            Respondemos ágilmente a las necesidades de nuestros clientes con soluciones eficientes.
           </p>
         </div>
         <div class="frame">
           <div class="frame-icon">
             <i class="fas fa-handshake"></i>
           </div>
-          <h3 class="frame-title">Servicio Personalizado</h3>
+          <h3 class="frame-title">Calidad certificada en cada proceso</h3>
           <p class="frame-text">
-            Trabajamos estrechamente con nuestros clientes para entender y satisfacer sus necesidades específicas.
+            Aseguramos la calidad en cada etapa de producción con procesos certificados y rigurosos controles.
           </p>
         </div>
       </div>
