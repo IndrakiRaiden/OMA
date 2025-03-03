@@ -1,9 +1,11 @@
 <template>
-  <div>
+  <div class="layout-container">
     <ClientOnly>
       <NavBar />
     </ClientOnly>
-    <slot :key="$route.fullPath" />
+    <main class="main-content">
+      <slot />
+    </main>
     <ClientOnly>
       <Footer />
     </ClientOnly>
@@ -23,7 +25,14 @@ const isBrowser = typeof window !== 'undefined'
 </script>
 
 <style scoped>
-div {
+.layout-container {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding-top: 64px; /* Height of the navbar */
 }
 </style>

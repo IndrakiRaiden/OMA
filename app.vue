@@ -1,11 +1,10 @@
 <template>
-  <div>
-    <NuxtLayout>
-      <ClientOnly>
-        <NuxtPage :key="$route.fullPath" />
-      </ClientOnly>
-    </NuxtLayout>
-  </div>
+  <NuxtLayout>
+    <NuxtPage :transition="{
+      name: 'page',
+      mode: 'out-in'
+    }" />
+  </NuxtLayout>
 </template>
 
 <style>
@@ -49,71 +48,70 @@ body {
 
 @media (min-width: 1024px) {
   .container {
-    padding: 0 4rem;
+    padding: 0 2rem;
   }
 }
 
-section {
-  padding: 4rem 0;
-  background-color: var(--content-light);
+/* Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border: none;
+  outline: none;
 }
 
 .btn-primary {
-  background-color: var(--content-secondary);
-  color: var(--content-primary);
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
+  background-color: var(--color-accent);
+  color: white;
 }
 
 .btn-primary:hover {
-  background-color: var(--content-accent);
+  background-color: var(--color-accent-dark);
+  transform: translateY(-2px);
 }
 
 .btn-secondary {
-  background-color: transparent;
-  color: var(--content-secondary);
-  border: 2px solid var(--content-secondary);
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
+  background-color: var(--color-secondary);
+  color: white;
 }
 
 .btn-secondary:hover {
-  background-color: var(--content-secondary);
-  color: var(--content-primary);
+  background-color: var(--color-secondary-dark);
+  transform: translateY(-2px);
 }
 
-.nav-link {
-  color: var(--content-dark);
-  transition: color 0.3s ease;
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
 }
 
-.nav-link:hover {
-  color: var(--content-primary);
+.btn-outline:hover {
+  background-color: var(--color-accent);
+  color: white;
+  transform: translateY(-2px);
 }
 
-/* Remove page transitions that might be causing issues */
-.page-enter-active,
+/* Transition Effects */
+.page-enter-active, 
 .page-leave-active {
-  transition: none;
+  transition: all 0.3s ease-out;
 }
 
-.page-enter-from,
-.page-leave-to {
-  opacity: 1;
-  transform: none;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s;
-}
-
-.fade-enter-from,
-.fade-leave-to {
+.page-enter-from {
   opacity: 0;
+  transform: translateY(10px);
+}
+
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
 }
 </style>

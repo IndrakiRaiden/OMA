@@ -1,43 +1,47 @@
 <template>
-  <div>
-    <NavBar />
-    <main class="services-page">
-      <BannerV2 
-        title="Nuestros Servicios" 
-        subtitle="Soluciones integrales de manufactura CNC"
-        :buttons="[
-          { text: 'Ver Servicios', href: '#servicios', class: 'primary-btn' },
-          { text: 'Cotizar', href: '/cotiza', class: 'secondary-btn' }
-        ]"
-      />
-      
-      <!-- Services Section -->
-      <section id="servicios" class="services-section py-16">
-        <div class="container mx-auto px-4">
-          <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">SERVICIOS PRINCIPALES DE OMA</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">
-              Ofrecemos una gama completa de servicios de manufactura y producción, respaldados por años de experiencia y tecnología de punta.
-            </p>
-          </div>
-          
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ServiceCard v-for="service in services" :key="service.id" :service="service" />
-          </div>
+  <main class="services-page">
+    <BannerV2 
+      title="Nuestros Servicios" 
+      subtitle="Soluciones integrales de manufactura CNC"
+      :buttons="[
+        { text: 'Ver Servicios', href: '#servicios', class: 'primary-btn' },
+        { text: 'Cotizar', href: '/cotiza', class: 'secondary-btn' }
+      ]"
+    />
+    
+    <!-- Services Section -->
+    <section id="servicios" class="services-section py-16">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">SERVICIOS PRINCIPALES DE OMA</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Ofrecemos una gama completa de servicios de manufactura y producción, respaldados por años de experiencia y tecnología de punta.
+          </p>
         </div>
-      </section>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <ServiceCard v-for="service in services" :key="service.id" :service="service" />
+        </div>
+      </div>
+    </section>
 
-      <FeaturesSection :features="features" />
-      <TestimonialsSection :testimonials="testimonials" />
-      <CTASection />
-    </main>
-    <Footer />
-  </div>
+    <FeaturesSection :features="features" />
+    <TestimonialsSection :testimonials="testimonials" />
+    <CTASection />
+  </main>
 </template>
 
+<script setup>
+definePageMeta({
+  layout: 'default',
+  pageTransition: {
+    name: 'page',
+    mode: 'out-in'
+  }
+})
+</script>
+
 <script>
-import NavBar from '../components/NavBar.vue'
-import Footer from '../components/Footer.vue'
 import ServiceCard from '../components/services-components/ServiceCard.vue'
 import BannerV2 from '../components/BannerV2.vue'
 import FeaturesSection from '../components/services-components/FeaturesSection.vue'
@@ -47,8 +51,6 @@ import CTASection from '~/components/common/CTASection.vue'
 export default {
   name: 'ServiciosPage',
   components: {
-    NavBar,
-    Footer,
     ServiceCard,
     BannerV2,
     FeaturesSection,
@@ -79,7 +81,7 @@ export default {
         {
           id: 3,
           title: 'Maquinado CNC',
-          description: 'Fabricación de piezas de precisión como cilindros, pistones, poleas, chumaceras, sprockets, bujes, punzones y matrices, trabajando con diversos aceros de grado herramienta y maquinaria.',
+          description: 'Fabricación de piezas de precisión como cilindros, pistones, poleas, chumaceras, sprockets, bujes y matrices, trabajando con diversos aceros de grado herramienta y maquinaria.',
           icon: 'fa-tools',
           image: '/images/services/cnc-machining.jpg',
           features: ['Piezas de precisión', 'Aceros especializados', 'Alta calidad'],
@@ -168,5 +170,10 @@ export default {
 .services-page {
   background-color: var(--background-light);
   min-height: 100vh;
+}
+
+/* We've moved the padding to the BannerV2 component itself */
+:deep(.hero-section) {
+  margin-top: 0;
 }
 </style>

@@ -1,23 +1,27 @@
 <template>
-  <div class="home">
-    <NavBar />
-    <main class="home-page">
-      <Hero />
-      <Solutions />
-      <Timeline />
-      <Benefits />
-      <HowItWorks />
-      <Industries />
-      <Testimonials />
-      <CallToAction />
-    </main>
-    <Footer />
-  </div>
+  <main class="home-page">
+    <Hero />
+    <Solutions />
+    <Timeline />
+    <Benefits />
+    <HowItWorks />
+    <Industries />
+    <Testimonials />
+    <CallToAction />
+  </main>
 </template>
 
+<script setup>
+definePageMeta({
+  layout: 'default',
+  pageTransition: {
+    name: 'page',
+    mode: 'out-in'
+  }
+})
+</script>
+
 <script>
-import NavBar from '~/components/NavBar.vue'
-import Footer from '~/components/Footer.vue'
 import Hero from '~/components/Hero.vue'
 import Solutions from '~/components/index-components/Solutions.vue'
 import Timeline from '~/components/index-components/Timeline.vue'
@@ -30,8 +34,6 @@ import CallToAction from '~/components/index-components/CallToAction.vue'
 export default {
   name: 'HomePage',
   components: {
-    NavBar,
-    Footer,
     Hero,
     Solutions,
     Timeline,
@@ -45,12 +47,6 @@ export default {
 </script>
 
 <style scoped>
-.home {
-  background-color: var(--content-light);
-  color: var(--content-primary);
-  min-height: 100vh;
-}
-
 .home-page {
   background-color: var(--content-light);
   min-height: 100vh;

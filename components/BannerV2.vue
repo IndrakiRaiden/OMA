@@ -50,9 +50,10 @@ defineProps({
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 5rem 2rem;
+  padding: 6rem 2rem 2rem 2rem;
   overflow: hidden;
   background: url('../public/images/Banners/7.jpg') center/cover no-repeat;
+  margin-top: 0;
 }
 
 .gradient-overlay {
