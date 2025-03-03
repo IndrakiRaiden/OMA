@@ -43,12 +43,12 @@ export default {
   right: 0;
   bottom: 0;
   background: linear-gradient(135deg, 
-    var(--content-primary) 0%, 
-    var(--content-primary) 25%,
-    var(--content-secondary) 45%,
-    var(--content-secondary) 55%,
-    var(--content-primary) 75%,
-    var(--content-primary) 100%);
+    #4B6E8C 0%, 
+    #4B6E8C 25%,
+    #F5A623 45%,
+    #F5A623 55%,
+    #4B6E8C 75%,
+    #4B6E8C 100%);
   background-size: 200% 200%;
   animation: gradientMove 15s ease infinite;
   opacity: 0.8;

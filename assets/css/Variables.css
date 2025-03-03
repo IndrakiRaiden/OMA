@@ -12,6 +12,7 @@
   /* Variables para el contenido de las páginas */
   --content-primary: #4B6E8C;    /* Azul - Confianza y estabilidad */
   --content-secondary: #F5A623;  /* Amanecer Dorado - Toque cálido */
+  --content-accent: #F5A623;     /* Amanecer Dorado - Acento */
   --content-light: #F7F7F7;      /* Blanco Hielo - Limpieza */
   --content-dark: #5A5A5A;       /* Piedra Natural - Seriedad */
   --content-gray: #B1B1B1;       /* Gris Claro - Elegancia suave */

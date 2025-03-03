@@ -1,51 +1,44 @@
 <template>
-  <TimelineBackground>
-    <section ref="timelineSection" class="timeline-section" :class="{ 'is-visible': isVisible }">
-      <div class="section-header">
-        <span class="subtitle">PROCESO DE PRODUCCIÓN</span>
-        <h2>De la idea a la entrega</h2>
-        <p>Orquestamos todo el proceso productivo</p>
-      </div>
-      <div class="timeline-container">
-        <div class="timeline">
-          <div class="timeline-step" style="--step-index: 1">
-            <i class="fas fa-comments"></i>
-            <span>Consulta Inicial</span>
-          </div>
-          <div class="timeline-step" style="--step-index: 2">
-            <i class="fas fa-clipboard-list"></i>
-            <span>Definición del Proyecto</span>
-          </div>
-          <div class="timeline-step" style="--step-index: 3">
-            <i class="fas fa-drafting-compass"></i>
-            <span>Diseño y Prototipado</span>
-          </div>
-          <div class="timeline-step" style="--step-index: 4">
-            <i class="fas fa-cogs"></i>
-            <span>Producción</span>
-          </div>
-          <div class="timeline-step" style="--step-index: 5">
-            <i class="fas fa-check-double"></i>
-            <span>Acabados y Control de Calidad</span>
-          </div>
-          <div class="timeline-step" style="--step-index: 6">
-            <i class="fas fa-truck"></i>
-            <span>Entrega Final</span>
-          </div>
+  <section ref="timelineSection" class="timeline-section" :class="{ 'is-visible': isVisible }">
+    <div class="section-header">
+      <span class="subtitle">PROCESO DE PRODUCCIÓN</span>
+      <h2>De la idea a la entrega</h2>
+      <p>Orquestamos todo el proceso productivo</p>
+    </div>
+    <div class="timeline-container">
+      <div class="timeline">
+        <div class="timeline-step" style="--step-index: 1">
+          <i class="fas fa-comments"></i>
+          <span>Consulta Inicial</span>
+        </div>
+        <div class="timeline-step" style="--step-index: 2">
+          <i class="fas fa-clipboard-list"></i>
+          <span>Definición del Proyecto</span>
+        </div>
+        <div class="timeline-step" style="--step-index: 3">
+          <i class="fas fa-drafting-compass"></i>
+          <span>Diseño y Prototipado</span>
+        </div>
+        <div class="timeline-step" style="--step-index: 4">
+          <i class="fas fa-cogs"></i>
+          <span>Producción</span>
+        </div>
+        <div class="timeline-step" style="--step-index: 5">
+          <i class="fas fa-check-double"></i>
+          <span>Acabados y Control de Calidad</span>
+        </div>
+        <div class="timeline-step" style="--step-index: 6">
+          <i class="fas fa-truck"></i>
+          <span>Entrega Final</span>
         </div>
       </div>
-    </section>
-  </TimelineBackground>
+    </div>
+  </section>
 </template>
 
 <script>
-import TimelineBackground from '../backgrounds/TimelineBackground.vue'
-
 export default {
   name: 'Timeline',
-  components: {
-    TimelineBackground
-  },
   data() {
     return {
       isVisible: false
@@ -76,6 +69,31 @@ export default {
   padding: 8rem 2rem;
   position: relative;
   width: 100%;
+  background-image: url('/images/index/4.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.timeline-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    #4B6E8C 0%, 
+    #4B6E8C 25%,
+    #F5A623 45%,
+    #F5A623 55%,
+    #4B6E8C 75%,
+    #4B6E8C 100%);
+  background-size: 200% 200%;
+  animation: gradientMove 15s ease infinite;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .timeline-section .section-header {
@@ -258,6 +276,18 @@ export default {
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
