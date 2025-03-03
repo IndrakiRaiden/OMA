@@ -18,11 +18,12 @@ export default defineNuxtConfig({
       theme: {
         extend: {
           colors: {
-            'primary': '#4B6E8C',
-            'secondary': '#B1B1B1',
-            'accent': '#F5A623',
-            'light': '#F7F7F7',
-            'dark': '#5A5A5A'
+            'primary': 'var(--content-primary)',
+            'secondary': 'var(--content-secondary)',
+            'accent': 'var(--content-accent)',
+            'light': 'var(--content-light)',
+            'dark': 'var(--content-dark)',
+            'gray': 'var(--content-gray)'
           }
         }
       }

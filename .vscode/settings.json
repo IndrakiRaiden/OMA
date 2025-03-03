@@ -1,0 +1,18 @@
+{
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "stylelint.validate": ["css", "scss"],
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "tailwindCSS.includeLanguages": {
+    "vue": "html",
+    "vue-html": "html"
+  },
+  "tailwindCSS.experimental.classRegex": [
+    ["class\\s*=\\s*['\"]([^'\"]*)['\"]", "['\"]([^'\"]*)['\"]"],
+    ["\\s*:\\s*['\"]([^'\"]*)['\"]", "['\"]([^'\"]*)['\"]"],
+    ["@apply\\s+([^;]*);", "\\s*([^;]*);"]
+  ]
+}

@@ -15,7 +15,7 @@ export default {
   right: -20%;
   width: 80vw;
   height: 120vw;
-  background: linear-gradient(165deg, var(--content-primary) 0%, var(--content-secondary) 100%);
+  background: linear-gradient(165deg, var(--content-secondary) 0%, var(--content-accent) 100%);
   transform: rotate(-45deg);
   opacity: 0.05;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;

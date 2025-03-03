@@ -11,23 +11,9 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+@import url('@/assets/css/Variables.css');
 
-:root {
-  /* Variables originales para navbar y elementos globales */
-  --color-primary: #F7F7F7;    /* Blanco Hielo - Color Principal */
-  --color-secondary: #4B6E8C;  /* Azul - Color Secundario */
-  --color-accent: #F5A623;     /* Amanecer Dorado */
-  --color-light: #FFFFFF;      /* Blanco Puro */
-  --color-dark: #5A5A5A;       /* Piedra Natural */
-  --color-gray: #B1B1B1;       /* Gris Claro */
-
-  /* Variables para el contenido de las páginas */
-  --content-primary: #4B6E8C;    /* Azul - Confianza y estabilidad */
-  --content-secondary: #F5A623;  /* Amanecer Dorado - Toque cálido */
-  --content-light: #F7F7F7;      /* Blanco Hielo - Limpieza */
-  --content-dark: #5A5A5A;       /* Piedra Natural - Seriedad */
-  --content-gray: #B1B1B1;       /* Gris Claro - Elegancia suave */
-}
+/* Root styles were moved to Variables.css */
 
 * {
   margin: 0;
@@ -41,10 +27,11 @@ html {
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: white;
+  background-color: var(--content-light);
   color: var(--content-dark);
   line-height: 1.6;
-  @apply bg-light text-dark antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -66,6 +53,11 @@ body {
   }
 }
 
+section {
+  padding: 4rem 0;
+  background-color: var(--content-light);
+}
+
 .btn-primary {
   background-color: var(--content-secondary);
   color: var(--content-primary);
@@ -73,7 +65,6 @@ body {
   border-radius: 0.5rem;
   font-weight: 500;
   transition: all 0.3s ease;
-  @apply px-6 py-2 rounded-lg hover:bg-opacity-90 transition-all duration-300;
 }
 
 .btn-primary:hover {
@@ -88,7 +79,6 @@ body {
   border-radius: 0.5rem;
   font-weight: 500;
   transition: all 0.3s ease;
-  @apply border-2 border-primary text-primary px-6 py-2 rounded-lg hover:bg-primary hover:text-white transition-all duration-300;
 }
 
 .btn-secondary:hover {
@@ -97,13 +87,18 @@ body {
 }
 
 .nav-link {
-  @apply text-dark hover:text-primary transition-colors duration-300;
+  color: var(--content-dark);
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--content-primary);
 }
 
 /* Page Transition Animations */
 .page-enter-active,
 .page-leave-active {
-  transition: all 0.3s ease-out;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .page-enter-from {
@@ -114,5 +109,15 @@ body {
 .page-leave-to {
   opacity: 0;
   transform: translateY(-20px);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
