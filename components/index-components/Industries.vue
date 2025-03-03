@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import { Plane, Car, Stethoscope, Zap } from 'lucide-vue-next'
+import { Plane, Wrench, Stethoscope, Cpu, Factory, Building } from 'lucide-vue-next'
 import IndustryCard from './IndustryCard.vue'
 
 export default {
@@ -38,9 +38,11 @@ export default {
   components: {
     IndustryCard,
     Plane,
-    Car,
+    Wrench,
     Stethoscope,
-    Zap
+    Cpu,
+    Factory,
+    Building
   },
   data() {
     return {
@@ -48,22 +50,22 @@ export default {
         { 
           icon: Plane, 
           title: 'Aeroespacial',
-          description: 'Soluciones de alta precisión para la industria aeroespacial'
+          description: 'Fabricación de alta precisión para componentes aeroespaciales con estrictos controles de calidad.'
         },
         { 
-          icon: Car, 
-          title: 'Automotriz',
-          description: 'Innovación en manufactura y automatización automotriz'
+          icon: Building, 
+          title: 'Construcción',
+          description: 'Servicios de manufactura para elementos estructurales y componentes utilizados en la industria de la construcción.'
         },
         { 
           icon: Stethoscope, 
-          title: 'Médico',
-          description: 'Tecnología de vanguardia para equipos médicos'
+          title: 'Médica',
+          description: 'Fabricación especializada para dispositivos e instrumentos médicos con altos estándares de calidad.'
         },
         { 
-          icon: Zap, 
-          title: 'Energía',
-          description: 'Sistemas eficientes para el sector energético'
+          icon: Cpu, 
+          title: 'Electrónica',
+          description: 'Servicios especializados para componentes y carcasas de dispositivos electrónicos.'
         }
       ]
     }

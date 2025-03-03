@@ -15,10 +15,10 @@
       <p class="card-description">{{ description }}</p>
       
       <div class="card-footer">
-        <a href="#" class="discover-more">
+        <router-link to="/industrias" class="discover-more">
           <span>Descubre más</span>
           <i class="fas fa-arrow-right"></i>
-        </a>
+        </router-link>
       </div>
     </div>
     <div class="card-background"></div>
