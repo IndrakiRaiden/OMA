@@ -1,7 +1,7 @@
 <template>
   <div>
     <main class="industries-page">
-      <BannerV1 
+      <BannerV2 
         title="Industrias" 
         subtitle="Soluciones especializadas para diferentes sectores"
         :buttons="[
@@ -130,12 +130,12 @@
 </template>
 
 <script>
-import BannerV1 from '../components/BannerV1.vue'
+import BannerV2 from '../components/BannerV2.vue'
 
 export default {
   name: 'IndustriasPage',
   components: {
-    BannerV1
+    BannerV2
   }
 }
 </script>
@@ -148,7 +148,7 @@ html {
 .industries-page {
   background-color: var(--content-light);
   min-height: 100vh;
-  padding: 4rem 0;
+  padding: 0 0 4rem 0;
 }
 
 .industries-grid {

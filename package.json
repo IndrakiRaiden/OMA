@@ -17,6 +17,10 @@
     "vue-router": "latest"
   },
   "devDependencies": {
-    "lucide-vue-next": "^0.475.0"
+    "autoprefixer": "^10.4.20",
+    "lucide-vue-next": "^0.475.0",
+    "postcss": "^8.5.3",
+    "postcss-import": "^16.1.0",
+    "tailwindcss": "^3.4.17"
   }
 }
