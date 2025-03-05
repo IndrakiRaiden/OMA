@@ -1,7 +1,6 @@
 <template>
   <div>
-    <NavBar />
-    <main class="maquinado-convencional-page">
+    <main v-if="service" class="maquinado-convencional-page">
       <BannerV2 
         title="Maquinado Convencional" 
         subtitle="Fabricación precisa de flechas, sistemas de transmisión, platos, sprockets y más"
@@ -22,13 +21,13 @@
         buttonLink="/cotiza"
       />
     </main>
-    <Footer />
+    <div v-else class="loading-container">
+      <p>Cargando información del servicio...</p>
+    </div>
   </div>
 </template>
 
 <script>
-import NavBar from '../../components/NavBar.vue'
-import Footer from '../../components/Footer.vue'
 import BannerV2 from '../../components/BannerV2.vue'
 import DetallesMaquinadoCNC from '../../components/services-components/DetallesMaquinadoCNC.vue'
 import CapacidadesCNC from '../../components/services-components/CapacidadesCNC.vue'
@@ -39,8 +38,6 @@ import CTASection from '../../components/common/CTASection.vue'
 export default {
   name: 'MaquinadoConvencionalPage',
   components: {
-    NavBar,
-    Footer,
     BannerV2,
     DetallesMaquinadoCNC,
     CapacidadesCNC,

@@ -1,7 +1,6 @@
 <template>
   <div>
-    <NavBar />
-    <main class="recubrimientos-page">
+    <main v-if="service" class="recubrimientos-page">
       <BannerV1 
         title="Recubrimientos" 
         subtitle="Aplicación de recubrimientos especializados como vulcanizado, neopreno, poliuretano y más"
@@ -22,25 +21,25 @@
         buttonLink="/cotiza"
       />
     </main>
-    <Footer />
+    <div v-else class="loading-container">
+      <p>Cargando información del servicio...</p>
+    </div>
   </div>
 </template>
 
 <script>
-import NavBar from '../../components/NavBar.vue'
-import Footer from '../../components/Footer.vue'
 import BannerV1 from '../../components/BannerV1.vue'
 import DetallesMaquinadoCNC from '../../components/services-components/DetallesMaquinadoCNC.vue'
 import CapacidadesCNC from '../../components/services-components/CapacidadesCNC.vue'
 import ProcesosCNC from '../../components/services-components/ProcesosCNC.vue'
 import GaleriaCNC from '../../components/services-components/GaleriaCNC.vue'
 import CTASection from '../../components/common/CTASection.vue'
+import { getServiceModel } from '../../services/api'
+import ServiceModel from '../../models/ServiceModel'
 
 export default {
   name: 'RecubrimientosPage',
   components: {
-    NavBar,
-    Footer,
     BannerV1,
     DetallesMaquinadoCNC,
     CapacidadesCNC,

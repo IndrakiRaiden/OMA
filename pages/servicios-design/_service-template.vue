@@ -1,6 +1,5 @@
 <template>
   <div>
-    <NavBar />
     <main v-if="service" class="service-page">
       <BannerV2 
         :title="service.banner.title" 
@@ -58,13 +57,10 @@
       <p>{{ error }}</p>
       <button @click="retryFetch" class="retry-button">Reintentar</button>
     </div>
-    <Footer />
   </div>
 </template>
 
 <script>
-import NavBar from '../../components/NavBar.vue'
-import Footer from '../../components/Footer.vue'
 import BannerV2 from '../../components/BannerV2.vue'
 import DetallesServicio from '../../components/services-components/DetallesServicio.vue'
 import CapacidadesServicio from '../../components/services-components/CapacidadesServicio.vue'
@@ -75,10 +71,8 @@ import { getServiceModel } from '../../services/api'
 import ServiceModel from '../../models/ServiceModel'
 
 export default {
-  name: 'ServiceTemplate',
+  name: 'ServiceTemplatePage',
   components: {
-    NavBar,
-    Footer,
     BannerV2,
     DetallesServicio,
     CapacidadesServicio,

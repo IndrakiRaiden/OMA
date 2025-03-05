@@ -1,6 +1,5 @@
 <template>
   <div>
-    <NavBar />
     <main v-if="service" class="maquinado-cnc-page">
       <BannerV2 
         :title="service.banner.title" 
@@ -55,13 +54,10 @@
       <div class="loading-spinner"></div>
       <p>Cargando información del servicio...</p>
     </div>
-    <Footer />
   </div>
 </template>
 
 <script>
-import NavBar from '../../components/NavBar.vue'
-import Footer from '../../components/Footer.vue'
 import BannerV2 from '../../components/BannerV2.vue'
 import DetallesServicio from '../../components/services-components/DetallesServicio.vue'
 import CapacidadesServicio from '../../components/services-components/CapacidadesServicio.vue'
@@ -74,8 +70,6 @@ import ServiceModel from '../../models/ServiceModel'
 export default {
   name: 'MaquinadoCNCPage',
   components: {
-    NavBar,
-    Footer,
     BannerV2,
     DetallesServicio,
     CapacidadesServicio,
