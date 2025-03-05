@@ -1,6 +1,6 @@
 <template>
   <div>
-    <main v-if="industry" class="industry-page">
+    <main class="industry-page">
       <BannerV2 
         :title="industry.banner.title" 
         :subtitle="industry.banner.subtitle"
@@ -47,13 +47,6 @@
         :buttonLink="industry.cta.buttonLink"
       />
     </main>
-    <div v-else-if="loading" class="loading-container">
-      <p>Cargando información de la industria...</p>
-    </div>
-    <div v-else-if="error" class="error-container">
-      <p>{{ error }}</p>
-      <button @click="retryFetch" class="retry-button">Reintentar</button>
-    </div>
     <Footer />
   </div>
 </template>
@@ -79,31 +72,17 @@ export default {
     GaleriaIndustria,
     CTASection
   },
+  pageTransition: {
+    name: 'page',
+    mode: 'out-in'
+  },
   data() {
     return {
-      industry: null,
-      loading: true,
-      error: null,
+      industry: this.getDefaultIndustryData(),
       slug: 'minera'
     }
   },
-  async mounted() {
-    try {
-      // For now, use static data
-      this.industry = this.getDefaultIndustryData()
-    } catch (error) {
-      console.error('Error loading industry data:', error)
-      this.error = 'Error al cargar los datos de la industria'
-    } finally {
-      this.loading = false
-    }
-  },
   methods: {
-    retryFetch() {
-      this.loading = true
-      this.error = null
-      this.mounted()
-    },
     getDefaultIndustryData() {
       return {
         banner: {
@@ -297,44 +276,23 @@ export default {
 
 <style scoped>
 .industry-page {
-  background-color: var(--content-light);
+  background-color: var(--background-light);
   min-height: 100vh;
 }
 
-.text-primary {
-  color: var(--content-primary);
+html {
+  scroll-behavior: smooth;
 }
 
-.bg-primary {
-  background-color: var(--content-primary);
+/* Page Transition Animation */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.hover\:bg-primary-dark:hover {
-  background-color: var(--content-secondary);
-}
-
-.loading-container, 
-.error-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 50vh;
-  padding: 2rem;
-  text-align: center;
-}
-
-.retry-button {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: var(--content-primary);
-  color: white;
-  border: none;
-  border-radius: 0.25rem;
-  cursor: pointer;
-}
-
-.retry-button:hover {
-  background-color: var(--content-secondary);
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
 }
 </style>
