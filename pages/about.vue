@@ -1,6 +1,5 @@
 <template>
   <div>
-    <NavBar />
     <main class="about-page">
       <AnimatedBackground />
       <BannerV1 
@@ -19,7 +18,6 @@
       <TeamSection />
       <CTASection />
     </main>
-    <Footer />
   </div>
 </template>
 
@@ -31,8 +29,6 @@ import CompanyStats from '~/components/about-components/CompanyStats.vue'
 import TimelineSection from '~/components/about-components/TimelineSection.vue'
 import TeamSection from '~/components/about-components/TeamSection.vue'
 import CTASection from '~/components/common/CTASection.vue'
-import NavBar from '~/components/NavBar.vue'
-import Footer from '~/components/Footer.vue'
 import BannerV1 from '~/components/BannerV1.vue'
 import AnimatedBackground from '~/components/common/AnimatedBackground.vue'
 
@@ -45,8 +41,6 @@ export default defineComponent({
     TimelineSection,
     TeamSection,
     CTASection,
-    NavBar,
-    Footer,
     BannerV1,
     AnimatedBackground
   }

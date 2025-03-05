@@ -1,6 +1,5 @@
 <template>
   <div>
-    <NavBar />
     <main class="contact-page">
       <BannerV1 
         title="Contáctanos" 
@@ -157,22 +156,17 @@
         </div>
       </section>
     </main>
-    <Footer />
   </div>
 </template>
 
 <script>
 import { ref } from 'vue'
-import NavBar from '../components/NavBar.vue'
-import Footer from '../components/Footer.vue'
-import BannerV1 from '../components/BannerV1.vue'
+import BannerV1 from '~/components/BannerV1.vue'
 import FormFrame from '~/components/FormFrame.vue'
 
 export default {
   name: 'ContactPage',
   components: {
-    NavBar,
-    Footer,
     BannerV1,
     FormFrame
   },

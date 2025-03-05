@@ -1,6 +1,5 @@
 <template>
   <div>
-    <NavBar />
     <main class="faqs-page">
       <BannerV1 
         title="Centro de Ayuda" 
@@ -79,21 +78,16 @@
         </div>
       </section>
     </main>
-    <Footer />
   </div>
 </template>
 
 <script>
-import NavBar from '../components/NavBar.vue'
-import Footer from '../components/Footer.vue'
 import BannerV1 from '~/components/BannerV1.vue'
 import SearchBar from '../components/SearchBar.vue'
 
 export default {
   name: 'FAQsPage',
   components: {
-    NavBar,
-    Footer,
     BannerV1,
     SearchBar
   },
