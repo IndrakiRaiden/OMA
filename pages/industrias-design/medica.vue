@@ -1,6 +1,6 @@
 <template>
   <div>
-    <main v-if="industry" class="industry-page">
+    <main class="industry-page">
       <BannerV2 
         :title="industry.banner.title" 
         :subtitle="industry.banner.subtitle"
@@ -47,13 +47,6 @@
         :buttonLink="industry.cta.buttonLink"
       />
     </main>
-    <div v-else-if="loading" class="loading-container">
-      <p>Cargando información de la industria...</p>
-    </div>
-    <div v-else-if="error" class="error-container">
-      <p>{{ error }}</p>
-      <button @click="retryFetch" class="retry-button">Reintentar</button>
-    </div>
     <Footer />
   </div>
 </template>
@@ -79,31 +72,17 @@ export default {
     GaleriaIndustria,
     CTASection
   },
+  pageTransition: {
+    name: 'page',
+    mode: 'out-in'
+  },
   data() {
     return {
-      industry: null,
-      loading: true,
-      error: null,
+      industry: this.getDefaultIndustryData(),
       slug: 'medica'
     }
   },
-  async mounted() {
-    try {
-      // For now, use static data
-      this.industry = this.getDefaultIndustryData()
-    } catch (error) {
-      console.error('Error loading industry data:', error)
-      this.error = 'Error al cargar los datos de la industria'
-    } finally {
-      this.loading = false
-    }
-  },
   methods: {
-    retryFetch() {
-      this.loading = true
-      this.error = null
-      this.mounted()
-    },
     getDefaultIndustryData() {
       return {
         banner: {
@@ -265,7 +244,7 @@ export default {
   },
   head() {
     const defaultTitle = 'Industria Médica | OMA - Servicios de Manufactura'
-    const defaultDescription = 'Fabricación especializada para dispositivos e instrumentos médicos con altos estándares de calidad.'
+    const defaultDescription = 'Soluciones de manufactura de precisión para la industria médica.'
     
     return {
       title: this.industry?.seo?.title || defaultTitle,
@@ -283,40 +262,19 @@ export default {
   min-height: 100vh;
 }
 
-.loading-container,
-.error-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 50vh;
-  font-size: 1.2rem;
-  color: var(--text-primary);
-  text-align: center;
-  padding: 2rem;
-}
-
-.error-container {
-  color: var(--color-danger, #dc3545);
-}
-
-.retry-button {
-  margin-top: 1rem;
-  padding: 0.5rem 1.5rem;
-  background-color: var(--content-secondary);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s;
-}
-
-.retry-button:hover {
-  background-color: var(--content-accent);
-}
-
 html {
   scroll-behavior: smooth;
+}
+
+/* Page Transition Animation */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
 }
 </style>
