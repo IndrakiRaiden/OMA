@@ -72,6 +72,7 @@ export default {
     GaleriaIndustria,
     CTASection
   },
+  layout: 'industry',
   pageTransition: {
     name: 'page',
     mode: 'out-in'
