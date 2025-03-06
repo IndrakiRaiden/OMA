@@ -57,6 +57,17 @@ export default {
     TestimonialsSection,
     CTASection
   },
+  head() {
+    return {
+      title: 'Servicios | OMA - Servicios de Manufactura',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Soluciones integrales de manufactura CNC y servicios industriales de alta precisión.' }
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      ]
+    }
+  },
   data() {
     return {
       services: [
@@ -91,7 +102,7 @@ export default {
           id: 4,
           title: 'Corte Láser',
           description: 'Corte preciso en materiales como acero A-36, A-572, acero inoxidable, acero 1018/1026 y aluminio, con capacidades desde calibre 18 hasta 3/4 de pulgada.',
-          icon: 'fa-laser',
+          icon: 'fa-bolt',
           image: '/images/services/laser-cutting.jpg',
           features: ['Diversos materiales', 'Corte preciso', 'Calibre 18 hasta 3/4"'],
           link: '/servicios-design/corte-laser'

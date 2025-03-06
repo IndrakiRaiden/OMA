@@ -1,6 +1,5 @@
 <template>
   <div>
-    <NavBar />
     <main class="quote-page">
       <BannerV1 
         title="Cotiza tu Proyecto" 
@@ -35,8 +34,13 @@
               <div class="relative mt-2">
                 <div class="absolute top-0 h-1 bg-gray w-full"></div>
                 <div 
-                  class="absolute top-0 h-1 bg-primary transition-all duration-300"
-                  :style="{ width: ((currentStep - 1) / (totalSteps - 1)) * 100 + '%' }"
+                  class="absolute top-0 h-1 transition-all duration-300"
+                  :style="{ 
+                    width: ((currentStep - 1) / (totalSteps - 1)) * 100 + '%',
+                    background: 'linear-gradient(to right, var(--content-primary) 0%, var(--content-primary) 60%, var(--content-secondary) 80%, var(--content-accent) 100%)',
+                    backgroundSize: '200%',
+                    backgroundPosition: currentStep === 1 ? 'left' : currentStep === 2 ? 'center' : 'right'
+                  }"
                 ></div>
               </div>
             </div>
@@ -325,20 +329,15 @@
         </div>
       </div>
     </main>
-    <Footer />
   </div>
 </template>
 
 <script>
-import NavBar from '../components/NavBar.vue'
-import Footer from '../components/Footer.vue'
 import BannerV1 from '../components/BannerV1.vue'
 
 export default {
   name: 'CotizaPage',
   components: {
-    NavBar,
-    Footer,
     BannerV1
   },
   data() {
