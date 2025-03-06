@@ -63,6 +63,7 @@ import { IndustryModel } from '../../models/IndustryModel'
 
 export default {
   name: 'IndustriaAutomotriz',
+  layout: 'industry',
   components: {
     Footer,
     BannerV2,
@@ -73,8 +74,9 @@ export default {
     CTASection
   },
   pageTransition: {
-    name: 'page',
-    mode: 'out-in'
+    name: 'fade-slide-y',
+    mode: 'out-in',
+    appear: true
   },
   data() {
     return {
@@ -258,23 +260,49 @@ export default {
 
 <style scoped>
 .industry-page {
-  background-color: var(--background-light);
-  min-height: 100vh;
+  padding-top: 0;
+  width: 100%;
+  margin: 0 auto;
 }
 
-html {
-  scroll-behavior: smooth;
+/* Page transition animations */
+.fade-slide-y-enter-active,
+.fade-slide-y-leave-active {
+  transition: all 0.5s ease;
 }
 
-/* Page Transition Animation */
-.page-enter-active,
-.page-leave-active {
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.page-enter-from,
-.page-leave-to {
+.fade-slide-y-enter-from {
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(30px);
 }
+
+.fade-slide-y-leave-to {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+/* Add a subtle animation to the components */
+main.industry-page > * {
+  animation: fadeInUp 0.7s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger animation for child elements */
+main.industry-page > *:nth-child(1) { animation-delay: 0.1s; }
+main.industry-page > *:nth-child(2) { animation-delay: 0.2s; }
+main.industry-page > *:nth-child(3) { animation-delay: 0.3s; }
+main.industry-page > *:nth-child(4) { animation-delay: 0.4s; }
+main.industry-page > *:nth-child(5) { animation-delay: 0.5s; }
+main.industry-page > *:nth-child(6) { animation-delay: 0.6s; }
 </style>
