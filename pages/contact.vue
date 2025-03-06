@@ -12,7 +12,7 @@
       <section class="contact-content py-16">
         <div class="container mx-auto px-4">
           <!-- Contact Cards -->
-          <div class="contact-cards grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          <div class="contact-cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-16">
             <div class="contact-card">
               <div class="card-icon">
                 <i class="fas fa-phone-alt"></i>
@@ -42,8 +42,9 @@
                 <i class="fas fa-map-marker-alt"></i>
               </div>
               <h3>Visítanos</h3>
-              <p>JOSE MARIA PINO SUAREZ #4000 TECATE BAJA CALIFORNIA</p>
-              <a href="#map" class="card-link">
+              <p>JOSE MARIA PINO SUAREZ #4000</p>
+              <p>TECATE BAJA CALIFORNIA</p>
+              <a href="https://www.google.com.mx/maps/place/Jos%C3%A9+Mar%C3%ADa+Pino+Su%C3%A1rez+4000,+Bellavista,+21440+Tecate,+B.C./@32.5659613,-116.654308,21z/data=!4m6!3m5!1s0x80d912d89712366d:0x14caa25fcba81ed8!8m2!3d32.5659763!4d-116.6544206!16s%2Fg%2F11dxlbk6dr?entry=ttu" target="_blank" rel="noopener noreferrer" class="card-link">
                 Ver mapa
                 <i class="fas fa-arrow-right"></i>
               </a>
@@ -272,59 +273,114 @@ export default {
 }
 
 /* Contact Cards */
+.contact-cards {
+  margin-bottom: 3rem;
+}
+
 .contact-card {
   background: white;
-  padding: 2rem;
-  border-radius: 1rem;
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.04), 0 4px 6px rgba(0, 0, 0, 0.03);
 }
 
 .card-icon {
-  width: 3.5rem;
-  height: 3.5rem;
-  background: rgba(var(--content-primary-rgb), 0.1);
-  border-radius: 1rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--content-light, #f7fafc);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.5rem;
+  color: var(--content-primary, #2c5282);
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.card-icon i {
-  font-size: 1.5rem;
-  color: var(--content-primary);
+.contact-card:hover .card-icon {
+  transform: scale(1.1);
+  background-color: rgba(44, 82, 130, 0.1);
 }
 
 .contact-card h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: var(--content-dark);
+  color: var(--content-dark, #2d3748);
+  margin-bottom: 0.75rem;
 }
 
 .contact-card p {
-  color: var(--content-gray);
-  margin-bottom: 1.5rem;
+  color: var(--content-gray, #718096);
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  word-break: break-word;
 }
 
 .card-link {
-  color: var(--content-primary);
-  font-weight: 500;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  transition: gap 0.3s ease;
+  color: var(--content-primary, #2c5282);
+  font-weight: 500;
+  margin-top: auto;
+  padding-top: 1.25rem;
+  transition: color 0.2s ease;
 }
 
-.card-link:hover {
-  gap: 0.75rem;
+.card-link i {
+  margin-left: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.contact-card:hover .card-link {
+  color: var(--content-secondary, #2b6cb0);
+}
+
+.contact-card:hover .card-link i {
+  transform: translateX(3px);
+}
+
+@media (max-width: 639px) {
+  .contact-cards {
+    gap: 1.25rem;
+  }
+  
+  .contact-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .card-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .contact-card p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+  .contact-card {
+    padding: 1.75rem 1.25rem;
+  }
 }
 
 /* Info Section Styles */

@@ -16,18 +16,18 @@
         </div>
 
         <div class="quick-contact">
-          <div class="contact-card">
+          <div class="contact-card" @click="makePhoneCall">
             <i class="fas fa-phone"></i>
             <div>
               <span>Llámanos</span>
-              <strong>+52 6651219080</strong>
+              <strong>{{ contactInfo.phone }}</strong>
             </div>
           </div>
-          <div class="contact-card">
+          <div class="contact-card" @click="sendEmail">
             <i class="fas fa-envelope"></i>
             <div>
               <span>Escríbenos</span>
-              <strong>OMASOLUTIONSRH@GMAIL.COM</strong>
+              <strong>{{ contactInfo.email }}</strong>
             </div>
           </div>
         </div>
@@ -61,20 +61,24 @@
             <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
             <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
             <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link">
+              <svg class="x-logo-svg" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" stroke="none" fill="currentColor"></path>
+              </svg>
+            </a>
           </div>
         </div>
 
         <div class="footer-col">
           <h3>Ubicación</h3>
           <div class="location-info">
-            <div class="location-item">
+            <div class="location-item location-address" @click="openMap">
               <i class="fas fa-map-marker-alt"></i>
-              <span>JOSE MARIA PINO SUAREZ #4000 TECATE BAJA CALIFORNIA</span>
+              <span>{{ contactInfo.address }}</span>
             </div>
-            <div class="location-item">
+            <div class="location-item location-hours">
               <i class="fas fa-clock"></i>
-              <span>Horario: 6 AM A 6 PM</span>
+              <span>Horario: {{ contactInfo.businessHours }}</span>
             </div>
           </div>
         </div>
@@ -98,6 +102,35 @@ export default {
     MapPin,
     Phone,
     Mail
+  },
+  data() {
+    return {
+      contactInfo: {
+        phone: '+52 6651219080',
+        email: 'OMASOLUTIONSRH@GMAIL.COM',
+        address: 'JOSE MARIA PINO SUAREZ #4000 TECATE BAJA CALIFORNIA',
+        businessHours: '6 AM A 6 PM',
+        mapUrl: 'https://www.google.com.mx/maps/place/Jos%C3%A9+Mar%C3%ADa+Pino+Su%C3%A1rez+4000,+Bellavista,+21440+Tecate,+B.C./@32.5659613,-116.654308,21z/data=!4m6!3m5!1s0x80d912d89712366d:0x14caa25fcba81ed8!8m2!3d32.5659763!4d-116.6544206!16s%2Fg%2F11dxlbk6dr?entry=ttu'
+      }
+    }
+  },
+  methods: {
+    makePhoneCall() {
+      window.location.href = `tel:${this.contactInfo.phone.replace(/\s+/g, '')}`
+    },
+    sendEmail() {
+      window.location.href = `mailto:${this.contactInfo.email}`
+    },
+    openMap() {
+      window.open(this.contactInfo.mapUrl, '_blank', 'noopener,noreferrer')
+    }
+  },
+  head() {
+    return {
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      ]
+    }
   }
 }
 </script>
@@ -268,18 +301,62 @@ export default {
   align-items: flex-start;
   gap: 0.8rem;
   margin-bottom: 0.8rem;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.location-address, .location-hours {
+  cursor: pointer;
+}
+
+.location-address::before, .location-hours::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #F5A623, #4B6E8C);
+  transition: width 0.3s ease;
+  z-index: 1;
+}
+
+.location-address:hover::before, .location-hours:hover::before {
+  width: 100%;
+}
+
+.location-address:hover, .location-hours:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.9);
+  border-color: rgba(75, 110, 140, 0.1);
+}
+
+.location-address:hover i, .location-hours:hover i {
+  transform: scale(1.2) rotate(8deg);
+  color: #4B6E8C;
+}
+
+.location-address:hover span, .location-hours:hover span {
+  color: #4B6E8C;
 }
 
 .location-item i {
   color: #F5A623;
   font-size: 1.1rem;
   margin-top: 0.2rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .location-item span {
   color: #718096;
   font-size: 0.9rem;
   line-height: 1.5;
+  transition: color 0.3s ease;
 }
 
 .social-links {
@@ -297,6 +374,13 @@ export default {
 .social-link:hover {
   color: #F5A623;
   transform: translateY(-2px);
+}
+
+.x-logo-svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .footer-bottom {
