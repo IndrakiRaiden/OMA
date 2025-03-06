@@ -19,109 +19,33 @@
             adaptados a las necesidades específicas de cada industria.
           </p>
           <div class="industries-grid">
-            <div class="industry-card" v-for="(_, index) in 10" :key="index">
+            <NuxtLink 
+              v-for="(industry, index) in industries" 
+              :key="index"
+              :to="industry.path"
+              class="industry-card"
+            >
               <div class="card-content">
                 <div class="industry-image">
-                  <img :src="`https://source.unsplash.com/featured/600x400?${
-                    index === 0 ? 'automotive,manufacturing,car' : 
-                    index === 1 ? 'medical,equipment,healthcare' :
-                    index === 2 ? 'construction,architecture,building' :
-                    index === 3 ? 'mining,industrial,excavation' :
-                    index === 4 ? 'aerospace,aircraft,aviation' :
-                    index === 5 ? 'food,processing,industry' :
-                    index === 6 ? 'electronics,circuit,technology' :
-                    index === 7 ? 'energy,power,electricity' :
-                    index === 8 ? 'agriculture,farming,machinery' :
-                    'industrial,machinery,factory'
-                  }`" :alt="`Industria ${
-                    index === 0 ? 'Automotriz' :
-                    index === 1 ? 'Médica' :
-                    index === 2 ? 'Construcción' :
-                    index === 3 ? 'Minera' :
-                    index === 4 ? 'Aeroespacial' :
-                    index === 5 ? 'Alimentos' :
-                    index === 6 ? 'Electrónica' :
-                    index === 7 ? 'Energía' :
-                    index === 8 ? 'Agrícola' :
-                    'Maquinaria y equipos industriales'
-                  }`" class="industry-img" />
+                  <img :src="industry.imageUrl" :alt="industry.name" class="industry-img" />
                   <div class="image-overlay">
                     <div class="icon-container">
-                      <i :class="['fas', 
-                        index === 0 ? 'fa-car' : 
-                        index === 1 ? 'fa-heartbeat' :
-                        index === 2 ? 'fa-hard-hat' :
-                        index === 3 ? 'fa-mountain' :
-                        index === 4 ? 'fa-plane' :
-                        index === 5 ? 'fa-utensils' :
-                        index === 6 ? 'fa-microchip' :
-                        index === 7 ? 'fa-bolt' :
-                        index === 8 ? 'fa-tractor' :
-                        'fa-industry']"></i>
+                      <i :class="['fas', industry.icon]"></i>
                     </div>
-                    <div class="industry-label">
-                      {{
-                        index === 0 ? 'Automotriz' :
-                        index === 1 ? 'Médica' :
-                        index === 2 ? 'Construcción' :
-                        index === 3 ? 'Minera' :
-                        index === 4 ? 'Aeroespacial' :
-                        index === 5 ? 'Alimentos' :
-                        index === 6 ? 'Electrónica' :
-                        index === 7 ? 'Energía' :
-                        index === 8 ? 'Agrícola' :
-                        'Industrial'
-                      }}
-                    </div>
+                    <div class="industry-label">{{ industry.name }}</div>
                   </div>
                 </div>
                 <div class="card-body">
-                  <h3>
-                    {{
-                      index === 0 ? 'Automotriz' :
-                      index === 1 ? 'Médica' :
-                      index === 2 ? 'Construcción' :
-                      index === 3 ? 'Minera' :
-                      index === 4 ? 'Aeroespacial' :
-                      index === 5 ? 'Alimentos' :
-                      index === 6 ? 'Electrónica' :
-                      index === 7 ? 'Energía' :
-                      index === 8 ? 'Agrícola' :
-                      'Maquinaria y equipos industriales'
-                    }}
-                  </h3>
-                  <p>
-                    {{
-                      index === 0 ? 'Soluciones de manufactura de precisión para componentes y piezas del sector automotriz.' :
-                      index === 1 ? 'Fabricación especializada para dispositivos e instrumentos médicos con altos estándares de calidad.' :
-                      index === 2 ? 'Servicios de manufactura para elementos estructurales y componentes utilizados en la industria de la construcción.' :
-                      index === 3 ? 'Soluciones robustas para equipos y componentes utilizados en la exigente industria minera.' :
-                      index === 4 ? 'Fabricación de alta precisión para componentes aeroespaciales con estrictos controles de calidad.' :
-                      index === 5 ? 'Manufactura de equipos y componentes para la industria alimentaria con materiales de grado alimenticio.' :
-                      index === 6 ? 'Servicios especializados para componentes y carcasas de dispositivos electrónicos.' :
-                      index === 7 ? 'Fabricación de componentes para sistemas de generación y distribución de energía.' :
-                      index === 8 ? 'Soluciones de manufactura para maquinaria y equipos utilizados en el sector agrícola.' :
-                      'Diseño y fabricación de componentes para maquinaria industrial y equipos especializados.'
-                    }}
-                  </p>
-                  <a :href="
-                    index === 0 ? '/industrias-design/automotriz' : 
-                    index === 1 ? '/industrias-design/medica' :
-                    index === 2 ? '/industrias-design/construccion' :
-                    index === 3 ? '/industrias-design/minera' :
-                    index === 4 ? '/industrias-design/aeroespacial' :
-                    index === 5 ? '/industrias-design/alimentos' :
-                    index === 6 ? '/industrias-design/electronica' :
-                    index === 7 ? '/industrias-design/energia' :
-                    index === 8 ? '/industrias-design/agricola' :
-                    '/industrias-design/industrial'" 
-                    class="learn-more">
-                    {{ 'Ver Detalles' }}
-                    <i class="fas fa-arrow-right"></i>
-                  </a>
+                  <h3>{{ industry.name }}</h3>
+                  <p>{{ industry.description }}</p>
+                  <div class="learn-more-wrapper">
+                    <span class="learn-more">
+                      Ver más <i class="fas fa-arrow-right"></i>
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -136,6 +60,82 @@ export default {
   name: 'IndustriasPage',
   components: {
     BannerV2
+  },
+  data() {
+    return {
+      industries: [
+        {
+          name: 'Automotriz',
+          description: 'Soluciones de manufactura de precisión para componentes y piezas del sector automotriz.',
+          icon: 'fa-car',
+          imageUrl: 'https://source.unsplash.com/featured/600x400?automotive,manufacturing,car',
+          path: '/industrias-design/automotriz'
+        },
+        {
+          name: 'Médica',
+          description: 'Fabricación especializada para dispositivos e instrumentos médicos con altos estándares de calidad.',
+          icon: 'fa-heartbeat',
+          imageUrl: 'https://source.unsplash.com/featured/600x400?medical,equipment,healthcare',
+          path: '/industrias-design/medica'
+        },
+        {
+          name: 'Construcción',
+          description: 'Servicios de manufactura para elementos estructurales y componentes utilizados en la industria de la construcción.',
+          icon: 'fa-hard-hat',
+          imageUrl: 'https://source.unsplash.com/featured/600x400?construction,architecture,building',
+          path: '/industrias-design/construccion'
+        },
+        {
+          name: 'Minera',
+          description: 'Soluciones robustas para equipos y componentes utilizados en la exigente industria minera.',
+          icon: 'fa-mountain',
+          imageUrl: 'https://source.unsplash.com/featured/600x400?mining,industrial,excavation',
+          path: '/industrias-design/minera'
+        },
+        {
+          name: 'Aeroespacial',
+          description: 'Componentes de alta precisión para la industria aeroespacial, cumpliendo con estrictos estándares de calidad.',
+          icon: 'fa-plane',
+          imageUrl: 'https://source.unsplash.com/featured/600x400?aerospace,aircraft,aviation',
+          path: '/industrias-design/aeroespacial'
+        },
+        {
+          name: 'Alimentos',
+          description: 'Soluciones de manufactura para equipos y maquinaria utilizados en la industria alimenticia.',
+          icon: 'fa-utensils',
+          imageUrl: 'https://source.unsplash.com/featured/600x400?food,processing,industry',
+          path: '/industrias-design/alimentos'
+        },
+        {
+          name: 'Electrónica',
+          description: 'Fabricación de componentes y piezas precisas para la industria electrónica y de telecomunicaciones.',
+          icon: 'fa-microchip',
+          imageUrl: 'https://source.unsplash.com/featured/600x400?electronics,circuit,technology',
+          path: '/industrias-design/electronica'
+        },
+        {
+          name: 'Energía',
+          description: 'Componentes y soluciones para generación, transmisión y distribución de energía.',
+          icon: 'fa-bolt',
+          imageUrl: 'https://source.unsplash.com/featured/600x400?energy,power,electricity',
+          path: '/industrias-design/energia'
+        },
+        {
+          name: 'Agrícola',
+          description: 'Fabricación de piezas y componentes para maquinaria y equipos utilizados en el sector agrícola.',
+          icon: 'fa-tractor',
+          imageUrl: 'https://source.unsplash.com/featured/600x400?agriculture,farming,machinery',
+          path: '/industrias-design/agricola'
+        },
+        {
+          name: 'Industrial',
+          description: 'Soluciones integrales para el sector industrial, incluyendo maquinaria, equipos y componentes personalizados.',
+          icon: 'fa-industry',
+          imageUrl: 'https://source.unsplash.com/featured/600x400?industrial,machinery,factory',
+          path: '/industrias-design/industrial'
+        }
+      ]
+    }
   }
 }
 </script>
@@ -169,6 +169,8 @@ html {
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+  color: inherit;
 }
 
 .industry-card:hover {
@@ -301,65 +303,54 @@ html {
 }
 
 .card-body {
-  padding: 2rem;
+  padding: 1.5rem;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 1.5rem;
-}
-
-.industry-card h3 {
-  color: var(--content-primary);
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin: 0;
-  line-height: 1.2;
-}
-
-.industry-card p {
-  color: #64748b;
-  line-height: 1.6;
-  margin: 0;
-  flex-grow: 1;
-}
-
-.learn-more {
-  color: var(--content-primary);
-  font-weight: 500;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.75rem 1.5rem;
-  border: 2px solid var(--content-primary);
-  border-radius: 25px;
-  transition: all 0.3s ease;
-  margin-top: 1.5rem;
-  background: transparent;
   position: relative;
   z-index: 2;
 }
 
-/* Responsive Styles */
-@media (max-width: 1536px) {
-  .industries-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
+.card-body h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #1a202c;
+  transition: color 0.3s ease;
+}
+
+.card-body p {
+  color: #4a5568;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.learn-more-wrapper {
+  margin-top: auto;
+}
+
+.learn-more {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  background: linear-gradient(165deg, var(--content-primary) 0%, var(--content-secondary) 100%);
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.learn-more i {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
 }
 
 @media (max-width: 768px) {
   .industries-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .card-body {
-    padding: 1.5rem;
-  }
-
-  .industry-card h3 {
-    font-size: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 }
 </style>

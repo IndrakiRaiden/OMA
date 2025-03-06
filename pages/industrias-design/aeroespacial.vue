@@ -89,7 +89,7 @@ export default {
           subtitle: "Soluciones de manufactura de precisión para componentes aeroespaciales",
           buttons: [
             { text: 'Ver Servicios', href: '#servicios', class: 'primary-btn' },
-            { text: 'Contáctanos', href: '../contact', class: 'secondary-btn' }
+            { text: 'Contáctanos', to: '/contact', class: 'secondary-btn' }
           ]
         },
         details: {

@@ -1,16 +1,22 @@
 <template>
   <div class="layout-container">
-    <main class="main-content">
-      <slot />
-    </main>
-    <Footer />
+    <ClientOnly>
+      <NavBar />
+    </ClientOnly>
+    <Transition name="page" mode="out-in">
+      <main class="main-content">
+        <slot />
+      </main>
+    </Transition>
+    <ClientOnly>
+      <Footer />
+    </ClientOnly>
   </div>
 </template>
 
 <script setup>
-import Footer from '~/components/Footer.vue';
-// Industry layout - includes Footer but not NavBar
-// NavBar should be included directly in each industry page if needed
+import NavBar from '~/components/NavBar.vue'
+import Footer from '~/components/Footer.vue'
 </script>
 
 <style scoped>
@@ -22,5 +28,16 @@ import Footer from '~/components/Footer.vue';
 
 .main-content {
   flex: 1;
+  padding-top: 64px; /* Height of the navbar */
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.3s;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
 }
 </style>

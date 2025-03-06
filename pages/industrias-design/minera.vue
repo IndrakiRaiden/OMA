@@ -88,8 +88,8 @@ export default {
           title: "Industria Minera",
           subtitle: "Soluciones robustas para equipos y componentes mineros",
           buttons: [
-            { text: 'Ver Servicios', href: '#servicios', class: 'primary-btn' },
-            { text: 'Contáctanos', href: '../contact', class: 'secondary-btn' }
+            { text: 'Ver Servicios', to: '/servicios', class: 'primary-btn' },
+            { text: 'Contáctanos', to: '/contact', class: 'secondary-btn' }
           ]
         },
         details: {
@@ -200,54 +200,48 @@ export default {
         gallery: {
           titlePrefix: "Nuestra",
           titleHighlight: "Galería",
-          description: "Explora algunos de nuestros proyectos y componentes fabricados para la industria minera.",
-          showMoreButtonText: "Ver Más Proyectos",
+          description: "Explore algunos ejemplos de nuestros proyectos y soluciones para la industria minera.",
+          showMoreButtonText: "Ver Más",
           galleryCategories: [
-            { id: 'all', name: 'Todos' },
-            { id: 'components', name: 'Componentes' },
-            { id: 'equipment', name: 'Equipos' },
-            { id: 'tools', name: 'Herramientas' }
+            { id: "all", name: "Todos" },
+            { id: "components", name: "Componentes" },
+            { id: "equipment", name: "Equipamiento" },
+            { id: "tools", name: "Herramientas" }
           ],
           galleryItems: [
             {
               id: 1,
-              title: "Componentes para equipos de trituración",
-              description: "Piezas de alta resistencia para equipos de trituración minera.",
+              title: "Componentes para Trituradora",
               category: "components",
-              imageUrl: "https://source.unsplash.com/featured/600x400?mining,crusher"
+              imageUrl: "https://source.unsplash.com/featured/600x400?mining,machinery"
             },
             {
               id: 2,
-              title: "Herramientas de perforación",
-              description: "Herramientas especializadas para perforación en terrenos rocosos.",
+              title: "Sistema de Filtración Industrial",
+              category: "equipment",
+              imageUrl: "https://source.unsplash.com/featured/600x400?mining,filter"
+            },
+            {
+              id: 3,
+              title: "Herramientas de Perforación",
               category: "tools",
               imageUrl: "https://source.unsplash.com/featured/600x400?mining,drill"
             },
             {
-              id: 3,
-              title: "Sistemas de transporte",
-              description: "Componentes para sistemas de transporte de materiales en minas.",
-              category: "equipment",
-              imageUrl: "https://source.unsplash.com/featured/600x400?mining,conveyor"
-            },
-            {
               id: 4,
-              title: "Piezas de desgaste",
-              description: "Piezas de desgaste fabricadas con materiales de alta durabilidad.",
+              title: "Engranajes de Alta Resistencia",
               category: "components",
-              imageUrl: "https://source.unsplash.com/featured/600x400?mining,wear"
+              imageUrl: "https://source.unsplash.com/featured/600x400?mining,gears"
             },
             {
               id: 5,
-              title: "Estructuras de soporte",
-              description: "Estructuras metálicas para soporte de equipos mineros.",
+              title: "Estructuras de Soporte",
               category: "equipment",
               imageUrl: "https://source.unsplash.com/featured/600x400?mining,structure"
             },
             {
               id: 6,
-              title: "Herramientas de extracción",
-              description: "Herramientas para extracción de minerales en condiciones extremas.",
+              title: "Equipos de Extracción",
               category: "tools",
               imageUrl: "https://source.unsplash.com/featured/600x400?mining,extraction"
             }
@@ -257,7 +251,7 @@ export default {
           title: "¿Listo para impulsar su operación minera?",
           subtitle: "Contáctenos hoy para discutir sus necesidades específicas y descubrir cómo nuestros servicios de manufactura pueden ayudar a su empresa a alcanzar nuevos niveles de eficiencia y rendimiento.",
           buttonText: "Solicitar Información",
-          buttonLink: "../contact"
+          buttonLink: "/contact"
         }
       }
     }

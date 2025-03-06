@@ -4,15 +4,28 @@
       <h1 class="hero-title">{{ title }}</h1>
       <p class="hero-subtitle">{{ subtitle }}</p>
       <div class="button-group">
-        <a v-for="(button, index) in buttons" 
-           :key="index"
-           :href="button.href" 
-           :class="button.class">
-          {{ button.text }}
-          <span class="btn-icon">
-            <i :class="button.class.includes('primary') ? 'fas fa-arrow-right' : 'fas fa-external-link-alt'"></i>
-          </span>
-        </a>
+        <template v-for="(button, index) in buttons" :key="index">
+          <!-- Use NuxtLink for internal navigation -->
+          <NuxtLink 
+            v-if="button.to" 
+            :to="button.to" 
+            :class="button.class">
+            {{ button.text }}
+            <span class="btn-icon">
+              <i :class="button.class.includes('primary') ? 'fas fa-arrow-right' : 'fas fa-external-link-alt'"></i>
+            </span>
+          </NuxtLink>
+          
+          <!-- Use regular anchor for hash links or external links -->
+          <a v-else
+             :href="button.href" 
+             :class="button.class">
+            {{ button.text }}
+            <span class="btn-icon">
+              <i :class="button.class.includes('primary') ? 'fas fa-arrow-right' : 'fas fa-external-link-alt'"></i>
+            </span>
+          </a>
+        </template>
       </div>
     </div>
     <!-- Additional decorative elements -->
@@ -99,193 +112,137 @@ defineProps({
   font-size: clamp(1.2rem, 2.2vw, 1.5rem);
   margin-bottom: 2.5rem;
   opacity: 0.95;
-  line-height: 1.6;
-  animation: slideInUp 1.2s ease-out;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  line-height: 1.6;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  animation: slideInUp 1.4s ease-out;
 }
 
 .button-group {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   justify-content: center;
-  animation: fadeIn 1.5s ease-out;
+  margin-top: 2rem;
+  animation: fadeIn 1.8s ease-out;
+  flex-wrap: wrap;
 }
 
-.primary-btn,
-.secondary-btn {
-  padding: 0.85rem 2rem;
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-  text-decoration: none;
+.button-group a {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  position: relative;
-  overflow: hidden;
-  border: none;
-  z-index: 1;
-}
-
-.btn-icon {
-  display: inline-flex;
-  transition: transform 0.3s ease;
-  position: relative;
-  z-index: 2;
+  padding: 0.75rem 1.75rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .primary-btn {
-  background: var(--content-secondary);
-  color: var(--content-light);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-}
-
-.primary-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, var(--content-primary), #2a4365);
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s ease;
-  z-index: -1;
+  background: linear-gradient(165deg, var(--content-primary) 0%, var(--content-secondary) 100%);
+  color: white;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 30px rgba(0, 125, 255, 0.3);
 }
 
 .primary-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(13, 28, 51, 0.3);
-}
-
-.primary-btn:hover .btn-icon {
-  transform: translateX(4px);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0, 125, 255, 0.4);
 }
 
 .secondary-btn {
   background: transparent;
-  color: var(--content-light);
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  border-radius: 0;
-  padding: calc(0.85rem - 1px) calc(2rem - 1px);
+  color: white;
+  border: 2px solid white;
 }
 
-.secondary-btn::before {
-  content: '';
+.secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+.btn-icon {
+  margin-left: 0.75rem;
+  font-size: 0.85rem;
+  transition: transform 0.3s ease;
+}
+
+.primary-btn:hover .btn-icon,
+.secondary-btn:hover .btn-icon {
+  transform: translateX(3px);
+}
+
+/* Geometric shapes */
+.geometric-shapes {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), #e2e8f0);
-  transform: scaleY(0);
-  transform-origin: bottom;
-  transition: transform 0.3s ease;
-  z-index: -1;
-}
-
-.secondary-btn:hover {
-  color: var(--content-primary);
-}
-
-.secondary-btn:hover::before {
-  transform: scaleY(1);
-  transform-origin: top;
-}
-
-.secondary-btn:hover .btn-icon {
-  transform: translate(3px, -3px);
-}
-
-/* Enhanced background elements */
-.hero-section::before,
-.hero-section::after {
-  content: '';
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  background: linear-gradient(45deg, 
-    rgba(226, 232, 240, 0.08),
-    rgba(44, 82, 130, 0.08)
-  );
-  animation: float 20s infinite;
-}
-
-.hero-section::before {
-  top: -150px;
-  right: -100px;
-  animation-delay: -5s;
-}
-
-.hero-section::after {
-  bottom: -150px;
-  left: -100px;
-  animation-delay: -10s;
-}
-
-.geometric-shapes {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   overflow: hidden;
   pointer-events: none;
 }
 
 .shape {
   position: absolute;
-  background: linear-gradient(135deg, 
-    rgba(226, 232, 240, 0.05),
-    rgba(44, 82, 130, 0.05)
-  );
-  backdrop-filter: blur(3px);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }
 
 .shape-1 {
-  width: 100px;
-  height: 100px;
-  top: 20%;
-  left: 10%;
-  transform: rotate(45deg);
-  animation: float 15s infinite, pulse 8s ease-in-out infinite;
+  top: -40px;
+  left: -40px;
+  width: 250px;
+  height: 250px;
+  animation: float 18s infinite ease-in-out, rotateShape 30s infinite linear;
 }
 
 .shape-2 {
-  width: 150px;
-  height: 150px;
-  top: 60%;
-  right: 15%;
-  border-radius: 30%;
-  animation: float 18s infinite reverse, pulse 8s ease-in-out infinite 2s;
+  top: 150px;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  animation: float 14s infinite ease-in-out reverse, rotateShape 25s infinite linear reverse;
 }
 
 .shape-3 {
-  width: 80px;
-  height: 80px;
-  bottom: 20%;
-  left: 20%;
-  border-radius: 24%;
-  animation: float 20s infinite, pulse 8s ease-in-out infinite 4s;
+  bottom: -50px;
+  left: 40%;
+  width: 300px;
+  height: 300px;
+  animation: float 16s infinite ease-in-out, rotateShape 35s infinite linear;
 }
 
 @keyframes float {
   0%, 100% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-  25% {
-    transform: translate(15px, -15px) rotate(5deg);
+    transform: translateY(0);
   }
   50% {
-    transform: translate(0, -25px) rotate(-5deg);
+    transform: translateY(-20px);
   }
-  75% {
-    transform: translate(-15px, -15px) rotate(3deg);
+}
+
+@keyframes rotateShape {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
@@ -297,6 +254,15 @@ defineProps({
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -322,54 +288,25 @@ defineProps({
   }
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes pulse {
-  0%, 100% {
-    opacity: 0.05;
-  }
-  50% {
-    opacity: 0.1;
-  }
-}
-
+/* Responsive */
 @media (max-width: 768px) {
   .hero-section {
-    padding: 4rem 1rem;
+    padding: 5rem 1rem 2rem 1rem;
   }
-
+  
   .button-group {
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
-    padding: 0 2rem;
   }
-
-  .primary-btn,
-  .secondary-btn {
+  
+  .button-group a {
+    width: 100%;
     justify-content: center;
   }
-
-  .geometric-shapes {
-    display: none;
+  
+  .shape {
+    opacity: 0.4;
   }
 }
 </style>
