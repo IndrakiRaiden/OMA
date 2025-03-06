@@ -1,7 +1,7 @@
 <template>
   <div>
     <main class="industry-page">
-      <BannerV2 
+      <BannerV3 
         :title="industry.banner.title" 
         :subtitle="industry.banner.subtitle"
         :buttons="industry.banner.buttons"
@@ -51,7 +51,7 @@
 </template>
 
 <script>
-import BannerV2 from '../../components/BannerV2.vue'
+import BannerV3 from '../../components/BannerV3.vue'
 import DetallesIndustria from '../../components/industrias-components/DetallesIndustria.vue'
 import CapacidadesIndustria from '../../components/industrias-components/CapacidadesIndustria.vue'
 import ProcesosIndustria from '../../components/industrias-components/ProcesosIndustria.vue'
@@ -62,7 +62,7 @@ import { IndustryModel } from '../../models/IndustryModel'
 export default {
   name: 'IndustriaMinera',
   components: {
-    BannerV2,
+    BannerV3,
     DetallesIndustria,
     CapacidadesIndustria,
     ProcesosIndustria,
