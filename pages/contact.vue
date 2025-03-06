@@ -133,21 +133,44 @@
               </form>
             </FormFrame>
 
-            <!-- Info Section -->
-            <div class="info-container">
-              <div id="map" class="map-container mb-8">
-                <div class="map-placeholder">
-                  <i class="fas fa-map-marked-alt"></i>
-                  <p>Mapa de ubicación</p>
+            <!-- Info Section - Redesigned -->
+            <div class="location-section">
+              <!-- Map with Location info -->
+              <div class="map-container">
+                <div class="section-header">
+                  <div class="header-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <h3>Mapa de ubicación</h3>
+                </div>
+                <div class="map-iframe-wrapper">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209.0239102051599!2d-116.65430800000002!3d32.5659613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d912d89712366d%3A0x14caa25fcba81ed8!2sJos%C3%A9%20Mar%C3%ADa%20Pino%20Su%C3%A1rez%204000%2C%20Bellavista%2C%2021440%20Tecate%2C%20B.C.!5e0!3m2!1sen!2smx!4v1709754000000!5m2!1sen!2smx" 
+                    width="100%" 
+                    height="300" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                  </iframe>
+                </div>
+                <div class="address-info">
+                  <p>JOSE MARIA PINO SUAREZ #4000, TECATE, BAJA CALIFORNIA</p>
                 </div>
               </div>
-
-              <div class="business-hours">
-                <h3 class="text-xl font-bold mb-4">Horario de atención</h3>
-                <div class="hours-grid">
-                  <div class="day-row" v-for="(hours, day) in businessHours" :key="day">
-                    <span class="day">{{ day }}</span>
-                    <span class="hours">{{ hours }}</span>
+              
+              <!-- Business Hours -->
+              <div class="hours-box">
+                <div class="section-header">
+                  <div class="header-icon">
+                    <i class="fas fa-clock"></i>
+                  </div>
+                  <h3>Horario de atención</h3>
+                </div>
+                <div class="hours-list">
+                  <div v-for="(hours, day) in businessHours" :key="day" class="hours-item">
+                    <div class="day-name">{{ day }}</div>
+                    <div class="hour-value" :class="{'closed': hours === 'Cerrado'}">{{ hours }}</div>
                   </div>
                 </div>
               </div>
@@ -169,6 +192,13 @@ export default {
   components: {
     BannerV1,
     FormFrame
+  },
+  head() {
+    return {
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      ]
+    }
   },
   data() {
     return {
@@ -297,89 +327,110 @@ export default {
   gap: 0.75rem;
 }
 
-/* Map and Business Hours */
-.info-container {
-  background: white;
-  padding: 2.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+/* Info Section Styles */
+.location-section {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
 }
 
-.map-container {
-  height: 300px;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  background: rgba(var(--content-primary-rgb), 0.05);
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-}
-
-.map-container:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(var(--content-primary-rgb), 0.1);
-}
-
-.map-placeholder {
-  width: 100%;
-  height: 100%;
+.section-header {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: var(--content-primary);
+  margin-bottom: 1.25rem;
+  gap: 0.75rem;
 }
 
-.map-placeholder i {
-  font-size: 3rem;
+.header-icon {
+  color: var(--content-primary, #2c5282);
+  font-size: 1.25rem;
+}
+
+.section-header h3 {
+  font-size: 1.25rem;
+  color: var(--content-dark, #2d3748);
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Map Container Styles */
+.map-container {
   margin-bottom: 1rem;
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.03);
+  padding: 1.5rem;
 }
 
-.map-placeholder p {
-  font-size: 1.1rem;
-  font-weight: 500;
-  transition: opacity 0.3s ease;
+.map-iframe-wrapper {
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.map-container:hover .map-placeholder p {
-  opacity: 0.8;
+.address-info {
+  text-align: center;
+  padding: 0.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  margin-top: 0.5rem;
+  padding-top: 1rem;
 }
 
-.hours-grid {
+.address-info p {
+  color: var(--content-gray, #718096);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Hours Box Styles */
+.hours-box {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.hours-list {
   display: grid;
   gap: 0.75rem;
 }
 
-.day-row {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid rgba(var(--content-gray-rgb), 0.2);
+.hours-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.day {
+.hours-item:last-child {
+  border-bottom: none;
+}
+
+.day-name {
+  color: var(--content-dark, #2d3748);
   font-weight: 500;
-  color: var(--content-dark);
 }
 
-.hours {
-  color: var(--content-gray);
+.hour-value {
+  text-align: right;
+  color: var(--content-gray, #718096);
 }
 
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-    transform: scale(1);
+.hour-value.closed {
+  color: #e53e3e;
+}
+
+@media (min-width: 768px) {
+  .location-section {
+    grid-template-columns: 1fr;
   }
-  50% {
-    opacity: 0.8;
-    transform: scale(1.05);
+  
+  .hours-item {
+    padding: 0.85rem 0;
   }
-}
-
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
 </style>
