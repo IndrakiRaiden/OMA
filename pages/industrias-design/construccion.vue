@@ -47,12 +47,10 @@
         :buttonLink="industry.cta.buttonLink"
       />
     </main>
-    <Footer />
   </div>
 </template>
 
 <script>
-import Footer from '../../components/Footer.vue'
 import BannerV2 from '../../components/BannerV2.vue'
 import DetallesIndustria from '../../components/industrias-components/DetallesIndustria.vue'
 import CapacidadesIndustria from '../../components/industrias-components/CapacidadesIndustria.vue'
@@ -65,7 +63,6 @@ export default {
   name: 'IndustriaConstruccion',
   layout: 'industry',
   components: {
-    Footer,
     BannerV2,
     DetallesIndustria,
     CapacidadesIndustria,
