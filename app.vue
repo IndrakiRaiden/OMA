@@ -114,4 +114,18 @@ body {
   opacity: 0;
   transform: translateY(-10px);
 }
+
+/* Page Transition Animation for button redirects */
+.page-transitioning {
+  animation: fadeOut 0.3s ease-out forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 </style>

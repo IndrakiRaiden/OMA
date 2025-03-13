@@ -15,14 +15,14 @@
           {{ description }}
         </p>
         <div class="cta-buttons">
-          <a :href="primaryButton.href" class="btn-primary">
+          <a @click.prevent="navigateTo(primaryButton.href)" :href="primaryButton.href" class="btn-primary">
             <span class="btn-content">
               <span>{{ primaryButton.text }}</span>
               <i :class="primaryButton.icon"></i>
             </span>
             <span class="btn-background"></span>
           </a>
-          <a :href="secondaryButton.href" class="btn-secondary">
+          <a @click.prevent="navigateTo(secondaryButton.href)" :href="secondaryButton.href" class="btn-secondary">
             <span class="btn-content">
               <span>{{ secondaryButton.text }}</span>
               <i :class="secondaryButton.icon"></i>
@@ -66,6 +66,17 @@ export default {
       type: String,
       default: 'primary',
       validator: (value) => ['primary', 'secondary', 'gradient'].includes(value)
+    }
+  },
+  methods: {
+    navigateTo(url) {
+      // Add a class to trigger the fade-out animation
+      document.body.classList.add('page-transitioning');
+      
+      // Wait for the animation to complete before navigating
+      setTimeout(() => {
+        window.location.href = url;
+      }, 300); // Match this with the CSS transition duration
     }
   },
   computed: {
@@ -192,11 +203,15 @@ export default {
 
 .btn-primary, .btn-secondary {
   position: relative;
-  padding: 1rem 2rem;
+  padding: 1rem 2.5rem;
   font-weight: 600;
   border-radius: 0.75rem;
   transition: all 0.3s ease;
   overflow: hidden;
+  min-width: 220px;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
 }
 
 .btn-primary {
@@ -215,7 +230,10 @@ export default {
   z-index: 1;
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  white-space: nowrap;
 }
 
 .btn-background {
@@ -347,16 +365,51 @@ export default {
   .cta-buttons {
     flex-direction: column;
     gap: 1rem;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .btn-primary, .btn-secondary {
     width: 100%;
+    min-width: unset;
     display: flex;
     justify-content: center;
+    padding: 0.875rem 2rem;
   }
 
   .background-shape {
     opacity: 0.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-buttons {
+    max-width: 100%;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .btn-content {
+    gap: 0.75rem;
+  }
+}
+
+/* Page Transition Animation */
+.page-transitioning {
+  animation: fadeOut 0.3s ease-out forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 </style>
