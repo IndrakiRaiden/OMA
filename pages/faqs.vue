@@ -2,7 +2,7 @@
   <div>
     <main class="faqs-page">
       <BannerV1 
-        title="Centro de Ayuda" 
+        title="Preguntas Frecuentes" 
         subtitle="Encuentra rápidamente las respuestas que necesitas"
         :buttons="[
           { text: 'Contactar Soporte', href: '/contact', class: 'primary-btn' }

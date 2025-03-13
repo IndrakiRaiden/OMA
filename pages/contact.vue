@@ -59,7 +59,7 @@
                 <p class="text-gray-600">Cuéntanos sobre tu proyecto y nos pondremos en contacto contigo pronto.</p>
               </div>
               
-              <form @submit.prevent="handleSubmit" class="space-y-6">
+              <form @submit.prevent="handleSubmit" class="space-y-6" id="contact-form">
                 <div class="form-group">
                   <label for="name">Nombre</label>
                   <input 
