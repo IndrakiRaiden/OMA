@@ -2,16 +2,24 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/strapi'],
   css: ['~/assets/css/tailwind.css'],
   build: {
     transpile: ['axios']
   },
   runtimeConfig: {
     public: {
-      strapiApiUrl: process.env.STRAPI_API_URL || 'http://localhost:1337/api',
-      strapiUrl: process.env.STRAPI_URL || 'http://localhost:1337'
+      strapiApiUrl: process.env.STRAPI_API_URL || 'https://strapi.fiesco.computoespacial.com/api',
+      strapiUrl: process.env.STRAPI_URL || 'https://strapi.fiesco.computoespacial.com'
     }
+  },
+  // @ts-ignore
+  strapi: {
+    url: process.env.STRAPI_URL || 'https://strapi.fiesco.computoespacial.com',
+    prefix: '/api', // Strapi API prefix
+    version: 'v4',
+    cookie: {},
+    cookieName: 'strapi_jwt'
   },
   tailwindcss: {
     config: {

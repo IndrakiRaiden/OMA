@@ -50,7 +50,7 @@
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
 
-// Usar las variables de entorno
+// Usar las variables de entorno directamente
 const strapiUrl = ref(process.env.NUXT_PUBLIC_STRAPI_API_URL || 'https://strapi.fiesco.computoespacial.com/api');
 const strapiBaseUrl = ref(process.env.NUXT_PUBLIC_STRAPI_URL || 'https://strapi.fiesco.computoespacial.com');
 const strapiApiKey = ref(process.env.NUXT_PUBLIC_STRAPI_API_KEY || '5a7f68926c6783e660757108c7bdda3d58985781c563fcaa684b67367c189a784f056714ae937c7b650a176f7d36e9f79e6097bc0007573ced0c6c7b941351958615781fbdb219f72bf266a6af788f556bb2405c1755a64bbf27d5d62914b5b6be4628a47af70336c73c02885c4115f667a31ab77e296340c2c38d20e06c3468');
@@ -72,7 +72,7 @@ const fetchArticles = async () => {
   connectionStatus.value = 'Conectando a la API de Strapi...';
   
   try {
-    // Intentar obtener artículos con el API Key del .env
+    // Intentar obtener artículos con el API Key
     const url = `${strapiUrl.value}/articles?populate=*`;
     console.log('Fetching from:', url);
     console.log('Using API Key:', strapiApiKey.value ? 'Yes (from .env)' : 'No');
