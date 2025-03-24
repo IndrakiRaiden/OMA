@@ -1,10 +1,7 @@
 <template>
   <main class="home-page">
     <Hero />
-    <Solutions />
-    <Timeline />
     <Benefits />
-    <HowItWorks />
     <Industries />
     <Testimonials />
     <CallToAction />
@@ -23,10 +20,7 @@ definePageMeta({
 
 <script>
 import Hero from '~/components/Hero.vue'
-import Solutions from '~/components/index-components/Solutions.vue'
-import Timeline from '~/components/index-components/Timeline.vue'
 import Benefits from '~/components/index-components/Benefits.vue'
-import HowItWorks from '~/components/index-components/HowItWorks.vue'
 import Industries from '~/components/index-components/Industries.vue'
 import Testimonials from '~/components/index-components/Testimonials.vue'
 import CallToAction from '~/components/index-components/CallToAction.vue'
@@ -35,10 +29,7 @@ export default {
   name: 'HomePage',
   components: {
     Hero,
-    Solutions,
-    Timeline,
     Benefits,
-    HowItWorks,
     Industries,
     Testimonials,
     CallToAction

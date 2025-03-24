@@ -9,9 +9,17 @@
         <p class="main-text">Soluciones integrales para proyectos industriales</p>
       </div>
       <div class="hero-features">
-        <div class="feature" v-for="(feature, index) in features" :key="index">
-          <i :class="feature.icon"></i>
-          <span>{{ feature.text }}</span>
+        <div class="hero-features-row top-row">
+          <NuxtLink to="/servicios" class="feature" v-for="(feature, index) in features.slice(0, 4)" :key="index">
+            <i :class="feature.icon"></i>
+            <span>{{ feature.text }}</span>
+          </NuxtLink>
+        </div>
+        <div class="hero-features-row bottom-row">
+          <NuxtLink to="/servicios" class="feature" v-for="(feature, index) in features.slice(4, 6)" :key="index + 4">
+            <i :class="feature.icon"></i>
+            <span>{{ feature.text }}</span>
+          </NuxtLink>
         </div>
       </div>
       <div class="cta-buttons">
@@ -35,10 +43,12 @@
 import { ref } from 'vue';
 
 const features = [
-  { icon: 'fas fa-industry', text: 'Manufactura' },
-  { icon: 'fas fa-cogs', text: 'Automatización' },
-  { icon: 'fas fa-tools', text: 'Ingeniería' },
-  { icon: 'fas fa-chart-line', text: 'Innovación' },
+  { icon: 'fas fa-cog', text: 'Maquinado Convencional' },
+  { icon: 'fas fa-industry', text: 'Producción' },
+  { icon: 'fas fa-tools', text: 'Maquinado CNC' },
+  { icon: 'fas fa-bolt', text: 'Corte Láser' },
+  { icon: 'fas fa-spray-can', text: 'Acabados' },
+  { icon: 'fas fa-fill-drip', text: 'Recubrimientos' },
 ];
 </script>
 
@@ -141,11 +151,23 @@ const features = [
 
 .hero-features {
   display: flex;
-  gap: clamp(1rem, 3vw, 2rem);
+  flex-direction: column;
+  gap: clamp(1rem, 2vw, 1.5rem);
   justify-content: center;
   margin: 2.5rem 0;
+  width: 100%;
+}
+
+.hero-features-row {
+  display: flex;
+  gap: clamp(1rem, 3vw, 2rem);
+  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
+}
+
+.top-row {
+  margin-bottom: 0.5rem;
 }
 
 .feature {
@@ -159,15 +181,31 @@ const features = [
   border-radius: 50px;
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .feature:hover {
   background: rgba(255,255,255,0.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-bottom: 2px solid var(--color-secondary);
+}
+
+.feature:hover i {
+  color: var(--color-accent);
 }
 
 .feature i {
   color: var(--color-secondary);
   font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.feature span {
+  transition: all 0.3s ease;
 }
 
 .cta-buttons {
