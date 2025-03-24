@@ -50,9 +50,12 @@
         :buttonLink="service.cta.buttonLink"
       />
     </main>
-    <div v-else class="loading-container">
-      <div class="loading-spinner"></div>
+    <div v-else-if="loading" class="loading-container">
       <p>Cargando información del servicio...</p>
+    </div>
+    <div v-else-if="error" class="error-container">
+      <p>{{ error }}</p>
+      <button @click="retryFetch" class="retry-button">Reintentar</button>
     </div>
   </div>
 </template>
@@ -81,42 +84,51 @@ export default {
     return {
       service: null,
       loading: true,
-      error: null
+      error: null,
+      slug: 'maquinado-cnc' // Set the slug directly
     }
   },
   async fetch() {
     try {
-      // Get the service slug from the page name
-      const slug = 'maquinado-cnc'
-      
       // Fetch service data from Strapi
-      this.service = await getServiceModel(slug)
+      this.service = await getServiceModel(this.slug)
       
       // If no data is returned, use default data
       if (!this.service) {
-        console.warn('No service data found, using default data')
-        this.service = new ServiceModel(ServiceModel.getDefaultData(slug))
+        console.warn(`No service data found for ${this.slug}, using default data`)
+        this.service = new ServiceModel(ServiceModel.getDefaultData(this.slug))
       }
     } catch (error) {
-      console.error('Error fetching service data:', error)
+      console.error(`Error fetching service data for ${this.slug}:`, error)
       this.error = 'Error al cargar los datos del servicio'
       
       // Use default data in case of error
-      const slug = 'maquinado-cnc'
-      this.service = new ServiceModel(ServiceModel.getDefaultData(slug))
+      this.service = new ServiceModel(ServiceModel.getDefaultData(this.slug))
     } finally {
       this.loading = false
     }
   },
+  methods: {
+    async retryFetch() {
+      this.loading = true
+      this.error = null
+      await this.$fetch()
+    }
+  },
   head() {
+    if (!this.service) {
+      return {
+        title: 'Maquinado CNC | OMA - Servicios de Manufactura',
+        meta: [
+          { hid: 'description', name: 'description', content: 'Servicios de maquinado CNC de alta precisión para la fabricación de piezas y componentes industriales. Especialistas en aceros, aluminio y materiales especiales.' }
+        ]
+      }
+    }
+    
     return {
-      title: this.service?.seo?.title || 'Maquinado CNC | OMA - Servicios de Manufactura',
+      title: this.service.seo.title,
       meta: [
-        { 
-          hid: 'description', 
-          name: 'description', 
-          content: this.service?.seo?.description || 'Servicios de maquinado CNC de alta precisión para la fabricación de piezas y componentes industriales. Especialistas en aceros, aluminio y materiales especiales.' 
-        }
+        { hid: 'description', name: 'description', content: this.service.seo.description }
       ]
     }
   }
@@ -129,31 +141,40 @@ export default {
   min-height: 100vh;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-.loading-container {
+.loading-container,
+.error-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   min-height: 50vh;
-  background-color: var(--background-light);
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  text-align: center;
   padding: 2rem;
 }
 
-.loading-spinner {
-  width: 50px;
-  height: 50px;
-  border: 5px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  border-top-color: var(--content-primary);
-  animation: spin 1s ease-in-out infinite;
-  margin-bottom: 1rem;
+.error-container {
+  color: var(--color-danger, #dc3545);
 }
 
-@keyframes spin {
-  to { transform: rotate(360deg); }
+.retry-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.retry-button:hover {
+  background-color: var(--primary-color-dark);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 </style>
