@@ -14,7 +14,6 @@
       <IntroFrames />
       <DividerStats />
       <CompanyStats />
-      <TimelineSection id="historia" />
       <Timeline />
       <TeamSection />
       <CTASection />
@@ -27,7 +26,6 @@ import { defineComponent } from 'vue'
 import IntroFrames from '~/components/about-components/IntroFrames.vue'
 import DividerStats from '~/components/about-components/DividerStats.vue'
 import CompanyStats from '~/components/about-components/CompanyStats.vue'
-import TimelineSection from '~/components/about-components/TimelineSection.vue'
 import Timeline from '~/components/index-components/Timeline.vue'
 import TeamSection from '~/components/about-components/TeamSection.vue'
 import CTASection from '~/components/common/CTASection.vue'
@@ -40,7 +38,6 @@ export default defineComponent({
     IntroFrames,
     DividerStats,
     CompanyStats,
-    TimelineSection,
     Timeline,
     TeamSection,
     CTASection,
