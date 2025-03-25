@@ -30,7 +30,42 @@
         
         <!-- Services grid -->
         <div v-if="services.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <ServiceCard v-for="service in services" :key="service.id" :service="service" />
+          <!-- Service card (inline implementation) -->
+          <div v-for="service in services" :key="service.id" class="service-card group">
+            <!-- Service image -->
+            <div class="card-image" :style="{ backgroundImage: `url(${getImageUrl(service)})` }">
+              <div class="image-overlay"></div>
+              <div class="icon-wrapper">
+                <i :class="['fas', service.attributes?.icon || 'fa-wrench']"></i>
+              </div>
+            </div>
+            
+            <!-- Service content -->
+            <div class="card-content">
+              <h3 class="title">{{ service.attributes?.titulo || 'Servicio' }}</h3>
+              <p class="description">{{ service.attributes?.descripcion || 'Sin descripción disponible' }}</p>
+              
+              <!-- Features list -->
+              <div v-if="getFeatures(service).length > 0" class="features-list">
+                <div v-for="(feature, index) in getFeatures(service)" :key="index" 
+                     class="feature-item"
+                     :style="{ animationDelay: `${index * 100}ms` }">
+                  <div class="feature-icon">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <span>{{ feature }}</span>
+                </div>
+              </div>
+
+              <!-- Link to service detail page -->
+              <nuxt-link :to="service.attributes?.ruta || `/servicios/${service.id}`" class="learn-more group">
+                <span class="btn-text">Más Información</span>
+                <span class="btn-icon">
+                  <i class="fas fa-arrow-right"></i>
+                </span>
+              </nuxt-link>
+            </div>
+          </div>
         </div>
         
         <!-- Fallback if no services found -->
@@ -61,7 +96,7 @@ definePageMeta({
 // Strapi connection variables
 const strapiUrl = ref(process.env.NUXT_PUBLIC_STRAPI_API_URL || 'https://strapi.fiesco.computoespacial.com/api');
 const strapiBaseUrl = ref(process.env.NUXT_PUBLIC_STRAPI_URL || 'https://strapi.fiesco.computoespacial.com');
-const strapiApiKey = ref(process.env.NUXT_PUBLIC_STRAPI_API_KEY || '5a7f68926c6783e660757108c7bdda3d58985781c563fcaa684b67367c189a784f056714ae937c7b650a176f7d36e9f79e6097bc0007573ced0c6c7b941351958615781fbdb219f72bf266a6af788f556bb2405c1755a64bbf27d5d62914b5b6be4628a47af70336c73c02885c4115f667a31ab77e296340c2c38d20e06c3468');
+const strapiApiKey = ref(process.env.NUXT_PUBLIC_STRAPI_API_KEY || '1c74ca7b3d5fb29dd2a3c8b5a3e6c66020669ced5465517e9b6ac9ece4357ec33f2be5192306fe827d138bc3b3725f6da6304275be00aabe38d74b2919553f3c764c08903746459146cf005ebe3d248a39bd606ea84ae07acddb11b47ce1b0ceae39e4486fc3a12b6161e6f87c967faa103b0e2f9077f57d5ab25fd7d8e8d68d');
 
 // Reactive state
 const services = ref([]);
@@ -130,141 +165,75 @@ const fetchServices = async () => {
   error.value = null;
   
   try {
-    // Fetch services with populated images
-    const url = `${strapiUrl.value}/services?populate=*`;
-    console.log('Fetching services from:', url);
-    
-    const response = await axios.get(url, {
+    const response = await axios.get(`${strapiUrl.value}/services?populate=*`, {
       headers: getAuthHeaders()
     });
     
-    // Log the entire response to see its structure
-    console.log('API Response:', response.data);
+    console.log('Respuesta exitosa');
     
-    // Create a fallback array of services if API doesn't return expected data
-    // This ensures the page still works even if the API fails
-    const fallbackServices = [
-      {
-        id: 1,
-        title: 'Maquinado Convencional',
-        description: 'Flechas de hasta 10 pulgadas de diámetro, sistemas de transmisión motriz, platos, sprockets, rodillos y rectificado utilizando tornos convencionales, fresadoras y rectificadoras.',
-        icon: 'fa-cog',
-        image: '/images/services/cnc-machining.jpg',
-        features: ['Flechas hasta 10" de diámetro', 'Sistemas de transmisión', 'Rectificado cilíndrico y plano'],
-        link: '/servicios-design/maquinado-convencional'
-      },
-      {
-        id: 2,
-        title: 'Producción',
-        description: 'Trabajamos con diversos materiales como bronce, aluminio, acero y plásticos de ingeniería. Ofrecemos servicios de submaquila para procesos después de fundición e inyección.',
-        icon: 'fa-industry',
-        image: '/images/services/production.jpg',
-        features: ['Materiales diversos', 'Submaquila', 'Ingeniería de plásticos'],
-        link: '/servicios-design/produccion'
-      },
-      {
-        id: 3,
-        title: 'Maquinado CNC',
-        description: 'Fabricación de piezas de precisión como cilindros, pistones, poleas, chumaceras, sprockets, bujes y matrices, trabajando con diversos aceros de grado herramienta y maquinaria.',
-        icon: 'fa-tools',
-        image: '/images/services/cnc-machining.jpg',
-        features: ['Piezas de precisión', 'Aceros especializados', 'Alta calidad'],
-        link: '/servicios-design/maquinado-cnc'
-      }
-    ];
+    // Debug the data structure
+    if (response.data && response.data.data && response.data.data.length > 0) {
+      console.log('Estructura del primer servicio:', JSON.stringify(response.data.data[0], null, 2));
+    }
     
-    // Process the data with careful error handling
-    if (response.data && response.data.data && Array.isArray(response.data.data)) {
-      try {
-        // Try to process the API data
-        services.value = response.data.data.map(item => {
-          // Create a base service object with fallbacks for all properties
-          const service = {
-            id: item.id || Math.random().toString(36).substring(2, 9),
-            title: 'Servicio',
-            description: 'Sin descripción disponible',
-            icon: 'fa-wrench',
-            image: '/images/services/default.jpg',
-            features: [],
-            link: `/servicios/${item.id || 'default'}`
-          };
-          
-          // Only try to access attributes if they exist
-          const attrs = item.attributes || {};
-          
-          // Safely assign properties
-          if (attrs.title) service.title = attrs.title;
-          if (attrs.description) service.description = attrs.description;
-          if (attrs.icon) service.icon = attrs.icon;
-          if (attrs.link) service.link = attrs.link;
-          if (attrs.features) service.features = attrs.features;
-          
-          // Handle image with extra care
-          if (attrs.image && attrs.image.data) {
-            const imageData = attrs.image.data;
-            if (imageData.attributes && imageData.attributes.url) {
-              const imageUrl = imageData.attributes.url;
-              service.image = imageUrl.startsWith('http') 
-                ? imageUrl 
-                : `${strapiBaseUrl.value}${imageUrl}`;
-            }
-          }
-          
-          return service;
-        });
-        
-        console.log('Processed services:', services.value);
-      } catch (processingError) {
-        // If processing fails, use fallback data
-        console.error('Error processing API data:', processingError);
-        services.value = fallbackServices;
-        error.value = `Error al procesar los datos: ${processingError.message}`;
-      }
+    // Process the data - Direct assignment like in nicki.vue
+    if (response.data && response.data.data) {
+      // Data comes directly, not inside attributes
+      services.value = response.data.data;
+      console.log(`Conexión exitosa. Se encontraron ${services.value.length} servicios.`);
     } else {
-      // If API doesn't return expected structure, use fallback data
-      console.warn('API did not return expected data structure, using fallbacks');
-      services.value = fallbackServices;
+      services.value = [];
+      console.log('Conexión exitosa, pero no se encontraron servicios en el formato esperado.');
     }
   } catch (err) {
-    // If API request fails entirely, use fallback data
-    console.error('Error fetching services:', err);
-    services.value = fallbackServices;
+    console.error('Error al obtener servicios:', err);
     error.value = `Error al cargar los servicios: ${err.message}`;
   } finally {
     loading.value = false;
   }
 };
 
-// Helper to get the full image URL
-const getImageUrl = (imageData) => {
-  if (!imageData || !imageData.attributes || !imageData.attributes.url) {
-    console.log('Invalid image data structure');
-    return '/images/services/default.jpg';
-  }
-  
-  const imageUrl = imageData.attributes.url;
-  
-  // Construct the full URL
-  const baseUrl = strapiBaseUrl.value.endsWith('/') 
-    ? strapiBaseUrl.value.slice(0, -1) 
-    : strapiBaseUrl.value;
-  
-  const fullUrl = imageUrl.startsWith('http') 
-    ? imageUrl 
-    : `${baseUrl}${imageUrl}`;
-    
-  console.log('Full image URL:', fullUrl);
-  return fullUrl;
-};
-
 // Fetch services on component mount
 onMounted(() => {
   fetchServices();
 });
+
+// Helper functions
+const getImageUrl = (service) => {
+  const defaultImage = '/images/services/default.jpg';
+  
+  if (!service.attributes?.image?.data) {
+    return defaultImage;
+  }
+  
+  const imageData = service.attributes.image.data;
+  if (!imageData.attributes || !imageData.attributes.url) {
+    return defaultImage;
+  }
+  
+  const imageUrl = imageData.attributes.url;
+  
+  return imageUrl.startsWith('http') 
+    ? imageUrl 
+    : `${strapiBaseUrl.value}${imageUrl}`;
+};
+
+const getFeatures = (service) => {
+  if (!service.attributes?.caracteristicas) return [];
+  
+  const caracteristicas = service.attributes.caracteristicas;
+  
+  if (typeof caracteristicas === 'string') {
+    return caracteristicas.split(',').map(f => f.trim());
+  } else if (Array.isArray(caracteristicas)) {
+    return caracteristicas;
+  }
+  
+  return [];
+};
 </script>
 
 <script>
-import ServiceCard from '../components/services-components/ServiceCard.vue'
 import BannerV2 from '../components/BannerV2.vue'
 import FeaturesSection from '../components/services-components/FeaturesSection.vue'
 import TestimonialsSection from '../components/services-components/TestimonialsSection.vue'
@@ -273,7 +242,6 @@ import CTASection from '~/components/common/CTASection.vue'
 export default {
   name: 'ServiciosPage',
   components: {
-    ServiceCard,
     BannerV2,
     FeaturesSection,
     TestimonialsSection,
@@ -302,5 +270,211 @@ export default {
 /* We've moved the padding to the BannerV2 component itself */
 :deep(.hero-section) {
   margin-top: 0;
+}
+
+/* Service Card Styles */
+.service-card {
+  background: white;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  isolation: isolate;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.card-image {
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.4)
+  );
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .image-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.5)
+  );
+}
+
+.icon-wrapper {
+  width: 80px;
+  height: 80px;
+  background: var(--content-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+.service-card:hover .icon-wrapper {
+  transform: scale(1.1) rotate(5deg);
+  background: var(--content-secondary);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.icon-wrapper i {
+  color: white;
+  font-size: 2rem;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover .icon-wrapper i {
+  transform: rotate(-5deg);
+}
+
+.card-content {
+  padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--content-dark);
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--content-primary);
+  transition: width 0.3s ease;
+}
+
+.service-card:hover .title::after {
+  width: 80px;
+}
+
+.description {
+  color: var(--content-gray);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.features-list {
+  margin-bottom: 2rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  color: var(--content-dark);
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.feature-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--content-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.feature-icon i {
+  color: var(--content-primary);
+  font-size: 0.75rem;
+}
+
+.learn-more {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--content-primary);
+  font-weight: 600;
+  margin-top: auto;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.learn-more:hover {
+  color: var(--content-secondary);
+}
+
+.btn-icon {
+  transition: transform 0.3s ease;
+}
+
+.learn-more:hover .btn-icon {
+  transform: translateX(5px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .card-image {
+    height: 200px;
+  }
+  
+  .icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .icon-wrapper i {
+    font-size: 1.5rem;
+  }
+  
+  .card-content {
+    padding: 1.5rem;
+  }
+  
+  .title {
+    font-size: 1.25rem;
+  }
 }
 </style>
