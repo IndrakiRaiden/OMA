@@ -12,13 +12,22 @@
              class="team-card"
              :style="{ animationDelay: `${index * 200}ms` }">
           <div class="member-avatar" :class="getAvatarClass(index)">
-            <span class="initials">{{ getInitials(member.name) }}</span>
+            <img v-if="member.image" :src="member.image" alt="" class="member-image">
+            <span v-else class="initials">{{ getInitials(member.name) }}</span>
             <div class="avatar-ring"></div>
           </div>
           <div class="member-info">
             <h3 class="member-name">{{ member.name }}</h3>
             <p class="member-role">{{ member.role }}</p>
-            <p class="member-description">{{ member.description }}</p>
+            <a v-if="isPhoneNumber(member.description)" 
+               :href="`tel:${formatPhoneForCall(member.description)}`"
+               class="phone-number"
+               @mouseover="startPhoneAnimation" 
+               @mouseout="stopPhoneAnimation">
+              <i class="fas fa-phone phone-icon" :class="{'phone-ringing': isPhoneRinging}"></i>
+              {{ member.description }}
+            </a>
+            <p v-else class="member-description">{{ member.description }}</p>
           </div>
           <div class="member-social">
             <a v-for="social in member.social" 
@@ -52,24 +61,21 @@ export default {
           ]
         },
         {
-          name: 'Ana Martínez',
-          role: 'Directora de Operaciones',
-          description: 'Especialista en optimización de procesos y control de calidad en manufactura.',
-          social: [
-            { platform: 'linkedin', url: '#' },
-            { platform: 'twitter', url: '#' }
-          ]
+          name: 'Eduardo Topete',
+          role: 'Departamento de Ingenieria',
+          description: '+52 66 5106 6940',
+          social: [],
+          image: '/images/people/eduardo.png'
         },
         {
-          name: 'Carlos Ruiz',
-          role: 'Jefe de Ingeniería',
-          description: 'Experto en diseño CAD/CAM y programación CNC avanzada.',
-          social: [
-            { platform: 'linkedin', url: '#' },
-            { platform: 'github', url: '#' }
-          ]
+          name: 'Miguel Calvario',
+          role: 'Departamento de Ventas',
+          description: '+52 66 5121 9080',
+          social: [],
+          image: '/images/people/miguel.png'
         }
-      ]
+      ],
+      isPhoneRinging: false
     }
   },
   methods: {
@@ -83,6 +89,19 @@ export default {
         .join('')
         .toUpperCase()
         .slice(0, 2)
+    },
+    isPhoneNumber(text) {
+      return text && text.includes('+52')
+    },
+    formatPhoneForCall(phone) {
+      // Remove spaces and keep the format needed for tel: protocol
+      return phone.replace(/\s+/g, '')
+    },
+    startPhoneAnimation() {
+      this.isPhoneRinging = true
+    },
+    stopPhoneAnimation() {
+      this.isPhoneRinging = false
     }
   }
 }
@@ -183,6 +202,13 @@ export default {
   font-weight: 600;
   color: white;
   position: relative;
+  overflow: hidden;
+}
+
+.member-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .avatar-ring {
@@ -223,6 +249,51 @@ export default {
   font-size: 0.875rem;
   color: var(--content-gray);
   line-height: 1.6;
+}
+
+.phone-number {
+  display: inline-flex;
+  align-items: center;
+  color: var(--content-primary);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.phone-number:hover {
+  background-color: rgba(var(--content-primary-rgb), 0.1);
+  transform: scale(1.05);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.phone-icon {
+  margin-right: 8px;
+  transition: all 0.3s ease;
+}
+
+.phone-ringing {
+  animation: phoneRing 0.8s infinite;
+  color: var(--content-primary);
+}
+
+@keyframes phoneRing {
+  0% {
+    transform: rotate(-15deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(-15deg);
+  }
 }
 
 .member-social {
