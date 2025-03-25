@@ -58,7 +58,7 @@
               </div>
 
               <!-- Link to service detail page -->
-              <nuxt-link :to="service.attributes?.ruta || `/servicios/${service.id}`" class="learn-more group">
+              <nuxt-link :to="`/servicios/${service.attributes?.ruta || service.id}`" class="learn-more group">
                 <span class="btn-text">Más Información</span>
                 <span class="btn-icon">
                   <i class="fas fa-arrow-right"></i>
@@ -200,33 +200,52 @@ onMounted(() => {
 
 // Helper functions
 const getImageUrl = (service) => {
-  const defaultImage = '/images/services/default.jpg';
+  const defaultImage = '/img/services/default.jpg';
   
-  if (!service.attributes?.image?.data) {
-    return defaultImage;
+  // Handle the new data structure
+  if (service.image) {
+    // Direct image object from the new structure
+    const imageUrl = service.image.url;
+    return imageUrl.startsWith('http') 
+      ? imageUrl 
+      : `${strapiBaseUrl.value}${imageUrl}`;
   }
   
-  const imageData = service.attributes.image.data;
-  if (!imageData.attributes || !imageData.attributes.url) {
-    return defaultImage;
+  // Handle the old data structure as fallback
+  if (service.attributes?.image?.data) {
+    const imageData = service.attributes.image.data;
+    if (imageData.attributes && imageData.attributes.url) {
+      const imageUrl = imageData.attributes.url;
+      return imageUrl.startsWith('http') 
+        ? imageUrl 
+        : `${strapiBaseUrl.value}${imageUrl}`;
+    }
   }
   
-  const imageUrl = imageData.attributes.url;
-  
-  return imageUrl.startsWith('http') 
-    ? imageUrl 
-    : `${strapiBaseUrl.value}${imageUrl}`;
+  return defaultImage;
 };
 
 const getFeatures = (service) => {
-  if (!service.attributes?.caracteristicas) return [];
+  // Handle the new data structure with descripcion array
+  if (service.descripcion && Array.isArray(service.descripcion)) {
+    // Look for list items in the descripcion array
+    const listItems = service.descripcion.find(item => item.type === 'list');
+    if (listItems && listItems.children) {
+      return listItems.children
+        .filter(child => child.type === 'list-item')
+        .map(item => item.children[0]?.text || '');
+    }
+  }
   
-  const caracteristicas = service.attributes.caracteristicas;
-  
-  if (typeof caracteristicas === 'string') {
-    return caracteristicas.split(',').map(f => f.trim());
-  } else if (Array.isArray(caracteristicas)) {
-    return caracteristicas;
+  // Handle old data structure as fallback
+  if (service.attributes?.caracteristicas) {
+    const caracteristicas = service.attributes.caracteristicas;
+    
+    if (typeof caracteristicas === 'string') {
+      return caracteristicas.split(',').map(f => f.trim());
+    } else if (Array.isArray(caracteristicas)) {
+      return caracteristicas;
+    }
   }
   
   return [];
