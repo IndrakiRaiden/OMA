@@ -1,17 +1,17 @@
 <template>
   <div class="service-card group">
-    <div class="card-image" :style="{ backgroundImage: `url(${service.image})` }">
+    <div class="card-image" :style="{ backgroundImage: `url(${service.image || '/images/services/default.jpg'})` }">
       <div class="image-overlay"></div>
       <div class="icon-wrapper">
-        <i :class="['fas', service.icon]"></i>
+        <i :class="['fas', service.icon || 'fa-wrench']"></i>
       </div>
     </div>
     <div class="card-content">
-      <h3 class="title">{{ service.title }}</h3>
-      <p class="description">{{ service.description }}</p>
+      <h3 class="title">{{ service.title || 'Servicio' }}</h3>
+      <p class="description">{{ service.description || 'Sin descripción disponible' }}</p>
       
-      <div class="features-list">
-        <div v-for="(feature, index) in service.features" :key="index" 
+      <div v-if="processedFeatures.length > 0" class="features-list">
+        <div v-for="(feature, index) in processedFeatures" :key="index" 
              class="feature-item"
              :style="{ animationDelay: `${index * 100}ms` }">
           <div class="feature-icon">
@@ -21,7 +21,7 @@
         </div>
       </div>
 
-      <nuxt-link :to="service.link || '#'" class="learn-more group">
+      <nuxt-link :to="service.link || `/servicios/${service.id}`" class="learn-more group">
         <span class="btn-text">Más Información</span>
         <span class="btn-icon">
           <i class="fas fa-arrow-right"></i>
@@ -39,13 +39,31 @@ export default {
       type: Object,
       required: true,
       validator: (value) => {
-        return value.hasOwnProperty('title') &&
-               value.hasOwnProperty('description') &&
-               value.hasOwnProperty('icon') &&
-               value.hasOwnProperty('image') &&
-               value.hasOwnProperty('features') &&
-               (value.hasOwnProperty('link') || true)
+        return typeof value === 'object' && value !== null && value.hasOwnProperty('id');
       }
+    }
+  },
+  computed: {
+    processedFeatures() {
+      if (!this.service.features) return [];
+      
+      if (Array.isArray(this.service.features) && 
+          this.service.features.length > 0 && 
+          typeof this.service.features[0] === 'string') {
+        return this.service.features;
+      }
+      
+      if (Array.isArray(this.service.features) && 
+          this.service.features.length > 0 && 
+          typeof this.service.features[0] === 'object') {
+        return this.service.features.map(f => f.text || f.name || f.feature || JSON.stringify(f));
+      }
+      
+      if (typeof this.service.features === 'string') {
+        return this.service.features.split(',').map(f => f.trim());
+      }
+      
+      return [];
     }
   }
 }
