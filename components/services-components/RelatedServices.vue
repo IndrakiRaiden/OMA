@@ -26,13 +26,13 @@
           
           <!-- Service content -->
           <div class="card-content">
-            <h3 class="title">{{ service.attributes?.titulo || service.titulo || 'Servicio' }}</h3>
+            <h3 class="title">{{ service.titulo || service.attributes?.titulo || 'Servicio' }}</h3>
             <p class="description">
               {{ getShortDescription(service) }}
             </p>
             
             <!-- Link to service detail page -->
-            <nuxt-link :to="`/servicios/${service.attributes?.ruta || service.ruta || service.id}`" class="learn-more group">
+            <nuxt-link :to="`/servicios/${service.ruta || service.id}`" class="learn-more group">
               <span class="btn-text">Más Información</span>
               <span class="btn-icon">
                 <i class="fas fa-arrow-right"></i>

@@ -42,8 +42,10 @@
             
             <!-- Service content -->
             <div class="card-content">
-              <h3 class="title">{{ service.attributes?.titulo || 'Servicio' }}</h3>
-              <p class="description">{{ service.attributes?.descripcion || 'Sin descripción disponible' }}</p>
+              <h3 class="title">{{ service.titulo || service.attributes?.titulo || 'Servicio' }}</h3>
+              <p class="description">
+                {{ getServiceDescription(service) }}
+              </p>
               
               <!-- Features list -->
               <div v-if="getFeatures(service).length > 0" class="features-list">
@@ -58,7 +60,7 @@
               </div>
 
               <!-- Link to service detail page -->
-              <nuxt-link :to="`/servicios/${service.attributes?.ruta || service.id}`" class="learn-more group">
+              <nuxt-link :to="`/servicios/${service.ruta || service.id}`" class="learn-more group">
                 <span class="btn-text">Más Información</span>
                 <span class="btn-icon">
                   <i class="fas fa-arrow-right"></i>
@@ -223,6 +225,24 @@ const getImageUrl = (service) => {
   }
   
   return defaultImage;
+};
+
+const getServiceDescription = (service) => {
+  // Handle the new data structure with rich text
+  if (service.descripcion && Array.isArray(service.descripcion)) {
+    // Get the first paragraph from the rich text
+    const paragraph = service.descripcion.find(item => item.type === 'paragraph');
+    if (paragraph && paragraph.children && paragraph.children.length > 0) {
+      return paragraph.children[0]?.text || 'Sin descripción disponible';
+    }
+  }
+  
+  // Handle old data structure as fallback
+  if (service.attributes?.descripcion) {
+    return service.attributes.descripcion;
+  }
+  
+  return 'Sin descripción disponible';
 };
 
 const getFeatures = (service) => {
