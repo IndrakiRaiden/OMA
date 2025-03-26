@@ -163,57 +163,70 @@
             <div class="service-gallery mt-8">
               <h3 class="text-2xl font-bold mb-4">Galería</h3>
               
-              <div v-if="serviceGallery && serviceGallery.length > 0" class="gallery-grid grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div v-if="serviceGallery && serviceGallery.length > 0" class="gallery-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 <div v-for="(image, index) in serviceGallery" :key="index" class="gallery-item">
-                  <img 
-                    :src="getGalleryImageUrl(image)" 
-                    :alt="image.attributes?.alternativeText || 'Imagen de galería'"
-                    class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer"
-                    @error="handleImageError"
-                    @click="openLightbox(index)"
-                  />
+                  <div class="gallery-image-container" @click="openLightbox(index)">
+                    <img 
+                      :src="getGalleryImageUrl(image)" 
+                      :alt="image.attributes?.alternativeText || 'Imagen de galería'"
+                      class="w-full h-full object-cover rounded-lg shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer"
+                      @error="handleImageError"
+                    />
+                    <div class="gallery-overlay">
+                      <div class="gallery-zoom-icon">
+                        <i class="fas fa-search-plus"></i>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               
-              <div v-else class="text-center py-4 bg-gray-100 rounded">
-                <p>No hay imágenes disponibles en la galería.</p>
+              <div v-else class="text-center py-8 bg-gray-100 rounded-lg">
+                <i class="fas fa-images text-4xl text-gray-400 mb-3"></i>
+                <p class="text-lg font-medium">No hay imágenes disponibles en la galería.</p>
                 <p class="text-sm text-gray-500 mt-2">ID del servicio: {{ selectedService?.id }}</p>
               </div>
             </div>
             
-            <!-- Lightbox Gallery -->
-            <div v-if="lightboxActive && serviceGallery.length > 0" class="lightbox-overlay">
-              <div class="lightbox-container">
-                <button class="lightbox-close" @click="closeLightbox">
+            <!-- New Lightbox Implementation -->
+            <div v-if="lightboxActive" class="fixed inset-0 lightbox-bg flex items-center justify-center z-50" @click="closeLightbox">
+              <div class="relative max-w-4xl mx-auto" @click.stop>
+                <!-- Close button -->
+                <button @click="closeLightbox" class="absolute top-4 right-4 gradient-primary text-white w-10 h-10 rounded-full flex items-center justify-center z-10">
                   <i class="fas fa-times"></i>
                 </button>
                 
-                <!-- Navigation buttons outside the content for better visibility -->
+                <!-- Image container -->
+                <div class="p-4 bg-white rounded-lg shadow-xl">
+                  <img 
+                    v-if="currentLightboxImage" 
+                    :src="getGalleryImageUrl(currentLightboxImage)" 
+                    :alt="currentLightboxImage?.attributes?.alternativeText || 'Imagen de galería'"
+                    class="max-h-[70vh] max-w-full object-contain"
+                  />
+                </div>
+                
+                <!-- Navigation buttons -->
                 <button 
-                  class="lightbox-nav-btn prev" 
-                  @click="navigateLightbox('prev')"
+                  @click.stop="navigateLightbox('prev')" 
+                  class="absolute left-4 top-1/2 transform -translate-y-1/2 gradient-primary text-white w-12 h-12 rounded-full flex items-center justify-center"
                   :disabled="currentLightboxIndex === 0"
+                  :class="{'opacity-50 cursor-not-allowed': currentLightboxIndex === 0}"
                 >
                   <i class="fas fa-chevron-left"></i>
                 </button>
                 
                 <button 
-                  class="lightbox-nav-btn next" 
-                  @click="navigateLightbox('next')"
-                  :disabled="currentLightboxIndex === serviceGallery.length - 1"
+                  @click.stop="navigateLightbox('next')" 
+                  class="absolute right-4 top-1/2 transform -translate-y-1/2 gradient-primary text-white w-12 h-12 rounded-full flex items-center justify-center"
+                  :disabled="currentLightboxIndex >= serviceGallery.length - 1"
+                  :class="{'opacity-50 cursor-not-allowed': currentLightboxIndex >= serviceGallery.length - 1}"
                 >
                   <i class="fas fa-chevron-right"></i>
                 </button>
                 
-                <div class="lightbox-content">
-                  <img 
-                    :src="getGalleryImageUrl(serviceGallery[currentLightboxIndex])" 
-                    :alt="serviceGallery[currentLightboxIndex]?.attributes?.alternativeText || 'Imagen de galería'"
-                    class="lightbox-image"
-                  />
-                </div>
-                
-                <div class="lightbox-counter">
+                <!-- Counter -->
+                <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white px-4 py-2 rounded-full text-gray-800 font-medium shadow-md">
                   {{ currentLightboxIndex + 1 }} / {{ serviceGallery.length }}
                 </div>
               </div>
@@ -236,7 +249,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted, computed } from 'vue';
 import axios from 'axios';
 
 definePageMeta({
@@ -260,11 +273,17 @@ const error = ref(null);
 // Modal state
 const showModal = ref(false);
 const selectedService = ref(null);
-const serviceGallery = ref([]); // New state variable for gallery data
+const serviceGallery = ref([]); // State variable for gallery data
 
 // Lightbox state
 const lightboxActive = ref(false);
 const currentLightboxIndex = ref(0);
+const currentLightboxImage = computed(() => {
+  if (serviceGallery.value.length === 0 || currentLightboxIndex.value >= serviceGallery.value.length) {
+    return null;
+  }
+  return serviceGallery.value[currentLightboxIndex.value];
+});
 
 // Features and testimonials (kept as static data for now)
 const features = ref([
@@ -403,19 +422,29 @@ const closeModal = () => {
 
 // Lightbox functions
 const openLightbox = (index) => {
+  console.log('Opening lightbox for image at index:', index);
+  console.log('Gallery data:', serviceGallery.value);
+  
+  if (!serviceGallery.value || serviceGallery.value.length === 0) {
+    console.error('No gallery images available');
+    return;
+  }
+  
+  // Set the current image index
   currentLightboxIndex.value = index;
+  
+  // Activate the lightbox immediately
   lightboxActive.value = true;
-  // Prevent scrolling when lightbox is open
-  document.body.style.overflow = 'hidden';
+  console.log('Lightbox activated:', lightboxActive.value);
 };
 
 const closeLightbox = () => {
+  console.log('Closing lightbox');
   lightboxActive.value = false;
-  // Re-enable scrolling
-  document.body.style.overflow = 'hidden'; // Keep hidden because modal is still open
 };
 
 const navigateLightbox = (direction) => {
+  console.log('Navigating lightbox:', direction);
   if (direction === 'next' && currentLightboxIndex.value < serviceGallery.value.length - 1) {
     currentLightboxIndex.value++;
   } else if (direction === 'prev' && currentLightboxIndex.value > 0) {
@@ -1007,12 +1036,15 @@ export default {
 /* Lightbox Gallery */
 .lightbox-overlay {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: rgba(0, 0, 0, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1001;
+  z-index: 2000; /* Ensure it's above everything else */
 }
 
 .lightbox-container {
@@ -1117,5 +1149,79 @@ export default {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+/* Gallery Styles */
+.service-gallery {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.gallery-item {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-zoom-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--content-primary) 0%, var(--content-secondary) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.25rem;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-zoom-icon {
+  transform: scale(1);
+}
+
+/* Lightbox gradients */
+.lightbox-bg {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.85) 100%);
+}
+
+.gradient-primary {
+  background: linear-gradient(135deg, var(--content-primary) 0%, var(--content-secondary) 100%);
+}
+
+.gradient-secondary {
+  background: linear-gradient(135deg, var(--content-secondary) 0%, var(--content-primary) 100%);
 }
 </style>
