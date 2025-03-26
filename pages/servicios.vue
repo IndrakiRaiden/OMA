@@ -59,13 +59,13 @@
                 </div>
               </div>
 
-              <!-- Link to service detail page -->
-              <nuxt-link :to="`/servicios/${service.ruta || service.id}`" class="learn-more group">
+              <!-- Button to open service detail modal -->
+              <button @click="openServiceDetail(service)" class="learn-more group">
                 <span class="btn-text">Más Información</span>
                 <span class="btn-icon">
                   <i class="fas fa-arrow-right"></i>
                 </span>
-              </nuxt-link>
+              </button>
             </div>
           </div>
         </div>
@@ -80,11 +80,163 @@
     <FeaturesSection :features="features" />
     <TestimonialsSection :testimonials="testimonials" />
     <CTASection />
+    
+    <!-- Service Detail Modal -->
+    <div v-if="selectedService && showModal" class="service-detail-modal">
+      <div class="modal-overlay" @click="closeModal"></div>
+      <div class="modal-container">
+        <button class="modal-close-btn" @click="closeModal">
+          <i class="fas fa-times"></i>
+        </button>
+        
+        <!-- Modal Content -->
+        <div class="modal-content">
+          <!-- Service Hero -->
+          <div class="modal-hero" :style="{ backgroundImage: `url(${getImageUrl(selectedService)})` }">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+              <div class="service-icon">
+                <i class="fas fa-wrench"></i>
+              </div>
+              <h2 class="text-3xl md:text-4xl font-bold text-white">
+                {{ selectedService.titulo || selectedService.attributes?.titulo || 'Servicio' }}
+              </h2>
+            </div>
+          </div>
+          
+          <!-- Service Details -->
+          <div class="modal-body">
+            <div class="service-description">
+              <h3 class="text-2xl font-bold mb-4">Descripción del Servicio</h3>
+              
+              <!-- Rich Text Description -->
+              <div class="rich-text-content mb-6">
+                <div v-if="selectedService.attributes?.descripcion && Array.isArray(selectedService.attributes.descripcion)">
+                  <div v-for="(block, index) in selectedService.attributes.descripcion" :key="index" class="mb-4">
+                    <!-- Paragraph -->
+                    <p v-if="block.type === 'paragraph'" class="text-lg text-gray-700 leading-relaxed mb-4">
+                      {{ block.children && block.children.length > 0 ? block.children[0]?.text || '' : '' }}
+                    </p>
+                    
+                    <!-- Heading -->
+                    <h4 v-else-if="block.type === 'heading'" class="text-xl font-bold text-gray-800 mb-3">
+                      {{ block.children && block.children.length > 0 ? block.children[0]?.text || '' : '' }}
+                    </h4>
+                    
+                    <!-- List -->
+                    <ul v-else-if="block.type === 'list'" class="features-list-modal">
+                      <li v-for="(item, itemIndex) in block.children" :key="itemIndex" 
+                          class="feature-item-modal">
+                        <div class="feature-icon-modal">
+                          <i class="fas fa-check-circle"></i>
+                        </div>
+                        <span>{{ item.children && item.children.length > 0 ? item.children[0]?.text || '' : '' }}</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <!-- Simple description fallback -->
+                <div v-else>
+                  <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    {{ getServiceDescription(selectedService) }}
+                  </p>
+                  
+                  <!-- Features from service -->
+                  <div v-if="getFeatures(selectedService).length > 0" class="mt-6">
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">Características</h4>
+                    <ul class="features-list-modal">
+                      <li v-for="(feature, index) in getFeatures(selectedService)" :key="index" 
+                          class="feature-item-modal">
+                        <div class="feature-icon-modal">
+                          <i class="fas fa-check-circle"></i>
+                        </div>
+                        <span>{{ feature }}</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Gallery Section (only in modal) -->
+            <div class="service-gallery mt-8">
+              <h3 class="text-2xl font-bold mb-4">Galería</h3>
+              
+              <div v-if="serviceGallery && serviceGallery.length > 0" class="gallery-grid grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div v-for="(image, index) in serviceGallery" :key="index" class="gallery-item">
+                  <img 
+                    :src="getGalleryImageUrl(image)" 
+                    :alt="image.attributes?.alternativeText || 'Imagen de galería'"
+                    class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+                    @error="handleImageError"
+                    @click="openLightbox(index)"
+                  />
+                </div>
+              </div>
+              
+              <div v-else class="text-center py-4 bg-gray-100 rounded">
+                <p>No hay imágenes disponibles en la galería.</p>
+                <p class="text-sm text-gray-500 mt-2">ID del servicio: {{ selectedService?.id }}</p>
+              </div>
+            </div>
+            
+            <!-- Lightbox Gallery -->
+            <div v-if="lightboxActive && serviceGallery.length > 0" class="lightbox-overlay">
+              <div class="lightbox-container">
+                <button class="lightbox-close" @click="closeLightbox">
+                  <i class="fas fa-times"></i>
+                </button>
+                
+                <!-- Navigation buttons outside the content for better visibility -->
+                <button 
+                  class="lightbox-nav-btn prev" 
+                  @click="navigateLightbox('prev')"
+                  :disabled="currentLightboxIndex === 0"
+                >
+                  <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <button 
+                  class="lightbox-nav-btn next" 
+                  @click="navigateLightbox('next')"
+                  :disabled="currentLightboxIndex === serviceGallery.length - 1"
+                >
+                  <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="lightbox-content">
+                  <img 
+                    :src="getGalleryImageUrl(serviceGallery[currentLightboxIndex])" 
+                    :alt="serviceGallery[currentLightboxIndex]?.attributes?.alternativeText || 'Imagen de galería'"
+                    class="lightbox-image"
+                  />
+                </div>
+                
+                <div class="lightbox-counter">
+                  {{ currentLightboxIndex + 1 }} / {{ serviceGallery.length }}
+                </div>
+              </div>
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="modal-cta">
+              <NuxtLink to="/cotiza" class="cta-button">
+                Solicitar Cotización
+              </NuxtLink>
+              <NuxtLink to="/contacto" class="cta-button-secondary">
+                Contactar
+              </NuxtLink>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import axios from 'axios';
 
 definePageMeta({
@@ -104,6 +256,15 @@ const strapiApiKey = ref(process.env.NUXT_PUBLIC_STRAPI_API_KEY || '1c74ca7b3d5f
 const services = ref([]);
 const loading = ref(false);
 const error = ref(null);
+
+// Modal state
+const showModal = ref(false);
+const selectedService = ref(null);
+const serviceGallery = ref([]); // New state variable for gallery data
+
+// Lightbox state
+const lightboxActive = ref(false);
+const currentLightboxIndex = ref(0);
 
 // Features and testimonials (kept as static data for now)
 const features = ref([
@@ -167,6 +328,7 @@ const fetchServices = async () => {
   error.value = null;
   
   try {
+    // Revert to the original endpoint that was working
     const response = await axios.get(`${strapiUrl.value}/services?populate=*`, {
       headers: getAuthHeaders()
     });
@@ -195,10 +357,100 @@ const fetchServices = async () => {
   }
 };
 
-// Fetch services on component mount
+// Modal functions
+const openServiceDetail = (service) => {
+  selectedService.value = service;
+  console.log('Opening modal for service:', service.id, service.attributes?.titulo);
+  
+  // Debug the service object structure
+  console.log('Complete service object:', service);
+  
+  showModal.value = true;
+  // Prevent body scrolling when modal is open
+  document.body.style.overflow = 'hidden';
+  
+  // Set gallery data directly from the service object
+  // Check for gallery in different possible locations based on Strapi structure
+  if (service.attributes && service.attributes.gallery && service.attributes.gallery.data) {
+    console.log('Gallery data found in service.attributes.gallery.data');
+    serviceGallery.value = service.attributes.gallery.data;
+  } else if (service.attributes && service.attributes.gallery) {
+    console.log('Gallery data found in service.attributes.gallery');
+    serviceGallery.value = Array.isArray(service.attributes.gallery) ? service.attributes.gallery : [service.attributes.gallery];
+  } else if (service.gallery && service.gallery.data) {
+    console.log('Gallery data found in service.gallery.data');
+    serviceGallery.value = service.gallery.data;
+  } else if (service.gallery) {
+    console.log('Gallery data found in service.gallery');
+    serviceGallery.value = Array.isArray(service.gallery) ? service.gallery : [service.gallery];
+  } else {
+    console.log('No gallery data found in service object');
+    serviceGallery.value = [];
+  }
+  
+  console.log('Gallery data set to:', serviceGallery.value);
+};
+
+const closeModal = () => {
+  showModal.value = false;
+  // Re-enable body scrolling
+  document.body.style.overflow = 'auto';
+  // Clear gallery data when modal closes
+  serviceGallery.value = [];
+  // Ensure lightbox is closed
+  lightboxActive.value = false;
+};
+
+// Lightbox functions
+const openLightbox = (index) => {
+  currentLightboxIndex.value = index;
+  lightboxActive.value = true;
+  // Prevent scrolling when lightbox is open
+  document.body.style.overflow = 'hidden';
+};
+
+const closeLightbox = () => {
+  lightboxActive.value = false;
+  // Re-enable scrolling
+  document.body.style.overflow = 'hidden'; // Keep hidden because modal is still open
+};
+
+const navigateLightbox = (direction) => {
+  if (direction === 'next' && currentLightboxIndex.value < serviceGallery.value.length - 1) {
+    currentLightboxIndex.value++;
+  } else if (direction === 'prev' && currentLightboxIndex.value > 0) {
+    currentLightboxIndex.value--;
+  }
+};
+
+// Handle keyboard navigation for lightbox
 onMounted(() => {
   fetchServices();
+  
+  // Add keyboard event listener for lightbox navigation
+  window.addEventListener('keydown', handleKeyDown);
 });
+
+// Clean up event listener
+onUnmounted(() => {
+  window.removeEventListener('keydown', handleKeyDown);
+});
+
+const handleKeyDown = (event) => {
+  if (!lightboxActive.value) return;
+  
+  switch (event.key) {
+    case 'Escape':
+      closeLightbox();
+      break;
+    case 'ArrowLeft':
+      navigateLightbox('prev');
+      break;
+    case 'ArrowRight':
+      navigateLightbox('next');
+      break;
+  }
+};
 
 // Helper functions
 const getImageUrl = (service) => {
@@ -214,7 +466,7 @@ const getImageUrl = (service) => {
   }
   
   // Handle the old data structure as fallback
-  if (service.attributes?.image?.data) {
+  if (service.attributes && service.attributes.image && service.attributes.image.data) {
     const imageData = service.attributes.image.data;
     if (imageData.attributes && imageData.attributes.url) {
       const imageUrl = imageData.attributes.url;
@@ -269,6 +521,41 @@ const getFeatures = (service) => {
   }
   
   return [];
+};
+
+const getGalleryImageUrl = (image) => {
+  if (!image) return '';
+  
+  // Debug the image object
+  console.log('Gallery image object:', image);
+  
+  // Try different possible structures
+  if (image.attributes && image.attributes.url) {
+    console.log('Using image.attributes.url:', image.attributes.url);
+    return `${strapiBaseUrl.value}${image.attributes.url}`;
+  } else if (image.url) {
+    console.log('Using image.url:', image.url);
+    return `${strapiBaseUrl.value}${image.url}`;
+  } else if (image.formats && image.formats.medium) {
+    console.log('Using image.formats.medium.url:', image.formats.medium.url);
+    return `${strapiBaseUrl.value}${image.formats.medium.url}`;
+  } else if (typeof image === 'string') {
+    console.log('Using image as string:', image);
+    if (image.startsWith('http')) {
+      return image;
+    } else {
+      return `${strapiBaseUrl.value}${image}`;
+    }
+  }
+  
+  console.log('No valid URL found in image object');
+  return '';
+};
+
+const handleImageError = (event) => {
+  console.error('Image failed to load:', event.target.src);
+  // Optionally set a fallback image
+  event.target.src = '/images/placeholder.jpg';
 };
 </script>
 
@@ -363,7 +650,7 @@ export default {
 .icon-wrapper {
   width: 80px;
   height: 80px;
-  background: var(--content-primary);
+  background-color: var(--content-primary);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -515,5 +802,320 @@ export default {
   .title {
     font-size: 1.25rem;
   }
+}
+
+/* Service Detail Modal */
+.service-detail-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-container {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  max-height: 90vh;
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: scaleIn 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  background-color: var(--content-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.25rem;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close-btn:hover {
+  background-color: var(--content-secondary);
+  transform: scale(1.1);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh;
+}
+
+.modal-hero {
+  position: relative;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.7)
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+
+.service-icon {
+  width: 80px;
+  height: 80px;
+  background-color: var(--content-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-body {
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.service-description {
+  margin-bottom: 2rem;
+}
+
+.rich-text-content {
+  color: var(--content-gray);
+  line-height: 1.7;
+}
+
+.features-list-modal {
+  margin: 1rem 0;
+}
+
+.feature-item-modal {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  background-color: #f8f9fa;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+.feature-item-modal:hover {
+  background-color: #f1f3f5;
+  transform: translateX(5px);
+}
+
+.feature-icon-modal {
+  margin-right: 0.75rem;
+  color: var(--content-primary);
+}
+
+.modal-cta {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--content-primary);
+  color: white;
+  border-radius: 0.25rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--content-secondary);
+  transform: translateY(-3px);
+}
+
+.cta-button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  background-color: transparent;
+  color: var(--content-primary);
+  border: 2px solid var(--content-primary);
+  border-radius: 0.25rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-button-secondary:hover {
+  background-color: rgba(var(--content-primary-rgb), 0.1);
+  transform: translateY(-3px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { 
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to { 
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Lightbox Gallery */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+}
+
+.lightbox-container {
+  position: relative;
+  max-width: 90%;
+  max-height: 90vh;
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  background-color: var(--content-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.25rem;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.lightbox-close:hover {
+  background-color: var(--content-secondary);
+  transform: scale(1.1);
+}
+
+.lightbox-content {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  width: 100%;
+  background-color: #f8f8f8;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.lightbox-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: var(--content-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.25rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.lightbox-nav-btn.prev {
+  left: 20px;
+}
+
+.lightbox-nav-btn.next {
+  right: 20px;
+}
+
+.lightbox-nav-btn:hover:not(:disabled) {
+  background-color: var(--content-secondary);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-nav-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.lightbox-counter {
+  font-size: 1.25rem;
+  color: #333;
+  font-weight: 600;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 </style>
