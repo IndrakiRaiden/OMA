@@ -22,15 +22,6 @@
         :capacities="industry.capabilities.capacities"
       />
       
-      <ProcesosIndustria 
-        :titlePrefix="industry.process.titlePrefix"
-        :titleHighlight="industry.process.titleHighlight"
-        :description="industry.process.description"
-        :steps="industry.process.steps"
-        :commitmentTitle="industry.process.commitmentTitle"
-        :commitments="industry.process.commitments"
-      />
-      
       <GaleriaIndustria 
         :titlePrefix="industry.gallery.titlePrefix"
         :titleHighlight="industry.gallery.titleHighlight"
@@ -54,7 +45,6 @@
 import BannerV3 from '../../components/BannerV3.vue'
 import DetallesIndustria from '../../components/industrias-components/DetallesIndustria.vue'
 import CapacidadesIndustria from '../../components/industrias-components/CapacidadesIndustria.vue'
-import ProcesosIndustria from '../../components/industrias-components/ProcesosIndustria.vue'
 import GaleriaIndustria from '../../components/industrias-components/GaleriaIndustria.vue'
 import CTASection from '../../components/common/CTASection.vue'
 import { IndustryModel } from '../../models/IndustryModel'
@@ -66,7 +56,6 @@ export default {
     BannerV3,
     DetallesIndustria,
     CapacidadesIndustria,
-    ProcesosIndustria,
     GaleriaIndustria,
     CTASection
   },
@@ -139,61 +128,6 @@ export default {
                 "Piezas para sistemas de refrigeración",
                 "Elementos para máquinas de envasado"
               ]
-            }
-          ]
-        },
-        process: {
-          titlePrefix: "Nuestro",
-          titleHighlight: "Proceso",
-          description: "Comprendemos las necesidades específicas de la industria alimentaria. Nuestro enfoque garantiza soluciones que cumplen con los estándares sanitarios más exigentes mientras optimizan la eficiencia operativa.",
-          steps: [
-            {
-              title: "Análisis de Requisitos Sanitarios",
-              description: "Evaluamos detalladamente los requisitos específicos de seguridad alimentaria y operación.",
-              points: [
-                "Identificación de normativas aplicables",
-                "Análisis de puntos críticos de control",
-                "Evaluación de materiales aptos para contacto con alimentos"
-              ],
-              imageUrl: "https://source.unsplash.com/featured/600x400?food,safety"
-            },
-            {
-              title: "Diseño Higiénico",
-              description: "Diseñamos soluciones con principios de diseño higiénico para facilitar limpieza y prevenir contaminación.",
-              points: [
-                "Eliminación de zonas de retención y acumulación",
-                "Diseño de superficies de fácil limpieza",
-                "Selección de materiales aprobados por FDA/USDA"
-              ],
-              imageUrl: "https://source.unsplash.com/featured/600x400?engineering,hygiene"
-            },
-            {
-              title: "Fabricación en Entorno Controlado",
-              description: "Producimos componentes en condiciones controladas para garantizar la integridad del producto.",
-              points: [
-                "Procesos de fabricación en áreas limpias",
-                "Control de calidad riguroso",
-                "Trazabilidad completa de materiales y procesos"
-              ],
-              imageUrl: "https://source.unsplash.com/featured/600x400?manufacturing,clean"
-            }
-          ],
-          commitmentTitle: "Nuestro Compromiso",
-          commitments: [
-            {
-              title: "Seguridad Alimentaria",
-              description: "Componentes y equipos diseñados para cumplir con los más altos estándares de seguridad alimentaria.",
-              icon: "fa-check-circle"
-            },
-            {
-              title: "Calidad Certificada",
-              description: "Procesos y materiales certificados para aplicaciones en la industria alimentaria.",
-              icon: "fa-certificate"
-            },
-            {
-              title: "Eficiencia Operativa",
-              description: "Soluciones diseñadas para maximizar la productividad y minimizar el tiempo de inactividad.",
-              icon: "fa-bolt"
             }
           ]
         },
@@ -322,5 +256,4 @@ main.industry-page > *:nth-child(2) { animation-delay: 0.2s; }
 main.industry-page > *:nth-child(3) { animation-delay: 0.3s; }
 main.industry-page > *:nth-child(4) { animation-delay: 0.4s; }
 main.industry-page > *:nth-child(5) { animation-delay: 0.5s; }
-main.industry-page > *:nth-child(6) { animation-delay: 0.6s; }
 </style>

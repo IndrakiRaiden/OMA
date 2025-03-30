@@ -22,15 +22,6 @@
         :capacities="industry.capabilities.capacities"
       />
       
-      <ProcesosIndustria 
-        :titlePrefix="industry.process.titlePrefix"
-        :titleHighlight="industry.process.titleHighlight"
-        :description="industry.process.description"
-        :steps="industry.process.steps"
-        :commitmentTitle="industry.process.commitmentTitle"
-        :commitments="industry.process.commitments"
-      />
-      
       <GaleriaIndustria 
         :titlePrefix="industry.gallery.titlePrefix"
         :titleHighlight="industry.gallery.titleHighlight"
@@ -54,7 +45,6 @@
 import BannerV3 from '../../components/BannerV3.vue'
 import DetallesIndustria from '../../components/industrias-components/DetallesIndustria.vue'
 import CapacidadesIndustria from '../../components/industrias-components/CapacidadesIndustria.vue'
-import ProcesosIndustria from '../../components/industrias-components/ProcesosIndustria.vue'
 import GaleriaIndustria from '../../components/industrias-components/GaleriaIndustria.vue'
 import CTASection from '../../components/common/CTASection.vue'
 import { IndustryModel } from '../../models/IndustryModel'
@@ -66,7 +56,6 @@ export default {
     BannerV3,
     DetallesIndustria,
     CapacidadesIndustria,
-    ProcesosIndustria,
     GaleriaIndustria,
     CTASection
   },
@@ -124,49 +113,6 @@ export default {
               title: "Sistemas de anclaje",
               description: "Fabricación de sistemas de fijación para aplicaciones estructurales.",
               items: ["Anclajes certificados", "Conectores especiales", "Sistemas modulares"]
-            }
-          ]
-        },
-        process: {
-          titlePrefix: "Nuestro",
-          titleHighlight: "Proceso",
-          description: "Seguimos un proceso riguroso para garantizar que cada componente cumpla con los exigentes estándares de seguridad y durabilidad del sector de la construcción.",
-          steps: [
-            {
-              title: "Ingeniería y diseño",
-              description: "Evaluamos los requerimientos estructurales y arquitectónicos específicos.",
-              points: ["Análisis estructural", "Optimización de materiales", "Diseño para fabricación"],
-              imageUrl: "https://source.unsplash.com/featured/600x400?architecture,design"
-            },
-            {
-              title: "Fabricación y control",
-              description: "Utilizamos procesos avanzados para la producción precisa de componentes.",
-              points: ["Corte de alta precisión", "Soldadura certificada", "Control dimensional"],
-              imageUrl: "https://source.unsplash.com/featured/600x400?metal,fabrication"
-            },
-            {
-              title: "Acabados y tratamientos",
-              description: "Aplicamos los acabados y tratamientos necesarios para garantizar durabilidad.",
-              points: ["Tratamientos anticorrosivos", "Acabados arquitectónicos", "Protección ambiental"],
-              imageUrl: "https://source.unsplash.com/featured/600x400?metal,finishing"
-            }
-          ],
-          commitmentTitle: "Nuestro compromiso con la calidad",
-          commitments: [
-            {
-              title: "Certificaciones estructurales",
-              description: "Cumplimos con normas nacionales e internacionales para componentes estructurales.",
-              icon: "fa-building"
-            },
-            {
-              title: "Sostenibilidad",
-              description: "Implementamos prácticas sostenibles en nuestros procesos de manufactura.",
-              icon: "fa-leaf"
-            },
-            {
-              title: "Durabilidad",
-              description: "Garantizamos productos de larga vida útil para aplicaciones en construcción.",
-              icon: "fa-shield-alt"
             }
           ]
         },
@@ -301,5 +247,4 @@ main.industry-page > *:nth-child(2) { animation-delay: 0.2s; }
 main.industry-page > *:nth-child(3) { animation-delay: 0.3s; }
 main.industry-page > *:nth-child(4) { animation-delay: 0.4s; }
 main.industry-page > *:nth-child(5) { animation-delay: 0.5s; }
-main.industry-page > *:nth-child(6) { animation-delay: 0.6s; }
 </style>

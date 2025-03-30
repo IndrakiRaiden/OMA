@@ -22,15 +22,6 @@
         :capacities="industry.capabilities.capacities"
       />
       
-      <ProcesosIndustria 
-        :titlePrefix="industry.process.titlePrefix"
-        :titleHighlight="industry.process.titleHighlight"
-        :description="industry.process.description"
-        :steps="industry.process.steps"
-        :commitmentTitle="industry.process.commitmentTitle"
-        :commitments="industry.process.commitments"
-      />
-      
       <GaleriaIndustria 
         :titlePrefix="industry.gallery.titlePrefix"
         :titleHighlight="industry.gallery.titleHighlight"
@@ -54,7 +45,6 @@
 import BannerV3 from '../../components/BannerV3.vue'
 import DetallesIndustria from '../../components/industrias-components/DetallesIndustria.vue'
 import CapacidadesIndustria from '../../components/industrias-components/CapacidadesIndustria.vue'
-import ProcesosIndustria from '../../components/industrias-components/ProcesosIndustria.vue'
 import GaleriaIndustria from '../../components/industrias-components/GaleriaIndustria.vue'
 import CTASection from '../../components/common/CTASection.vue'
 import { IndustryModel } from '../../models/IndustryModel'
@@ -66,7 +56,6 @@ export default {
     BannerV3,
     DetallesIndustria,
     CapacidadesIndustria,
-    ProcesosIndustria,
     GaleriaIndustria,
     CTASection
   },
@@ -139,61 +128,6 @@ export default {
                 "Componentes para actuadores de precisión",
                 "Carcasas con blindaje electromagnético"
               ]
-            }
-          ]
-        },
-        process: {
-          titlePrefix: "Nuestro",
-          titleHighlight: "Proceso",
-          description: "Entendemos los exigentes requisitos de la industria electrónica. Nuestro enfoque está orientado a garantizar la máxima precisión, control de contaminación y repetibilidad en cada componente que fabricamos.",
-          steps: [
-            {
-              title: "Análisis de Especificaciones",
-              description: "Evaluamos detalladamente las especificaciones técnicas y requisitos funcionales del componente electrónico.",
-              points: [
-                "Revisión de tolerancias críticas",
-                "Análisis de comportamiento térmico",
-                "Evaluación de compatibilidad electromagnética"
-              ],
-              imageUrl: "https://source.unsplash.com/featured/600x400?engineering,specifications"
-            },
-            {
-              title: "Diseño y Simulación",
-              description: "Desarrollamos soluciones optimizadas y validadas mediante simulación antes de la fabricación.",
-              points: [
-                "Modelado CAD/CAM de alta precisión",
-                "Simulación térmica y estructural",
-                "Optimización para fabricación"
-              ],
-              imageUrl: "https://source.unsplash.com/featured/600x400?engineering,simulation"
-            },
-            {
-              title: "Fabricación en Ambiente Controlado",
-              description: "Producimos componentes en condiciones que evitan la contaminación y garantizan la integridad.",
-              points: [
-                "Control de partículas y contaminantes",
-                "Procesos de mecanizado de alta precisión",
-                "Inspección y verificación rigurosa"
-              ],
-              imageUrl: "https://source.unsplash.com/featured/600x400?manufacturing,clean"
-            }
-          ],
-          commitmentTitle: "Nuestros Compromisos",
-          commitments: [
-            {
-              title: "Exactitud Garantizada",
-              description: "Cada componente cumple estrictamente con las especificaciones dimensionales y geométricas requeridas.",
-              icon: "fa-ruler-combined"
-            },
-            {
-              title: "Integridad de los Materiales",
-              description: "Selección y manejo de materiales que garantizan propiedades consistentes y confiables.",
-              icon: "fa-atom"
-            },
-            {
-              title: "Control de Calidad Avanzado",
-              description: "Sistemas de inspección y verificación que aseguran la detección de cualquier desviación.",
-              icon: "fa-search"
             }
           ]
         },

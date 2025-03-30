@@ -22,15 +22,6 @@
         :capacities="industry.capabilities.capacities"
       />
       
-      <ProcesosIndustria 
-        :titlePrefix="industry.process.titlePrefix"
-        :titleHighlight="industry.process.titleHighlight"
-        :description="industry.process.description"
-        :steps="industry.process.steps"
-        :commitmentTitle="industry.process.commitmentTitle"
-        :commitments="industry.process.commitments"
-      />
-      
       <GaleriaIndustria 
         :titlePrefix="industry.gallery.titlePrefix"
         :titleHighlight="industry.gallery.titleHighlight"
@@ -54,7 +45,6 @@
 import BannerV3 from '../../components/BannerV3.vue'
 import DetallesIndustria from '../../components/industrias-components/DetallesIndustria.vue'
 import CapacidadesIndustria from '../../components/industrias-components/CapacidadesIndustria.vue'
-import ProcesosIndustria from '../../components/industrias-components/ProcesosIndustria.vue'
 import GaleriaIndustria from '../../components/industrias-components/GaleriaIndustria.vue'
 import CTASection from '../../components/common/CTASection.vue'
 import { IndustryModel } from '../../models/IndustryModel'
@@ -66,7 +56,6 @@ export default {
     BannerV3,
     DetallesIndustria,
     CapacidadesIndustria,
-    ProcesosIndustria,
     GaleriaIndustria,
     CTASection
   },
@@ -140,61 +129,6 @@ export default {
                 "Trazabilidad completa de materiales y procesos",
                 "Inspección dimensional avanzada"
               ]
-            }
-          ]
-        },
-        process: {
-          titlePrefix: "Nuestro",
-          titleHighlight: "Proceso",
-          description: "Seguimos un proceso riguroso que garantiza la calidad y precisión de cada componente aeroespacial que fabricamos.",
-          steps: [
-            {
-              title: "Ingeniería y Planificación",
-              description: "Análisis detallado de requerimientos y planificación meticulosa de la producción.",
-              points: [
-                "Revisión de especificaciones técnicas",
-                "Selección de materiales certificados",
-                "Definición de procesos y secuencias de fabricación"
-              ],
-              imageUrl: "https://source.unsplash.com/featured/600x400?engineering,planning"
-            },
-            {
-              title: "Fabricación de Precisión",
-              description: "Fabricación utilizando tecnología avanzada y técnicas especializadas.",
-              points: [
-                "Maquinado CNC de 5 ejes",
-                "Tecnología de fabricación aditiva",
-                "Procesos especiales certificados"
-              ],
-              imageUrl: "https://source.unsplash.com/featured/600x400?aerospace,manufacturing"
-            },
-            {
-              title: "Control de Calidad",
-              description: "Riguroso sistema de control de calidad en cada fase del proceso.",
-              points: [
-                "Inspección dimensional con tecnología de punta",
-                "Pruebas no destructivas",
-                "Validación de propiedades mecánicas"
-              ],
-              imageUrl: "https://source.unsplash.com/featured/600x400?quality,inspection"
-            }
-          ],
-          commitmentTitle: "Nuestros Compromisos",
-          commitments: [
-            {
-              title: "Precisión Absoluta",
-              description: "Garantizamos la máxima precisión en cada componente que fabricamos.",
-              icon: "fa-bullseye"
-            },
-            {
-              title: "Confiabilidad",
-              description: "Componentes diseñados y fabricados para aplicaciones críticas donde la falla no es una opción.",
-              icon: "fa-shield-alt"
-            },
-            {
-              title: "Innovación Constante",
-              description: "Investigación y desarrollo continuos para mejorar procesos y resultados.",
-              icon: "fa-lightbulb"
             }
           ]
         },
@@ -323,5 +257,4 @@ main.industry-page > *:nth-child(2) { animation-delay: 0.2s; }
 main.industry-page > *:nth-child(3) { animation-delay: 0.3s; }
 main.industry-page > *:nth-child(4) { animation-delay: 0.4s; }
 main.industry-page > *:nth-child(5) { animation-delay: 0.5s; }
-main.industry-page > *:nth-child(6) { animation-delay: 0.6s; }
 </style>

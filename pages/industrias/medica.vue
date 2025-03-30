@@ -22,15 +22,6 @@
         :capacities="industry.capabilities.capacities"
       />
       
-      <ProcesosIndustria 
-        :titlePrefix="industry.process.titlePrefix"
-        :titleHighlight="industry.process.titleHighlight"
-        :description="industry.process.description"
-        :steps="industry.process.steps"
-        :commitmentTitle="industry.process.commitmentTitle"
-        :commitments="industry.process.commitments"
-      />
-      
       <GaleriaIndustria 
         :titlePrefix="industry.gallery.titlePrefix"
         :titleHighlight="industry.gallery.titleHighlight"
@@ -54,7 +45,6 @@
 import BannerV3 from '../../components/BannerV3.vue'
 import DetallesIndustria from '../../components/industrias-components/DetallesIndustria.vue'
 import CapacidadesIndustria from '../../components/industrias-components/CapacidadesIndustria.vue'
-import ProcesosIndustria from '../../components/industrias-components/ProcesosIndustria.vue'
 import GaleriaIndustria from '../../components/industrias-components/GaleriaIndustria.vue'
 import CTASection from '../../components/common/CTASection.vue'
 import { IndustryModel } from '../../models/IndustryModel'
@@ -65,7 +55,6 @@ export default {
     BannerV3,
     DetallesIndustria,
     CapacidadesIndustria,
-    ProcesosIndustria,
     GaleriaIndustria,
     CTASection
   },
@@ -124,49 +113,6 @@ export default {
               title: "Fabricación en salas limpias",
               description: "Entorno controlado para la producción de componentes médicos sensibles.",
               items: ["Control de partículas", "Monitoreo ambiental", "Protocolos de esterilidad"]
-            }
-          ]
-        },
-        process: {
-          titlePrefix: "Nuestro",
-          titleHighlight: "Proceso",
-          description: "Seguimos un proceso riguroso para garantizar que cada componente cumpla con los estrictos estándares regulatorios del sector médico.",
-          steps: [
-            {
-              title: "Planificación y diseño",
-              description: "Evaluamos detalladamente los requisitos técnicos y regulatorios específicos.",
-              points: ["Análisis de requerimientos normativos", "Selección de materiales biocompatibles", "Diseño para fabricación"],
-              imageUrl: "https://source.unsplash.com/featured/600x400?medical,design"
-            },
-            {
-              title: "Validación de procesos",
-              description: "Validamos cada etapa del proceso antes de la producción completa.",
-              points: ["Prototipos funcionales", "Pruebas de rendimiento", "Validación de materiales"],
-              imageUrl: "https://source.unsplash.com/featured/600x400?laboratory,testing"
-            },
-            {
-              title: "Fabricación y control de calidad",
-              description: "Producción en entornos controlados con estrictos protocolos de calidad.",
-              points: ["Inspección al 100%", "Documentación completa", "Trazabilidad de materiales"],
-              imageUrl: "https://source.unsplash.com/featured/600x400?medical,manufacturing"
-            }
-          ],
-          commitmentTitle: "Nuestro compromiso con la excelencia",
-          commitments: [
-            {
-              title: "Certificaciones médicas",
-              description: "Cumplimos con estándares internacionales para la industria médica.",
-              icon: "fa-certificate"
-            },
-            {
-              title: "Control de procesos",
-              description: "Implementamos controles estrictos para garantizar la consistencia.",
-              icon: "fa-check-circle"
-            },
-            {
-              title: "Innovación constante",
-              description: "Nos mantenemos a la vanguardia de nuevas tecnologías para el sector médico.",
-              icon: "fa-lightbulb"
             }
           ]
         },

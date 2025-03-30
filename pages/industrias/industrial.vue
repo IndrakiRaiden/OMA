@@ -22,15 +22,6 @@
         :capacities="industry.capabilities.capacities"
       />
       
-      <ProcesosIndustria 
-        :titlePrefix="industry.process.titlePrefix"
-        :titleHighlight="industry.process.titleHighlight"
-        :description="industry.process.description"
-        :steps="industry.process.steps"
-        :commitmentTitle="industry.process.commitmentTitle"
-        :commitments="industry.process.commitments"
-      />
-      
       <GaleriaIndustria 
         :titlePrefix="industry.gallery.titlePrefix"
         :titleHighlight="industry.gallery.titleHighlight"
@@ -54,7 +45,6 @@
 import BannerV3 from '../../components/BannerV3.vue'
 import DetallesIndustria from '../../components/industrias-components/DetallesIndustria.vue'
 import CapacidadesIndustria from '../../components/industrias-components/CapacidadesIndustria.vue'
-import ProcesosIndustria from '../../components/industrias-components/ProcesosIndustria.vue'
 import GaleriaIndustria from '../../components/industrias-components/GaleriaIndustria.vue'
 import CTASection from '../../components/common/CTASection.vue'
 import { IndustryModel } from '../../models/IndustryModel'
@@ -65,7 +55,6 @@ export default {
     BannerV3,
     DetallesIndustria,
     CapacidadesIndustria,
-    ProcesosIndustria,
     GaleriaIndustria,
     CTASection
   },
@@ -140,61 +129,6 @@ export default {
                 "Modificación de componentes para mejor rendimiento",
                 "Optimización de sistemas mecánicos"
               ]
-            }
-          ]
-        },
-        process: {
-          titlePrefix: "Nuestro",
-          titleHighlight: "Proceso",
-          description: "Seguimos un proceso riguroso que garantiza la calidad y funcionalidad de cada componente industrial que fabricamos.",
-          steps: [
-            {
-              title: "Análisis y Diseño",
-              description: "Análisis detallado de requisitos y diseño optimizado para la aplicación industrial.",
-              points: [
-                "Evaluación de requisitos funcionales",
-                "Selección de materiales adecuados",
-                "Diseño orientado a la fabricación"
-              ],
-              imageUrl: "https://source.unsplash.com/featured/600x400?engineering,design,industrial"
-            },
-            {
-              title: "Fabricación Especializada",
-              description: "Producción con tecnología avanzada adaptada a componentes industriales.",
-              points: [
-                "Maquinado CNC de alta precisión",
-                "Procesos especiales para materiales industriales",
-                "Control estricto de calidad durante la fabricación"
-              ],
-              imageUrl: "https://source.unsplash.com/featured/600x400?manufacturing,industrial"
-            },
-            {
-              title: "Validación y Entrega",
-              description: "Verificación exhaustiva de todos los componentes antes de su implementación.",
-              points: [
-                "Inspección dimensional precisa",
-                "Pruebas de funcionamiento",
-                "Documentación completa de los procesos y resultados"
-              ],
-              imageUrl: "https://source.unsplash.com/featured/600x400?quality,inspection,industrial"
-            }
-          ],
-          commitmentTitle: "Nuestros Compromisos",
-          commitments: [
-            {
-              title: "Fiabilidad",
-              description: "Componentes que funcionan de manera consistente en entornos industriales exigentes.",
-              icon: "fa-check-circle"
-            },
-            {
-              title: "Durabilidad",
-              description: "Piezas diseñadas para resistir condiciones severas y prolongar la vida útil de los equipos.",
-              icon: "fa-shield-alt"
-            },
-            {
-              title: "Eficiencia",
-              description: "Soluciones que mejoran el rendimiento y reducen el tiempo de inactividad.",
-              icon: "fa-bolt"
             }
           ]
         },
@@ -316,5 +250,4 @@ main.industry-page > *:nth-child(2) { animation-delay: 0.2s; }
 main.industry-page > *:nth-child(3) { animation-delay: 0.3s; }
 main.industry-page > *:nth-child(4) { animation-delay: 0.4s; }
 main.industry-page > *:nth-child(5) { animation-delay: 0.5s; }
-main.industry-page > *:nth-child(6) { animation-delay: 0.6s; }
 </style>

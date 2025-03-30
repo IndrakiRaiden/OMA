@@ -22,15 +22,6 @@
         :capacities="industry.capabilities.capacities"
       />
       
-      <ProcesosIndustria 
-        :titlePrefix="industry.process.titlePrefix"
-        :titleHighlight="industry.process.titleHighlight"
-        :description="industry.process.description"
-        :steps="industry.process.steps"
-        :commitmentTitle="industry.process.commitmentTitle"
-        :commitments="industry.process.commitments"
-      />
-      
       <GaleriaIndustria 
         :titlePrefix="industry.gallery.titlePrefix"
         :titleHighlight="industry.gallery.titleHighlight"
@@ -54,7 +45,6 @@
 import BannerV3 from '../../components/BannerV3.vue'
 import DetallesIndustria from '../../components/industrias-components/DetallesIndustria.vue'
 import CapacidadesIndustria from '../../components/industrias-components/CapacidadesIndustria.vue'
-import ProcesosIndustria from '../../components/industrias-components/ProcesosIndustria.vue'
 import GaleriaIndustria from '../../components/industrias-components/GaleriaIndustria.vue'
 import CTASection from '../../components/common/CTASection.vue'
 import { IndustryModel } from '../../models/IndustryModel'
@@ -65,7 +55,6 @@ export default {
     BannerV3,
     DetallesIndustria,
     CapacidadesIndustria,
-    ProcesosIndustria,
     GaleriaIndustria,
     CTASection
   },
@@ -133,61 +122,6 @@ export default {
                 "Mejoras de rendimiento para implementos",
                 "Sistemas de conexión rápida para herramientas"
               ]
-            }
-          ]
-        },
-        process: {
-          titlePrefix: "Nuestro",
-          titleHighlight: "Proceso",
-          description: "Comprendemos las necesidades específicas del sector agrícola. Nuestro enfoque está orientado a desarrollar soluciones que ofrezcan durabilidad y eficiencia en condiciones de trabajo extremas.",
-          steps: [
-            {
-              title: "Análisis de Necesidades",
-              description: "Evaluamos detalladamente los requerimientos específicos para cada aplicación agrícola.",
-              points: [
-                "Identificación de condiciones de trabajo",
-                "Análisis de desgaste y puntos críticos",
-                "Evaluación de materiales óptimos"
-              ],
-              imageUrl: "https://source.unsplash.com/featured/600x400?agriculture,planning"
-            },
-            {
-              title: "Diseño y Desarrollo",
-              description: "Diseñamos soluciones optimizadas para maximizar la eficiencia y durabilidad.",
-              points: [
-                "Modelado 3D y simulación de esfuerzos",
-                "Selección de materiales específicos",
-                "Optimización para facilidad de mantenimiento"
-              ],
-              imageUrl: "https://source.unsplash.com/featured/600x400?engineering,design"
-            },
-            {
-              title: "Fabricación y Pruebas",
-              description: "Producimos componentes con tecnología avanzada y realizamos pruebas exhaustivas.",
-              points: [
-                "Producción con controles de calidad rigurosos",
-                "Pruebas de resistencia y durabilidad",
-                "Validación en condiciones reales"
-              ],
-              imageUrl: "https://source.unsplash.com/featured/600x400?manufacturing,testing"
-            }
-          ],
-          commitmentTitle: "Nuestro Compromiso",
-          commitments: [
-            {
-              title: "Durabilidad Superior",
-              description: "Componentes diseñados para soportar condiciones extremas del entorno agrícola.",
-              icon: "fa-shield-alt"
-            },
-            {
-              title: "Precisión y Calidad",
-              description: "Fabricación con estándares exigentes para garantizar el rendimiento óptimo.",
-              icon: "fa-check-circle"
-            },
-            {
-              title: "Entrega Oportuna",
-              description: "Comprendemos la importancia de los ciclos agrícolas y los plazos críticos.",
-              icon: "fa-clock"
             }
           ]
         },

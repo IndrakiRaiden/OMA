@@ -22,15 +22,6 @@
         :capacities="industry.capabilities.capacities"
       />
       
-      <ProcesosIndustria 
-        :titlePrefix="industry.process.titlePrefix"
-        :titleHighlight="industry.process.titleHighlight"
-        :description="industry.process.description"
-        :steps="industry.process.steps"
-        :commitmentTitle="industry.process.commitmentTitle"
-        :commitments="industry.process.commitments"
-      />
-      
       <GaleriaIndustria 
         :titlePrefix="industry.gallery.titlePrefix"
         :titleHighlight="industry.gallery.titleHighlight"
@@ -54,7 +45,6 @@
 import BannerV3 from '../../components/BannerV3.vue'
 import DetallesIndustria from '../../components/industrias-components/DetallesIndustria.vue'
 import CapacidadesIndustria from '../../components/industrias-components/CapacidadesIndustria.vue'
-import ProcesosIndustria from '../../components/industrias-components/ProcesosIndustria.vue'
 import GaleriaIndustria from '../../components/industrias-components/GaleriaIndustria.vue'
 import CTASection from '../../components/common/CTASection.vue'
 import { IndustryModel } from '../../models/IndustryModel'
@@ -66,7 +56,6 @@ export default {
     BannerV3,
     DetallesIndustria,
     CapacidadesIndustria,
-    ProcesosIndustria,
     GaleriaIndustria,
     CTASection
   },
@@ -139,61 +128,6 @@ export default {
                 'Piezas para equipos de monitoreo y control',
                 'Elementos para reducción de pérdidas energéticas'
               ]
-            }
-          ]
-        },
-        process: {
-          titlePrefix: "Nuestro",
-          titleHighlight: "Enfoque",
-          description: "Entendemos los requisitos específicos del sector energético. Nuestros procesos están diseñados para garantizar que cada componente cumpla con las exigentes demandas de seguridad, fiabilidad y eficiencia de esta industria.",
-          steps: [
-            {
-              title: 'Análisis de Especificaciones Técnicas',
-              description: 'Evaluamos detalladamente los requisitos técnicos y estándares aplicables al sector energético.',
-              points: [
-                'Revisión de normativas específicas del sector',
-                'Análisis de condiciones de servicio (temperatura, presión, ambiente)',
-                'Estudio de requisitos de seguridad y certificaciones'
-              ],
-              imageUrl: 'https://source.unsplash.com/featured/600x400?engineering,planning'
-            },
-            {
-              title: 'Diseño y Simulación',
-              description: 'Desarrollamos soluciones precisas con herramientas avanzadas de diseño y simulación para validar rendimiento.',
-              points: [
-                'Modelado 3D y análisis de elementos finitos',
-                'Simulación de condiciones extremas',
-                'Optimización de diseño para máxima eficiencia'
-              ],
-              imageUrl: 'https://source.unsplash.com/featured/600x400?engineering,design,simulation'
-            },
-            {
-              title: 'Fabricación Controlada',
-              description: 'Producimos componentes bajo estricto control de procesos para garantizar la máxima calidad y trazabilidad.',
-              points: [
-                'Procesos certificados para el sector energético',
-                'Control estadístico de procesos (SPC)',
-                'Inspección y documentación detallada para trazabilidad'
-              ],
-              imageUrl: 'https://source.unsplash.com/featured/600x400?manufacturing,precision,quality'
-            }
-          ],
-          commitmentTitle: "Compromiso con la Excelencia",
-          commitments: [
-            {
-              title: 'Seguridad Integral',
-              description: 'Componentes diseñados priorizando la seguridad en todas las fases de operación.',
-              icon: 'fa-shield-alt'
-            },
-            {
-              title: 'Eficiencia Energética',
-              description: 'Soluciones optimizadas para maximizar el rendimiento energético en cada aplicación.',
-              icon: 'fa-bolt'
-            },
-            {
-              title: 'Sostenibilidad',
-              description: 'Compromiso con prácticas sostenibles y apoyo a tecnologías de energía limpia.',
-              icon: 'fa-leaf'
             }
           ]
         },
@@ -308,5 +242,4 @@ main.industry-page > *:nth-child(2) { animation-delay: 0.2s; }
 main.industry-page > *:nth-child(3) { animation-delay: 0.3s; }
 main.industry-page > *:nth-child(4) { animation-delay: 0.4s; }
 main.industry-page > *:nth-child(5) { animation-delay: 0.5s; }
-main.industry-page > *:nth-child(6) { animation-delay: 0.6s; }
 </style>

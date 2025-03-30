@@ -22,15 +22,6 @@
         :capacities="industry.capabilities.capacities"
       />
       
-      <ProcesosIndustria 
-        :titlePrefix="industry.process.titlePrefix"
-        :titleHighlight="industry.process.titleHighlight"
-        :description="industry.process.description"
-        :steps="industry.process.steps"
-        :commitmentTitle="industry.process.commitmentTitle"
-        :commitments="industry.process.commitments"
-      />
-      
       <GaleriaIndustria 
         :titlePrefix="industry.gallery.titlePrefix"
         :titleHighlight="industry.gallery.titleHighlight"
@@ -54,7 +45,6 @@
 import BannerV3 from '../../components/BannerV3.vue'
 import DetallesIndustria from '../../components/industrias-components/DetallesIndustria.vue'
 import CapacidadesIndustria from '../../components/industrias-components/CapacidadesIndustria.vue'
-import ProcesosIndustria from '../../components/industrias-components/ProcesosIndustria.vue'
 import GaleriaIndustria from '../../components/industrias-components/GaleriaIndustria.vue'
 import CTASection from '../../components/common/CTASection.vue'
 import { IndustryModel } from '../../models/IndustryModel'
@@ -66,7 +56,6 @@ export default {
     BannerV3,
     DetallesIndustria,
     CapacidadesIndustria,
-    ProcesosIndustria,
     GaleriaIndustria,
     CTASection
   },
@@ -124,49 +113,6 @@ export default {
               title: "Producción en serie",
               description: "Fabricación de componentes en serie con control de calidad riguroso.",
               items: ["Control estadístico de procesos", "Trazabilidad completa", "Documentación PPAP"]
-            }
-          ]
-        },
-        process: {
-          titlePrefix: "Nuestro",
-          titleHighlight: "Proceso",
-          description: "Seguimos un proceso riguroso para garantizar que cada componente cumpla con los estándares más exigentes del sector automotriz.",
-          steps: [
-            {
-              title: "Análisis de requerimientos",
-              description: "Evaluamos detalladamente las especificaciones técnicas y funcionales requeridas.",
-              points: ["Revisión de planos y especificaciones", "Análisis de materiales", "Evaluación de tolerancias críticas"],
-              imageUrl: "https://source.unsplash.com/featured/600x400?engineering,drawings"
-            },
-            {
-              title: "Programación CAM y simulación",
-              description: "Desarrollamos programas de mecanizado optimizados y realizamos simulaciones para validar el proceso.",
-              points: ["Optimización de trayectorias", "Simulación de procesos", "Validación virtual"],
-              imageUrl: "https://source.unsplash.com/featured/600x400?cam,simulation"
-            },
-            {
-              title: "Fabricación y control de calidad",
-              description: "Ejecutamos la producción con controles rigurosos en cada etapa.",
-              points: ["Inspección dimensional", "Verificación de propiedades mecánicas", "Documentación de trazabilidad"],
-              imageUrl: "https://source.unsplash.com/featured/600x400?quality,control"
-            }
-          ],
-          commitmentTitle: "Nuestro compromiso con la calidad",
-          commitments: [
-            {
-              title: "Certificaciones de calidad",
-              description: "Cumplimos con estándares internacionales de calidad para la industria automotriz.",
-              icon: "fa-certificate"
-            },
-            {
-              title: "Mejora continua",
-              description: "Implementamos procesos de mejora continua para optimizar resultados.",
-              icon: "fa-chart-line"
-            },
-            {
-              title: "Sostenibilidad",
-              description: "Aplicamos prácticas sostenibles en nuestros procesos de manufactura.",
-              icon: "fa-leaf"
             }
           ]
         },

@@ -22,15 +22,6 @@
         :capacities="industry.capabilities.capacities"
       />
       
-      <ProcesosIndustria 
-        :titlePrefix="industry.process.titlePrefix"
-        :titleHighlight="industry.process.titleHighlight"
-        :description="industry.process.description"
-        :steps="industry.process.steps"
-        :commitmentTitle="industry.process.commitmentTitle"
-        :commitments="industry.process.commitments"
-      />
-      
       <GaleriaIndustria 
         :titlePrefix="industry.gallery.titlePrefix"
         :titleHighlight="industry.gallery.titleHighlight"
@@ -54,7 +45,6 @@
 import BannerV3 from '../../components/BannerV3.vue'
 import DetallesIndustria from '../../components/industrias-components/DetallesIndustria.vue'
 import CapacidadesIndustria from '../../components/industrias-components/CapacidadesIndustria.vue'
-import ProcesosIndustria from '../../components/industrias-components/ProcesosIndustria.vue'
 import GaleriaIndustria from '../../components/industrias-components/GaleriaIndustria.vue'
 import CTASection from '../../components/common/CTASection.vue'
 import { IndustryModel } from '../../models/IndustryModel'
@@ -65,7 +55,6 @@ export default {
     BannerV3,
     DetallesIndustria,
     CapacidadesIndustria,
-    ProcesosIndustria,
     GaleriaIndustria,
     CTASection
   },
@@ -139,61 +128,6 @@ export default {
                 "Estructuras de protección",
                 "Piezas para equipos de ventilación"
               ]
-            }
-          ]
-        },
-        process: {
-          titlePrefix: "Nuestro",
-          titleHighlight: "Enfoque",
-          description: "Entendemos los desafíos únicos de la industria minera. Nuestros procesos están diseñados para maximizar la eficiencia y minimizar el tiempo de inactividad en entornos operativos exigentes.",
-          steps: [
-            {
-              title: "Análisis de Requerimientos",
-              description: "Evaluamos detalladamente las necesidades específicas y las condiciones de operación.",
-              points: [
-                "Identificación de desafíos específicos del proyecto",
-                "Análisis de condiciones ambientales y operativas",
-                "Definición de especificaciones técnicas"
-              ],
-              imageUrl: "https://source.unsplash.com/featured/600x400?mining,planning"
-            },
-            {
-              title: "Diseño y Modelado",
-              description: "Desarrollamos soluciones precisas mediante software especializado de diseño y simulación.",
-              points: [
-                "Modelado 3D para visualización previa",
-                "Análisis de elementos finitos para validación",
-                "Optimización para resistencia y durabilidad"
-              ],
-              imageUrl: "https://source.unsplash.com/featured/600x400?engineering,design"
-            },
-            {
-              title: "Fabricación de Precisión",
-              description: "Utilizamos tecnología de punta para fabricar componentes con la máxima precisión y calidad.",
-              points: [
-                "Maquinado CNC para tolerancias estrictas",
-                "Procesos especiales para materiales de alta dureza",
-                "Control de calidad continuo durante fabricación"
-              ],
-              imageUrl: "https://source.unsplash.com/featured/600x400?manufacturing,cnc"
-            }
-          ],
-          commitmentTitle: "Compromiso con la Calidad",
-          commitments: [
-            {
-              title: "Resistencia Superior",
-              description: "Componentes con resistencia superior al desgaste para extender la vida útil del equipo.",
-              icon: "fa-shield-alt"
-            },
-            {
-              title: "Materiales Certificados",
-              description: "Materiales de alta calidad certificados para uso industrial en condiciones extremas.",
-              icon: "fa-certificate"
-            },
-            {
-              title: "Procesos Optimizados",
-              description: "Procesos de manufactura optimizados para máxima durabilidad y rendimiento.",
-              icon: "fa-cog"
             }
           ]
         },
