@@ -68,70 +68,70 @@ export default {
           name: 'Automotriz',
           description: 'Soluciones de manufactura de precisión para componentes y piezas del sector automotriz.',
           icon: 'fa-car',
-          imageUrl: '/images/industries/Automotriz 5.jpg',
+          imageUrl: '/images/industries/Automotriz-5 (1).webp',
           path: '/industrias-design/automotriz'
         },
         {
           name: 'Médica',
           description: 'Fabricación especializada para dispositivos e instrumentos médicos con altos estándares de calidad.',
           icon: 'fa-heartbeat',
-          imageUrl: '/images/industries/Medica 10.jpg',
+          imageUrl: '/images/industries/Medica-10 (1).webp',
           path: '/industrias-design/medica'
         },
         {
           name: 'Construcción',
           description: 'Servicios de manufactura para elementos estructurales y componentes utilizados en la industria de la construcción.',
           icon: 'fa-hard-hat',
-          imageUrl: '/images/industries/Construccion 2.jpg',
+          imageUrl: '/images/industries/Construccion-2 (1).webp',
           path: '/industrias-design/construccion'
         },
         {
           name: 'Minera',
           description: 'Soluciones robustas para equipos y componentes utilizados en la exigente industria minera.',
           icon: 'fa-mountain',
-          imageUrl: '/images/industries/Minera 5.jpg',
+          imageUrl: '/images/industries/Minera-5 (1).webp',
           path: '/industrias-design/minera'
         },
         {
           name: 'Aeroespacial',
           description: 'Componentes de alta precisión para la industria aeroespacial, cumpliendo con estrictos estándares de calidad.',
           icon: 'fa-plane',
-          imageUrl: '/images/industries/Aeroespacial 6.jpeg',
+          imageUrl: '/images/industries/Aeroespacial-6 (1).webp',
           path: '/industrias-design/aeroespacial'
         },
         {
           name: 'Alimentos',
           description: 'Soluciones de manufactura para equipos y maquinaria utilizados en la industria alimenticia.',
           icon: 'fa-utensils',
-          imageUrl: '/images/industries/Alimentos 4.jpg',
+          imageUrl: '/images/industries/Alimentos-4 (1).webp',
           path: '/industrias-design/alimentos'
         },
         {
           name: 'Electrónica',
           description: 'Fabricación de componentes y piezas precisas para la industria electrónica y de telecomunicaciones.',
           icon: 'fa-microchip',
-          imageUrl: '/images/industries/Electronica 4.jpg',
+          imageUrl: '/images/industries/Electronica-4 (1).webp',
           path: '/industrias-design/electronica'
         },
         {
           name: 'Energía',
           description: 'Componentes y soluciones para generación, transmisión y distribución de energía.',
           icon: 'fa-bolt',
-          imageUrl: '/images/industries/Energia 2.jpg',
+          imageUrl: '/images/industries/Energia-2 (1).webp',
           path: '/industrias-design/energia'
         },
         {
           name: 'Agrícola',
           description: 'Fabricación de piezas y componentes para maquinaria y equipos utilizados en el sector agrícola.',
           icon: 'fa-tractor',
-          imageUrl: '/images/industries/Agricola 4.jpg',
+          imageUrl: '/images/industries/Minera-5 (1).webp',
           path: '/industrias-design/agricola'
         },
         {
           name: 'Industrial',
           description: 'Soluciones integrales para el sector industrial, incluyendo maquinaria, equipos y componentes personalizados.',
           icon: 'fa-industry',
-          imageUrl: '/images/industries/Industrial 2.jpg',
+          imageUrl: '/images/industries/Industrial-2 (1).webp',
           path: '/industrias-design/industrial'
         }
       ]
