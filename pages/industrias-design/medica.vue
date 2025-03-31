@@ -78,7 +78,7 @@ export default {
           subtitle: "Fabricación especializada para dispositivos e instrumentos médicos con altos estándares de calidad",
           buttons: [
             { text: 'Ver Servicios', href: '#servicios', class: 'primary-btn' },
-            { text: 'Contáctanos', href: '../../contact', class: 'secondary-btn' }
+            { text: 'Contáctanos', href: '../contact', class: 'secondary-btn' }
           ]
         },
         details: {
@@ -122,10 +122,7 @@ export default {
           description: "Explora algunos de nuestros proyectos y componentes fabricados para la industria médica.",
           showMoreButtonText: "Ver Más Proyectos",
           galleryCategories: [
-            { id: 'all', name: 'Todos' },
-            { id: 'instruments', name: 'Instrumentos' },
-            { id: 'implants', name: 'Implantes' },
-            { id: 'equipment', name: 'Equipamiento' }
+            { id: 'all', name: 'Todos' }
           ],
           galleryItems: [
             {
@@ -182,7 +179,7 @@ export default {
           title: "¿Listo para comenzar tu proyecto médico?",
           subtitle: "Contáctanos hoy mismo para discutir tus necesidades específicas y obtener una cotización personalizada.",
           buttonText: "Contactar ahora",
-          buttonLink: "../../contact"
+          buttonLink: "../contact"
         }
       }
     },

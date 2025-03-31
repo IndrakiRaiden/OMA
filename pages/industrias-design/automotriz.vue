@@ -50,7 +50,7 @@ import CTASection from '../../components/common/CTASection.vue'
 import { IndustryModel } from '../../models/IndustryModel'
 
 export default {
-  name: 'IndustriaConstruccion',
+  name: 'IndustriaAutomotriz',
   layout: 'industry',
   components: {
     BannerV3,
@@ -67,15 +67,15 @@ export default {
   data() {
     return {
       industry: this.getDefaultIndustryData(),
-      slug: 'construccion'
+      slug: 'automotriz'
     }
   },
   methods: {
     getDefaultIndustryData() {
       return {
         banner: {
-          title: "Industria de la Construcción",
-          subtitle: "Servicios de manufactura para elementos estructurales y componentes utilizados en el sector de la construcción",
+          title: "Industria Automotriz",
+          subtitle: "Soluciones de manufactura de precisión para componentes y piezas del sector automotriz",
           buttons: [
             { text: 'Ver Servicios', href: '#servicios', class: 'primary-btn' },
             { text: 'Contáctanos', href: '../contact', class: 'secondary-btn' }
@@ -83,103 +83,100 @@ export default {
         },
         details: {
           titlePrefix: "Soluciones para la",
-          titleHighlight: "Industria de la Construcción",
-          description: "Ofrecemos servicios especializados de manufactura para el sector de la construcción, con un enfoque en durabilidad y precisión. Nuestros procesos están optimizados para la producción de componentes estructurales y arquitectónicos que cumplen con los estándares más exigentes de la industria.",
+          titleHighlight: "Industria Automotriz",
+          description: "Ofrecemos servicios especializados de manufactura para el sector automotriz, con altos estándares de calidad y precisión. Nuestros procesos están diseñados para cumplir con los exigentes requisitos de la industria automotriz, garantizando componentes duraderos y con tolerancias exactas.",
           features: [
-            "Componentes estructurales metálicos",
-            "Elementos arquitectónicos personalizados",
-            "Sistemas de anclaje y fijación",
-            "Herrajes de alta resistencia",
-            "Moldes para prefabricados de concreto"
+            "Componentes para sistemas de dirección y suspensión",
+            "Piezas para transmisiones y cajas de cambio",
+            "Componentes para sistemas de frenos",
+            "Piezas estructurales de alta resistencia",
+            "Moldes y herramentales para autopartes"
           ],
-          imageUrl: "https://source.unsplash.com/featured/600x400?construction,architecture,building"
+          imageUrl: "https://source.unsplash.com/featured/600x400?automotive,manufacturing,car"
         },
         capabilities: {
           titlePrefix: "Nuestras",
           titleHighlight: "Capacidades",
-          description: "Contamos con tecnología avanzada y experiencia para ofrecer soluciones integrales al sector de la construcción.",
+          description: "Contamos con tecnología de punta y personal altamente capacitado para ofrecer soluciones integrales al sector automotriz.",
           capacities: [
             {
-              title: "Manufactura de precisión",
-              description: "Fabricación de elementos estructurales con tolerancias precisas.",
-              items: ["Corte CNC de perfiles", "Soldadura de alta resistencia", "Mecanizado de componentes complejos"]
+              title: "Mecanizado CNC de alta precisión",
+              description: "Fabricación de componentes con tolerancias estrictas.",
+              items: ["Tolerancias de hasta ±0.01mm", "Acabados superficiales de alta calidad", "Fabricación de piezas complejas"]
             },
             {
-              title: "Elementos arquitectónicos",
-              description: "Creación de componentes arquitectónicos personalizados.",
-              items: ["Acabados decorativos", "Barandales y pasamanos", "Elementos modulares"]
+              title: "Prototipos rápidos",
+              description: "Desarrollo y fabricación rápida de prototipos para validación.",
+              items: ["Iteraciones rápidas", "Validación de diseño", "Pruebas funcionales"]
             },
             {
-              title: "Sistemas de anclaje",
-              description: "Fabricación de sistemas de fijación para aplicaciones estructurales.",
-              items: ["Anclajes certificados", "Conectores especiales", "Sistemas modulares"]
+              title: "Producción en serie",
+              description: "Fabricación de componentes en serie con control de calidad riguroso.",
+              items: ["Control estadístico de procesos", "Trazabilidad completa", "Documentación PPAP"]
             }
           ]
         },
         gallery: {
           titlePrefix: "Nuestra",
           titleHighlight: "Galería",
-          description: "Explora algunos de nuestros proyectos y componentes fabricados para la industria de la construcción.",
+          description: "Explora algunos de nuestros proyectos y componentes fabricados para la industria automotriz.",
           showMoreButtonText: "Ver Más Proyectos",
           galleryCategories: [
-            { id: 'all', name: 'Todos' },
-            { id: 'structural', name: 'Estructural' },
-            { id: 'architectural', name: 'Arquitectónico' },
-            { id: 'specialized', name: 'Especializado' }
+            { id: 'all', name: 'Todos' }
           ],
           galleryItems: [
             {
-              title: "Conectores estructurales",
-              description: "Sistemas de conexión para estructuras metálicas.",
-              category: "structural",
-              imageUrl: "https://source.unsplash.com/featured/600x400?steel,connection"
+              title: "Componentes de transmisión",
+              description: "Fabricación de engranajes y ejes para sistemas de transmisión.",
+              category: "components",
+              imageUrl: "https://source.unsplash.com/featured/600x400?gears,transmission"
             },
             {
-              title: "Barandales arquitectónicos",
-              description: "Sistemas de barandales personalizados para proyectos arquitectónicos.",
-              category: "architectural",
-              imageUrl: "https://source.unsplash.com/featured/600x400?railing,architecture"
+              title: "Moldes para autopartes",
+              description: "Diseño y fabricación de moldes para inyección de plástico.",
+              category: "molds",
+              imageUrl: "https://source.unsplash.com/featured/600x400?mold,injection"
             },
             {
-              title: "Anclajes especiales",
-              description: "Sistemas de anclaje para aplicaciones exigentes.",
-              category: "specialized",
-              imageUrl: "https://source.unsplash.com/featured/600x400?anchor,construction"
+              title: "Piezas de suspensión",
+              description: "Componentes mecanizados para sistemas de suspensión.",
+              category: "components",
+              imageUrl: "https://source.unsplash.com/featured/600x400?suspension,car"
             },
             {
-              title: "Elementos estructurales",
-              description: "Componentes para sistemas estructurales de edificios.",
-              category: "structural",
-              imageUrl: "https://source.unsplash.com/featured/600x400?beam,structure"
+              title: "Herramentales de precisión",
+              description: "Fabricación de herramientas especiales para líneas de producción.",
+              category: "tooling",
+              imageUrl: "https://source.unsplash.com/featured/600x400?tools,precision"
             },
             {
-              title: "Revestimientos metálicos",
-              description: "Sistemas de fachada y revestimiento arquitectónico.",
-              category: "architectural",
-              imageUrl: "https://source.unsplash.com/featured/600x400?facade,metal"
+              title: "Componentes de frenos",
+              description: "Piezas mecanizadas para sistemas de frenos de alto rendimiento.",
+              category: "components",
+              imageUrl: "https://source.unsplash.com/featured/600x400?brakes,automotive"
             },
             {
-              title: "Sistemas de andamiaje",
-              description: "Componentes para andamios y sistemas temporales.",
-              category: "specialized",
-              imageUrl: "https://source.unsplash.com/featured/600x400?scaffold,construction"
+              title: "Matrices de estampado",
+              description: "Matrices para conformado de piezas metálicas.",
+              category: "tooling",
+              imageUrl: "https://source.unsplash.com/featured/600x400?metal,stamping"
             },
             {
-              title: "Soportes antisísmicos",
-              description: "Sistemas de protección para estructuras en zonas sísmicas.",
-              category: "specialized",
-              imageUrl: "https://source.unsplash.com/featured/600x400?seismic,support"
+              title: "Moldes multi-cavidad",
+              description: "Moldes de alta productividad para componentes plásticos.",
+              category: "molds",
+              imageUrl: "https://source.unsplash.com/featured/600x400?plastic,molding"
             },
             {
-              title: "Escaleras metálicas",
-              description: "Sistemas de escaleras para proyectos arquitectónicos y comerciales.",
-              category: "architectural",
-              imageUrl: "https://source.unsplash.com/featured/600x400?stairs,metal"
+              title: "Prototipos funcionales",
+              description: "Fabricación rápida de prototipos para validación de diseño.",
+              category: "components",
+              imageUrl: "https://source.unsplash.com/featured/600x400?prototype,automotive"
             }
           ]
         },
         cta: {
-          title: "¿Listo para comenzar tu proyecto de construcción?",
+          title: "¿Listo para comenzar tu proyecto?",
           subtitle: "Contáctanos hoy mismo para discutir tus necesidades específicas y obtener una cotización personalizada.",
           buttonText: "Contactar ahora",
           buttonLink: "../contact"
@@ -188,8 +185,8 @@ export default {
     },
   },
   head() {
-    const defaultTitle = 'Industria de la Construcción | OMA - Servicios de Manufactura'
-    const defaultDescription = 'Servicios de manufactura para elementos estructurales y componentes utilizados en la industria de la construcción.'
+    const defaultTitle = 'Industria Automotriz | OMA - Servicios de Manufactura'
+    const defaultDescription = 'Soluciones de manufactura de precisión para la industria automotriz.'
     
     return {
       title: this.industry?.seo?.title || defaultTitle,
@@ -247,4 +244,5 @@ main.industry-page > *:nth-child(2) { animation-delay: 0.2s; }
 main.industry-page > *:nth-child(3) { animation-delay: 0.3s; }
 main.industry-page > *:nth-child(4) { animation-delay: 0.4s; }
 main.industry-page > *:nth-child(5) { animation-delay: 0.5s; }
+main.industry-page > *:nth-child(6) { animation-delay: 0.6s; }
 </style>

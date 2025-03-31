@@ -50,7 +50,7 @@ import CTASection from '../../components/common/CTASection.vue'
 import { IndustryModel } from '../../models/IndustryModel'
 
 export default {
-  name: 'IndustriaMinera',
+  name: 'IndustriaIndustrial',
   components: {
     BannerV3,
     DetallesIndustria,
@@ -67,66 +67,67 @@ export default {
   data() {
     return {
       industry: this.getDefaultIndustryData(),
-      slug: 'minera'
+      slug: 'industrial'
     }
   },
   methods: {
     getDefaultIndustryData() {
       return {
         banner: {
-          title: "Industria Minera",
-          subtitle: "Soluciones robustas para equipos y componentes mineros",
+          title: "Industria Industrial",
+          subtitle: "Soluciones de manufactura avanzadas para equipos y maquinaria industrial",
           buttons: [
-            { text: 'Ver Servicios', to: '/servicios', class: 'primary-btn' },
-            { text: 'Contáctanos', to: '/contact', class: 'secondary-btn' }
+            { text: 'Ver Servicios', href: '#servicios', class: 'primary-btn' },
+            { text: 'Contáctanos', href: '../contact', class: 'secondary-btn' }
           ]
         },
         details: {
           titlePrefix: "Soluciones para la",
-          titleHighlight: "Industria Minera",
-          description: "Ofrecemos servicios de manufactura de alta calidad para equipos y componentes utilizados en la exigente industria minera, diseñados para soportar las condiciones más extremas y cumplir con los más altos estándares de seguridad y durabilidad.",
+          titleHighlight: "Industria Industrial",
+          description: "Ofrecemos servicios de manufactura especializados para la industria industrial, diseñando y fabricando componentes duraderos y de alta precisión para todo tipo de maquinaria y equipos industriales.",
           features: [
-            "Fabricación de componentes resistentes a la abrasión",
-            "Piezas con alta resistencia a la corrosión",
-            "Componentes para equipos de extracción y procesamiento",
-            "Materiales certificados para uso industrial pesado",
-            "Soluciones personalizadas para necesidades específicas"
+            "Componentes para maquinaria pesada",
+            "Piezas para equipos de automatización",
+            "Componentes para sistemas hidráulicos",
+            "Fabricación de herramientas especializadas",
+            "Piezas para sistemas de transmisión"
           ],
-          imageUrl: "https://source.unsplash.com/featured/600x400?mining,industrial,excavation"
+          imageUrl: "https://source.unsplash.com/featured/600x400?industrial,machinery,equipment"
         },
         capabilities: {
           titlePrefix: "Nuestras",
-          titleHighlight: "Especialidades",
-          description: "Nuestra experiencia en la industria minera nos permite ofrecer soluciones que combinan durabilidad, resistencia y precisión para los entornos más exigentes.",
+          titleHighlight: "Capacidades",
+          description: "Contamos con la tecnología y el conocimiento para fabricar componentes industriales de alta precisión y durabilidad, fundamentales para el correcto funcionamiento de maquinaria industrial.",
           capacities: [
             {
-              title: "Componentes Resistentes",
-              description: "Fabricación de componentes metálicos resistentes a la abrasión, corrosión y altas temperaturas para equipos de minería.",
+              title: "Precisión Industrial",
+              description: "Fabricamos componentes con tolerancias estrictas para aplicaciones industriales exigentes.",
               icon: "fa-cogs",
               items: [
-                "Aceros de alta resistencia",
-                "Tratamientos térmicos especializados",
-                "Aleaciones especiales"
+                "Tolerancias de precisión industrial",
+                "Acabados superficiales especializados",
+                "Ensamblaje de componentes complejos"
               ]
             },
             {
-              title: "Herramientas Especializadas",
-              description: "Diseño y fabricación de herramientas personalizadas para operaciones específicas de minería y extracción.",
+              title: "Materiales Industriales",
+              description: "Trabajamos con una amplia gama de materiales resistentes para aplicaciones industriales.",
+              icon: "fa-industry",
+              items: [
+                "Aceros especiales y aleaciones",
+                "Materiales resistentes a la corrosión",
+                "Metales no ferrosos para aplicaciones específicas",
+                "Plásticos técnicos de alto rendimiento"
+              ]
+            },
+            {
+              title: "Soluciones Personalizadas",
+              description: "Desarrollamos soluciones a medida para resolver problemas específicos en equipos industriales.",
               icon: "fa-tools",
               items: [
-                "Herramientas de perforación",
-                "Equipos de corte y trituración",
-                "Sistemas de sujeción"
-              ]
-            },
-            {
-              title: "Equipos de Seguridad",
-              description: "Soluciones para equipos de seguridad y protección que cumplen con las normativas más estrictas del sector minero.",
-              icon: "fa-hard-hat",
-              items: [
-                "Componentes para sistemas de monitoreo",
-                "Estructuras de protección",
-                "Piezas para equipos de ventilación"
+                "Diseño de piezas de reemplazo mejoradas",
+                "Modificación de componentes para mejor rendimiento",
+                "Optimización de sistemas mecánicos"
               ]
             }
           ]
@@ -134,67 +135,64 @@ export default {
         gallery: {
           titlePrefix: "Nuestra",
           titleHighlight: "Galería",
-          description: "Explore algunos ejemplos de nuestros proyectos y soluciones para la industria minera.",
-          showMoreButtonText: "Ver Más",
+          description: "Explora algunos de nuestros proyectos y componentes fabricados para la industria general.",
+          showMoreButtonText: "Ver Más Proyectos",
           galleryCategories: [
-            { id: "all", name: "Todos" },
-            { id: "components", name: "Componentes" },
-            { id: "equipment", name: "Equipamiento" },
-            { id: "tools", name: "Herramientas" }
+            { id: 'all', name: 'Todos' }
           ],
           galleryItems: [
             {
               id: 1,
-              title: "Componentes para Trituradora",
-              category: "components",
-              imageUrl: "https://source.unsplash.com/featured/600x400?mining,machinery"
+              imageUrl: "https://source.unsplash.com/featured/600x400?industrial,machinery",
+              title: "Componentes para Maquinaria Pesada",
+              category: "maquinaria"
             },
             {
               id: 2,
-              title: "Sistema de Filtración Industrial",
-              category: "equipment",
-              imageUrl: "https://source.unsplash.com/featured/600x400?mining,filter"
+              imageUrl: "https://source.unsplash.com/featured/600x400?hydraulic,industrial",
+              title: "Sistemas Hidráulicos Industriales",
+              category: "hidraulica"
             },
             {
               id: 3,
-              title: "Herramientas de Perforación",
-              category: "tools",
-              imageUrl: "https://source.unsplash.com/featured/600x400?mining,drill"
+              imageUrl: "https://source.unsplash.com/featured/600x400?automation,industrial",
+              title: "Piezas para Automatización",
+              category: "automatizacion"
             },
             {
               id: 4,
-              title: "Engranajes de Alta Resistencia",
-              category: "components",
-              imageUrl: "https://source.unsplash.com/featured/600x400?mining,gears"
+              imageUrl: "https://source.unsplash.com/featured/600x400?tools,industrial",
+              title: "Herramientas Especializadas",
+              category: "herramientas"
             },
             {
               id: 5,
-              title: "Estructuras de Soporte",
-              category: "equipment",
-              imageUrl: "https://source.unsplash.com/featured/600x400?mining,structure"
+              imageUrl: "https://source.unsplash.com/featured/600x400?transmission,industrial",
+              title: "Componentes de Transmisión",
+              category: "transmision"
             },
             {
               id: 6,
-              title: "Equipos de Extracción",
-              category: "tools",
-              imageUrl: "https://source.unsplash.com/featured/600x400?mining,extraction"
+              imageUrl: "https://source.unsplash.com/featured/600x400?assembly,industrial",
+              title: "Ensambles Industriales",
+              category: "ensambles"
             }
           ]
         },
         cta: {
-          title: "¿Listo para impulsar su operación minera?",
-          subtitle: "Contáctenos hoy para discutir sus necesidades específicas y descubrir cómo nuestros servicios de manufactura pueden ayudar a su empresa a alcanzar nuevos niveles de eficiencia y rendimiento.",
+          title: "¿Necesitas Componentes Industriales de Alta Calidad?",
+          subtitle: "Contáctanos hoy para discutir tus requerimientos específicos",
           buttonText: "Solicitar Información",
-          buttonLink: "/contact"
+          buttonLink: "../contact"
         }
       }
     }
   },
   head() {
     return {
-      title: 'Industria Minera | OMA - Servicios de Manufactura',
+      title: 'Maquinaria y Equipos Industriales | OMA - Servicios de Manufactura',
       meta: [
-        { hid: 'description', name: 'description', content: 'Soluciones robustas para equipos y componentes utilizados en la exigente industria minera.' }
+        { hid: 'description', name: 'description', content: 'Diseño y fabricación de componentes para maquinaria industrial y equipos especializados.' }
       ]
     }
   }
@@ -247,5 +245,4 @@ main.industry-page > *:nth-child(2) { animation-delay: 0.2s; }
 main.industry-page > *:nth-child(3) { animation-delay: 0.3s; }
 main.industry-page > *:nth-child(4) { animation-delay: 0.4s; }
 main.industry-page > *:nth-child(5) { animation-delay: 0.5s; }
-main.industry-page > *:nth-child(6) { animation-delay: 0.6s; }
 </style>

@@ -134,8 +134,11 @@ export default {
         gallery: {
           titlePrefix: "Nuestra",
           titleHighlight: "Galería",
-          description: "Explore nuestra galería de proyectos relacionados con la industria energética, donde podrá ver ejemplos de componentes fabricados para diferentes aplicaciones del sector.",
-          showMoreButtonText: "Ver más proyectos",
+          description: "Explora algunos de nuestros proyectos y componentes fabricados para la industria energética.",
+          showMoreButtonText: "Ver Más Proyectos",
+          galleryCategories: [
+            { id: 'all', name: 'Todos' }
+          ],
           galleryItems: [
             {
               id: 1,
@@ -161,12 +164,6 @@ export default {
               category: 'eficiencia',
               imageUrl: 'https://source.unsplash.com/featured/600x400?cooling,system'
             }
-          ],
-          galleryCategories: [
-            { id: 'todos', name: 'Todos' },
-            { id: 'energia-convencional', name: 'Energía Convencional' },
-            { id: 'energia-renovable', name: 'Energía Renovable' },
-            { id: 'eficiencia', name: 'Sistemas de Eficiencia' }
           ]
         },
         cta: {

@@ -50,7 +50,7 @@ import CTASection from '../../components/common/CTASection.vue'
 import { IndustryModel } from '../../models/IndustryModel'
 
 export default {
-  name: 'IndustriaAeroespacial',
+  name: 'IndustriaElectronica',
   layout: 'industry',
   components: {
     BannerV3,
@@ -67,67 +67,66 @@ export default {
   data() {
     return {
       industry: this.getDefaultIndustryData(),
-      slug: 'aeroespacial'
+      slug: 'electronica'
     }
   },
   methods: {
     getDefaultIndustryData() {
       return {
         banner: {
-          title: "Industria Aeroespacial",
-          subtitle: "Soluciones de manufactura de precisión para componentes aeroespaciales",
+          title: "Industria Electrónica",
+          subtitle: "Soluciones de manufactura de precisión para componentes electrónicos",
           buttons: [
             { text: 'Ver Servicios', href: '#servicios', class: 'primary-btn' },
-            { text: 'Contáctanos', to: '/contact', class: 'secondary-btn' }
+            { text: 'Contáctanos', href: '../contact', class: 'secondary-btn' }
           ]
         },
         details: {
           titlePrefix: "Soluciones para la",
-          titleHighlight: "Industria Aeroespacial",
-          description: "Ofrecemos servicios de manufactura de alta precisión para componentes aeroespaciales, cumpliendo con los estándares más exigentes de la industria. Nuestras soluciones están diseñadas para garantizar la máxima calidad, rendimiento y confiabilidad en aplicaciones críticas.",
+          titleHighlight: "Industria Electrónica",
+          description: "Ofrecemos servicios de manufactura de alta precisión para componentes electrónicos y mecatrónicos, cumpliendo con los más altos estándares de calidad y tolerancias. Nuestras soluciones están diseñadas para satisfacer las exigentes demandas de la industria electrónica moderna.",
           features: [
-            "Fabricación de componentes estructurales",
-            "Piezas para sistemas de propulsión",
-            "Componentes para sistemas de navegación",
-            "Piezas con certificación aeroespacial",
-            "Prototipos funcionales para validación"
+            "Fabricación de gabinetes y carcasas para dispositivos electrónicos",
+            "Componentes para equipos de prueba y medición",
+            "Piezas con alta precisión dimensional",
+            "Elementos para sistemas de refrigeración",
+            "Soluciones personalizadas para ensambles complejos"
           ],
-          imageUrl: "https://source.unsplash.com/featured/600x400?aerospace,aviation,aircraft"
+          imageUrl: "https://source.unsplash.com/featured/600x400?electronics,circuit,technology"
         },
         capabilities: {
           titlePrefix: "Nuestras",
           titleHighlight: "Capacidades",
-          description: "Contamos con la tecnología y el conocimiento para fabricar componentes aeroespaciales de alta precisión, cumpliendo con las certificaciones y estándares más rigurosos.",
+          description: "Contamos con la tecnología y el conocimiento para fabricar componentes electrónicos de alta precisión que cumplen con las especificaciones más exigentes.",
           capacities: [
             {
-              title: "Precisión Extrema",
-              description: "Fabricación de componentes con tolerancias extremadamente estrictas y acabados superficiales excepcionales.",
-              icon: "fa-ruler-combined",
+              title: "Precisión Microscópica",
+              description: "Fabricación de componentes con tolerancias extremadamente ajustadas para aplicaciones electrónicas avanzadas.",
+              icon: "fa-microchip",
               items: [
-                "Tolerancias de ±0.005mm",
-                "Acabados superficiales de clase aeroespacial",
-                "Mediciones con CMM certificada"
+                "Tolerancias de hasta ±0.005mm",
+                "Acabados superficiales controlados",
+                "Verificación dimensional con equipos calibrados"
               ]
             },
             {
-              title: "Materiales Avanzados",
-              description: "Experiencia en el mecanizado de aleaciones especiales y materiales avanzados utilizados en la industria aeroespacial.",
-              icon: "fa-atom",
+              title: "Soluciones Térmicas",
+              description: "Desarrollo de componentes para disipación térmica y gestión de temperatura en dispositivos electrónicos.",
+              icon: "fa-temperature-low",
               items: [
-                "Titanio y aleaciones de titanio",
-                "Aleaciones de aluminio aeroespacial",
-                "Inconel y superaleaciones",
-                "Materiales compuestos"
+                "Disipadores de calor optimizados",
+                "Sistemas de enfriamiento pasivo",
+                "Componentes para conducción térmica"
               ]
             },
             {
-              title: "Certificaciones y Calidad",
-              description: "Cumplimos con los estándares de calidad más estrictos de la industria aeroespacial.",
-              icon: "fa-certificate",
+              title: "Integración Mecatrónica",
+              description: "Fabricación de componentes para sistemas que integran elementos mecánicos y electrónicos.",
+              icon: "fa-robot",
               items: [
-                "Sistema de gestión de calidad robusto",
-                "Trazabilidad completa de materiales y procesos",
-                "Inspección dimensional avanzada"
+                "Estructuras de soporte para PCBs",
+                "Componentes para actuadores de precisión",
+                "Carcasas con blindaje electromagnético"
               ]
             }
           ]
@@ -135,62 +134,59 @@ export default {
         gallery: {
           titlePrefix: "Nuestra",
           titleHighlight: "Galería",
-          description: "Explora algunos de nuestros proyectos y componentes fabricados para la industria aeroespacial.",
+          description: "Explora algunos de nuestros proyectos y componentes fabricados para la industria electrónica.",
           showMoreButtonText: "Ver Más Proyectos",
           galleryCategories: [
-            { id: 'all', name: 'Todos' },
-            { id: 'structural', name: 'Estructurales' },
-            { id: 'propulsion', name: 'Propulsión' },
-            { id: 'navigation', name: 'Navegación' }
+            { id: 'all', name: 'Todos' }
           ],
           galleryItems: [
             {
               id: 1,
-              title: "Componentes para turbinas",
-              description: "Piezas de alta precisión para sistemas de propulsión aeroespacial.",
-              category: "propulsion",
-              imageUrl: "https://source.unsplash.com/featured/600x400?turbine,engine"
+              title: "Gabinetes para servidores",
+              description: "Carcasas de precisión para equipos de servidores y redes.",
+              category: "enclosures",
+              imageUrl: "https://source.unsplash.com/featured/600x400?server,rack"
             },
             {
               id: 2,
-              title: "Elementos estructurales",
-              description: "Componentes estructurales ligeros y resistentes para aeronaves.",
-              category: "structural",
-              imageUrl: "https://source.unsplash.com/featured/600x400?aircraft,structure"
+              title: "Sistemas de enfriamiento",
+              description: "Disipadores térmicos optimizados para componentes de alta potencia.",
+              category: "cooling",
+              imageUrl: "https://source.unsplash.com/featured/600x400?cooling,heatsink"
             },
             {
               id: 3,
-              title: "Sistemas de navegación",
-              description: "Componentes precisos para sistemas de navegación y control.",
-              category: "navigation",
-              imageUrl: "https://source.unsplash.com/featured/600x400?navigation,aerospace"
+              title: "Componentes para instrumentos",
+              description: "Piezas de alta precisión para equipos de medición y prueba.",
+              category: "precision",
+              imageUrl: "https://source.unsplash.com/featured/600x400?testing,electronic"
             },
             {
               id: 4,
-              title: "Álabes de turbina",
-              description: "Álabes de alta precisión para turbinas de aviones.",
-              category: "propulsion",
-              imageUrl: "https://source.unsplash.com/featured/600x400?turbine,blade"
+              title: "Carcasas con blindaje EMI",
+              description: "Gabinetes con protección electromagnética para aplicaciones sensibles.",
+              category: "enclosures",
+              imageUrl: "https://source.unsplash.com/featured/600x400?shielding,electronics"
             },
             {
               id: 5,
-              title: "Componentes de tren de aterrizaje",
-              description: "Piezas resistentes para sistemas de aterrizaje de aeronaves.",
-              category: "structural",
-              imageUrl: "https://source.unsplash.com/featured/600x400?landing,gear"
+              title: "Estructuras de enfriamiento líquido",
+              description: "Componentes para sistemas de refrigeración líquida en electrónica.",
+              category: "cooling",
+              imageUrl: "https://source.unsplash.com/featured/600x400?liquid,cooling"
             },
             {
               id: 6,
-              title: "Sistemas de control",
-              description: "Componentes para sistemas de control de vuelo de precisión.",
-              category: "navigation",
-              imageUrl: "https://source.unsplash.com/featured/600x400?control,system"
+              title: "Bases para microprocesadores",
+              description: "Componentes de precisión para montaje de microprocesadores.",
+              category: "precision",
+              imageUrl: "https://source.unsplash.com/featured/600x400?processor,socket"
             }
           ]
         },
         cta: {
-          title: "¿Listo para elevar la precisión de sus componentes aeroespaciales?",
-          subtitle: "Contáctenos hoy para discutir cómo nuestros servicios de manufactura de precisión pueden satisfacer sus necesidades específicas en la industria aeroespacial.",
+          title: "¿Listo para llevar sus componentes electrónicos al siguiente nivel?",
+          subtitle: "Contáctenos hoy para conocer cómo nuestras soluciones de manufactura de precisión pueden satisfacer sus necesidades específicas en la industria electrónica.",
           buttonText: "Solicitar Información",
           buttonLink: "../contact"
         }
@@ -198,8 +194,8 @@ export default {
     }
   },
   head() {
-    const defaultTitle = 'Industria Aeroespacial | OMA - Servicios de Manufactura'
-    const defaultDescription = 'Soluciones de manufactura de precisión para la industria aeroespacial.'
+    const defaultTitle = 'Industria Electrónica | OMA - Servicios de Manufactura'
+    const defaultDescription = 'Soluciones de manufactura de precisión para la industria electrónica.'
     
     return {
       title: this.industry?.seo?.title || defaultTitle,
@@ -257,4 +253,5 @@ main.industry-page > *:nth-child(2) { animation-delay: 0.2s; }
 main.industry-page > *:nth-child(3) { animation-delay: 0.3s; }
 main.industry-page > *:nth-child(4) { animation-delay: 0.4s; }
 main.industry-page > *:nth-child(5) { animation-delay: 0.5s; }
+main.industry-page > *:nth-child(6) { animation-delay: 0.6s; }
 </style>

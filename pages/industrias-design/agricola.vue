@@ -72,7 +72,7 @@ export default {
           subtitle: "Soluciones de manufactura robustas para equipos y maquinaria agrícola",
           buttons: [
             { text: 'Ver Servicios', href: '#servicios', class: 'primary-btn' },
-            { text: 'Contáctanos', href: '../../contact', class: 'secondary-btn' }
+            { text: 'Contáctanos', href: '../contact', class: 'secondary-btn' }
           ]
         },
         details: {
@@ -131,10 +131,7 @@ export default {
           description: "Explora algunos de nuestros proyectos y componentes fabricados para la industria agrícola.",
           showMoreButtonText: "Ver Más Proyectos",
           galleryCategories: [
-            { id: 'all', name: 'Todos' },
-            { id: 'components', name: 'Componentes' },
-            { id: 'implements', name: 'Implementos' },
-            { id: 'systems', name: 'Sistemas' }
+            { id: 'all', name: 'Todos' }
           ],
           galleryItems: [
             {
@@ -185,7 +182,7 @@ export default {
           title: "¿Listo para optimizar su operación agrícola?",
           subtitle: "Contáctenos hoy para conocer cómo nuestras soluciones de manufactura pueden incrementar la eficiencia y durabilidad de su equipo agrícola.",
           buttonText: "Solicitar Información",
-          buttonLink: "../../contact"
+          buttonLink: "../contact"
         }
       },
       slug: 'agricola'

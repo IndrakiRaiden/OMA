@@ -50,7 +50,7 @@ import CTASection from '../../components/common/CTASection.vue'
 import { IndustryModel } from '../../models/IndustryModel'
 
 export default {
-  name: 'IndustriaElectronica',
+  name: 'IndustriaAlimentos',
   layout: 'industry',
   components: {
     BannerV3,
@@ -67,15 +67,15 @@ export default {
   data() {
     return {
       industry: this.getDefaultIndustryData(),
-      slug: 'electronica'
+      slug: 'alimentos'
     }
   },
   methods: {
     getDefaultIndustryData() {
       return {
         banner: {
-          title: "Industria Electrónica",
-          subtitle: "Soluciones de manufactura de precisión para componentes electrónicos",
+          title: "Industria Alimentaria",
+          subtitle: "Soluciones de manufactura para equipos de procesamiento de alimentos",
           buttons: [
             { text: 'Ver Servicios', href: '#servicios', class: 'primary-btn' },
             { text: 'Contáctanos', href: '../contact', class: 'secondary-btn' }
@@ -83,50 +83,50 @@ export default {
         },
         details: {
           titlePrefix: "Soluciones para la",
-          titleHighlight: "Industria Electrónica",
-          description: "Ofrecemos servicios de manufactura de alta precisión para componentes electrónicos y mecatrónicos, cumpliendo con los más altos estándares de calidad y tolerancias. Nuestras soluciones están diseñadas para satisfacer las exigentes demandas de la industria electrónica moderna.",
+          titleHighlight: "Industria Alimentaria",
+          description: "Ofrecemos servicios de manufactura especializados para la industria alimentaria, cumpliendo con los estrictos estándares de higiene y seguridad alimentaria. Nuestras soluciones están diseñadas para optimizar procesos, garantizar la calidad y maximizar la producción en plantas de procesamiento de alimentos.",
           features: [
-            "Fabricación de gabinetes y carcasas para dispositivos electrónicos",
-            "Componentes para equipos de prueba y medición",
-            "Piezas con alta precisión dimensional",
-            "Elementos para sistemas de refrigeración",
-            "Soluciones personalizadas para ensambles complejos"
+            "Componentes para líneas de procesamiento de alimentos",
+            "Piezas de grado alimenticio con certificaciones",
+            "Equipos de acero inoxidable para entornos sanitarios",
+            "Soluciones personalizadas para manipulación de alimentos",
+            "Sistemas de dosificación y mezcla de alta precisión"
           ],
-          imageUrl: "https://source.unsplash.com/featured/600x400?electronics,circuit,technology"
+          imageUrl: "https://source.unsplash.com/featured/600x400?food,processing,industry"
         },
         capabilities: {
           titlePrefix: "Nuestras",
           titleHighlight: "Capacidades",
-          description: "Contamos con la tecnología y el conocimiento para fabricar componentes electrónicos de alta precisión que cumplen con las especificaciones más exigentes.",
+          description: "Contamos con la experiencia y la tecnología para fabricar componentes y equipos que cumplen con los más altos estándares de la industria alimentaria.",
           capacities: [
             {
-              title: "Precisión Microscópica",
-              description: "Fabricación de componentes con tolerancias extremadamente ajustadas para aplicaciones electrónicas avanzadas.",
-              icon: "fa-microchip",
+              title: "Manufactura en Acero Inoxidable",
+              description: "Especialistas en la fabricación de componentes en acero inoxidable para entornos de procesamiento de alimentos.",
+              icon: "fa-utensils",
               items: [
-                "Tolerancias de hasta ±0.005mm",
-                "Acabados superficiales controlados",
-                "Verificación dimensional con equipos calibrados"
+                "Grados 304, 316 y otros aceros inoxidables",
+                "Acabados sanitarios y electropulidos",
+                "Soldaduras de alta calidad sin contaminantes"
               ]
             },
             {
-              title: "Soluciones Térmicas",
-              description: "Desarrollo de componentes para disipación térmica y gestión de temperatura en dispositivos electrónicos.",
-              icon: "fa-temperature-low",
+              title: "Sistemas de Transporte y Dosificación",
+              description: "Componentes y sistemas para el transporte, dosificación y mezcla de productos alimenticios.",
+              icon: "fa-conveyor-belt",
               items: [
-                "Disipadores de calor optimizados",
-                "Sistemas de enfriamiento pasivo",
-                "Componentes para conducción térmica"
+                "Tornillos sin fin y sistemas de transporte",
+                "Dosificadores de precisión para ingredientes",
+                "Componentes para sistemas de mezcla"
               ]
             },
             {
-              title: "Integración Mecatrónica",
-              description: "Fabricación de componentes para sistemas que integran elementos mecánicos y electrónicos.",
-              icon: "fa-robot",
+              title: "Equipos de Procesamiento",
+              description: "Soluciones para equipos de procesamiento, cocción y conservación de alimentos.",
+              icon: "fa-temperature-high",
               items: [
-                "Estructuras de soporte para PCBs",
-                "Componentes para actuadores de precisión",
-                "Carcasas con blindaje electromagnético"
+                "Componentes para hornos y cámaras de cocción",
+                "Piezas para sistemas de refrigeración",
+                "Elementos para máquinas de envasado"
               ]
             }
           ]
@@ -134,62 +134,59 @@ export default {
         gallery: {
           titlePrefix: "Nuestra",
           titleHighlight: "Galería",
-          description: "Explora algunos de nuestros proyectos y componentes fabricados para la industria electrónica.",
+          description: "Explora algunos de nuestros proyectos y componentes fabricados para la industria alimentaria.",
           showMoreButtonText: "Ver Más Proyectos",
           galleryCategories: [
-            { id: 'all', name: 'Todos' },
-            { id: 'enclosures', name: 'Gabinetes' },
-            { id: 'cooling', name: 'Enfriamiento' },
-            { id: 'precision', name: 'Precisión' }
+            { id: 'all', name: 'Todos' }
           ],
           galleryItems: [
             {
               id: 1,
-              title: "Gabinetes para servidores",
-              description: "Carcasas de precisión para equipos de servidores y redes.",
-              category: "enclosures",
-              imageUrl: "https://source.unsplash.com/featured/600x400?server,rack"
+              title: "Mezcladores para lácteos",
+              description: "Sistemas de mezcla de alta precisión para productos lácteos.",
+              category: "processing",
+              imageUrl: "https://source.unsplash.com/featured/600x400?dairy,mixer"
             },
             {
               id: 2,
-              title: "Sistemas de enfriamiento",
-              description: "Disipadores térmicos optimizados para componentes de alta potencia.",
-              category: "cooling",
-              imageUrl: "https://source.unsplash.com/featured/600x400?cooling,heatsink"
+              title: "Cintas transportadoras",
+              description: "Sistemas de transporte para líneas de producción alimentaria.",
+              category: "handling",
+              imageUrl: "https://source.unsplash.com/featured/600x400?conveyor,food"
             },
             {
               id: 3,
-              title: "Componentes para instrumentos",
-              description: "Piezas de alta precisión para equipos de medición y prueba.",
-              category: "precision",
-              imageUrl: "https://source.unsplash.com/featured/600x400?testing,electronic"
+              title: "Componentes para embotelladoras",
+              description: "Piezas de precisión para máquinas de embotellado.",
+              category: "packaging",
+              imageUrl: "https://source.unsplash.com/featured/600x400?bottling,machine"
             },
             {
               id: 4,
-              title: "Carcasas con blindaje EMI",
-              description: "Gabinetes con protección electromagnética para aplicaciones sensibles.",
-              category: "enclosures",
-              imageUrl: "https://source.unsplash.com/featured/600x400?shielding,electronics"
+              title: "Sistemas de cocción",
+              description: "Componentes para equipos de cocción industrial.",
+              category: "processing",
+              imageUrl: "https://source.unsplash.com/featured/600x400?cooking,industrial"
             },
             {
               id: 5,
-              title: "Estructuras de enfriamiento líquido",
-              description: "Componentes para sistemas de refrigeración líquida en electrónica.",
-              category: "cooling",
-              imageUrl: "https://source.unsplash.com/featured/600x400?liquid,cooling"
+              title: "Dosificadores para panadería",
+              description: "Sistemas de dosificación precisa para ingredientes de panadería.",
+              category: "handling",
+              imageUrl: "https://source.unsplash.com/featured/600x400?bakery,dosing"
             },
             {
               id: 6,
-              title: "Bases para microprocesadores",
-              description: "Componentes de precisión para montaje de microprocesadores.",
-              category: "precision",
-              imageUrl: "https://source.unsplash.com/featured/600x400?processor,socket"
+              title: "Máquinas envasadoras",
+              description: "Componentes para sistemas de envasado al vacío y atmósfera modificada.",
+              category: "packaging",
+              imageUrl: "https://source.unsplash.com/featured/600x400?packaging,machine"
             }
           ]
         },
         cta: {
-          title: "¿Listo para llevar sus componentes electrónicos al siguiente nivel?",
-          subtitle: "Contáctenos hoy para conocer cómo nuestras soluciones de manufactura de precisión pueden satisfacer sus necesidades específicas en la industria electrónica.",
+          title: "¿Listo para optimizar su procesamiento de alimentos?",
+          subtitle: "Contáctenos hoy para conocer cómo nuestras soluciones de manufactura pueden mejorar la eficiencia, higiene y productividad de sus líneas de procesamiento de alimentos.",
           buttonText: "Solicitar Información",
           buttonLink: "../contact"
         }
@@ -197,8 +194,8 @@ export default {
     }
   },
   head() {
-    const defaultTitle = 'Industria Electrónica | OMA - Servicios de Manufactura'
-    const defaultDescription = 'Soluciones de manufactura de precisión para la industria electrónica.'
+    const defaultTitle = 'Industria Alimentaria | OMA - Servicios de Manufactura'
+    const defaultDescription = 'Soluciones de manufactura de precisión para la industria alimentaria y procesamiento de alimentos.'
     
     return {
       title: this.industry?.seo?.title || defaultTitle,
@@ -256,5 +253,4 @@ main.industry-page > *:nth-child(2) { animation-delay: 0.2s; }
 main.industry-page > *:nth-child(3) { animation-delay: 0.3s; }
 main.industry-page > *:nth-child(4) { animation-delay: 0.4s; }
 main.industry-page > *:nth-child(5) { animation-delay: 0.5s; }
-main.industry-page > *:nth-child(6) { animation-delay: 0.6s; }
 </style>
