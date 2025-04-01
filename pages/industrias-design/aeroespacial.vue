@@ -146,42 +146,42 @@ export default {
               title: "Componentes para turbinas",
               description: "Piezas de alta precisión para sistemas de propulsión aeroespacial.",
               category: "propulsion",
-              imageUrl: "https://source.unsplash.com/featured/600x400?turbine,engine"
+              imageUrl: "/images/industries/galleryaerospacial/Aeroespacial 2.webp"
             },
             {
               id: 2,
               title: "Elementos estructurales",
               description: "Componentes estructurales ligeros y resistentes para aeronaves.",
               category: "structural",
-              imageUrl: "https://source.unsplash.com/featured/600x400?aircraft,structure"
+              imageUrl: "/images/industries/galleryaerospacial/Aeroespacial 3.webp"
             },
             {
               id: 3,
               title: "Sistemas de navegación",
               description: "Componentes precisos para sistemas de navegación y control.",
               category: "navigation",
-              imageUrl: "https://source.unsplash.com/featured/600x400?navigation,aerospace"
+              imageUrl: "/images/industries/galleryaerospacial/Aeroespacial 4.webp"
             },
             {
               id: 4,
               title: "Álabes de turbina",
               description: "Álabes de alta precisión para turbinas de aviones.",
               category: "propulsion",
-              imageUrl: "https://source.unsplash.com/featured/600x400?turbine,blade"
+              imageUrl: "/images/industries/galleryaerospacial/Aeroespacial 5.webp"
             },
             {
               id: 5,
               title: "Componentes de tren de aterrizaje",
               description: "Piezas resistentes para sistemas de aterrizaje de aeronaves.",
               category: "structural",
-              imageUrl: "https://source.unsplash.com/featured/600x400?landing,gear"
+              imageUrl: "/images/industries/galleryaerospacial/Aeroespacial 6.webp"
             },
             {
               id: 6,
               title: "Sistemas de control",
               description: "Componentes para sistemas de control de vuelo de precisión.",
               category: "navigation",
-              imageUrl: "https://source.unsplash.com/featured/600x400?control,system"
+              imageUrl: "/images/industries/galleryaerospacial/Aeroespacial 7.webp"
             }
           ]
         },

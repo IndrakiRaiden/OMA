@@ -129,49 +129,49 @@ export default {
               title: "Componentes de transmisión",
               description: "Fabricación de engranajes y ejes para sistemas de transmisión.",
               category: "components",
-              imageUrl: "https://source.unsplash.com/featured/600x400?gears,transmission"
+              imageUrl: "/images/industries/galleryautomobile/Automotriz+1.webp"
             },
             {
               title: "Moldes para autopartes",
               description: "Diseño y fabricación de moldes para inyección de plástico.",
               category: "molds",
-              imageUrl: "https://source.unsplash.com/featured/600x400?mold,injection"
+              imageUrl: "/images/industries/galleryautomobile/Automotriz+2.webp"
             },
             {
               title: "Piezas de suspensión",
               description: "Componentes mecanizados para sistemas de suspensión.",
               category: "components",
-              imageUrl: "https://source.unsplash.com/featured/600x400?suspension,car"
+              imageUrl: "/images/industries/galleryautomobile/Automotriz+3.webp"
             },
             {
               title: "Herramentales de precisión",
               description: "Fabricación de herramientas especiales para líneas de producción.",
               category: "tooling",
-              imageUrl: "https://source.unsplash.com/featured/600x400?tools,precision"
+              imageUrl: "/images/industries/galleryautomobile/Automotriz+4.webp"
             },
             {
               title: "Componentes de frenos",
               description: "Piezas mecanizadas para sistemas de frenos de alto rendimiento.",
               category: "components",
-              imageUrl: "https://source.unsplash.com/featured/600x400?brakes,automotive"
+              imageUrl: "/images/industries/galleryautomobile/Automotriz+5.webp"
             },
             {
               title: "Matrices de estampado",
               description: "Matrices para conformado de piezas metálicas.",
               category: "tooling",
-              imageUrl: "https://source.unsplash.com/featured/600x400?metal,stamping"
+              imageUrl: "/images/industries/galleryautomobile/Automotriz+6.webp"
             },
             {
               title: "Moldes multi-cavidad",
               description: "Moldes de alta productividad para componentes plásticos.",
               category: "molds",
-              imageUrl: "https://source.unsplash.com/featured/600x400?plastic,molding"
+              imageUrl: "/images/industries/galleryautomobile/Automotriz+7.webp"
             },
             {
               title: "Prototipos funcionales",
               description: "Fabricación rápida de prototipos para validación de diseño.",
               category: "components",
-              imageUrl: "https://source.unsplash.com/featured/600x400?prototype,automotive"
+              imageUrl: "/images/industries/galleryautomobile/Automotriz+8.webp"
             }
           ]
         },

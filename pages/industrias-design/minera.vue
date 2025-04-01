@@ -144,37 +144,37 @@ export default {
               id: 1,
               title: "Componentes para Trituradora",
               category: "components",
-              imageUrl: "https://source.unsplash.com/featured/600x400?mining,machinery"
+              imageUrl: "/images/industries/galleryminery/Minera+1.webp"
             },
             {
               id: 2,
               title: "Sistema de Filtración Industrial",
               category: "equipment",
-              imageUrl: "https://source.unsplash.com/featured/600x400?mining,filter"
+              imageUrl: "/images/industries/galleryminery/Minera+2.webp"
             },
             {
               id: 3,
               title: "Herramientas de Perforación",
               category: "tools",
-              imageUrl: "https://source.unsplash.com/featured/600x400?mining,drill"
+              imageUrl: "/images/industries/galleryminery/Minera+3.webp"
             },
             {
               id: 4,
               title: "Engranajes de Alta Resistencia",
               category: "components",
-              imageUrl: "https://source.unsplash.com/featured/600x400?mining,gears"
+              imageUrl: "/images/industries/galleryminery/Minera+4.webp"
             },
             {
               id: 5,
               title: "Estructuras de Soporte",
               category: "equipment",
-              imageUrl: "https://source.unsplash.com/featured/600x400?mining,structure"
+              imageUrl: "/images/industries/galleryminery/Minera+5.webp"
             },
             {
               id: 6,
               title: "Equipos de Extracción",
               category: "tools",
-              imageUrl: "https://source.unsplash.com/featured/600x400?mining,extraction"
+              imageUrl: "/images/industries/galleryminery/Minera+6.webp"
             }
           ]
         },

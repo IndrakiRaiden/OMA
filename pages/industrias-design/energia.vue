@@ -144,25 +144,37 @@ export default {
               id: 1,
               title: 'Componentes para turbinas',
               category: 'energia-convencional',
-              imageUrl: 'https://source.unsplash.com/featured/600x400?turbine,power'
+              imageUrl: '/images/industries/galleryenergy/Energia 1.webp'
             },
             {
               id: 2,
               title: 'Piezas para paneles solares',
               category: 'energia-renovable',
-              imageUrl: 'https://source.unsplash.com/featured/600x400?solar,panel'
+              imageUrl: '/images/industries/galleryenergy/Energia 2.webp'
             },
             {
               id: 3,
               title: 'Componentes para aerogeneradores',
               category: 'energia-renovable',
-              imageUrl: 'https://source.unsplash.com/featured/600x400?wind,turbine'
+              imageUrl: '/images/industries/galleryenergy/Energia 3.webp'
             },
             {
               id: 4,
               title: 'Sistemas de refrigeración',
               category: 'eficiencia',
-              imageUrl: 'https://source.unsplash.com/featured/600x400?cooling,system'
+              imageUrl: '/images/industries/galleryenergy/Energia 4.webp'
+            },
+            {
+              id: 5,
+              title: 'Componentes para plantas eléctricas',
+              category: 'energia-convencional',
+              imageUrl: '/images/industries/galleryenergy/Energia 7.webp'
+            },
+            {
+              id: 6,
+              title: 'Sistemas de transmisión de energía',
+              category: 'eficiencia',
+              imageUrl: '/images/industries/galleryenergy/Energia 8.webp'
             }
           ]
         },

@@ -129,49 +129,49 @@ export default {
               title: "Instrumental quirúrgico",
               description: "Herramientas de precisión para procedimientos quirúrgicos.",
               category: "instruments",
-              imageUrl: "https://source.unsplash.com/featured/600x400?surgical,instruments"
+              imageUrl: "/images/industries/gallerymedic/Medica 3.webp"
             },
             {
               title: "Componentes para prótesis",
               description: "Piezas mecanizadas para prótesis de alta durabilidad.",
               category: "implants",
-              imageUrl: "https://source.unsplash.com/featured/600x400?prosthetic,medical"
+              imageUrl: "/images/industries/gallerymedic/Medica 4.webp"
             },
             {
               title: "Equipos de laboratorio",
               description: "Componentes precisos para equipos de análisis clínico.",
               category: "equipment",
-              imageUrl: "https://source.unsplash.com/featured/600x400?laboratory,equipment"
+              imageUrl: "/images/industries/gallerymedic/Medica 5.webp"
             },
             {
               title: "Dispositivos de diagnóstico",
               description: "Piezas para equipos de diagnóstico médico avanzado.",
               category: "equipment",
-              imageUrl: "https://source.unsplash.com/featured/600x400?medical,diagnostic"
+              imageUrl: "/images/industries/gallerymedic/Medica 6.webp"
             },
             {
               title: "Componentes dentales",
               description: "Piezas de precisión para aplicaciones odontológicas.",
               category: "implants",
-              imageUrl: "https://source.unsplash.com/featured/600x400?dental,medical"
+              imageUrl: "/images/industries/gallerymedic/Medica 7.webp"
             },
             {
               title: "Instrumental de precisión",
               description: "Herramientas especializadas para procedimientos delicados.",
               category: "instruments",
-              imageUrl: "https://source.unsplash.com/featured/600x400?precision,medical"
+              imageUrl: "/images/industries/gallerymedic/Medica 8.webp"
             },
             {
               title: "Dispositivos implantables",
               description: "Componentes biocompatibles para implantes médicos.",
               category: "implants",
-              imageUrl: "https://source.unsplash.com/featured/600x400?implant,medical"
+              imageUrl: "/images/industries/gallerymedic/Medica 9.webp"
             },
             {
               title: "Equipos de monitoreo",
               description: "Componentes para sistemas de monitoreo de pacientes.",
               category: "equipment",
-              imageUrl: "https://source.unsplash.com/featured/600x400?monitor,medical"
+              imageUrl: "/images/industries/gallerymedic/Medica 10.webp"
             }
           ]
         },

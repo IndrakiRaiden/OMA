@@ -139,42 +139,42 @@ export default {
               title: "Componentes para arados",
               description: "Piezas de alta resistencia para arados y labranza.",
               category: "components",
-              imageUrl: "https://source.unsplash.com/featured/600x400?agriculture,plow"
+              imageUrl: "/images/industries/galleryaagricultural/Agricola 1.webp"
             },
             {
               id: 2,
               title: "Sistemas de siembra",
               description: "Componentes precisos para sembradoras de precisión.",
               category: "systems",
-              imageUrl: "https://source.unsplash.com/featured/600x400?agriculture,seeding"
+              imageUrl: "/images/industries/galleryaagricultural/Agricola 2.webp"
             },
             {
               id: 3,
               title: "Implementos para tractores",
               description: "Accesorios y herramientas para diversas aplicaciones agrícolas.",
               category: "implements",
-              imageUrl: "https://source.unsplash.com/featured/600x400?tractor,implement"
+              imageUrl: "/images/industries/galleryaagricultural/Agricola 3.webp"
             },
             {
               id: 4,
               title: "Sistemas de riego",
               description: "Componentes para sistemas de irrigación eficientes.",
               category: "systems",
-              imageUrl: "https://source.unsplash.com/featured/600x400?irrigation,agriculture"
+              imageUrl: "/images/industries/galleryaagricultural/Agricola 4.webp"
             },
             {
               id: 5,
               title: "Componentes para cosechadoras",
               description: "Piezas de precisión para equipos de cosecha.",
               category: "components",
-              imageUrl: "https://source.unsplash.com/featured/600x400?harvester,agriculture"
+              imageUrl: "/images/industries/galleryaagricultural/Agricola 5.webp"
             },
             {
               id: 6,
               title: "Implementos especializados",
               description: "Soluciones a medida para cultivos específicos.",
               category: "implements",
-              imageUrl: "https://source.unsplash.com/featured/600x400?agriculture,specialized"
+              imageUrl: "/images/industries/galleryaagricultural/Agricola 6.webp"
             }
           ]
         },

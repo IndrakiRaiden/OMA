@@ -143,37 +143,37 @@ export default {
           galleryItems: [
             {
               id: 1,
-              imageUrl: "https://source.unsplash.com/featured/600x400?industrial,machinery",
+              imageUrl: "/images/industries/galleryindustrial/Industrial 1.webp",
               title: "Componentes para Maquinaria Pesada",
               category: "maquinaria"
             },
             {
               id: 2,
-              imageUrl: "https://source.unsplash.com/featured/600x400?hydraulic,industrial",
+              imageUrl: "/images/industries/galleryindustrial/Industrial 2.webp",
               title: "Sistemas Hidráulicos Industriales",
               category: "hidraulica"
             },
             {
               id: 3,
-              imageUrl: "https://source.unsplash.com/featured/600x400?automation,industrial",
+              imageUrl: "/images/industries/galleryindustrial/Industrial 3.webp",
               title: "Piezas para Automatización",
               category: "automatizacion"
             },
             {
               id: 4,
-              imageUrl: "https://source.unsplash.com/featured/600x400?tools,industrial",
+              imageUrl: "/images/industries/galleryindustrial/Industrial 4.webp",
               title: "Herramientas Especializadas",
               category: "herramientas"
             },
             {
               id: 5,
-              imageUrl: "https://source.unsplash.com/featured/600x400?transmission,industrial",
+              imageUrl: "/images/industries/galleryindustrial/Industrial 5.webp",
               title: "Componentes de Transmisión",
               category: "transmision"
             },
             {
               id: 6,
-              imageUrl: "https://source.unsplash.com/featured/600x400?assembly,industrial",
+              imageUrl: "/images/industries/galleryindustrial/Industrial 6.webp",
               title: "Ensambles Industriales",
               category: "ensambles"
             }

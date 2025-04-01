@@ -129,49 +129,49 @@ export default {
               title: "Conectores estructurales",
               description: "Sistemas de conexión para estructuras metálicas.",
               category: "structural",
-              imageUrl: "https://source.unsplash.com/featured/600x400?steel,connection"
+              imageUrl: "/images/industries/galleryconstruction/Construccion 1.webp"
             },
             {
               title: "Barandales arquitectónicos",
               description: "Sistemas de barandales personalizados para proyectos arquitectónicos.",
               category: "architectural",
-              imageUrl: "https://source.unsplash.com/featured/600x400?railing,architecture"
+              imageUrl: "/images/industries/galleryconstruction/Construccion 2.webp"
             },
             {
               title: "Anclajes especiales",
               description: "Sistemas de anclaje para aplicaciones exigentes.",
               category: "specialized",
-              imageUrl: "https://source.unsplash.com/featured/600x400?anchor,construction"
+              imageUrl: "/images/industries/galleryconstruction/Construccion 3.webp"
             },
             {
               title: "Elementos estructurales",
               description: "Componentes para sistemas estructurales de edificios.",
               category: "structural",
-              imageUrl: "https://source.unsplash.com/featured/600x400?beam,structure"
+              imageUrl: "/images/industries/galleryconstruction/Construccion 4 .webp"
             },
             {
               title: "Revestimientos metálicos",
               description: "Sistemas de fachada y revestimiento arquitectónico.",
               category: "architectural",
-              imageUrl: "https://source.unsplash.com/featured/600x400?facade,metal"
+              imageUrl: "/images/industries/galleryconstruction/Construccion 5.webp"
             },
             {
               title: "Sistemas de andamiaje",
               description: "Componentes para andamios y sistemas temporales.",
               category: "specialized",
-              imageUrl: "https://source.unsplash.com/featured/600x400?scaffold,construction"
+              imageUrl: "/images/industries/galleryconstruction/Construccion 6.webp"
             },
             {
               title: "Soportes antisísmicos",
               description: "Sistemas de protección para estructuras en zonas sísmicas.",
               category: "specialized",
-              imageUrl: "https://source.unsplash.com/featured/600x400?seismic,support"
+              imageUrl: "/images/industries/galleryconstruction/Construccion 7.webp"
             },
             {
               title: "Escaleras metálicas",
               description: "Sistemas de escaleras para proyectos arquitectónicos y comerciales.",
               category: "architectural",
-              imageUrl: "https://source.unsplash.com/featured/600x400?stairs,metal"
+              imageUrl: "/images/industries/galleryconstruction/Construccion 8.webp"
             }
           ]
         },

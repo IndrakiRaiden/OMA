@@ -145,42 +145,42 @@ export default {
               title: "Mezcladores para lácteos",
               description: "Sistemas de mezcla de alta precisión para productos lácteos.",
               category: "processing",
-              imageUrl: "https://source.unsplash.com/featured/600x400?dairy,mixer"
+              imageUrl: "/images/industries/galleryaliments/Alimentos 2.webp"
             },
             {
               id: 2,
               title: "Cintas transportadoras",
               description: "Sistemas de transporte para líneas de producción alimentaria.",
               category: "handling",
-              imageUrl: "https://source.unsplash.com/featured/600x400?conveyor,food"
+              imageUrl: "/images/industries/galleryaliments/Alimentos 3.webp"
             },
             {
               id: 3,
               title: "Componentes para embotelladoras",
               description: "Piezas de precisión para máquinas de embotellado.",
               category: "packaging",
-              imageUrl: "https://source.unsplash.com/featured/600x400?bottling,machine"
+              imageUrl: "/images/industries/galleryaliments/Alimentos 4.webp"
             },
             {
               id: 4,
               title: "Sistemas de cocción",
               description: "Componentes para equipos de cocción industrial.",
               category: "processing",
-              imageUrl: "https://source.unsplash.com/featured/600x400?cooking,industrial"
+              imageUrl: "/images/industries/galleryaliments/Alimentos 5.webp"
             },
             {
               id: 5,
               title: "Dosificadores para panadería",
               description: "Sistemas de dosificación precisa para ingredientes de panadería.",
               category: "handling",
-              imageUrl: "https://source.unsplash.com/featured/600x400?bakery,dosing"
+              imageUrl: "/images/industries/galleryaliments/Alimentos 8.webp"
             },
             {
               id: 6,
               title: "Máquinas envasadoras",
               description: "Componentes para sistemas de envasado al vacío y atmósfera modificada.",
               category: "packaging",
-              imageUrl: "https://source.unsplash.com/featured/600x400?packaging,machine"
+              imageUrl: "/images/industries/galleryaliments/Alimentos 9.webp"
             }
           ]
         },

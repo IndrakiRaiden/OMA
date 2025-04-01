@@ -145,42 +145,42 @@ export default {
               title: "Gabinetes para servidores",
               description: "Carcasas de precisión para equipos de servidores y redes.",
               category: "enclosures",
-              imageUrl: "https://source.unsplash.com/featured/600x400?server,rack"
+              imageUrl: "/images/industries/galleryelectronics/Electronica 1.webp"
             },
             {
               id: 2,
               title: "Sistemas de enfriamiento",
               description: "Disipadores térmicos optimizados para componentes de alta potencia.",
               category: "cooling",
-              imageUrl: "https://source.unsplash.com/featured/600x400?cooling,heatsink"
+              imageUrl: "/images/industries/galleryelectronics/Electronica 2.webp"
             },
             {
               id: 3,
               title: "Componentes para instrumentos",
               description: "Piezas de alta precisión para equipos de medición y prueba.",
               category: "precision",
-              imageUrl: "https://source.unsplash.com/featured/600x400?testing,electronic"
+              imageUrl: "/images/industries/galleryelectronics/Electronica 3.webp"
             },
             {
               id: 4,
               title: "Carcasas con blindaje EMI",
               description: "Gabinetes con protección electromagnética para aplicaciones sensibles.",
               category: "enclosures",
-              imageUrl: "https://source.unsplash.com/featured/600x400?shielding,electronics"
+              imageUrl: "/images/industries/galleryelectronics/Electronica 4.webp"
             },
             {
               id: 5,
               title: "Estructuras de enfriamiento líquido",
               description: "Componentes para sistemas de refrigeración líquida en electrónica.",
               category: "cooling",
-              imageUrl: "https://source.unsplash.com/featured/600x400?liquid,cooling"
+              imageUrl: "/images/industries/galleryelectronics/Electronica 5.webp"
             },
             {
               id: 6,
               title: "Bases para microprocesadores",
               description: "Componentes de precisión para montaje de microprocesadores.",
               category: "precision",
-              imageUrl: "https://source.unsplash.com/featured/600x400?processor,socket"
+              imageUrl: "/images/industries/galleryelectronics/Electronica 7.webp"
             }
           ]
         },
