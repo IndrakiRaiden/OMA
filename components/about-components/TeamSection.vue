@@ -52,15 +52,6 @@ export default {
     return {
       team: [
         {
-          name: 'Roberto García',
-          role: 'Director General',
-          description: 'Más de 15 años de experiencia en manufactura CNC y gestión de proyectos industriales.',
-          social: [
-            { platform: 'linkedin', url: '#' },
-            { platform: 'twitter', url: '#' }
-          ]
-        },
-        {
           name: 'Eduardo Topete',
           role: 'Departamento de Ingenieria',
           description: '+52 66 5106 6940',

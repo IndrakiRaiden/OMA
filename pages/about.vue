@@ -15,7 +15,6 @@
       <DividerStats />
       <CompanyStats />
       <Timeline />
-      <TeamSection />
       <CTASection />
     </main>
   </div>
@@ -27,7 +26,6 @@ import IntroFrames from '~/components/about-components/IntroFrames.vue'
 import DividerStats from '~/components/about-components/DividerStats.vue'
 import CompanyStats from '~/components/about-components/CompanyStats.vue'
 import Timeline from '~/components/index-components/Timeline.vue'
-import TeamSection from '~/components/about-components/TeamSection.vue'
 import CTASection from '~/components/common/CTASection.vue'
 import BannerV1 from '~/components/BannerV1.vue'
 import AnimatedBackground from '~/components/common/AnimatedBackground.vue'
@@ -39,7 +37,6 @@ export default defineComponent({
     DividerStats,
     CompanyStats,
     Timeline,
-    TeamSection,
     CTASection,
     BannerV1,
     AnimatedBackground

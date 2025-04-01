@@ -3,7 +3,7 @@
     <Hero />
     <Benefits />
     <Industries />
-    <Testimonials />
+    <div class="section-spacer"></div>
     <CallToAction />
   </main>
 </template>
@@ -22,7 +22,6 @@ definePageMeta({
 import Hero from '~/components/Hero.vue'
 import Benefits from '~/components/index-components/Benefits.vue'
 import Industries from '~/components/index-components/Industries.vue'
-import Testimonials from '~/components/index-components/Testimonials.vue'
 import CallToAction from '~/components/index-components/CallToAction.vue'
 
 export default {
@@ -31,7 +30,6 @@ export default {
     Hero,
     Benefits,
     Industries,
-    Testimonials,
     CallToAction
   }
 }
@@ -80,6 +78,10 @@ main {
   }
 }
 
+.section-spacer {
+  height: 6rem;
+}
+
 @media (max-width: 1024px) {
   .cards-grid {
     grid-template-columns: 1fr;
@@ -90,6 +92,9 @@ main {
 @media (max-width: 768px) {
   .solution-card {
     padding: 2rem;  
+  }
+  .section-spacer {
+    height: 4rem;
   }
 }
 </style>

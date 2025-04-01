@@ -78,7 +78,6 @@
     </section>
 
     <FeaturesSection :features="features" />
-    <TestimonialsSection :testimonials="testimonials" />
     <CTASection />
     
     <!-- Service Detail Modal -->
@@ -285,7 +284,7 @@ const currentLightboxImage = computed(() => {
   return serviceGallery.value[currentLightboxIndex.value];
 });
 
-// Features and testimonials (kept as static data for now)
+// Features (kept as static data for now)
 const features = ref([
   {
     id: 1,
@@ -310,27 +309,6 @@ const features = ref([
     title: 'Soporte 24/7',
     description: 'Asistencia técnica continua',
     icon: 'fa-headset'
-  }
-]);
-
-const testimonials = ref([
-  {
-    id: 1,
-    content: 'La calidad y precisión de su trabajo es excepcional. Han sido un socio clave en nuestro proceso de manufactura.',
-    name: 'Carlos Ramírez',
-    company: 'Industrias Metalúrgicas'
-  },
-  {
-    id: 2,
-    content: 'Su equipo de diseño CAD/CAM nos ayudó a optimizar significativamente nuestros procesos de producción.',
-    name: 'Ana Martínez',
-    company: 'Tecnología Aeroespacial'
-  },
-  {
-    id: 3,
-    content: 'El servicio de prototipado rápido nos permitió validar nuestros diseños en tiempo récord.',
-    name: 'Roberto Sánchez',
-    company: 'Innovación Automotriz'
   }
 ]);
 
@@ -591,7 +569,6 @@ const handleImageError = (event) => {
 <script>
 import BannerV2 from '../components/BannerV2.vue'
 import FeaturesSection from '../components/services-components/FeaturesSection.vue'
-import TestimonialsSection from '../components/services-components/TestimonialsSection.vue'
 import CTASection from '~/components/common/CTASection.vue'
 
 export default {
@@ -599,7 +576,6 @@ export default {
   components: {
     BannerV2,
     FeaturesSection,
-    TestimonialsSection,
     CTASection
   },
   head() {
