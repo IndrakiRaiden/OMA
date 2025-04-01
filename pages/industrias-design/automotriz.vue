@@ -92,7 +92,7 @@ export default {
             "Piezas estructurales de alta resistencia",
             "Moldes y herramentales para autopartes"
           ],
-          imageUrl: "https://source.unsplash.com/featured/600x400?automotive,manufacturing,car"
+          imageUrl: "/images/industries/galleryautomobile/Automotriz+1.webp"
         },
         capabilities: {
           titlePrefix: "Nuestras",

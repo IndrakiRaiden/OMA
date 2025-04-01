@@ -84,15 +84,15 @@ export default {
         details: {
           titlePrefix: "Soluciones para la",
           titleHighlight: "Industria Electrónica",
-          description: "Ofrecemos servicios de manufactura de alta precisión para componentes electrónicos y mecatrónicos, cumpliendo con los más altos estándares de calidad y tolerancias. Nuestras soluciones están diseñadas para satisfacer las exigentes demandas de la industria electrónica moderna.",
+          description: "Ofrecemos servicios especializados de manufactura para el sector electrónico, con altos estándares de calidad y precisión. Nuestros procesos están diseñados para cumplir con los exigentes requisitos de la industria electrónica, garantizando componentes fiables y con tolerancias exactas.",
           features: [
-            "Fabricación de gabinetes y carcasas para dispositivos electrónicos",
-            "Componentes para equipos de prueba y medición",
-            "Piezas con alta precisión dimensional",
-            "Elementos para sistemas de refrigeración",
-            "Soluciones personalizadas para ensambles complejos"
+            "Gabinetes y carcasas para equipos electrónicos",
+            "Componentes para sistemas de enfriamiento",
+            "Piezas para instrumentos de precisión",
+            "Elementos con blindaje electromagnético",
+            "Bases y soportes para componentes electrónicos"
           ],
-          imageUrl: "https://source.unsplash.com/featured/600x400?electronics,circuit,technology"
+          imageUrl: "/images/industries/galleryelectronics/Electronica 1.webp"
         },
         capabilities: {
           titlePrefix: "Nuestras",

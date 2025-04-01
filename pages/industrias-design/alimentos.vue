@@ -84,15 +84,15 @@ export default {
         details: {
           titlePrefix: "Soluciones para la",
           titleHighlight: "Industria Alimentaria",
-          description: "Ofrecemos servicios de manufactura especializados para la industria alimentaria, cumpliendo con los estrictos estándares de higiene y seguridad alimentaria. Nuestras soluciones están diseñadas para optimizar procesos, garantizar la calidad y maximizar la producción en plantas de procesamiento de alimentos.",
+          description: "Ofrecemos servicios especializados de manufactura para el sector alimentario, con altos estándares de calidad e higiene. Nuestros procesos cumplen con los rigurosos requisitos de la industria alimentaria, garantizando componentes seguros y eficientes para el procesamiento de alimentos.",
           features: [
-            "Componentes para líneas de procesamiento de alimentos",
-            "Piezas de grado alimenticio con certificaciones",
-            "Equipos de acero inoxidable para entornos sanitarios",
-            "Soluciones personalizadas para manipulación de alimentos",
-            "Sistemas de dosificación y mezcla de alta precisión"
+            "Componentes para equipos de procesamiento",
+            "Piezas para sistemas de envasado",
+            "Elementos para maquinaria de dosificación",
+            "Componentes para sistemas de transporte",
+            "Piezas para equipos de cocción industrial"
           ],
-          imageUrl: "https://source.unsplash.com/featured/600x400?food,processing,industry"
+          imageUrl: "/images/industries/galleryaliments/Alimentos 2.webp"
         },
         capabilities: {
           titlePrefix: "Nuestras",

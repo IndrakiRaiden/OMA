@@ -82,17 +82,17 @@ export default {
           ]
         },
         details: {
-          titlePrefix: "Soluciones para",
-          titleHighlight: "la Industria Energética",
-          description: "Ofrecemos servicios de manufactura de alta precisión para componentes críticos en el sector energético, cumpliendo con los estándares más rigurosos de seguridad, durabilidad y rendimiento para aplicaciones en generación, transmisión y distribución de energía.",
+          titlePrefix: "Soluciones para la",
+          titleHighlight: "Industria Energética",
+          description: "Ofrecemos servicios especializados de manufactura para el sector energético, con altos estándares de calidad y precisión. Nuestros procesos están diseñados para cumplir con los exigentes requisitos de la industria energética, garantizando componentes duraderos y eficientes.",
           features: [
-            'Componentes para sistemas de generación eléctrica',
-            'Piezas para equipos de energías renovables',
-            'Componentes para sistemas de distribución',
-            'Materiales resistentes a altas temperaturas y presiones',
-            'Soluciones con certificaciones del sector energético'
+            "Componentes para sistemas de generación convencional",
+            "Piezas para equipos de energía renovable",
+            "Elementos para sistemas de transmisión",
+            "Componentes para equipos de eficiencia energética",
+            "Piezas para infraestructura energética"
           ],
-          imageUrl: "https://source.unsplash.com/featured/800x600?energy,power,industrial"
+          imageUrl: "/images/industries/galleryenergy/Energia 1.webp"
         },
         capabilities: {
           titlePrefix: "Nuestras",

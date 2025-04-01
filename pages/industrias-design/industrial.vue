@@ -83,16 +83,16 @@ export default {
         },
         details: {
           titlePrefix: "Soluciones para la",
-          titleHighlight: "Industria Industrial",
-          description: "Ofrecemos servicios de manufactura especializados para la industria industrial, diseñando y fabricando componentes duraderos y de alta precisión para todo tipo de maquinaria y equipos industriales.",
+          titleHighlight: "Industria General",
+          description: "Ofrecemos servicios especializados de manufactura para el sector industrial, con altos estándares de calidad y precisión. Nuestros procesos están diseñados para cumplir con los exigentes requisitos de la industria, garantizando componentes duraderos y con tolerancias exactas.",
           features: [
             "Componentes para maquinaria pesada",
-            "Piezas para equipos de automatización",
-            "Componentes para sistemas hidráulicos",
-            "Fabricación de herramientas especializadas",
-            "Piezas para sistemas de transmisión"
+            "Piezas para sistemas hidráulicos",
+            "Elementos para equipos de automatización",
+            "Herramientas industriales especializadas",
+            "Componentes para sistemas de transmisión"
           ],
-          imageUrl: "https://source.unsplash.com/featured/600x400?industrial,machinery,equipment"
+          imageUrl: "/images/industries/galleryindustrial/Industrial 1.webp"
         },
         capabilities: {
           titlePrefix: "Nuestras",

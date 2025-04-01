@@ -84,15 +84,15 @@ export default {
         details: {
           titlePrefix: "Soluciones para la",
           titleHighlight: "Industria de la Construcción",
-          description: "Ofrecemos servicios especializados de manufactura para el sector de la construcción, con un enfoque en durabilidad y precisión. Nuestros procesos están optimizados para la producción de componentes estructurales y arquitectónicos que cumplen con los estándares más exigentes de la industria.",
+          description: "Ofrecemos servicios especializados de manufactura para el sector de la construcción, con altos estándares de calidad y precisión. Nuestros procesos están diseñados para cumplir con los exigentes requisitos de la industria, garantizando componentes duraderos y con tolerancias exactas.",
           features: [
-            "Componentes estructurales metálicos",
-            "Elementos arquitectónicos personalizados",
-            "Sistemas de anclaje y fijación",
-            "Herrajes de alta resistencia",
-            "Moldes para prefabricados de concreto"
+            "Componentes estructurales de alta resistencia",
+            "Elementos de fijación y anclaje",
+            "Piezas para sistemas de andamiaje",
+            "Componentes para maquinaria de construcción",
+            "Elementos arquitectónicos personalizados"
           ],
-          imageUrl: "https://source.unsplash.com/featured/600x400?construction,architecture,building"
+          imageUrl: "/images/industries/galleryconstruction/Construccion 1.webp"
         },
         capabilities: {
           titlePrefix: "Nuestras",

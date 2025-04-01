@@ -92,7 +92,7 @@ export default {
             "Componentes para dispositivos implantables",
             "Prótesis y componentes ortopédicos"
           ],
-          imageUrl: "https://source.unsplash.com/featured/600x400?medical,equipment,healthcare"
+          imageUrl: "/images/industries/gallerymedic/Medica 3.webp"
         },
         capabilities: {
           titlePrefix: "Nuestras",

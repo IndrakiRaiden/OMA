@@ -84,15 +84,15 @@ export default {
         details: {
           titlePrefix: "Soluciones para la",
           titleHighlight: "Industria Minera",
-          description: "Ofrecemos servicios de manufactura de alta calidad para equipos y componentes utilizados en la exigente industria minera, diseñados para soportar las condiciones más extremas y cumplir con los más altos estándares de seguridad y durabilidad.",
+          description: "Ofrecemos servicios especializados de manufactura para el sector minero, con altos estándares de calidad y durabilidad. Nuestros procesos están diseñados para cumplir con los exigentes requisitos de la industria minera, garantizando componentes resistentes a condiciones extremas.",
           features: [
-            "Fabricación de componentes resistentes a la abrasión",
-            "Piezas con alta resistencia a la corrosión",
-            "Componentes para equipos de extracción y procesamiento",
-            "Materiales certificados para uso industrial pesado",
-            "Soluciones personalizadas para necesidades específicas"
+            "Componentes para equipos de trituración",
+            "Piezas para sistemas de transporte",
+            "Elementos para maquinaria de perforación",
+            "Componentes resistentes a la abrasión",
+            "Piezas para equipos de procesamiento"
           ],
-          imageUrl: "https://source.unsplash.com/featured/600x400?mining,industrial,excavation"
+          imageUrl: "/images/industries/galleryminery/Minera+1.webp"
         },
         capabilities: {
           titlePrefix: "Nuestras",

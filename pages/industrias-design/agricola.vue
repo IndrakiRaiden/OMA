@@ -86,7 +86,7 @@ export default {
             "Soluciones personalizadas para implementos agrícolas",
             "Piezas de alta durabilidad para entornos exigentes"
           ],
-          imageUrl: "https://source.unsplash.com/featured/600x400?agriculture,farming,tractor"
+          imageUrl: "/images/industries/galleryaagricultural/Agricola 1.webp"
         },
         capabilities: {
           titlePrefix: "Nuestras",

@@ -84,15 +84,15 @@ export default {
         details: {
           titlePrefix: "Soluciones para la",
           titleHighlight: "Industria Aeroespacial",
-          description: "Ofrecemos servicios de manufactura de alta precisión para componentes aeroespaciales, cumpliendo con los estándares más exigentes de la industria. Nuestras soluciones están diseñadas para garantizar la máxima calidad, rendimiento y confiabilidad en aplicaciones críticas.",
+          description: "Ofrecemos servicios especializados de manufactura para el sector aeroespacial, cumpliendo con los más altos estándares de calidad y precisión. Nuestros procesos están certificados para satisfacer los rigurosos requisitos de la industria aeroespacial, garantizando componentes fiables y de alto rendimiento.",
           features: [
-            "Fabricación de componentes estructurales",
-            "Piezas para sistemas de propulsión",
-            "Componentes para sistemas de navegación",
-            "Piezas con certificación aeroespacial",
-            "Prototipos funcionales para validación"
+            "Componentes para sistemas de propulsión",
+            "Piezas estructurales ligeras y resistentes",
+            "Elementos para sistemas de navegación",
+            "Componentes para trenes de aterrizaje",
+            "Piezas para sistemas de control de vuelo"
           ],
-          imageUrl: "https://source.unsplash.com/featured/600x400?aerospace,aviation,aircraft"
+          imageUrl: "/images/industries/galleryaerospacial/Aeroespacial 2.webp"
         },
         capabilities: {
           titlePrefix: "Nuestras",
