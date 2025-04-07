@@ -59,12 +59,13 @@
                 <p class="text-gray-600">Cuéntanos sobre tu proyecto y nos pondremos en contacto contigo pronto.</p>
               </div>
               
-              <form @submit.prevent="handleSubmit" class="space-y-6" id="contact-form">
+              <form action="https://formspree.io/f/xjkypeqp" method="POST" class="space-y-6" id="contact-form">
                 <div class="form-group">
                   <label for="name">Nombre</label>
                   <input 
                     id="name" 
                     v-model="formData.name" 
+                    name="name" 
                     type="text" 
                     required 
                     :class="{ 'has-value': formData.name }" 
@@ -77,6 +78,7 @@
                   <input 
                     id="company" 
                     v-model="formData.company" 
+                    name="company" 
                     type="text" 
                     required 
                     :class="{ 'has-value': formData.company }" 
@@ -89,6 +91,7 @@
                   <input 
                     id="email" 
                     v-model="formData.email" 
+                    name="email" 
                     type="email" 
                     required 
                     :class="{ 'has-value': formData.email }" 
@@ -101,8 +104,9 @@
                   <input 
                     id="phone" 
                     v-model="formData.phone" 
+                    name="phone" 
                     type="tel" 
-                    required
+                    required 
                     :class="{ 'has-value': formData.phone }" 
                     placeholder="Tu número de teléfono"
                   >
@@ -113,23 +117,21 @@
                   <textarea 
                     id="message" 
                     v-model="formData.message" 
+                    name="message" 
                     rows="4" 
                     required 
                     :class="{ 'has-value': formData.message }" 
-                    placeholder="Describe tu proyecto o idea"
+                    placeholder="Describe brevemente tu proyecto"
                   ></textarea>
                 </div>
 
+                <input type="hidden" name="_next" value="https://omasolutions.netlify.app/thank-you">
+                <input type="hidden" name="_subject" value="Nuevo mensaje desde el sitio web">
                 <button 
                   type="submit" 
-                  class="submit-btn" 
-                  :disabled="isSubmitting"
+                  class="submit-btn"
                 >
-                  <span v-if="!isSubmitting">Enviar mensaje</span>
-                  <span v-else class="flex items-center">
-                    <i class="fas fa-spinner fa-spin mr-2"></i>
-                    Enviando...
-                  </span>
+                  Enviar mensaje
                 </button>
               </form>
             </FormFrame>
@@ -204,6 +206,7 @@ export default {
   data() {
     return {
       isSubmitting: false,
+      formspreeUrl: 'https://formspree.io/f/xjkypeqp', // Formspree form ID
       formData: {
         name: '',
         company: '',
@@ -222,42 +225,7 @@ export default {
       }
     }
   },
-  methods: {
-    async handleSubmit() {
-      this.isSubmitting = true
-      
-      try {
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500))
-        
-        // Log the form data with the new structure
-        console.log('Form submitted:', {
-          nombre: this.formData.name,
-          empresa: this.formData.company,
-          correo: this.formData.email,
-          telefono: this.formData.phone,
-          mensaje: this.formData.message
-        })
-        
-        // Reset form
-        this.formData = {
-          name: '',
-          company: '',
-          email: '',
-          phone: '',
-          message: ''
-        }
-        
-        // Show success message (you could use a toast notification here)
-        alert('Mensaje enviado correctamente')
-      } catch (error) {
-        console.error('Error submitting form:', error)
-        alert('Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.')
-      } finally {
-        this.isSubmitting = false
-      }
-    }
-  }
+  methods: {}
 }
 </script>
 
