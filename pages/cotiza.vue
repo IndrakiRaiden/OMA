@@ -73,6 +73,7 @@
                     <input 
                       type="text" 
                       id="name" 
+                      name="name"
                       v-model="form.name" 
                       class="form-input" 
                       :class="{'border-red-500': errors.name}"
@@ -85,6 +86,7 @@
                     <input 
                       type="email" 
                       id="email" 
+                      name="email"
                       v-model="form.email" 
                       class="form-input" 
                       :class="{'border-red-500': errors.email}"
@@ -97,10 +99,11 @@
                     <input 
                       type="tel" 
                       id="phone" 
+                      name="phone"
                       v-model="form.phone" 
                       class="form-input" 
                       :class="{'border-red-500': errors.phone}"
-                      placeholder="(123) 456-7890"
+                      placeholder="Tu número de teléfono"
                     >
                     <p v-if="errors.phone" class="text-red-500 text-sm mt-1">{{ errors.phone }}</p>
                   </div>
@@ -109,6 +112,7 @@
                     <input 
                       type="text" 
                       id="company" 
+                      name="company"
                       v-model="form.company" 
                       class="form-input"
                       placeholder="Nombre de tu empresa (opcional)"
@@ -127,16 +131,16 @@
                   <label class="block text-dark mb-2" for="service">Tipo de Servicio <span class="text-red-500">*</span></label>
                   <select 
                     id="service" 
+                    name="service"
                     v-model="form.service" 
                     class="form-select" 
                     :class="{'border-red-500': errors.service}"
                   >
                     <option value="">Selecciona un servicio</option>
-                    <option value="recubrimientos">Recubrimientos</option>
-                    <option value="acabados">Acabados</option>
+                    <option value="cnc">Maquinado CNC</option>
+                    <option value="impresion-3d">Impresión 3D</option>
                     <option value="corte-laser">Corte Láser</option>
-                    <option value="maquinado-cnc">Maquinado CNC</option>
-                    <option value="produccion">Producción</option>
+                    <option value="prototipado">Prototipado Rápido</option>
                     <option value="maquinado-convencional">Maquinado Convencional</option>
                   </select>
                   <p v-if="errors.service" class="text-red-500 text-sm mt-1">{{ errors.service }}</p>
@@ -146,6 +150,7 @@
                   <input 
                     type="number" 
                     id="quantity" 
+                    name="quantity"
                     v-model="form.quantity" 
                     class="form-input" 
                     :class="{'border-red-500': errors.quantity}"
@@ -158,13 +163,15 @@
                   <label class="block text-dark mb-2" for="material">Material <span class="text-red-500">*</span></label>
                   <select 
                     id="material" 
+                    name="material"
                     v-model="form.material" 
                     class="form-select" 
                     :class="{'border-red-500': errors.material}"
                   >
                     <option value="">Selecciona un material</option>
-                    <option value="acero">Acero</option>
                     <option value="aluminio">Aluminio</option>
+                    <option value="acero">Acero</option>
+                    <option value="acero-inoxidable">Acero Inoxidable</option>
                     <option value="plastico">Plástico</option>
                     <option value="madera">Madera</option>
                     <option value="otro">Otro (especificar en descripción)</option>
@@ -175,30 +182,30 @@
                   <label class="block text-dark mb-2" for="specifications">Planos o especificaciones técnicas</label>
                   <textarea 
                     id="specifications" 
+                    name="specifications"
                     v-model="form.specifications" 
                     class="form-textarea" 
-                    :class="{'border-red-500': errors.specifications}"
                     rows="3" 
                     maxlength="500"
                     placeholder="Detalla las especificaciones técnicas o menciona si incluirás planos en los archivos adjuntos (opcional)"
                   ></textarea>
-                  <p v-if="errors.specifications" class="text-red-500 text-sm mt-1">{{ errors.specifications }}</p>
                 </div>
                 <div>
                   <label class="block text-dark mb-2" for="description">Descripción del Proyecto <span class="text-red-500">*</span></label>
                   <textarea 
                     id="description" 
+                    name="description"
                     v-model="form.description" 
                     class="form-textarea" 
-                    :class="{'border-red-500': errors.description}"
                     rows="4" 
+                    :class="{'border-red-500': errors.description}"
                     maxlength="1000"
                     placeholder="Describe tu proyecto, necesidades específicas y expectativas"
                   ></textarea>
                   <p v-if="errors.description" class="text-red-500 text-sm mt-1">{{ errors.description }}</p>
                 </div>
                 <div>
-                  <label class="block text-dark mb-2">Archivos Adjuntos (Dibujos, planos, etc.)</label>
+                  <label class="block text-dark mb-2">Archivos Adjuntos</label>
                   <div class="border-2 border-dashed border-gray rounded-lg p-4 text-center">
                     <input 
                       type="file" 
@@ -212,28 +219,32 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-gray mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                         </svg>
-                        <p class="text-sm text-dark">Arrastra archivos aquí o <span class="text-primary">selecciona archivos</span></p>
-                        <p class="text-xs text-gray mt-1">Soporta: CAD, PDF, JPG, PNG (máx. 10MB)</p>
+                        <span class="text-gray font-medium">Haz clic para subir archivos o arrastra y suelta</span>
+                        <span class="text-xs text-gray mt-1">Formatos aceptados: CAD, PDF, JPG, PNG (máx. 10MB)</span>
                       </div>
                     </label>
-                  </div>
-                  <div v-if="form.files.length > 0" class="mt-4">
-                    <p class="text-sm font-medium mb-2">Archivos seleccionados:</p>
-                    <ul class="space-y-2">
-                      <li v-for="(file, index) in form.files" :key="index" class="flex items-center justify-between bg-light p-2 rounded">
-                        <span class="text-sm truncate">{{ file.name }}</span>
-                        <button @click.prevent="removeFile(index)" class="text-error hover:text-error-dark">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                          </svg>
-                        </button>
-                      </li>
-                    </ul>
+                    <div v-if="form.files.length > 0" class="mt-4">
+                      <h4 class="font-semibold text-dark mb-2 text-left">Archivos seleccionados:</h4>
+                      <ul class="text-left">
+                        <li v-for="(file, index) in form.files" :key="index" class="flex justify-between items-center py-1">
+                          <span class="text-sm truncate max-w-xs">{{ file.name }}</span>
+                          <button 
+                            type="button" 
+                            @click="removeFile(index)" 
+                            class="text-red-500 hover:text-red-700"
+                          >
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <!-- Step 3: Presupuesto -->
+              <!-- Step 3: Presupuesto y Finalización -->
               <div v-show="currentStep === 3" class="space-y-4">
                 <h3 class="text-xl font-semibold flex items-center">
                   <span class="w-8 h-8 bg-primary text-white rounded-full inline-flex items-center justify-center mr-2">3</span>
@@ -243,26 +254,39 @@
                   <label class="block text-dark mb-2" for="budget">Rango de Presupuesto <span class="text-red-500">*</span></label>
                   <select 
                     id="budget" 
+                    name="budget"
                     v-model="form.budget" 
                     class="form-select" 
                     :class="{'border-red-500': errors.budget}"
                   >
                     <option value="">Selecciona un rango</option>
-                    <option value="bajo">Menos de $10,000</option>
-                    <option value="medio">$10,000 - $50,000</option>
-                    <option value="alto">$50,000 - $100,000</option>
-                    <option value="enterprise">Más de $100,000</option>
+                    <option value="menos-5000">Menos de $5,000 MXN</option>
+                    <option value="5000-10000">$5,000 - $10,000 MXN</option>
+                    <option value="10000-25000">$10,000 - $25,000 MXN</option>
+                    <option value="25000-50000">$25,000 - $50,000 MXN</option>
+                    <option value="mas-50000">Más de $50,000 MXN</option>
                   </select>
                   <p v-if="errors.budget" class="text-red-500 text-sm mt-1">{{ errors.budget }}</p>
                 </div>
-                <div class="bg-light p-4 rounded-lg mt-6">
-                  <h4 class="font-medium text-primary-dark mb-2">¿Por qué elegir nuestros servicios?</h4>
+                
+                <!-- Mostrar archivos seleccionados -->
+                <div v-if="form.files.length > 0" class="mb-4">
+                  <h4 class="font-semibold text-dark mb-2">Archivos seleccionados:</h4>
+                  <ul class="text-left">
+                    <li v-for="(file, index) in form.files" :key="index" class="flex justify-between items-center py-1">
+                      <span class="text-sm truncate max-w-xs">{{ file.name }}</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="bg-gray-50 p-4 rounded-lg">
+                  <h4 class="font-semibold text-dark mb-3">¿Por qué elegir nuestros servicios?</h4>
                   <ul class="space-y-2">
                     <li class="flex items-start">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                       </svg>
-                      <span class="text-sm">Equipo de expertos con más de 10 años de experiencia</span>
+                      <span class="text-sm">Más de 10 años de experiencia en la industria</span>
                     </li>
                     <li class="flex items-start">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -334,14 +358,26 @@
 
 <script>
 import BannerV1 from '../components/BannerV1.vue'
+import emailjs from '@emailjs/browser'
+import pb, { testConnection } from '../plugins/pocketbase';
 
 export default {
   name: 'CotizaPage',
   components: {
     BannerV1
   },
+  async mounted() {
+    // Inicializar EmailJS con tu clave pública
+    emailjs.init('rXHgdC4BNuJObWyvd');
+    console.log('EmailJS initialized');
+    
+    // Probar la conexión con PocketBase
+    const connectionTest = await testConnection();
+    console.log('Resultado de prueba de conexión:', connectionTest);
+  },
   data() {
     return {
+      pb: pb, // Usar la instancia centralizada
       form: {
         name: '',
         email: '',
@@ -373,34 +409,152 @@ export default {
     }
   },
   methods: {
-    handleSubmit() {
-      // Validate the current step before submission
-      if (this.validateCurrentStep()) {
-        this.isSubmitting = true;
+    async handleSubmit() {
+      // Validar todos los pasos antes de enviar
+      this.validateAllSteps();
+      if (Object.keys(this.errors).length > 0) return;
+      
+      this.isSubmitting = true;
+      try {
+        console.log('Iniciando envío a PocketBase...');
+        console.log('URL de PocketBase:', this.pb.baseUrl);
         
-        // Simulate API call with timeout
-        setTimeout(() => {
-          console.log('Form submitted:', this.form);
+        // Preparar los datos para PocketBase - usando los nombres exactos de los campos de PocketBase
+        // Asegurarse de que los valores coincidan con los valores permitidos en PocketBase
+        
+        // Definir los valores exactos aceptados por PocketBase para cada campo de selección
+        
+        // Valores aceptados para el campo 'field' (material) - lista completa proporcionada por el usuario
+        const validMaterials = ['Acero', 'Aluminio', 'Plastico', 'Madera', 'Otro (Especificar en Descripcion)'];
+        
+        // Valores aceptados para el campo 'tipodeservicio' - lista completa proporcionada por el usuario
+        const validServices = ['Recubrimientos', 'Corte Laser', 'Acabados', 'Maquinado CNC', 'Maquinado Convencional', 'Produccion'];
+        
+        // Valores aceptados para el campo 'Presupuesto' - lista completa proporcionada por el usuario
+        // Nota: Estos deben coincidir EXACTAMENTE con los valores definidos en PocketBase
+        const validBudgets = ['Menos de $10 000', '$10 000 a $50 000', '$50 000 a $100 000', 'Mas de $100 000'];
+        
+        // Mapear los valores de material a los valores aceptados por PocketBase
+        let materialValue = this.form.material;
+        const materialMapping = {
+          // Valores del formulario -> Valores de PocketBase
+          'aluminio': 'Aluminio',
+          'acero': 'Acero',
+          'acero-inoxidable': 'Acero',
+          'plastico': 'Plastico',
+          'madera': 'Madera',
+          'otro': 'Otro (Especificar en Descripcion)' // Valor correcto para 'otro'
+        };
+        
+        // Aplicar mapeo o usar valor por defecto
+        materialValue = materialMapping[materialValue] || validMaterials[0];
+        
+        // Mapear los valores de servicio a los valores aceptados por PocketBase
+        let serviceValue = this.form.service;
+        const serviceMapping = {
+          // Mapeo de los valores del formulario a los valores aceptados por PocketBase
+          'maquinado-cnc': 'Maquinado CNC',
+          'impresion-3d': 'Produccion',
+          'corte-laser': 'Corte Laser',
+          'prototipado-rapido': 'Produccion', // Mapeando Prototipado Rápido a Produccion
+          'maquinado-convencional': 'Maquinado Convencional'
+        };
+        
+        // Aplicar mapeo o usar valor por defecto
+        serviceValue = serviceMapping[serviceValue] || validServices[0];
+        
+        // Mapear los valores de presupuesto a los valores aceptados por PocketBase
+        let budgetValue = this.form.budget;
+        const budgetMapping = {
+          'menos-10000': 'Menos de $10 000',
+          '10000-30000': '$10 000 a $50 000',
+          '25000-50000': '$10 000 a $50 000',
+          '30000-50000': '$10 000 a $50 000',
+          '50000-100000': '$50 000 a $100 000',
+          'mas-50000': '$50 000 a $100 000',
+          'mas-100000': 'Mas de $100 000'
+        };
+        
+        // Aplicar mapeo o usar valor por defecto
+        budgetValue = budgetMapping[budgetValue] || validBudgets[0];
+        
+        // Imprimir valores mapeados para depuración
+        console.log('Valores mapeados:', {
+          material: materialValue,
+          servicio: serviceValue,
+          presupuesto: budgetValue
+        });
+        
+        // Agregar logs para depurar qué valores se están enviando
+        console.log('Valores del formulario:', {
+          specifications: this.form.specifications,
+          description: this.form.description
+        });
+        
+        const formData = {
+          nombre: this.form.name,
+          email: this.form.email,
+          telefono: this.form.phone,
+          empresa: this.form.company || '',
+          tipodeservicio: serviceValue,
+          Cantidad: parseInt(this.form.quantity) || 0,
+          field: materialValue,
+          Planos_Especificaciones: this.form.specifications || '', // Actualizado: Planos_Especificaciones (con guion bajo)
+          Descripcion: this.form.description || '', // Descripción del proyecto
+          Presupuesto: budgetValue
+          // El campo 'archivos' se manejará por separado si es necesario
+        };
+        
+        // Verificar que los campos estén correctamente asignados
+        console.log('Campos enviados a PocketBase:', {
+          Planos_Especificaciones: formData.Planos_Especificaciones,
+          Descripcion: formData.Descripcion
+        });
+        
+        // Imprimir los datos para verificar
+        console.log('Datos enviados a PocketBase:', formData);
+
+        // Manejar el envío de datos con o sin archivos
+        if (this.form.files && this.form.files.length > 0) {
+          // Para archivos, necesitamos usar FormData en lugar de JSON
+          const pbFormData = new FormData();
           
-          // Reset form
-          this.form = {
-            name: '',
-            email: '',
-            phone: '',
-            company: '',
-            service: '',
-            quantity: '',
-            material: '',
-            specifications: '',
-            description: '',
-            budget: '',
-            files: []
-          };
+          // Agregar todos los campos de texto
+          Object.keys(formData).forEach(key => {
+            pbFormData.append(key, formData[key]);
+          });
           
-          this.isSubmitting = false;
-          this.formSubmitted = true;
-          this.currentStep = 1;
-        }, 1500);
+          // Agregar archivos
+          this.form.files.forEach((file, index) => {
+            pbFormData.append('archivos', file);
+          });
+          
+          // Enviar con FormData
+          console.log('Enviando formulario con archivos...');
+          const record = await this.pb.collection('formulario').create(pbFormData);
+          console.log('Respuesta de PocketBase:', record);
+        } else {
+          // Si no hay archivos, enviar como JSON normal
+          console.log('Enviando formulario sin archivos...');
+          const record = await this.pb.collection('formulario').create(formData);
+          console.log('Respuesta de PocketBase:', record);
+        }
+        
+        this.formSubmitted = true;
+        this.resetForm();
+      } catch (error) {
+        console.error('Error al enviar el formulario a PocketBase:', error);
+        console.error('Detalles del error:', error.response ? error.response : error.message);
+        
+        // Mostrar mensaje de error más específico si está disponible
+        let errorMessage = 'Hubo un error al enviar tu solicitud. Por favor, intenta nuevamente.';
+        if (error.response) {
+          errorMessage += ' Detalles: ' + JSON.stringify(error.response.data);
+        }
+        
+        alert(errorMessage);
+      } finally {
+        this.isSubmitting = false;
       }
     },
     nextStep() {
@@ -464,11 +618,82 @@ export default {
       return isValid;
     },
     handleFileUpload(event) {
-      const files = Array.from(event.target.files);
-      this.form.files = [...this.form.files, ...files];
+      const newFiles = Array.from(event.target.files);
+      // Limitar a archivos menores de 25MB para PocketBase
+      const maxSizeInBytes = 25 * 1024 * 1024; // 25MB en bytes (límite de PocketBase)
+      const validFiles = newFiles.filter(file => file.size <= maxSizeInBytes);
+      
+      if (validFiles.length < newFiles.length) {
+        alert('Algunos archivos son demasiado grandes (>25MB). PocketBase tiene un límite de 25MB por archivo. Por favor, reduce el tamaño de los archivos o incluye enlaces a los archivos en la descripción.');
+      }
+      
+      // Verificar tipos de archivo comunes de CAD y mostrar mensaje informativo
+      const cadExtensions = ['.dwg', '.dxf', '.dwf', '.rvt', '.rfa', '.cad', '.skp', '.3ds', '.max', '.obj', '.stl'];
+      const hasCadFiles = validFiles.some(file => {
+        const extension = file.name.substring(file.name.lastIndexOf('.')).toLowerCase();
+        return cadExtensions.includes(extension);
+      });
+      
+      if (hasCadFiles) {
+        alert('Has seleccionado archivos CAD o de diseño técnico. Estos archivos serán adjuntados a tu solicitud. Si tienes problemas al subir archivos muy grandes, considera comprimirlos o incluir un enlace de descarga en la descripción.');
+      }
+      
+      this.form.files = [...this.form.files, ...validFiles];
     },
     removeFile(index) {
       this.form.files.splice(index, 1);
+    },
+    validateAllSteps() {
+      this.errors = {};
+      
+      // Validar paso 1 (Información Personal)
+      if (!this.form.name) {
+        this.errors.name = 'El nombre es requerido';
+      }
+      if (!this.form.email) {
+        this.errors.email = 'El email es requerido';
+      } else if (!/^\S+@\S+\.\S+$/.test(this.form.email)) {
+        this.errors.email = 'Por favor ingresa un email válido';
+      }
+      if (!this.form.phone) {
+        this.errors.phone = 'El teléfono es requerido';
+      }
+      
+      // Validar paso 2 (Detalles del Proyecto)
+      if (!this.form.service) {
+        this.errors.service = 'Por favor selecciona un servicio';
+      }
+      if (!this.form.quantity) {
+        this.errors.quantity = 'La cantidad es requerida';
+      }
+      if (!this.form.material) {
+        this.errors.material = 'Por favor selecciona un material';
+      }
+      if (!this.form.description) {
+        this.errors.description = 'La descripción del proyecto es requerida';
+      }
+      
+      // Validar paso 3 (Presupuesto)
+      if (!this.form.budget) {
+        this.errors.budget = 'Por favor selecciona un rango de presupuesto';
+      }
+    },
+    resetForm() {
+      this.form = {
+        name: '',
+        email: '',
+        phone: '',
+        company: '',
+        service: '',
+        quantity: '',
+        material: '',
+        specifications: '',
+        description: '',
+        budget: '',
+        files: []
+      };
+      this.currentStep = 1;
+      this.errors = {};
     }
   }
 }
