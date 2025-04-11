@@ -1,7 +1,13 @@
 <template>
-  <div class="admin-page">
-    <div class="container mx-auto px-4 py-8">
-      <h1 class="text-3xl font-bold mb-6">Panel de Administración - Formularios</h1>
+  <div class="admin-page pt-10">
+    <div class="container mx-auto px-4 py-6 mt-4">
+      <div class="flex justify-between items-center mb-6 mt-10">
+        <h1 class="text-3xl font-bold">Formularios</h1>
+        <button @click="logout" class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-md flex items-center transition">
+          <LogOut class="h-5 w-5 mr-2" />
+          Cerrar Sesión
+        </button>
+      </div>
       
       <!-- Filtros y búsqueda -->
       <div class="bg-white p-4 rounded-lg shadow-md mb-6">
@@ -85,7 +91,15 @@
                     @click="viewDetails(record)" 
                     class="text-primary hover:text-secondary mr-3"
                   >
-                    Ver detalles
+                    <Eye class="h-5 w-5 inline" />
+                    <span class="ml-1">Ver</span>
+                  </button>
+                  <button 
+                    @click="confirmDelete(record)" 
+                    class="text-red-600 hover:text-red-800"
+                  >
+                    <X class="h-5 w-5 inline" />
+                    <span class="ml-1">Eliminar</span>
                   </button>
                 </td>
               </tr>
@@ -162,8 +176,17 @@
               </div>
             </div>
             
-            <div class="mt-6 flex justify-end">
-              <button @click="selectedRecord = null" class="bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition">
+            <div class="mt-6 flex justify-end space-x-3">
+              <button 
+                @click="confirmDelete(selectedRecord)" 
+                class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition"
+              >
+                Eliminar
+              </button>
+              <button 
+                @click="selectedRecord = null" 
+                class="bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition"
+              >
                 Cerrar
               </button>
             </div>
@@ -176,7 +199,7 @@
 
 <script>
 import pb, { testConnection } from '../../plugins/pocketbase';
-import { X, FileText, Search, Eye } from 'lucide-vue-next';
+import { X, FileText, Search, Eye, LogOut } from 'lucide-vue-next';
 
 export default {
   name: 'AdminFormulariosPage',
@@ -184,7 +207,8 @@ export default {
     X,
     FileText,
     Search,
-    Eye
+    Eye,
+    LogOut
   },
   layout: 'admin', // Si tienes un layout específico para admin
   data() {
@@ -194,7 +218,9 @@ export default {
       filteredRecords: [],
       searchTerm: '',
       isLoading: true,
-      selectedRecord: null
+      selectedRecord: null,
+      showDeleteConfirmation: false,
+      recordToDelete: null
     };
   },
   async mounted() {
@@ -205,6 +231,19 @@ export default {
     await this.loadRecords();
   },
   methods: {
+    logout() {
+      // Mostrar confirmación antes de cerrar sesión
+      if (confirm('¿Estás seguro de que deseas cerrar sesión?')) {
+        // Eliminar el token de autenticación
+        localStorage.removeItem('oma_admin_auth');
+        
+        // Redirigir a la página de login
+        this.$router.push('/admin/login');
+        
+        // Mostrar mensaje de éxito
+        alert('Has cerrado sesión correctamente');
+      }
+    },
     async loadRecords() {
       this.isLoading = true;
       try {
@@ -219,6 +258,35 @@ export default {
       } catch (error) {
         console.error('Error al cargar los registros:', error);
         alert('Error al cargar los datos. Por favor, intenta nuevamente.');
+      } finally {
+        this.isLoading = false;
+      }
+    },
+    
+    confirmDelete(record) {
+      if (confirm(`¿Estás seguro de que deseas eliminar la cotización de ${record.nombre}? Esta acción no se puede deshacer.`)) {
+        this.deleteRecord(record.id);
+      }
+    },
+    
+    async deleteRecord(recordId) {
+      try {
+        this.isLoading = true;
+        await this.pb.collection('formulario').delete(recordId);
+        
+        // Actualizar la lista de registros
+        this.records = this.records.filter(record => record.id !== recordId);
+        this.filteredRecords = this.filteredRecords.filter(record => record.id !== recordId);
+        
+        // Si el registro eliminado es el que se está mostrando en el modal, cerrar el modal
+        if (this.selectedRecord && this.selectedRecord.id === recordId) {
+          this.selectedRecord = null;
+        }
+        
+        alert('Registro eliminado correctamente');
+      } catch (error) {
+        console.error('Error al eliminar el registro:', error);
+        alert('Error al eliminar el registro. Por favor, intenta nuevamente.');
       } finally {
         this.isLoading = false;
       }
@@ -265,6 +333,7 @@ export default {
 .admin-page {
   min-height: 100vh;
   background-color: #f9fafb;
+  padding-top: 30px;
 }
 
 /* Estilos para tablas responsivas */

@@ -1,7 +1,13 @@
 <template>
-  <div class="admin-dashboard">
-    <div class="container mx-auto px-4 py-8">
-      <h1 class="text-3xl font-bold mb-8">Panel de Administración OMA</h1>
+  <div class="admin-dashboard pt-10">
+    <div class="container mx-auto px-4 py-6 mt-4">
+      <div class="flex justify-between items-center mb-6">
+        <h1 class="text-3xl font-bold">Dashboard</h1>
+        <button @click="logout" class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-md flex items-center transition">
+          <LogOut class="h-5 w-5 mr-2" />
+          Cerrar Sesión
+        </button>
+      </div>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Tarjeta de Formularios de Cotización -->
@@ -118,14 +124,15 @@
 
 <script>
 import pb, { testConnection } from '../../plugins/pocketbase';
-import { ClipboardList, BarChart, Settings } from 'lucide-vue-next';
+import { ClipboardList, BarChart, Settings, LogOut } from 'lucide-vue-next';
 
 export default {
   name: 'AdminDashboard',
   components: {
     ClipboardList,
     BarChart,
-    Settings
+    Settings,
+    LogOut
   },
   layout: 'admin', // Si tienes un layout específico para admin
   data() {
@@ -148,6 +155,19 @@ export default {
     await this.loadData();
   },
   methods: {
+    logout() {
+      // Mostrar confirmación antes de cerrar sesión
+      if (confirm('¿Estás seguro de que deseas cerrar sesión?')) {
+        // Eliminar el token de autenticación
+        localStorage.removeItem('oma_admin_auth');
+        
+        // Redirigir a la página de login
+        this.$router.push('/admin/login');
+        
+        // Mostrar mensaje de éxito
+        alert('Has cerrado sesión correctamente');
+      }
+    },
     async loadData() {
       this.isLoading = true;
       try {
