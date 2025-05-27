@@ -10,8 +10,8 @@
     />
     
     <!-- Catalog Section -->
-    <section id="catalogo" class="catalog-section py-16">
-      <div class="container mx-auto px-4">
+    <section id="catalogo" class="catalog-section py-16 overflow-x-hidden">
+      <div class="container mx-auto px-4 xl:px-6 2xl:px-8 max-w-screen-2xl">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold mb-4">NUESTRO CATÁLOGO</h2>
           <p class="text-gray-600 max-w-2xl mx-auto">
@@ -40,7 +40,7 @@
         </div>
         
         <!-- Catalog grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 lg:gap-8">
           <!-- Catalog items using component -->
           <CatalogItem 
             v-for="item in filteredItems" 
@@ -136,23 +136,41 @@ const openItemDetail = (item) => {
   showModal.value = true;
   // Prevent body scrolling when modal is open
   document.body.style.overflow = 'hidden';
+  // Save scroll position
+  document.body.dataset.scrollY = window.scrollY;
 };
 
 const closeModal = () => {
   showModal.value = false;
   // Re-enable body scrolling
   document.body.style.overflow = 'auto';
+  // Restore scroll position
+  if (document.body.dataset.scrollY) {
+    window.scrollTo(0, parseInt(document.body.dataset.scrollY || '0'));
+  }
 };
 
 onMounted(() => {
   // Load catalog data from JSON file
   catalogItems.value = catalogData.filter(item => item.Category && item.Category.trim() !== '');
+  
+  // Handle hash navigation
+  if (window.location.hash === '#catalogo') {
+    setTimeout(() => {
+      const catalogSection = document.getElementById('catalogo');
+      if (catalogSection) {
+        catalogSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 500);
+  }
 });
 </script>
 
 <style scoped>
 .catalog-page {
   /* Using site's color variables */
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* Banner styling is handled by the BannerV2 component */
@@ -171,6 +189,13 @@ onMounted(() => {
   font-weight: 600;
   transition: all 0.3s ease;
   border: 2px solid transparent;
+  white-space: nowrap;
+}
+
+@media (min-width: 1280px) {
+  .category-btn {
+    padding: 0.5rem 1.25rem;
+  }
 }
 
 .category-btn:hover {

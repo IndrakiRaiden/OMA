@@ -136,14 +136,16 @@ defineEmits(['close']);
 .modal-container {
   position: relative;
   width: 90%;
-  max-width: 1000px;
-  max-height: 90vh;
+  max-width: 1200px;
+  max-height: 95vh;
   background-color: white;
   border-radius: 8px;
   overflow: hidden;
   z-index: 1001;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   animation: scaleIn 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal-close-btn {
@@ -172,9 +174,12 @@ defineEmits(['close']);
 }
 
 .modal-content {
-  max-height: 90vh;
+  max-height: 95vh;
   overflow-y: auto;
   scrollbar-width: thin;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal-hero {
@@ -183,6 +188,12 @@ defineEmits(['close']);
   background-position: center;
   position: relative;
   animation: fadeIn 0.5s ease;
+}
+
+@media (min-width: 1280px) {
+  .modal-hero {
+    height: 380px;
+  }
 }
 
 .hero-overlay {
@@ -223,10 +234,31 @@ defineEmits(['close']);
 
 .modal-body {
   padding: 2rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+@media (min-width: 1280px) {
+  .modal-body {
+    padding: 2.5rem;
+  }
 }
 
 .item-description {
   margin-bottom: 2rem;
+}
+
+@media (min-width: 1280px) {
+  .item-description {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .rich-text-content {
+    flex: 1;
+    min-width: 300px;
+  }
 }
 
 .rich-text-content h3 {
@@ -291,6 +323,11 @@ defineEmits(['close']);
   display: flex;
   gap: 1rem;
   margin-top: 2rem;
+  position: sticky;
+  bottom: 0;
+  background-color: white;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
 }
 
 .cta-button {
