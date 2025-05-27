@@ -2,7 +2,7 @@
   <main class="catalog-page">
     <BannerV2 
       title="Catálogo de Productos" 
-      subtitle="Explora nuestra selección de productos y soluciones"
+      subtitle="Explora nuestra selección de productos y soluciones de alta precisión"
       :buttons="[
         { text: 'Ver Catálogo', href: '#catalogo', class: 'primary-btn' },
         { text: 'Cotizar', href: '/cotiza', class: 'secondary-btn' }
@@ -357,10 +357,17 @@ onMounted(() => {
 }
 
 .card-image {
-  height: 200px;
+  height: 220px;
   background-size: cover;
   background-position: center;
   position: relative;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.catalog-card:hover .card-image {
+  transform: scale(1.05);
 }
 
 .image-overlay {
@@ -400,23 +407,31 @@ onMounted(() => {
 }
 
 .card-content {
-  padding: 1.5rem;
+  padding: 1.75rem;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
 }
 
 .title {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: #333;
   margin-bottom: 0.75rem;
+  transition: color 0.3s ease;
+}
+
+.catalog-card:hover .title {
+  color: var(--content-primary);
 }
 
 .description {
   color: #666;
-  line-height: 1.6;
-  margin-bottom: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
 }
 
 /* Features list */
@@ -434,14 +449,15 @@ onMounted(() => {
 }
 
 .feature-icon {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   background-color: var(--content-primary);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-size: 0.625rem;
   margin-right: 0.75rem;
   flex-shrink: 0;
@@ -450,15 +466,23 @@ onMounted(() => {
 /* Learn more button */
 .learn-more {
   margin-top: auto;
-  display: flex;
-  align-items: center;
+  background: none;
+  border: none;
   color: var(--content-primary);
   font-weight: 600;
-  padding: 0.5rem 0;
-  border: none;
-  background: none;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
   cursor: pointer;
   transition: all 0.3s ease;
+  align-self: flex-start;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+
+.learn-more:hover {
+  background-color: rgba(var(--content-primary-rgb), 0.05);
+  border-color: rgba(var(--content-primary-rgb), 0.2);
 }
 
 .btn-text {
@@ -545,10 +569,11 @@ onMounted(() => {
 }
 
 .modal-hero {
-  height: 300px;
+  height: 320px;
   background-size: cover;
   background-position: center;
   position: relative;
+  animation: fadeIn 0.5s ease;
 }
 
 .hero-overlay {
@@ -573,8 +598,8 @@ onMounted(() => {
 }
 
 .item-icon {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   background-color: var(--content-primary);
   border-radius: 50%;
   display: flex;
@@ -584,6 +609,7 @@ onMounted(() => {
   font-size: 1.75rem;
   margin-bottom: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  animation: scaleIn 0.5s ease;
 }
 
 .modal-body {
@@ -595,15 +621,29 @@ onMounted(() => {
 }
 
 .rich-text-content h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   color: #333;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.rich-text-content h3:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--content-primary);
 }
 
 .rich-text-content p {
-  margin-bottom: 1rem;
-  line-height: 1.7;
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: #444;
 }
 
 /* Specifications table */
@@ -611,7 +651,8 @@ onMounted(() => {
   border: 1px solid #eee;
   border-radius: 8px;
   overflow: hidden;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .spec-row {
