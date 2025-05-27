@@ -11,7 +11,7 @@
     
     <!-- Catalog Section -->
     <section id="catalogo" class="catalog-section py-16 overflow-x-hidden">
-      <div class="container mx-auto px-4 xl:px-6 2xl:px-8 max-w-screen-2xl">
+      <div class="container mx-auto px-4">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold mb-4">NUESTRO CATÁLOGO</h2>
           <p class="text-gray-600 max-w-2xl mx-auto">
@@ -40,7 +40,7 @@
         </div>
         
         <!-- Catalog grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 lg:gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Catalog items using component -->
           <CatalogItem 
             v-for="item in filteredItems" 
@@ -171,6 +171,7 @@ onMounted(() => {
   /* Using site's color variables */
   overflow-x: hidden;
   width: 100%;
+  max-width: 100vw;
 }
 
 /* Banner styling is handled by the BannerV2 component */
@@ -190,12 +191,6 @@ onMounted(() => {
   transition: all 0.3s ease;
   border: 2px solid transparent;
   white-space: nowrap;
-}
-
-@media (min-width: 1280px) {
-  .category-btn {
-    padding: 0.5rem 1.25rem;
-  }
 }
 
 .category-btn:hover {
