@@ -7,7 +7,7 @@
       </NuxtLink>
 
       <div class="nav-right">
-        <NuxtLink to="/cotiza" class="contact-btn">Cotiza tu Proyecto</NuxtLink>
+        <NuxtLink to="/cotiza" class="contact-btn">Quote Your Project</NuxtLink>
         <button class="menu-btn" @click="toggleMenu" :class="{ 'active': isMenuOpen }">
           <span></span>
           <span></span>

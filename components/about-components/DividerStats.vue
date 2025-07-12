@@ -7,7 +7,7 @@
             <i class="fas fa-ruler-combined"></i>
           </div>
           <span class="divider-number">0.01mm</span>
-          <span class="divider-label">Precisión</span>
+          <span class="divider-label">Precision</span>
         </div>
         <div class="divider-separator"></div>
         <div class="divider-stat featured">
@@ -15,7 +15,7 @@
             <i class="fas fa-clock"></i>
           </div>
           <span class="divider-number">24/7</span>
-          <span class="divider-label">Operación</span>
+          <span class="divider-label">Operation</span>
         </div>
         <div class="divider-separator"></div>
         <div class="divider-stat">
@@ -23,7 +23,7 @@
             <i class="fas fa-check-circle"></i>
           </div>
           <span class="divider-number">100%</span>
-          <span class="divider-label">Calidad</span>
+          <span class="divider-label">Quality</span>
         </div>
       </div>
     </div>

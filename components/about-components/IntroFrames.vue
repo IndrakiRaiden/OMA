@@ -2,44 +2,44 @@
   <section class="intro-frames">
     <div class="container mx-auto px-4">
       <div class="section-header text-center mb-12">
-        <h2 class="section-title">¿Por qué elegirnos?</h2>
-        <p class="section-subtitle">Descubre cómo nuestra experiencia y compromiso con la innovación nos distinguen en la industria manufacturera.</p>
+        <h2 class="section-title">Why Choose Us?</h2>
+        <p class="section-subtitle">Discover how our experience and commitment to innovation set us apart in the manufacturing industry.</p>
       </div>
       <div class="frames-grid">
         <div class="frame">
           <div class="frame-icon">
             <i class="fas fa-cogs"></i>
           </div>
-          <h3 class="frame-title">Gestión integral del proyecto</h3>
+          <h3 class="frame-title">Comprehensive Project Management</h3>
           <p class="frame-text">
-            Ofrecemos una gestión completa de su proyecto desde el diseño hasta la entrega final.
+            We offer complete management of your project from design to final delivery.
           </p>
         </div>
         <div class="frame">
           <div class="frame-icon">
             <i class="fas fa-users"></i>
           </div>
-          <h3 class="frame-title">Red de proveedores confiables</h3>
+          <h3 class="frame-title">Network of Reliable Suppliers</h3>
           <p class="frame-text">
-            Contamos con una red de proveedores de confianza que garantizan materiales de alta calidad.
+            We have a network of trusted suppliers that guarantee high-quality materials.
           </p>
         </div>
         <div class="frame">
           <div class="frame-icon">
             <i class="fas fa-chart-line"></i>
           </div>
-          <h3 class="frame-title">Capacidad de respuesta rápida</h3>
+          <h3 class="frame-title">Quick Response Capability</h3>
           <p class="frame-text">
-            Respondemos ágilmente a las necesidades de nuestros clientes con soluciones eficientes.
+            We respond agilely to our clients' needs with efficient solutions.
           </p>
         </div>
         <div class="frame">
           <div class="frame-icon">
             <i class="fas fa-handshake"></i>
           </div>
-          <h3 class="frame-title">Calidad certificada en cada proceso</h3>
+          <h3 class="frame-title">Certified Quality in Every Process</h3>
           <p class="frame-text">
-            Aseguramos la calidad en cada etapa de producción con procesos certificados y rigurosos controles.
+            We ensure quality at every stage of production with certified processes and rigorous controls.
           </p>
         </div>
       </div>

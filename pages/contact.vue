@@ -2,10 +2,10 @@
   <div>
     <main class="contact-page">
       <BannerV1 
-        title="Contáctanos" 
-        subtitle="¿Tienes un proyecto en mente? Hablemos de él"
+        title="Contact Us" 
+        subtitle="Do you have a project in mind? Let's talk about it"
         :buttons="[
-          { text: 'Iniciar Proyecto', href: '#contact-form', class: 'primary-btn' }
+          { text: 'Start Project', href: '#contact-form', class: 'primary-btn' }
         ]"
       />
       
@@ -17,10 +17,10 @@
               <div class="card-icon">
                 <i class="fas fa-phone-alt"></i>
               </div>
-              <h3>Llámanos</h3>
+              <h3>Call Us</h3>
               <p>+52 6651219080</p>
               <a href="tel:+526651219080" class="card-link">
-                Llamar ahora
+                Call Now
                 <i class="fas fa-arrow-right"></i>
               </a>
             </div>
@@ -29,10 +29,10 @@
               <div class="card-icon">
                 <i class="fas fa-envelope"></i>
               </div>
-              <h3>Escríbenos</h3>
+              <h3>Email Us</h3>
               <p>OMASOLUTIONSRH@GMAIL.COM</p>
               <a href="mailto:OMASOLUTIONSRH@GMAIL.COM" class="card-link">
-                Enviar email
+                Send Email
                 <i class="fas fa-arrow-right"></i>
               </a>
             </div>
@@ -41,11 +41,11 @@
               <div class="card-icon">
                 <i class="fas fa-map-marker-alt"></i>
               </div>
-              <h3>Visítanos</h3>
+              <h3>Visit Us</h3>
               <p>JOSE MARIA PINO SUAREZ #4000</p>
               <p>TECATE BAJA CALIFORNIA</p>
               <a href="https://www.google.com.mx/maps/place/Jos%C3%A9+Mar%C3%ADa+Pino+Su%C3%A1rez+4000,+Bellavista,+21440+Tecate,+B.C./@32.5659613,-116.654308,21z/data=!4m6!3m5!1s0x80d912d89712366d:0x14caa25fcba81ed8!8m2!3d32.5659763!4d-116.6544206!16s%2Fg%2F11dxlbk6dr?entry=ttu" target="_blank" rel="noopener noreferrer" class="card-link">
-                Ver mapa
+                View Map
                 <i class="fas fa-arrow-right"></i>
               </a>
             </div>
@@ -55,13 +55,13 @@
             <!-- Contact Form -->
             <FormFrame>
               <div class="form-header mb-8">
-                <h2 class="text-3xl font-bold mb-3">Iniciemos tu proyecto</h2>
-                <p class="text-gray-600">Cuéntanos sobre tu proyecto y nos pondremos en contacto contigo pronto.</p>
+                <h2 class="text-3xl font-bold mb-3">Let's Start Your Project</h2>
+                <p class="text-gray-600">Tell us about your project and we will get in touch with you soon.</p>
               </div>
               
               <form action="https://formspree.io/f/xjkypeqp" method="POST" class="space-y-6" id="contact-form">
                 <div class="form-group">
-                  <label for="name">Nombre</label>
+                  <label for="name">Name</label>
                   <input 
                     id="name" 
                     v-model="formData.name" 
@@ -69,12 +69,12 @@
                     type="text" 
                     required 
                     :class="{ 'has-value': formData.name }" 
-                    placeholder="Tu nombre"
+                    placeholder="Your name"
                   >
                 </div>
 
                 <div class="form-group">
-                  <label for="company">Empresa</label>
+                  <label for="company">Company</label>
                   <input 
                     id="company" 
                     v-model="formData.company" 
@@ -82,12 +82,12 @@
                     type="text" 
                     required 
                     :class="{ 'has-value': formData.company }" 
-                    placeholder="Nombre de tu empresa"
+                    placeholder="Your company name"
                   >
                 </div>
 
                 <div class="form-group">
-                  <label for="email">Correo</label>
+                  <label for="email">Email</label>
                   <input 
                     id="email" 
                     v-model="formData.email" 
@@ -95,12 +95,12 @@
                     type="email" 
                     required 
                     :class="{ 'has-value': formData.email }" 
-                    placeholder="tu@email.com"
+                    placeholder="your@email.com"
                   >
                 </div>
 
                 <div class="form-group">
-                  <label for="phone">Teléfono</label>
+                  <label for="phone">Phone</label>
                   <input 
                     id="phone" 
                     v-model="formData.phone" 
@@ -108,12 +108,12 @@
                     type="tel" 
                     required 
                     :class="{ 'has-value': formData.phone }" 
-                    placeholder="Tu número de teléfono"
+                    placeholder="Your phone number"
                   >
                 </div>
 
                 <div class="form-group">
-                  <label for="message">Mensaje</label>
+                  <label for="message">Message</label>
                   <textarea 
                     id="message" 
                     v-model="formData.message" 
@@ -121,17 +121,17 @@
                     rows="4" 
                     required 
                     :class="{ 'has-value': formData.message }" 
-                    placeholder="Describe brevemente tu proyecto"
+                    placeholder="Briefly describe your project"
                   ></textarea>
                 </div>
 
                 <input type="hidden" name="_next" value="https://omasolutions.netlify.app/thank-you">
-                <input type="hidden" name="_subject" value="Nuevo mensaje desde el sitio web">
+                <input type="hidden" name="_subject" value="New message from the website">
                 <button 
                   type="submit" 
                   class="submit-btn"
                 >
-                  Enviar mensaje
+                  Send Message
                 </button>
               </form>
             </FormFrame>
@@ -144,7 +144,7 @@
                   <div class="header-icon">
                     <i class="fas fa-map-marker-alt"></i>
                   </div>
-                  <h3>Mapa de ubicación</h3>
+                  <h3>Location Map</h3>
                 </div>
                 <div class="map-iframe-wrapper">
                   <iframe 
@@ -168,12 +168,12 @@
                   <div class="header-icon">
                     <i class="fas fa-clock"></i>
                   </div>
-                  <h3>Horario de atención</h3>
+                  <h3>Business Hours</h3>
                 </div>
                 <div class="hours-list">
                   <div v-for="(hours, day) in businessHours" :key="day" class="hours-item">
                     <div class="day-name">{{ day }}</div>
-                    <div class="hour-value" :class="{'closed': hours === 'Cerrado'}">{{ hours }}</div>
+                    <div class="hour-value" :class="{'closed': hours === 'Closed'}">{{ hours }}</div>
                   </div>
                 </div>
               </div>
@@ -215,13 +215,13 @@ export default {
         message: ''
       },
       businessHours: {
-        'Lunes': '6:00 AM - 6:00 PM',
-        'Martes': '6:00 AM - 6:00 PM',
-        'Miércoles': '6:00 AM - 6:00 PM',
-        'Jueves': '6:00 AM - 6:00 PM',
-        'Viernes': '6:00 AM - 6:00 PM',
-        'Sábado': '6:00 AM - 6:00 PM',
-        'Domingo': 'Cerrado'
+        'Monday': '6:00 AM - 6:00 PM',
+        'Tuesday': '6:00 AM - 6:00 PM',
+        'Wednesday': '6:00 AM - 6:00 PM',
+        'Thursday': '6:00 AM - 6:00 PM',
+        'Friday': '6:00 AM - 6:00 PM',
+        'Saturday': '6:00 AM - 6:00 PM',
+        'Sunday': 'Closed'
       }
     }
   },

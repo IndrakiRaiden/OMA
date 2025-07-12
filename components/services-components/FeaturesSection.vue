@@ -2,9 +2,9 @@
   <section class="features-section bg-gray-50 py-16">
     <div class="container mx-auto px-4">
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">¿Por qué elegirnos?</h2>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose Us?</h2>
         <p class="text-gray-600 max-w-2xl mx-auto">
-          Nuestra experiencia y compromiso con la calidad nos distinguen en la industria.
+          Our experience and commitment to quality set us apart in the industry.
         </p>
       </div>
 

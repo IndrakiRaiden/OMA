@@ -1,11 +1,11 @@
 <template>
   <main class="services-page">
     <BannerV2 
-      title="Nuestros Servicios" 
-      subtitle="Soluciones integrales de manufactura CNC"
+      title="Our Services" 
+      subtitle="Comprehensive CNC manufacturing solutions"
       :buttons="[
-        { text: 'Ver Servicios', href: '#servicios', class: 'primary-btn' },
-        { text: 'Cotizar', href: '/cotiza', class: 'secondary-btn' }
+        { text: 'View Services', href: '#servicios', class: 'primary-btn' },
+        { text: 'Get a Quote', href: '/cotiza', class: 'secondary-btn' }
       ]"
     />
     
@@ -13,15 +13,15 @@
     <section id="servicios" class="services-section py-16">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">SERVICIOS PRINCIPALES DE OMA</h2>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">OMA'S MAIN SERVICES</h2>
           <p class="text-gray-600 max-w-2xl mx-auto">
-            Ofrecemos una gama completa de servicios de manufactura y producción, respaldados por años de experiencia y tecnología de punta.
+            We offer a complete range of manufacturing and production services, backed by years of experience and cutting-edge technology.
           </p>
         </div>
         
         <!-- Loading and error states -->
         <div v-if="loading" class="mb-8 p-4 bg-blue-100 rounded text-center">
-          <p>Cargando servicios...</p>
+          <p>Loading services...</p>
         </div>
         
         <div v-if="error" class="mb-8 p-4 bg-red-100 rounded text-center">
@@ -61,7 +61,7 @@
 
               <!-- Button to open service detail modal -->
               <button @click="openServiceDetail(service)" class="learn-more group">
-                <span class="btn-text">Más Información</span>
+                <span class="btn-text">More Information</span>
                 <span class="btn-icon">
                   <i class="fas fa-arrow-right"></i>
                 </span>
@@ -72,7 +72,7 @@
         
         <!-- Fallback if no services found -->
         <div v-else-if="!loading && !error" class="text-center p-8 bg-gray-100 rounded">
-          <p>No se encontraron servicios disponibles.</p>
+          <p>No services available.</p>
         </div>
       </div>
     </section>
@@ -98,7 +98,7 @@
                 <i class="fas fa-wrench"></i>
               </div>
               <h2 class="text-3xl md:text-4xl font-bold text-white">
-                {{ selectedService.titulo || selectedService.attributes?.titulo || 'Servicio' }}
+                {{ selectedService.titulo || selectedService.attributes?.titulo || 'Service' }}
               </h2>
             </div>
           </div>
@@ -106,7 +106,7 @@
           <!-- Service Details -->
           <div class="modal-body">
             <div class="service-description">
-              <h3 class="text-2xl font-bold mb-4">Descripción del Servicio</h3>
+              <h3 class="text-2xl font-bold mb-4">Service Description</h3>
               
               <!-- Rich Text Description -->
               <div class="rich-text-content mb-6">
@@ -143,7 +143,7 @@
                   
                   <!-- Features from service -->
                   <div v-if="getFeatures(selectedService).length > 0" class="mt-6">
-                    <h4 class="text-xl font-bold text-gray-800 mb-3">Características</h4>
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">Features</h4>
                     <ul class="features-list-modal">
                       <li v-for="(feature, index) in getFeatures(selectedService)" :key="index" 
                           class="feature-item-modal">
@@ -160,14 +160,14 @@
             
             <!-- Gallery Section (only in modal) -->
             <div class="service-gallery mt-8">
-              <h3 class="text-2xl font-bold mb-4">Galería</h3>
+              <h3 class="text-2xl font-bold mb-4">Gallery</h3>
               
               <div v-if="serviceGallery && serviceGallery.length > 0" class="gallery-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 <div v-for="(image, index) in serviceGallery" :key="index" class="gallery-item">
                   <div class="gallery-image-container" @click="openLightbox(index)">
                     <img 
                       :src="getGalleryImageUrl(image)" 
-                      :alt="image.attributes?.alternativeText || 'Imagen de galería'"
+                      :alt="image.attributes?.alternativeText || 'Gallery image'"
                       class="w-full h-full object-cover rounded-lg shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer"
                       @error="handleImageError"
                     />
@@ -182,8 +182,8 @@
               
               <div v-else class="text-center py-8 bg-gray-100 rounded-lg">
                 <i class="fas fa-images text-4xl text-gray-400 mb-3"></i>
-                <p class="text-lg font-medium">No hay imágenes disponibles en la galería.</p>
-                <p class="text-sm text-gray-500 mt-2">ID del servicio: {{ selectedService?.id }}</p>
+                <p class="text-lg font-medium">No images available in the gallery.</p>
+                <p class="text-sm text-gray-500 mt-2">Service ID: {{ selectedService?.id }}</p>
               </div>
             </div>
             
@@ -200,7 +200,7 @@
                   <img 
                     v-if="currentLightboxImage" 
                     :src="getGalleryImageUrl(currentLightboxImage)" 
-                    :alt="currentLightboxImage?.attributes?.alternativeText || 'Imagen de galería'"
+                    :alt="currentLightboxImage?.attributes?.alternativeText || 'Gallery image'"
                     class="max-h-[70vh] max-w-full object-contain"
                   />
                 </div>
@@ -234,10 +234,10 @@
             <!-- Call to Action -->
             <div class="modal-cta">
               <NuxtLink to="/cotiza" class="cta-button">
-                Solicitar Cotización
+                Request a Quote
               </NuxtLink>
               <NuxtLink to="/contacto" class="cta-button-secondary">
-                Contactar
+                Contact Us
               </NuxtLink>
             </div>
           </div>
@@ -288,26 +288,26 @@ const currentLightboxImage = computed(() => {
 const features = ref([
   {
     id: 1,
-    title: 'Precisión Garantizada',
-    description: 'Tolerancias exactas en cada pieza',
+    title: 'Guaranteed Precision',
+    description: 'Exact tolerances on every piece',
     icon: 'fa-bullseye'
   },
   {
     id: 2,
-    title: 'Tecnología Avanzada',
-    description: 'Equipos de última generación',
+    title: 'Advanced Technology',
+    description: 'State-of-the-art equipment',
     icon: 'fa-microchip'
   },
   {
     id: 3,
-    title: 'Experiencia Comprobada',
-    description: '+10 años en la industria',
+    title: 'Proven Experience',
+    description: '+10 years in the industry',
     icon: 'fa-certificate'
   },
   {
     id: 4,
-    title: 'Soporte 24/7',
-    description: 'Asistencia técnica continua',
+    title: '24/7 Support',
+    description: 'Continuous technical assistance',
     icon: 'fa-headset'
   }
 ]);
@@ -330,25 +330,25 @@ const fetchServices = async () => {
       headers: getAuthHeaders()
     });
     
-    console.log('Respuesta exitosa');
+    console.log('Successful response');
     
     // Debug the data structure
     if (response.data && response.data.data && response.data.data.length > 0) {
-      console.log('Estructura del primer servicio:', JSON.stringify(response.data.data[0], null, 2));
+      console.log('First service structure:', JSON.stringify(response.data.data[0], null, 2));
     }
     
     // Process the data - Direct assignment like in nicki.vue
     if (response.data && response.data.data) {
       // Data comes directly, not inside attributes
       services.value = response.data.data;
-      console.log(`Conexión exitosa. Se encontraron ${services.value.length} servicios.`);
+      console.log(`Successful connection. Found ${services.value.length} services.`);
     } else {
       services.value = [];
-      console.log('Conexión exitosa, pero no se encontraron servicios en el formato esperado.');
+      console.log('Successful connection, but no services were found in the expected format.');
     }
   } catch (err) {
-    console.error('Error al obtener servicios:', err);
-    error.value = `Error al cargar los servicios: ${err.message}`;
+    console.error('Error getting services:', err);
+    error.value = `Error loading services: ${err.message}`;
   } finally {
     loading.value = false;
   }

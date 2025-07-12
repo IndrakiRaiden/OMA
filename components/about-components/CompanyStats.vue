@@ -2,8 +2,8 @@
   <section class="stats-section">
     <div class="container mx-auto px-4">
       <div class="section-header text-center mb-16">
-        <h2 class="section-title">Nuestro Impacto en Números</h2>
-        <p class="section-subtitle">Resultados que respaldan nuestro compromiso con la excelencia y la innovación</p>
+        <h2 class="section-title">Our Impact in Numbers</h2>
+        <p class="section-subtitle">Results that support our commitment to excellence and innovation</p>
       </div>
       <div class="stats-grid">
         <div v-for="(stat, index) in stats" 
@@ -30,22 +30,22 @@ export default {
         {
           icon: 'fa-calendar-alt',
           number: '15+',
-          label: 'Años de Experiencia'
+          label: 'Years of Experience'
         },
         {
           icon: 'fa-users',
           number: '500+',
-          label: 'Clientes Satisfechos'
+          label: 'Satisfied Clients'
         },
         {
           icon: 'fa-cogs',
           number: '10K+',
-          label: 'Proyectos Completados'
+          label: 'Completed Projects'
         },
         {
           icon: 'fa-industry',
           number: '3',
-          label: 'Centros de Manufactura'
+          label: 'Manufacturing Centers'
         }
       ]
     }

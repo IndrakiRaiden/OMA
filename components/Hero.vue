@@ -3,10 +3,10 @@
     <div class="hero-overlay"></div>
     <div class="hero-bg"></div>
     <div class="hero-content">
-      <span class="pre-title">BIENVENIDOS A</span>
+      <span class="pre-title">WELCOME TO</span>
       <h1 class="hero-title">OMA SOLUTIONS</h1>
       <div class="hero-text">
-        <p class="main-text">Soluciones integrales para proyectos industriales</p>
+        <p class="main-text">Comprehensive solutions for industrial projects</p>
       </div>
       <div class="hero-features">
         <div class="hero-features-row top-row">
@@ -24,11 +24,11 @@
       </div>
       <div class="cta-buttons">
         <NuxtLink to="/cotiza" class="primary-btn">
-          Cotiza tu proyecto
+          Quote your project
           <i class="fas fa-arrow-right"></i>
         </NuxtLink>
         <NuxtLink to="/servicios" class="secondary-btn">
-          Ver servicios
+          View services
           <i class="fas fa-chevron-right"></i>
         </NuxtLink>
       </div>
@@ -43,12 +43,12 @@
 import { ref } from 'vue';
 
 const features = [
-  { icon: 'fas fa-cog', text: 'Maquinado Convencional' },
-  { icon: 'fas fa-industry', text: 'Producción' },
-  { icon: 'fas fa-tools', text: 'Maquinado CNC' },
-  { icon: 'fas fa-bolt', text: 'Corte Láser' },
-  { icon: 'fas fa-spray-can', text: 'Acabados' },
-  { icon: 'fas fa-fill-drip', text: 'Recubrimientos' },
+  { icon: 'fas fa-cog', text: 'Conventional Machining' },
+  { icon: 'fas fa-industry', text: 'Production' },
+  { icon: 'fas fa-tools', text: 'CNC Machining' },
+  { icon: 'fas fa-bolt', text: 'Laser Cutting' },
+  { icon: 'fas fa-spray-can', text: 'Finishes' },
+  { icon: 'fas fa-fill-drip', text: 'Coatings' },
 ];
 </script>
 

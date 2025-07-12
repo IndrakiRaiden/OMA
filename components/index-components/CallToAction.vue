@@ -6,9 +6,9 @@
       <div class="shape"></div>
     </div>
     <div class="cta-content">
-      <h2>Optimiza tu producción con OMA</h2>
-      <p>Hablemos sobre tu proyecto</p>
-      <NuxtLink to="/contact" class="primary-btn">Contacta con nosotros</NuxtLink>
+      <h2>Optimize your production with OMA</h2>
+      <p>Let's talk about your project</p>
+      <NuxtLink to="/contact" class="primary-btn">Contact us</NuxtLink>
     </div>
   </section>
 </template>

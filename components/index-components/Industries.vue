@@ -2,9 +2,9 @@
   <section class="industries">
     <div class="content">
       <div class="section-header" data-aos="fade-up">
-        <span class="pre-title">NUESTRAS INDUSTRIAS</span>
-        <h2 class="title">Experiencia en</h2>
-        <p class="description">Soluciones especializadas para las industrias más exigentes</p>
+        <span class="pre-title">OUR INDUSTRIES</span>
+        <h2 class="title">Experience in</h2>
+        <p class="description">Specialized solutions for the most demanding industries</p>
       </div>
       
       <div class="spacer"></div>
@@ -49,23 +49,23 @@ export default {
       industries: [
         { 
           icon: Plane, 
-          title: 'Aeroespacial',
-          description: 'Fabricación de alta precisión para componentes aeroespaciales con estrictos controles de calidad.'
+          title: 'Aerospace',
+          description: 'High-precision manufacturing for aerospace components with strict quality controls.'
         },
         { 
           icon: Building, 
-          title: 'Construcción',
-          description: 'Servicios de manufactura para elementos estructurales y componentes utilizados en la industria de la construcción.'
+          title: 'Construction',
+          description: 'Manufacturing services for structural elements and components used in the construction industry.'
         },
         { 
           icon: Stethoscope, 
-          title: 'Médica',
-          description: 'Fabricación especializada para dispositivos e instrumentos médicos con altos estándares de calidad.'
+          title: 'Medical',
+          description: 'Specialized manufacturing for medical devices and instruments with high quality standards.'
         },
         { 
           icon: Cpu, 
-          title: 'Electrónica',
-          description: 'Servicios especializados para componentes y carcasas de dispositivos electrónicos.'
+          title: 'Electronics',
+          description: 'Specialized services for components and casings of electronic devices.'
         }
       ]
     }

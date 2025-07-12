@@ -16,7 +16,7 @@
       
       <div class="card-footer">
         <router-link to="/industrias" class="discover-more">
-          <span>Descubre más</span>
+          <span>Discover more</span>
           <i class="fas fa-arrow-right"></i>
         </router-link>
       </div>

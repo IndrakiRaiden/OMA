@@ -3,11 +3,11 @@
     <main class="about-page">
       <AnimatedBackground />
       <BannerV1 
-        title="Sobre Nosotros" 
-        subtitle="Innovación y excelencia en manufactura CNC"
+        title="About Us" 
+        subtitle="Innovation and excellence in CNC manufacturing"
         :buttons="[
-          { text: 'Nuestra Historia', href: '#historia', class: 'primary-btn' },
-          { text: 'Contáctanos', href: '/contact', class: 'secondary-btn' }
+          { text: 'Our History', href: '#historia', class: 'primary-btn' },
+          { text: 'Contact Us', href: '/contact', class: 'secondary-btn' }
         ]"
       />
       

@@ -1,8 +1,8 @@
 <template>
   <section class="benefits">
     <div class="section-header">
-      <span class="subtitle">BENEFICIOS</span>
-      <h2>¿Por qué elegir OMA?</h2>
+      <span class="subtitle">BENEFITS</span>
+      <h2>Why choose OMA?</h2>
     </div>
     <div class="cards-grid">
       <div class="solution-card" style="--card-index: 1">
@@ -10,8 +10,8 @@
           <i class="fas fa-clock"></i>
         </div>
         <div class="card-content">
-          <h3>Ahorro de tiempo</h3>
-          <p>Nos encargamos de todo el proceso.</p>
+          <h3>Time Saving</h3>
+          <p>We take care of the entire process.</p>
         </div>
       </div>
       <div class="solution-card" style="--card-index: 2">
@@ -19,8 +19,8 @@
           <i class="fas fa-certificate"></i>
         </div>
         <div class="card-content">
-          <h3>Calidad garantizada</h3>
-          <p>Productos inspeccionados con estándares industriales.</p>
+          <h3>Guaranteed Quality</h3>
+          <p>Products inspected with industrial standards.</p>
         </div>
       </div>
       <div class="solution-card" style="--card-index: 3">
@@ -28,8 +28,8 @@
           <i class="fas fa-tools"></i>
         </div>
         <div class="card-content">
-          <h3>Flexibilidad</h3>
-          <p>Trabajamos con distintos materiales y procesos.</p>
+          <h3>Flexibility</h3>
+          <p>We work with different materials and processes.</p>
         </div>
       </div>
       <div class="solution-card" style="--card-index: 4">
@@ -37,8 +37,8 @@
           <i class="fas fa-industry"></i>
         </div>
         <div class="card-content">
-          <h3>Experiencia</h3>
-          <p>Contamos con amplia trayectoria en la industria.</p>
+          <h3>Experience</h3>
+          <p>We have extensive experience in the industry.</p>
         </div>
       </div>
     </div>

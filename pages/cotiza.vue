@@ -2,17 +2,17 @@
   <div>
     <main class="quote-page">
       <BannerV1 
-        title="Cotiza tu Proyecto" 
-        subtitle="Obtén una cotización personalizada para tu proyecto"
+        title="Quote Your Project" 
+        subtitle="Get a personalized quote for your project"
         :buttons="[
-          { text: 'Cotizar Ahora', href: '#quote-form', class: 'primary-btn' },
-          { text: 'Ver Servicios', href: '/servicios', class: 'secondary-btn' }
+          { text: 'Quote Now', href: '#quote-form', class: 'primary-btn' },
+          { text: 'View Services', href: '/servicios', class: 'secondary-btn' }
         ]"
       />
       <div id="quote-form" class="quote-content py-16">
         <div class="container mx-auto px-4">
           <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-            <h2 class="text-2xl font-bold mb-6 text-center">Solicitud de Cotización</h2>
+            <h2 class="text-2xl font-bold mb-6 text-center">Quote Request</h2>
             
             <!-- Form Progress Indicator -->
             <div v-if="!formSubmitted" class="mb-8">
@@ -27,7 +27,7 @@
                     {{ step }}
                   </div>
                   <div class="text-sm">
-                    {{ step === 1 ? 'Información' : step === 2 ? 'Proyecto' : 'Presupuesto' }}
+                    {{ step === 1 ? 'Information' : step === 2 ? 'Project' : 'Budget' }}
                   </div>
                 </div>
               </div>
@@ -52,10 +52,10 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 class="text-2xl font-bold text-dark mb-2">¡Solicitud Enviada!</h3>
-              <p class="text-gray mb-6">Hemos recibido tu solicitud de cotización. Nos pondremos en contacto contigo pronto.</p>
+              <h3 class="text-2xl font-bold text-dark mb-2">Request Sent!</h3>
+              <p class="text-gray mb-6">We have received your quote request. We will contact you soon.</p>
               <button @click="formSubmitted = false" class="primary-btn px-6 py-2">
-                Nueva Cotización
+                New Quote
               </button>
             </div>
             
@@ -65,11 +65,11 @@
               <div v-show="currentStep === 1" class="space-y-4">
                 <h3 class="text-xl font-semibold flex items-center">
                   <span class="w-8 h-8 bg-primary text-white rounded-full inline-flex items-center justify-center mr-2">1</span>
-                  Información Personal
+                  Personal Information
                 </h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label class="block text-dark mb-2" for="name">Nombre <span class="text-red-500">*</span></label>
+                    <label class="block text-dark mb-2" for="name">Name <span class="text-red-500">*</span></label>
                     <input 
                       type="text" 
                       id="name" 
@@ -77,7 +77,7 @@
                       v-model="form.name" 
                       class="form-input" 
                       :class="{'border-red-500': errors.name}"
-                      placeholder="Tu nombre completo"
+                      placeholder="Your full name"
                     >
                     <p v-if="errors.name" class="text-red-500 text-sm mt-1">{{ errors.name }}</p>
                   </div>
@@ -90,12 +90,12 @@
                       v-model="form.email" 
                       class="form-input" 
                       :class="{'border-red-500': errors.email}"
-                      placeholder="ejemplo@email.com"
+                      placeholder="example@email.com"
                     >
                     <p v-if="errors.email" class="text-red-500 text-sm mt-1">{{ errors.email }}</p>
                   </div>
                   <div>
-                    <label class="block text-dark mb-2" for="phone">Teléfono <span class="text-red-500">*</span></label>
+                    <label class="block text-dark mb-2" for="phone">Phone <span class="text-red-500">*</span></label>
                     <input 
                       type="tel" 
                       id="phone" 
@@ -103,19 +103,19 @@
                       v-model="form.phone" 
                       class="form-input" 
                       :class="{'border-red-500': errors.phone}"
-                      placeholder="Tu número de teléfono"
+                      placeholder="Your phone number"
                     >
                     <p v-if="errors.phone" class="text-red-500 text-sm mt-1">{{ errors.phone }}</p>
                   </div>
                   <div>
-                    <label class="block text-dark mb-2" for="company">Empresa</label>
+                    <label class="block text-dark mb-2" for="company">Company</label>
                     <input 
                       type="text" 
                       id="company" 
                       name="company"
                       v-model="form.company" 
                       class="form-input"
-                      placeholder="Nombre de tu empresa (opcional)"
+                      placeholder="Your company name (optional)"
                     >
                   </div>
                 </div>
@@ -125,10 +125,10 @@
               <div v-show="currentStep === 2" class="space-y-4">
                 <h3 class="text-xl font-semibold flex items-center">
                   <span class="w-8 h-8 bg-primary text-white rounded-full inline-flex items-center justify-center mr-2">2</span>
-                  Detalles del Proyecto
+                  Project Details
                 </h3>
                 <div>
-                  <label class="block text-dark mb-2" for="service">Tipo de Servicio <span class="text-red-500">*</span></label>
+                  <label class="block text-dark mb-2" for="service">Service Type <span class="text-red-500">*</span></label>
                   <select 
                     id="service" 
                     name="service"
@@ -136,17 +136,17 @@
                     class="form-select" 
                     :class="{'border-red-500': errors.service}"
                   >
-                    <option value="">Selecciona un servicio</option>
-                    <option value="cnc">Maquinado CNC</option>
-                    <option value="impresion-3d">Impresión 3D</option>
-                    <option value="corte-laser">Corte Láser</option>
-                    <option value="prototipado">Prototipado Rápido</option>
-                    <option value="maquinado-convencional">Maquinado Convencional</option>
+                    <option value="">Select a service</option>
+                    <option value="cnc">CNC Machining</option>
+                    <option value="impresion-3d">3D Printing</option>
+                    <option value="corte-laser">Laser Cutting</option>
+                    <option value="prototipado">Rapid Prototyping</option>
+                    <option value="maquinado-convencional">Conventional Machining</option>
                   </select>
                   <p v-if="errors.service" class="text-red-500 text-sm mt-1">{{ errors.service }}</p>
                 </div>
                 <div>
-                  <label class="block text-dark mb-2" for="quantity">Cantidad <span class="text-red-500">*</span></label>
+                  <label class="block text-dark mb-2" for="quantity">Quantity <span class="text-red-500">*</span></label>
                   <input 
                     type="number" 
                     id="quantity" 
@@ -154,7 +154,7 @@
                     v-model="form.quantity" 
                     class="form-input" 
                     :class="{'border-red-500': errors.quantity}"
-                    placeholder="Número de unidades requeridas"
+                    placeholder="Number of units required"
                     min="1"
                   >
                   <p v-if="errors.quantity" class="text-red-500 text-sm mt-1">{{ errors.quantity }}</p>
@@ -168,18 +168,18 @@
                     class="form-select" 
                     :class="{'border-red-500': errors.material}"
                   >
-                    <option value="">Selecciona un material</option>
-                    <option value="aluminio">Aluminio</option>
-                    <option value="acero">Acero</option>
-                    <option value="acero-inoxidable">Acero Inoxidable</option>
-                    <option value="plastico">Plástico</option>
-                    <option value="madera">Madera</option>
-                    <option value="otro">Otro (especificar en descripción)</option>
+                    <option value="">Select a material</option>
+                    <option value="aluminio">Aluminum</option>
+                    <option value="acero">Steel</option>
+                    <option value="acero-inoxidable">Stainless Steel</option>
+                    <option value="plastico">Plastic</option>
+                    <option value="madera">Wood</option>
+                    <option value="otro">Other (specify in description)</option>
                   </select>
                   <p v-if="errors.material" class="text-red-500 text-sm mt-1">{{ errors.material }}</p>
                 </div>
                 <div>
-                  <label class="block text-dark mb-2" for="specifications">Planos o especificaciones técnicas</label>
+                  <label class="block text-dark mb-2" for="specifications">Plans or technical specifications</label>
                   <textarea 
                     id="specifications" 
                     name="specifications"
@@ -187,11 +187,11 @@
                     class="form-textarea" 
                     rows="3" 
                     maxlength="500"
-                    placeholder="Detalla las especificaciones técnicas o menciona si incluirás planos en los archivos adjuntos (opcional)"
+                    placeholder="Detail the technical specifications or mention if you will include plans in the attached files (optional)"
                   ></textarea>
                 </div>
                 <div>
-                  <label class="block text-dark mb-2" for="description">Descripción del Proyecto <span class="text-red-500">*</span></label>
+                  <label class="block text-dark mb-2" for="description">Project Description <span class="text-red-500">*</span></label>
                   <textarea 
                     id="description" 
                     name="description"
@@ -200,12 +200,12 @@
                     rows="4" 
                     :class="{'border-red-500': errors.description}"
                     maxlength="1000"
-                    placeholder="Describe tu proyecto, necesidades específicas y expectativas"
+                    placeholder="Describe your project, specific needs and expectations"
                   ></textarea>
                   <p v-if="errors.description" class="text-red-500 text-sm mt-1">{{ errors.description }}</p>
                 </div>
                 <div>
-                  <label class="block text-dark mb-2">Archivos Adjuntos</label>
+                  <label class="block text-dark mb-2">Attached Files</label>
                   <div class="border-2 border-dashed border-gray rounded-lg p-4 text-center">
                     <input 
                       type="file" 
@@ -219,12 +219,12 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-gray mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                         </svg>
-                        <span class="text-gray font-medium">Haz clic para subir archivos o arrastra y suelta</span>
-                        <span class="text-xs text-gray mt-1">Formatos aceptados: CAD, PDF, JPG, PNG (máx. 10MB)</span>
+                        <span class="text-gray font-medium">Click to upload files or drag and drop</span>
+                        <span class="text-xs text-gray mt-1">Accepted formats: CAD, PDF, JPG, PNG (max. 10MB)</span>
                       </div>
                     </label>
                     <div v-if="form.files.length > 0" class="mt-4">
-                      <h4 class="font-semibold text-dark mb-2 text-left">Archivos seleccionados:</h4>
+                      <h4 class="font-semibold text-dark mb-2 text-left">Selected files:</h4>
                       <ul class="text-left">
                         <li v-for="(file, index) in form.files" :key="index" class="flex justify-between items-center py-1">
                           <span class="text-sm truncate max-w-xs">{{ file.name }}</span>
@@ -244,14 +244,14 @@
                 </div>
               </div>
 
-              <!-- Step 3: Presupuesto y Finalización -->
+              <!-- Step 3: Budget and Completion -->
               <div v-show="currentStep === 3" class="space-y-4">
                 <h3 class="text-xl font-semibold flex items-center">
                   <span class="w-8 h-8 bg-primary text-white rounded-full inline-flex items-center justify-center mr-2">3</span>
-                  Presupuesto y Finalización
+                  Budget and Completion
                 </h3>
                 <div>
-                  <label class="block text-dark mb-2" for="budget">Rango de Presupuesto <span class="text-red-500">*</span></label>
+                  <label class="block text-dark mb-2" for="budget">Budget Range <span class="text-red-500">*</span></label>
                   <select 
                     id="budget" 
                     name="budget"
@@ -259,19 +259,19 @@
                     class="form-select" 
                     :class="{'border-red-500': errors.budget}"
                   >
-                    <option value="">Selecciona un rango</option>
-                    <option value="menos-5000">Menos de $5,000 MXN</option>
+                    <option value="">Select a range</option>
+                    <option value="menos-5000">Less than $5,000 MXN</option>
                     <option value="5000-10000">$5,000 - $10,000 MXN</option>
                     <option value="10000-25000">$10,000 - $25,000 MXN</option>
                     <option value="25000-50000">$25,000 - $50,000 MXN</option>
-                    <option value="mas-50000">Más de $50,000 MXN</option>
+                    <option value="mas-50000">More than $50,000 MXN</option>
                   </select>
                   <p v-if="errors.budget" class="text-red-500 text-sm mt-1">{{ errors.budget }}</p>
                 </div>
                 
-                <!-- Mostrar archivos seleccionados -->
+                <!-- Display selected files -->
                 <div v-if="form.files.length > 0" class="mb-4">
-                  <h4 class="font-semibold text-dark mb-2">Archivos seleccionados:</h4>
+                  <h4 class="font-semibold text-dark mb-2">Selected files:</h4>
                   <ul class="text-left">
                     <li v-for="(file, index) in form.files" :key="index" class="flex justify-between items-center py-1">
                       <span class="text-sm truncate max-w-xs">{{ file.name }}</span>
@@ -280,25 +280,25 @@
                 </div>
 
                 <div class="bg-gray-50 p-4 rounded-lg">
-                  <h4 class="font-semibold text-dark mb-3">¿Por qué elegir nuestros servicios?</h4>
+                  <h4 class="font-semibold text-dark mb-3">Why choose our services?</h4>
                   <ul class="space-y-2">
                     <li class="flex items-start">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                       </svg>
-                      <span class="text-sm">Más de 10 años de experiencia en la industria</span>
+                      <span class="text-sm">More than 10 years of experience in the industry</span>
                     </li>
                     <li class="flex items-start">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                       </svg>
-                      <span class="text-sm">Tecnología de última generación para resultados precisos</span>
+                      <span class="text-sm">State-of-the-art technology for precise results</span>
                     </li>
                     <li class="flex items-start">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                       </svg>
-                      <span class="text-sm">Soporte personalizado durante todo el proceso</span>
+                      <span class="text-sm">Personalized support throughout the entire process</span>
                     </li>
                   </ul>
                 </div>
@@ -315,7 +315,7 @@
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                   </svg>
-                  Anterior
+                  Previous
                 </button>
                 <div v-else></div>
                 
@@ -325,7 +325,7 @@
                   @click="nextStep" 
                   class="primary-btn px-6 py-2 flex items-center"
                 >
-                  Siguiente
+                  Next
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                   </svg>
@@ -341,10 +341,10 @@
                       <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                       <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
-                    Enviando...
+                    Sending...
                   </span>
                   <span v-else>
-                    Solicitar Cotización
+                    Request Quote
                   </span>
                 </button>
               </div>
@@ -367,13 +367,13 @@ export default {
     BannerV1
   },
   async mounted() {
-    // Inicializar EmailJS con tu clave pública
+    // Initialize EmailJS with your public key
     emailjs.init('rXHgdC4BNuJObWyvd');
     console.log('EmailJS initialized');
     
-    // Probar la conexión con PocketBase
+    // Test the connection with PocketBase
     const connectionTest = await testConnection();
-    console.log('Resultado de prueba de conexión:', connectionTest);
+    console.log('Connection test result:', connectionTest);
   },
   data() {
     return {

@@ -12,21 +12,21 @@
               <span class="logo-subtitle">INDUSTRIAL</span>
             </div>
           </div>
-          <p class="tagline">Precisión. Innovación. Excelencia.</p>
+          <p class="tagline">Precision. Innovation. Excellence.</p>
         </div>
 
         <div class="quick-contact">
           <div class="contact-card" @click="makePhoneCall">
             <i class="fas fa-phone"></i>
             <div>
-              <span>Llámanos</span>
+              <span>Call us</span>
               <strong>{{ contactInfo.phone }}</strong>
             </div>
           </div>
           <div class="contact-card" @click="sendEmail">
             <i class="fas fa-envelope"></i>
             <div>
-              <span>Escríbenos</span>
+              <span>Email us</span>
               <strong>{{ contactInfo.email }}</strong>
             </div>
           </div>
@@ -35,25 +35,25 @@
 
       <div class="footer-grid">
         <div class="footer-col">
-          <h3>Navegación</h3>
+          <h3>Navigation</h3>
           <ul>
-            <li><NuxtLink to="/">Inicio</NuxtLink></li>
-            <li><NuxtLink to="/about">Nosotros</NuxtLink></li>
-            <li><NuxtLink to="/contact">Contacto</NuxtLink></li>
+            <li><NuxtLink to="/">Home</NuxtLink></li>
+            <li><NuxtLink to="/about">About Us</NuxtLink></li>
+            <li><NuxtLink to="/contact">Contact</NuxtLink></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h3>Servicios</h3>
+          <h3>Services</h3>
           <ul>
-            <li><NuxtLink to="/servicios">Servicios</NuxtLink></li>
-            <li><NuxtLink to="/industrias">Industrias</NuxtLink></li>
-            <li><NuxtLink to="/cotiza">Cotiza tu Proyecto</NuxtLink></li>
+            <li><NuxtLink to="/servicios">Services</NuxtLink></li>
+            <li><NuxtLink to="/industrias">Industries</NuxtLink></li>
+            <li><NuxtLink to="/cotiza">Quote Your Project</NuxtLink></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h3>Ayuda</h3>
+          <h3>Help</h3>
           <ul>
             <li><NuxtLink to="/faqs">FAQs</NuxtLink></li>
           </ul>
@@ -70,7 +70,7 @@
         </div>
 
         <div class="footer-col">
-          <h3>Ubicación</h3>
+          <h3>Location</h3>
           <div class="location-info">
             <div class="location-item location-address" @click="openMap">
               <i class="fas fa-map-marker-alt"></i>
@@ -78,7 +78,7 @@
             </div>
             <div class="location-item location-hours">
               <i class="fas fa-clock"></i>
-              <span>Horario: {{ contactInfo.businessHours }}</span>
+              <span>Hours: {{ contactInfo.businessHours }}</span>
             </div>
           </div>
         </div>
@@ -86,7 +86,7 @@
 
       <div class="footer-bottom">
         <div class="copyright">
-          <p>&copy; {{ new Date().getFullYear() }} OMA Industrial. Todos los derechos reservados.</p>
+          <p>&copy; {{ new Date().getFullYear() }} OMA Industrial. All rights reserved.</p>
         </div>
       </div>
     </div>
@@ -109,7 +109,7 @@ export default {
         phone: '+52 6651219080',
         email: 'OMASOLUTIONSRH@GMAIL.COM',
         address: 'JOSE MARIA PINO SUAREZ #4000 TECATE BAJA CALIFORNIA',
-        businessHours: '6 AM A 6 PM',
+        businessHours: '6 AM to 6 PM',
         mapUrl: 'https://www.google.com.mx/maps/place/Jos%C3%A9+Mar%C3%ADa+Pino+Su%C3%A1rez+4000,+Bellavista,+21440+Tecate,+B.C./@32.5659613,-116.654308,21z/data=!4m6!3m5!1s0x80d912d89712366d:0x14caa25fcba81ed8!8m2!3d32.5659763!4d-116.6544206!16s%2Fg%2F11dxlbk6dr?entry=ttu'
       }
     }
