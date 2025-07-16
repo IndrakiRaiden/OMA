@@ -50,7 +50,7 @@ import CTASection from '../../components/common/CTASection.vue'
 import { IndustryModel } from '../../models/IndustryModel'
 
 export default {
-  name: 'IndustriaAlimentos',
+  name: 'FoodIndustry',
   layout: 'industry',
   components: {
     BannerV3,
@@ -67,135 +67,135 @@ export default {
   data() {
     return {
       industry: this.getDefaultIndustryData(),
-      slug: 'alimentos'
+      slug: 'food'
     }
   },
   methods: {
     getDefaultIndustryData() {
       return {
         banner: {
-          title: "Industria Alimentaria",
-          subtitle: "Soluciones de manufactura para equipos de procesamiento de alimentos",
+          title: "Food Industry",
+          subtitle: "Manufacturing solutions for food processing equipment",
           buttons: [
-            { text: 'Ver Servicios', href: '#servicios', class: 'primary-btn' },
-            { text: 'Contáctanos', href: '../contact', class: 'secondary-btn' }
+            { text: 'View Services', href: '#servicios', class: 'primary-btn' },
+            { text: 'Contact Us', href: '../contact', class: 'secondary-btn' }
           ]
         },
         details: {
-          titlePrefix: "Soluciones para la",
-          titleHighlight: "Industria Alimentaria",
-          description: "Ofrecemos servicios especializados de manufactura para el sector alimentario, con altos estándares de calidad e higiene. Nuestros procesos cumplen con los rigurosos requisitos de la industria alimentaria, garantizando componentes seguros y eficientes para el procesamiento de alimentos.",
+          titlePrefix: "Solutions for the",
+          titleHighlight: "Food Industry",
+          description: "We offer specialized manufacturing services for the food sector, with high standards of quality and hygiene. Our processes meet the rigorous requirements of the food industry, ensuring safe and efficient components for food processing.",
           features: [
-            "Componentes para equipos de procesamiento",
-            "Piezas para sistemas de envasado",
-            "Elementos para maquinaria de dosificación",
-            "Componentes para sistemas de transporte",
-            "Piezas para equipos de cocción industrial"
+            "Components for processing equipment",
+            "Parts for packaging systems",
+            "Elements for dosing machinery",
+            "Components for transport systems",
+            "Parts for industrial cooking equipment"
           ],
           imageUrl: "/images/industries/galleryaliments/Alimentos 2.webp"
         },
         capabilities: {
-          titlePrefix: "Nuestras",
-          titleHighlight: "Capacidades",
-          description: "Contamos con la experiencia y la tecnología para fabricar componentes y equipos que cumplen con los más altos estándares de la industria alimentaria.",
+          titlePrefix: "Our",
+          titleHighlight: "Capabilities",
+          description: "We have the experience and technology to manufacture components and equipment that meet the highest standards of the food industry.",
           capacities: [
             {
-              title: "Manufactura en Acero Inoxidable",
-              description: "Especialistas en la fabricación de componentes en acero inoxidable para entornos de procesamiento de alimentos.",
+              title: "Stainless Steel Manufacturing",
+              description: "Specialists in the manufacturing of stainless steel components for food processing environments.",
               icon: "fa-utensils",
               items: [
-                "Grados 304, 316 y otros aceros inoxidables",
-                "Acabados sanitarios y electropulidos",
-                "Soldaduras de alta calidad sin contaminantes"
+                "Grades 304, 316 and other stainless steels",
+                "Sanitary and electropolished finishes",
+                "High-quality welds without contaminants"
               ]
             },
             {
-              title: "Sistemas de Transporte y Dosificación",
-              description: "Componentes y sistemas para el transporte, dosificación y mezcla de productos alimenticios.",
+              title: "Transport and Dosing Systems",
+              description: "Components and systems for the transport, dosing, and mixing of food products.",
               icon: "fa-conveyor-belt",
               items: [
-                "Tornillos sin fin y sistemas de transporte",
-                "Dosificadores de precisión para ingredientes",
-                "Componentes para sistemas de mezcla"
+                "Auger screws and transport systems",
+                "Precision dosers for ingredients",
+                "Components for mixing systems"
               ]
             },
             {
-              title: "Equipos de Procesamiento",
-              description: "Soluciones para equipos de procesamiento, cocción y conservación de alimentos.",
+              title: "Processing Equipment",
+              description: "Solutions for food processing, cooking, and preservation equipment.",
               icon: "fa-temperature-high",
               items: [
-                "Componentes para hornos y cámaras de cocción",
-                "Piezas para sistemas de refrigeración",
-                "Elementos para máquinas de envasado"
+                "Components for ovens and cooking chambers",
+                "Parts for refrigeration systems",
+                "Elements for packaging machines"
               ]
             }
           ]
         },
         gallery: {
-          titlePrefix: "Nuestra",
-          titleHighlight: "Galería",
-          description: "Explora algunos de nuestros proyectos y componentes fabricados para la industria alimentaria.",
-          showMoreButtonText: "Ver Más Proyectos",
+          titlePrefix: "Our",
+          titleHighlight: "Gallery",
+          description: "Explore some of our projects and components manufactured for the food industry.",
+          showMoreButtonText: "View More Projects",
           galleryCategories: [
-            { id: 'all', name: 'Todos' }
+            { id: 'all', name: 'All' }
           ],
           galleryItems: [
             {
               id: 1,
-              title: "Mezcladores para lácteos",
-              description: "Sistemas de mezcla de alta precisión para productos lácteos.",
+              title: "Dairy mixers",
+              description: "High-precision mixing systems for dairy products.",
               category: "processing",
               imageUrl: "/images/industries/galleryaliments/Alimentos 2.webp"
             },
             {
               id: 2,
-              title: "Cintas transportadoras",
-              description: "Sistemas de transporte para líneas de producción alimentaria.",
+              title: "Conveyor belts",
+              description: "Transport systems for food production lines.",
               category: "handling",
               imageUrl: "/images/industries/galleryaliments/Alimentos 3.webp"
             },
             {
               id: 3,
-              title: "Componentes para embotelladoras",
-              description: "Piezas de precisión para máquinas de embotellado.",
+              title: "Bottling components",
+              description: "Precision parts for bottling machines.",
               category: "packaging",
               imageUrl: "/images/industries/galleryaliments/Alimentos 4.webp"
             },
             {
               id: 4,
-              title: "Sistemas de cocción",
-              description: "Componentes para equipos de cocción industrial.",
+              title: "Cooking systems",
+              description: "Components for industrial cooking equipment.",
               category: "processing",
               imageUrl: "/images/industries/galleryaliments/Alimentos 5.webp"
             },
             {
               id: 5,
-              title: "Dosificadores para panadería",
-              description: "Sistemas de dosificación precisa para ingredientes de panadería.",
+              title: "Bakery dosing systems",
+              description: "Precise dosing systems for bakery ingredients.",
               category: "handling",
               imageUrl: "/images/industries/galleryaliments/Alimentos 8.webp"
             },
             {
               id: 6,
-              title: "Máquinas envasadoras",
-              description: "Componentes para sistemas de envasado al vacío y atmósfera modificada.",
+              title: "Packaging machines",
+              description: "Components for vacuum and modified atmosphere packaging systems.",
               category: "packaging",
               imageUrl: "/images/industries/galleryaliments/Alimentos 9.webp"
             }
           ]
         },
         cta: {
-          title: "¿Listo para optimizar su procesamiento de alimentos?",
-          subtitle: "Contáctenos hoy para conocer cómo nuestras soluciones de manufactura pueden mejorar la eficiencia, higiene y productividad de sus líneas de procesamiento de alimentos.",
-          buttonText: "Solicitar Información",
+          title: "Ready to optimize your food processing?",
+          subtitle: "Contact us today to learn how our manufacturing solutions can improve the efficiency, hygiene, and productivity of your food processing lines.",
+          buttonText: "Request Information",
           buttonLink: "../contact"
         }
       }
     }
   },
   head() {
-    const defaultTitle = 'Industria Alimentaria | OMA - Servicios de Manufactura'
-    const defaultDescription = 'Soluciones de manufactura de precisión para la industria alimentaria y procesamiento de alimentos.'
+    const defaultTitle = 'Food Industry | OMA - Manufacturing Services'
+    const defaultDescription = 'Precision manufacturing solutions for the food industry and food processing.'
     
     return {
       title: this.industry?.seo?.title || defaultTitle,

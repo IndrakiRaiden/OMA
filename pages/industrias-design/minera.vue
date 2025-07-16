@@ -50,7 +50,7 @@ import CTASection from '../../components/common/CTASection.vue'
 import { IndustryModel } from '../../models/IndustryModel'
 
 export default {
-  name: 'IndustriaMinera',
+  name: 'MiningIndustry',
   components: {
     BannerV3,
     DetallesIndustria,
@@ -67,121 +67,121 @@ export default {
   data() {
     return {
       industry: this.getDefaultIndustryData(),
-      slug: 'minera'
+      slug: 'mining'
     }
   },
   methods: {
     getDefaultIndustryData() {
       return {
         banner: {
-          title: "Industria Minera",
-          subtitle: "Soluciones robustas para equipos y componentes mineros",
+          title: "Mining Industry",
+          subtitle: "Robust solutions for mining equipment and components",
           buttons: [
-            { text: 'Ver Servicios', to: '/servicios', class: 'primary-btn' },
-            { text: 'Contáctanos', to: '/contact', class: 'secondary-btn' }
+            { text: 'View Services', to: '/servicios', class: 'primary-btn' },
+            { text: 'Contact Us', to: '/contact', class: 'secondary-btn' }
           ]
         },
         details: {
-          titlePrefix: "Soluciones para la",
-          titleHighlight: "Industria Minera",
-          description: "Ofrecemos servicios especializados de manufactura para el sector minero, con altos estándares de calidad y durabilidad. Nuestros procesos están diseñados para cumplir con los exigentes requisitos de la industria minera, garantizando componentes resistentes a condiciones extremas.",
+          titlePrefix: "Solutions for the",
+          titleHighlight: "Mining Industry",
+          description: "We offer specialized manufacturing services for the mining sector, with high standards of quality and durability. Our processes are designed to meet the demanding requirements of the mining industry, ensuring components resistant to extreme conditions.",
           features: [
-            "Componentes para equipos de trituración",
-            "Piezas para sistemas de transporte",
-            "Elementos para maquinaria de perforación",
-            "Componentes resistentes a la abrasión",
-            "Piezas para equipos de procesamiento"
+            "Components for crushing equipment",
+            "Parts for transport systems",
+            "Elements for drilling machinery",
+            "Abrasion-resistant components",
+            "Parts for processing equipment"
           ],
           imageUrl: "/images/industries/galleryminery/Minera+1.webp"
         },
         capabilities: {
-          titlePrefix: "Nuestras",
-          titleHighlight: "Especialidades",
-          description: "Nuestra experiencia en la industria minera nos permite ofrecer soluciones que combinan durabilidad, resistencia y precisión para los entornos más exigentes.",
+          titlePrefix: "Our",
+          titleHighlight: "Specialties",
+          description: "Our experience in the mining industry allows us to offer solutions that combine durability, resistance, and precision for the most demanding environments.",
           capacities: [
             {
-              title: "Componentes Resistentes",
-              description: "Fabricación de componentes metálicos resistentes a la abrasión, corrosión y altas temperaturas para equipos de minería.",
+              title: "Resistant Components",
+              description: "Manufacturing of metal components resistant to abrasion, corrosion, and high temperatures for mining equipment.",
               icon: "fa-cogs",
               items: [
-                "Aceros de alta resistencia",
-                "Tratamientos térmicos especializados",
-                "Aleaciones especiales"
+                "High-strength steels",
+                "Specialized heat treatments",
+                "Special alloys"
               ]
             },
             {
-              title: "Herramientas Especializadas",
-              description: "Diseño y fabricación de herramientas personalizadas para operaciones específicas de minería y extracción.",
+              title: "Specialized Tools",
+              description: "Design and manufacturing of custom tools for specific mining and extraction operations.",
               icon: "fa-tools",
               items: [
-                "Herramientas de perforación",
-                "Equipos de corte y trituración",
-                "Sistemas de sujeción"
+                "Drilling tools",
+                "Cutting and crushing equipment",
+                "Fastening systems"
               ]
             },
             {
-              title: "Equipos de Seguridad",
-              description: "Soluciones para equipos de seguridad y protección que cumplen con las normativas más estrictas del sector minero.",
+              title: "Safety Equipment",
+              description: "Solutions for safety and protection equipment that comply with the strictest regulations in the mining sector.",
               icon: "fa-hard-hat",
               items: [
-                "Componentes para sistemas de monitoreo",
-                "Estructuras de protección",
-                "Piezas para equipos de ventilación"
+                "Components for monitoring systems",
+                "Protective structures",
+                "Parts for ventilation equipment"
               ]
             }
           ]
         },
         gallery: {
-          titlePrefix: "Nuestra",
-          titleHighlight: "Galería",
-          description: "Explora algunos de nuestros proyectos y componentes fabricados para la industria minera.",
-          showMoreButtonText: "Ver Más Proyectos",
+          titlePrefix: "Our",
+          titleHighlight: "Gallery",
+          description: "Explore some of our projects and components manufactured for the mining industry.",
+          showMoreButtonText: "View More Projects",
           galleryCategories: [
-            { id: 'all', name: 'Todos' }
+            { id: 'all', name: 'All' }
           ],
           galleryItems: [
             {
               id: 1,
-              title: "Componentes para Trituradora",
+              title: "Crusher Components",
               category: "components",
               imageUrl: "/images/industries/galleryminery/Minera+1.webp"
             },
             {
               id: 2,
-              title: "Sistema de Filtración Industrial",
+              title: "Industrial Filtration System",
               category: "equipment",
               imageUrl: "/images/industries/galleryminery/Minera+2.webp"
             },
             {
               id: 3,
-              title: "Herramientas de Perforación",
+              title: "Drilling Tools",
               category: "tools",
               imageUrl: "/images/industries/galleryminery/Minera+3.webp"
             },
             {
               id: 4,
-              title: "Engranajes de Alta Resistencia",
+              title: "High-Strength Gears",
               category: "components",
               imageUrl: "/images/industries/galleryminery/Minera+4.webp"
             },
             {
               id: 5,
-              title: "Estructuras de Soporte",
+              title: "Support Structures",
               category: "equipment",
               imageUrl: "/images/industries/galleryminery/Minera+5.webp"
             },
             {
               id: 6,
-              title: "Equipos de Extracción",
+              title: "Extraction Equipment",
               category: "tools",
               imageUrl: "/images/industries/galleryminery/Minera+6.webp"
             }
           ]
         },
         cta: {
-          title: "¿Listo para impulsar su operación minera?",
-          subtitle: "Contáctenos hoy para discutir sus necesidades específicas y descubrir cómo nuestros servicios de manufactura pueden ayudar a su empresa a alcanzar nuevos niveles de eficiencia y rendimiento.",
-          buttonText: "Solicitar Información",
+          title: "Ready to boost your mining operation?",
+          subtitle: "Contact us today to discuss your specific needs and discover how our manufacturing services can help your company reach new levels of efficiency and performance.",
+          buttonText: "Request Information",
           buttonLink: "/contact"
         }
       }
@@ -189,9 +189,9 @@ export default {
   },
   head() {
     return {
-      title: 'Industria Minera | OMA - Servicios de Manufactura',
+      title: 'Mining Industry | OMA - Manufacturing Services',
       meta: [
-        { hid: 'description', name: 'description', content: 'Soluciones robustas para equipos y componentes utilizados en la exigente industria minera.' }
+        { hid: 'description', name: 'description', content: 'Robust solutions for equipment and components used in the demanding mining industry.' }
       ]
     }
   }

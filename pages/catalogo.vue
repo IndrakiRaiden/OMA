@@ -1,11 +1,11 @@
 <template>
   <main class="catalog-page">
     <BannerV2 
-      title="Catálogo de Productos" 
-      subtitle="Explora nuestra selección de productos y soluciones de alta precisión"
+      title="Product Catalog" 
+      subtitle="Explore our selection of high-precision products and solutions"
       :buttons="[
-        { text: 'Ver Catálogo', href: '#catalogo', class: 'primary-btn' },
-        { text: 'Cotizar', href: '/cotiza', class: 'secondary-btn' }
+        { text: 'View Catalog', href: '#catalogo', class: 'primary-btn' },
+        { text: 'Request Quote', href: '/cotiza', class: 'secondary-btn' }
       ]"
     />
     
@@ -13,9 +13,9 @@
     <section id="catalogo" class="catalog-section py-16 overflow-x-hidden">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">NUESTRO CATÁLOGO</h2>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">OUR CATALOG</h2>
           <p class="text-gray-600 max-w-2xl mx-auto">
-            Descubre nuestra amplia gama de productos y soluciones de manufactura CNC, diseñados para satisfacer las necesidades de diversas industrias.
+            Discover our wide range of CNC manufacturing products and solutions, designed to meet the needs of various industries.
           </p>
         </div>
         
@@ -26,7 +26,7 @@
               @click="selectedCategory = ''"
               :class="['category-btn', !selectedCategory ? 'active' : '']"
             >
-              Todos
+              All
             </button>
             <button 
               v-for="category in categories" 
@@ -102,26 +102,26 @@ const filteredItems = computed(() => {
 const features = ref([
   {
     id: 1,
-    title: 'Calidad Garantizada',
-    description: 'Todos nuestros productos cumplen con los más altos estándares de calidad',
+    title: 'Guaranteed Quality',
+    description: 'All our products meet the highest quality standards',
     icon: 'fa-award'
   },
   {
     id: 2,
-    title: 'Personalización Total',
-    description: 'Adaptamos nuestros productos a tus necesidades específicas',
+    title: 'Complete Customization',
+    description: 'We adapt our products to your specific needs',
     icon: 'fa-sliders-h'
   },
   {
     id: 3,
-    title: 'Soporte Técnico',
-    description: 'Equipo de expertos disponible para asesorarte',
+    title: 'Technical Support',
+    description: 'Team of experts available to advise you',
     icon: 'fa-headset'
   },
   {
     id: 4,
-    title: 'Entrega Puntual',
-    description: 'Cumplimos con los plazos de entrega acordados',
+    title: 'Punctual Delivery',
+    description: 'We meet agreed delivery deadlines',
     icon: 'fa-shipping-fast'
   }
 ]);

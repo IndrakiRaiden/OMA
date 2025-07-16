@@ -50,7 +50,7 @@ import CTASection from '../../components/common/CTASection.vue'
 import { IndustryModel } from '../../models/IndustryModel'
 
 export default {
-  name: 'IndustriaAeroespacial',
+  name: 'AerospaceIndustry',
   layout: 'industry',
   components: {
     BannerV3,
@@ -67,136 +67,136 @@ export default {
   data() {
     return {
       industry: this.getDefaultIndustryData(),
-      slug: 'aeroespacial'
+      slug: 'aerospace'
     }
   },
   methods: {
     getDefaultIndustryData() {
       return {
         banner: {
-          title: "Industria Aeroespacial",
-          subtitle: "Soluciones de manufactura de precisión para componentes aeroespaciales",
+          title: "Aerospace Industry",
+          subtitle: "Precision manufacturing solutions for aerospace components",
           buttons: [
-            { text: 'Ver Servicios', href: '#servicios', class: 'primary-btn' },
-            { text: 'Contáctanos', to: '/contact', class: 'secondary-btn' }
+            { text: 'View Services', href: '#servicios', class: 'primary-btn' },
+            { text: 'Contact Us', to: '/contact', class: 'secondary-btn' }
           ]
         },
         details: {
-          titlePrefix: "Soluciones para la",
-          titleHighlight: "Industria Aeroespacial",
-          description: "Ofrecemos servicios especializados de manufactura para el sector aeroespacial, cumpliendo con los más altos estándares de calidad y precisión. Nuestros procesos están certificados para satisfacer los rigurosos requisitos de la industria aeroespacial, garantizando componentes fiables y de alto rendimiento.",
+          titlePrefix: "Solutions for the",
+          titleHighlight: "Aerospace Industry",
+          description: "We offer specialized manufacturing services for the aerospace sector, meeting the highest standards of quality and precision. Our processes are certified to meet the rigorous requirements of the aerospace industry, ensuring reliable and high-performance components.",
           features: [
-            "Componentes para sistemas de propulsión",
-            "Piezas estructurales ligeras y resistentes",
-            "Elementos para sistemas de navegación",
-            "Componentes para trenes de aterrizaje",
-            "Piezas para sistemas de control de vuelo"
+            "Components for propulsion systems",
+            "Lightweight and resistant structural parts",
+            "Elements for navigation systems",
+            "Components for landing gear",
+            "Parts for flight control systems"
           ],
           imageUrl: "/images/industries/galleryaerospacial/Aeroespacial 2.webp"
         },
         capabilities: {
-          titlePrefix: "Nuestras",
-          titleHighlight: "Capacidades",
-          description: "Contamos con la tecnología y el conocimiento para fabricar componentes aeroespaciales de alta precisión, cumpliendo con las certificaciones y estándares más rigurosos.",
+          titlePrefix: "Our",
+          titleHighlight: "Capabilities",
+          description: "We have the technology and knowledge to manufacture high-precision aerospace components, meeting the most rigorous certifications and standards.",
           capacities: [
             {
-              title: "Precisión Extrema",
-              description: "Fabricación de componentes con tolerancias extremadamente estrictas y acabados superficiales excepcionales.",
+              title: "Extreme Precision",
+              description: "Manufacturing of components with extremely strict tolerances and exceptional surface finishes.",
               icon: "fa-ruler-combined",
               items: [
-                "Tolerancias de ±0.005mm",
-                "Acabados superficiales de clase aeroespacial",
-                "Mediciones con CMM certificada"
+                "Tolerances of ±0.005mm",
+                "Aerospace-class surface finishes",
+                "Measurements with certified CMM"
               ]
             },
             {
-              title: "Materiales Avanzados",
-              description: "Experiencia en el mecanizado de aleaciones especiales y materiales avanzados utilizados en la industria aeroespacial.",
+              title: "Advanced Materials",
+              description: "Experience in machining special alloys and advanced materials used in the aerospace industry.",
               icon: "fa-atom",
               items: [
-                "Titanio y aleaciones de titanio",
-                "Aleaciones de aluminio aeroespacial",
-                "Inconel y superaleaciones",
-                "Materiales compuestos"
+                "Titanium and titanium alloys",
+                "Aerospace aluminum alloys",
+                "Inconel and superalloys",
+                "Composite materials"
               ]
             },
             {
-              title: "Certificaciones y Calidad",
-              description: "Cumplimos con los estándares de calidad más estrictos de la industria aeroespacial.",
+              title: "Certifications and Quality",
+              description: "We comply with the strictest quality standards in the aerospace industry.",
               icon: "fa-certificate",
               items: [
-                "Sistema de gestión de calidad robusto",
-                "Trazabilidad completa de materiales y procesos",
-                "Inspección dimensional avanzada"
+                "Robust quality management system",
+                "Complete traceability of materials and processes",
+                "Advanced dimensional inspection"
               ]
             }
           ]
         },
         gallery: {
-          titlePrefix: "Nuestra",
-          titleHighlight: "Galería",
-          description: "Explora algunos de nuestros proyectos y componentes fabricados para la industria aeroespacial.",
-          showMoreButtonText: "Ver Más Proyectos",
+          titlePrefix: "Our",
+          titleHighlight: "Gallery",
+          description: "Explore some of our projects and components manufactured for the aerospace industry.",
+          showMoreButtonText: "View More Projects",
           galleryCategories: [
-            { id: 'all', name: 'Todos' }
+            { id: 'all', name: 'All' }
           ],
           galleryItems: [
             {
               id: 1,
-              title: "Componentes para turbinas",
-              description: "Piezas de alta precisión para sistemas de propulsión aeroespacial.",
+              title: "Turbine components",
+              description: "High-precision parts for aerospace propulsion systems.",
               category: "propulsion",
               imageUrl: "/images/industries/galleryaerospacial/Aeroespacial 2.webp"
             },
             {
               id: 2,
-              title: "Elementos estructurales",
-              description: "Componentes estructurales ligeros y resistentes para aeronaves.",
+              title: "Structural elements",
+              description: "Lightweight and resistant structural components for aircraft.",
               category: "structural",
               imageUrl: "/images/industries/galleryaerospacial/Aeroespacial 3.webp"
             },
             {
               id: 3,
-              title: "Sistemas de navegación",
-              description: "Componentes precisos para sistemas de navegación y control.",
+              title: "Navigation systems",
+              description: "Precise components for navigation and control systems.",
               category: "navigation",
               imageUrl: "/images/industries/galleryaerospacial/Aeroespacial 4.webp"
             },
             {
               id: 4,
-              title: "Álabes de turbina",
-              description: "Álabes de alta precisión para turbinas de aviones.",
+              title: "Turbine blades",
+              description: "High-precision blades for aircraft turbines.",
               category: "propulsion",
               imageUrl: "/images/industries/galleryaerospacial/Aeroespacial 5.webp"
             },
             {
               id: 5,
-              title: "Componentes de tren de aterrizaje",
-              description: "Piezas resistentes para sistemas de aterrizaje de aeronaves.",
+              title: "Landing gear components",
+              description: "Resistant parts for aircraft landing systems.",
               category: "structural",
               imageUrl: "/images/industries/galleryaerospacial/Aeroespacial 6.webp"
             },
             {
               id: 6,
-              title: "Sistemas de control",
-              description: "Componentes para sistemas de control de vuelo de precisión.",
+              title: "Control systems",
+              description: "Components for precision flight control systems.",
               category: "navigation",
               imageUrl: "/images/industries/galleryaerospacial/Aeroespacial 7.webp"
             }
           ]
         },
         cta: {
-          title: "¿Listo para elevar la precisión de sus componentes aeroespaciales?",
-          subtitle: "Contáctenos hoy para discutir cómo nuestros servicios de manufactura de precisión pueden satisfacer sus necesidades específicas en la industria aeroespacial.",
-          buttonText: "Solicitar Información",
+          title: "Ready to elevate the precision of your aerospace components?",
+          subtitle: "Contact us today to discuss how our precision manufacturing services can meet your specific needs in the aerospace industry.",
+          buttonText: "Request Information",
           buttonLink: "../contact"
         }
       }
     }
   },
   head() {
-    const defaultTitle = 'Industria Aeroespacial | OMA - Servicios de Manufactura'
-    const defaultDescription = 'Soluciones de manufactura de precisión para la industria aeroespacial.'
+    const defaultTitle = 'Aerospace Industry | OMA - Manufacturing Services'
+    const defaultDescription = 'Precision manufacturing solutions for the aerospace industry.'
     
     return {
       title: this.industry?.seo?.title || defaultTitle,

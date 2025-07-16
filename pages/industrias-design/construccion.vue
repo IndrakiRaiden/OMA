@@ -50,7 +50,7 @@ import CTASection from '../../components/common/CTASection.vue'
 import { IndustryModel } from '../../models/IndustryModel'
 
 export default {
-  name: 'IndustriaConstruccion',
+  name: 'ConstructionIndustry',
   layout: 'industry',
   components: {
     BannerV3,
@@ -67,126 +67,126 @@ export default {
   data() {
     return {
       industry: this.getDefaultIndustryData(),
-      slug: 'construccion'
+      slug: 'construction'
     }
   },
   methods: {
     getDefaultIndustryData() {
       return {
         banner: {
-          title: "Industria de la Construcción",
-          subtitle: "Servicios de manufactura para elementos estructurales y componentes utilizados en el sector de la construcción",
+          title: "Construction Industry",
+          subtitle: "Manufacturing services for structural elements and components used in the construction sector",
           buttons: [
-            { text: 'Ver Servicios', href: '#servicios', class: 'primary-btn' },
-            { text: 'Contáctanos', href: '../contact', class: 'secondary-btn' }
+            { text: 'View Services', href: '#servicios', class: 'primary-btn' },
+            { text: 'Contact Us', href: '../contact', class: 'secondary-btn' }
           ]
         },
         details: {
-          titlePrefix: "Soluciones para la",
-          titleHighlight: "Industria de la Construcción",
-          description: "Ofrecemos servicios especializados de manufactura para el sector de la construcción, con altos estándares de calidad y precisión. Nuestros procesos están diseñados para cumplir con los exigentes requisitos de la industria, garantizando componentes duraderos y con tolerancias exactas.",
+          titlePrefix: "Solutions for the",
+          titleHighlight: "Construction Industry",
+          description: "We offer specialized manufacturing services for the construction sector, with high standards of quality and precision. Our processes are designed to meet the demanding requirements of the industry, ensuring durable components with exact tolerances.",
           features: [
-            "Componentes estructurales de alta resistencia",
-            "Elementos de fijación y anclaje",
-            "Piezas para sistemas de andamiaje",
-            "Componentes para maquinaria de construcción",
-            "Elementos arquitectónicos personalizados"
+            "High-strength structural components",
+            "Fastening and anchoring elements",
+            "Parts for scaffolding systems",
+            "Components for construction machinery",
+            "Custom architectural elements"
           ],
           imageUrl: "/images/industries/galleryconstruction/Construccion 1.webp"
         },
         capabilities: {
-          titlePrefix: "Nuestras",
-          titleHighlight: "Capacidades",
-          description: "Contamos con tecnología avanzada y experiencia para ofrecer soluciones integrales al sector de la construcción.",
+          titlePrefix: "Our",
+          titleHighlight: "Capabilities",
+          description: "We have advanced technology and experience to offer comprehensive solutions to the construction sector.",
           capacities: [
             {
-              title: "Manufactura de precisión",
-              description: "Fabricación de elementos estructurales con tolerancias precisas.",
-              items: ["Corte CNC de perfiles", "Soldadura de alta resistencia", "Mecanizado de componentes complejos"]
+              title: "Precision manufacturing",
+              description: "Fabrication of structural elements with precise tolerances.",
+              items: ["CNC profile cutting", "High-strength welding", "Machining of complex components"]
             },
             {
-              title: "Elementos arquitectónicos",
-              description: "Creación de componentes arquitectónicos personalizados.",
-              items: ["Acabados decorativos", "Barandales y pasamanos", "Elementos modulares"]
+              title: "Architectural elements",
+              description: "Creation of custom architectural components.",
+              items: ["Decorative finishes", "Railings and handrails", "Modular elements"]
             },
             {
-              title: "Sistemas de anclaje",
-              description: "Fabricación de sistemas de fijación para aplicaciones estructurales.",
-              items: ["Anclajes certificados", "Conectores especiales", "Sistemas modulares"]
+              title: "Anchoring systems",
+              description: "Manufacturing of fastening systems for structural applications.",
+              items: ["Certified anchors", "Special connectors", "Modular systems"]
             }
           ]
         },
         gallery: {
-          titlePrefix: "Nuestra",
-          titleHighlight: "Galería",
-          description: "Explora algunos de nuestros proyectos y componentes fabricados para la industria de la construcción.",
-          showMoreButtonText: "Ver Más Proyectos",
+          titlePrefix: "Our",
+          titleHighlight: "Gallery",
+          description: "Explore some of our projects and components manufactured for the construction industry.",
+          showMoreButtonText: "View More Projects",
           galleryCategories: [
-            { id: 'all', name: 'Todos' }
+            { id: 'all', name: 'All' }
           ],
           galleryItems: [
             {
-              title: "Conectores estructurales",
-              description: "Sistemas de conexión para estructuras metálicas.",
+              title: "Structural connectors",
+              description: "Connection systems for metal structures.",
               category: "structural",
               imageUrl: "/images/industries/galleryconstruction/Construccion 1.webp"
             },
             {
-              title: "Barandales arquitectónicos",
-              description: "Sistemas de barandales personalizados para proyectos arquitectónicos.",
+              title: "Architectural railings",
+              description: "Custom railing systems for architectural projects.",
               category: "architectural",
               imageUrl: "/images/industries/galleryconstruction/Construccion 2.webp"
             },
             {
-              title: "Anclajes especiales",
-              description: "Sistemas de anclaje para aplicaciones exigentes.",
+              title: "Special anchors",
+              description: "Anchoring systems for demanding applications.",
               category: "specialized",
               imageUrl: "/images/industries/galleryconstruction/Construccion 3.webp"
             },
             {
-              title: "Elementos estructurales",
-              description: "Componentes para sistemas estructurales de edificios.",
+              title: "Structural elements",
+              description: "Components for building structural systems.",
               category: "structural",
               imageUrl: "/images/industries/galleryconstruction/Construccion 4 .webp"
             },
             {
-              title: "Revestimientos metálicos",
-              description: "Sistemas de fachada y revestimiento arquitectónico.",
+              title: "Metal cladding",
+              description: "Facade systems and architectural cladding.",
               category: "architectural",
               imageUrl: "/images/industries/galleryconstruction/Construccion 5.webp"
             },
             {
-              title: "Sistemas de andamiaje",
-              description: "Componentes para andamios y sistemas temporales.",
+              title: "Scaffolding systems",
+              description: "Components for scaffolding and temporary systems.",
               category: "specialized",
               imageUrl: "/images/industries/galleryconstruction/Construccion 6.webp"
             },
             {
-              title: "Soportes antisísmicos",
-              description: "Sistemas de protección para estructuras en zonas sísmicas.",
+              title: "Seismic supports",
+              description: "Protection systems for structures in seismic zones.",
               category: "specialized",
               imageUrl: "/images/industries/galleryconstruction/Construccion 7.webp"
             },
             {
-              title: "Escaleras metálicas",
-              description: "Sistemas de escaleras para proyectos arquitectónicos y comerciales.",
+              title: "Metal staircases",
+              description: "Staircase systems for architectural and commercial projects.",
               category: "architectural",
               imageUrl: "/images/industries/galleryconstruction/Construccion 8.webp"
             }
           ]
         },
         cta: {
-          title: "¿Listo para comenzar tu proyecto de construcción?",
-          subtitle: "Contáctanos hoy mismo para discutir tus necesidades específicas y obtener una cotización personalizada.",
-          buttonText: "Contactar ahora",
+          title: "Ready to start your construction project?",
+          subtitle: "Contact us today to discuss your specific needs and get a personalized quote.",
+          buttonText: "Contact now",
           buttonLink: "../contact"
         }
       }
     },
   },
   head() {
-    const defaultTitle = 'Industria de la Construcción | OMA - Servicios de Manufactura'
-    const defaultDescription = 'Servicios de manufactura para elementos estructurales y componentes utilizados en la industria de la construcción.'
+    const defaultTitle = 'Construction Industry | OMA - Manufacturing Services'
+    const defaultDescription = 'Manufacturing services for structural elements and components used in the construction industry.'
     
     return {
       title: this.industry?.seo?.title || defaultTitle,

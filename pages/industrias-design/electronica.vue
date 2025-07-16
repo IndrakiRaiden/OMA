@@ -50,7 +50,7 @@ import CTASection from '../../components/common/CTASection.vue'
 import { IndustryModel } from '../../models/IndustryModel'
 
 export default {
-  name: 'IndustriaElectronica',
+  name: 'ElectronicsIndustry',
   layout: 'industry',
   components: {
     BannerV3,
@@ -67,135 +67,135 @@ export default {
   data() {
     return {
       industry: this.getDefaultIndustryData(),
-      slug: 'electronica'
+      slug: 'electronics'
     }
   },
   methods: {
     getDefaultIndustryData() {
       return {
         banner: {
-          title: "Industria Electrónica",
-          subtitle: "Soluciones de manufactura de precisión para componentes electrónicos",
+          title: "Electronics Industry",
+          subtitle: "Precision manufacturing solutions for electronic components",
           buttons: [
-            { text: 'Ver Servicios', href: '#servicios', class: 'primary-btn' },
-            { text: 'Contáctanos', href: '../contact', class: 'secondary-btn' }
+            { text: 'View Services', href: '#servicios', class: 'primary-btn' },
+            { text: 'Contact Us', href: '../contact', class: 'secondary-btn' }
           ]
         },
         details: {
-          titlePrefix: "Soluciones para la",
-          titleHighlight: "Industria Electrónica",
-          description: "Ofrecemos servicios especializados de manufactura para el sector electrónico, con altos estándares de calidad y precisión. Nuestros procesos están diseñados para cumplir con los exigentes requisitos de la industria electrónica, garantizando componentes fiables y con tolerancias exactas.",
+          titlePrefix: "Solutions for the",
+          titleHighlight: "Electronics Industry",
+          description: "We offer specialized manufacturing services for the electronics sector, with high standards of quality and precision. Our processes are designed to meet the demanding requirements of the electronics industry, ensuring reliable components with exact tolerances.",
           features: [
-            "Gabinetes y carcasas para equipos electrónicos",
-            "Componentes para sistemas de enfriamiento",
-            "Piezas para instrumentos de precisión",
-            "Elementos con blindaje electromagnético",
-            "Bases y soportes para componentes electrónicos"
+            "Cabinets and enclosures for electronic equipment",
+            "Components for cooling systems",
+            "Parts for precision instruments",
+            "Elements with electromagnetic shielding",
+            "Bases and supports for electronic components"
           ],
           imageUrl: "/images/industries/galleryelectronics/Electronica 1.webp"
         },
         capabilities: {
-          titlePrefix: "Nuestras",
-          titleHighlight: "Capacidades",
-          description: "Contamos con la tecnología y el conocimiento para fabricar componentes electrónicos de alta precisión que cumplen con las especificaciones más exigentes.",
+          titlePrefix: "Our",
+          titleHighlight: "Capabilities",
+          description: "We have the technology and knowledge to manufacture high-precision electronic components that meet the most demanding specifications.",
           capacities: [
             {
-              title: "Precisión Microscópica",
-              description: "Fabricación de componentes con tolerancias extremadamente ajustadas para aplicaciones electrónicas avanzadas.",
+              title: "Microscopic Precision",
+              description: "Manufacturing of components with extremely tight tolerances for advanced electronic applications.",
               icon: "fa-microchip",
               items: [
-                "Tolerancias de hasta ±0.005mm",
-                "Acabados superficiales controlados",
-                "Verificación dimensional con equipos calibrados"
+                "Tolerances up to ±0.005mm",
+                "Controlled surface finishes",
+                "Dimensional verification with calibrated equipment"
               ]
             },
             {
-              title: "Soluciones Térmicas",
-              description: "Desarrollo de componentes para disipación térmica y gestión de temperatura en dispositivos electrónicos.",
+              title: "Thermal Solutions",
+              description: "Development of components for heat dissipation and temperature management in electronic devices.",
               icon: "fa-temperature-low",
               items: [
-                "Disipadores de calor optimizados",
-                "Sistemas de enfriamiento pasivo",
-                "Componentes para conducción térmica"
+                "Optimized heat sinks",
+                "Passive cooling systems",
+                "Components for thermal conduction"
               ]
             },
             {
-              title: "Integración Mecatrónica",
-              description: "Fabricación de componentes para sistemas que integran elementos mecánicos y electrónicos.",
+              title: "Mechatronic Integration",
+              description: "Manufacturing of components for systems that integrate mechanical and electronic elements.",
               icon: "fa-robot",
               items: [
-                "Estructuras de soporte para PCBs",
-                "Componentes para actuadores de precisión",
-                "Carcasas con blindaje electromagnético"
+                "Support structures for PCBs",
+                "Components for precision actuators",
+                "Enclosures with electromagnetic shielding"
               ]
             }
           ]
         },
         gallery: {
-          titlePrefix: "Nuestra",
-          titleHighlight: "Galería",
-          description: "Explora algunos de nuestros proyectos y componentes fabricados para la industria electrónica.",
-          showMoreButtonText: "Ver Más Proyectos",
+          titlePrefix: "Our",
+          titleHighlight: "Gallery",
+          description: "Explore some of our projects and components manufactured for the electronics industry.",
+          showMoreButtonText: "View More Projects",
           galleryCategories: [
-            { id: 'all', name: 'Todos' }
+            { id: 'all', name: 'All' }
           ],
           galleryItems: [
             {
               id: 1,
-              title: "Gabinetes para servidores",
-              description: "Carcasas de precisión para equipos de servidores y redes.",
+              title: "Server cabinets",
+              description: "Precision enclosures for server and network equipment.",
               category: "enclosures",
               imageUrl: "/images/industries/galleryelectronics/Electronica 1.webp"
             },
             {
               id: 2,
-              title: "Sistemas de enfriamiento",
-              description: "Disipadores térmicos optimizados para componentes de alta potencia.",
+              title: "Cooling systems",
+              description: "Optimized heat sinks for high-power components.",
               category: "cooling",
               imageUrl: "/images/industries/galleryelectronics/Electronica 2.webp"
             },
             {
               id: 3,
-              title: "Componentes para instrumentos",
-              description: "Piezas de alta precisión para equipos de medición y prueba.",
+              title: "Instrument components",
+              description: "High-precision parts for measurement and testing equipment.",
               category: "precision",
               imageUrl: "/images/industries/galleryelectronics/Electronica 3.webp"
             },
             {
               id: 4,
-              title: "Carcasas con blindaje EMI",
-              description: "Gabinetes con protección electromagnética para aplicaciones sensibles.",
+              title: "EMI shielded enclosures",
+              description: "Cabinets with electromagnetic protection for sensitive applications.",
               category: "enclosures",
               imageUrl: "/images/industries/galleryelectronics/Electronica 4.webp"
             },
             {
               id: 5,
-              title: "Estructuras de enfriamiento líquido",
-              description: "Componentes para sistemas de refrigeración líquida en electrónica.",
+              title: "Liquid cooling structures",
+              description: "Components for liquid cooling systems in electronics.",
               category: "cooling",
               imageUrl: "/images/industries/galleryelectronics/Electronica 5.webp"
             },
             {
               id: 6,
-              title: "Bases para microprocesadores",
-              description: "Componentes de precisión para montaje de microprocesadores.",
+              title: "Microprocessor bases",
+              description: "Precision components for microprocessor mounting.",
               category: "precision",
               imageUrl: "/images/industries/galleryelectronics/Electronica 7.webp"
             }
           ]
         },
         cta: {
-          title: "¿Listo para llevar sus componentes electrónicos al siguiente nivel?",
-          subtitle: "Contáctenos hoy para conocer cómo nuestras soluciones de manufactura de precisión pueden satisfacer sus necesidades específicas en la industria electrónica.",
-          buttonText: "Solicitar Información",
+          title: "Ready to take your electronic components to the next level?",
+          subtitle: "Contact us today to learn how our precision manufacturing solutions can meet your specific needs in the electronics industry.",
+          buttonText: "Request Information",
           buttonLink: "../contact"
         }
       }
     }
   },
   head() {
-    const defaultTitle = 'Industria Electrónica | OMA - Servicios de Manufactura'
-    const defaultDescription = 'Soluciones de manufactura de precisión para la industria electrónica.'
+    const defaultTitle = 'Electronics Industry | OMA - Manufacturing Services'
+    const defaultDescription = 'Precision manufacturing solutions for the electronics industry.'
     
     return {
       title: this.industry?.seo?.title || defaultTitle,

@@ -50,7 +50,7 @@ import CTASection from '../../components/common/CTASection.vue'
 import { IndustryModel } from '../../models/IndustryModel'
 
 export default {
-  name: 'IndustriaIndustrial',
+  name: 'IndustrialSector',
   components: {
     BannerV3,
     DetallesIndustria,
@@ -74,115 +74,115 @@ export default {
     getDefaultIndustryData() {
       return {
         banner: {
-          title: "Industria Industrial",
-          subtitle: "Soluciones de manufactura avanzadas para equipos y maquinaria industrial",
+          title: "Industrial Sector",
+          subtitle: "Advanced manufacturing solutions for industrial equipment and machinery",
           buttons: [
-            { text: 'Ver Servicios', href: '#servicios', class: 'primary-btn' },
-            { text: 'Contáctanos', href: '../contact', class: 'secondary-btn' }
+            { text: 'View Services', href: '#servicios', class: 'primary-btn' },
+            { text: 'Contact Us', href: '../contact', class: 'secondary-btn' }
           ]
         },
         details: {
-          titlePrefix: "Soluciones para la",
-          titleHighlight: "Industria General",
-          description: "Ofrecemos servicios especializados de manufactura para el sector industrial, con altos estándares de calidad y precisión. Nuestros procesos están diseñados para cumplir con los exigentes requisitos de la industria, garantizando componentes duraderos y con tolerancias exactas.",
+          titlePrefix: "Solutions for the",
+          titleHighlight: "General Industry",
+          description: "We offer specialized manufacturing services for the industrial sector, with high standards of quality and precision. Our processes are designed to meet the demanding requirements of the industry, ensuring durable components with exact tolerances.",
           features: [
-            "Componentes para maquinaria pesada",
-            "Piezas para sistemas hidráulicos",
-            "Elementos para equipos de automatización",
-            "Herramientas industriales especializadas",
-            "Componentes para sistemas de transmisión"
+            "Components for heavy machinery",
+            "Parts for hydraulic systems",
+            "Elements for automation equipment",
+            "Specialized industrial tools",
+            "Components for transmission systems"
           ],
           imageUrl: "/images/industries/galleryindustrial/Industrial 1.webp"
         },
         capabilities: {
-          titlePrefix: "Nuestras",
-          titleHighlight: "Capacidades",
-          description: "Contamos con la tecnología y el conocimiento para fabricar componentes industriales de alta precisión y durabilidad, fundamentales para el correcto funcionamiento de maquinaria industrial.",
+          titlePrefix: "Our",
+          titleHighlight: "Capabilities",
+          description: "We have the technology and knowledge to manufacture high-precision and durable industrial components, essential for the proper functioning of industrial machinery.",
           capacities: [
             {
-              title: "Precisión Industrial",
-              description: "Fabricamos componentes con tolerancias estrictas para aplicaciones industriales exigentes.",
+              title: "Industrial Precision",
+              description: "We manufacture components with strict tolerances for demanding industrial applications.",
               icon: "fa-cogs",
               items: [
-                "Tolerancias de precisión industrial",
-                "Acabados superficiales especializados",
-                "Ensamblaje de componentes complejos"
+                "Industrial precision tolerances",
+                "Specialized surface finishes",
+                "Assembly of complex components"
               ]
             },
             {
-              title: "Materiales Industriales",
-              description: "Trabajamos con una amplia gama de materiales resistentes para aplicaciones industriales.",
+              title: "Industrial Materials",
+              description: "We work with a wide range of resistant materials for industrial applications.",
               icon: "fa-industry",
               items: [
-                "Aceros especiales y aleaciones",
-                "Materiales resistentes a la corrosión",
-                "Metales no ferrosos para aplicaciones específicas",
-                "Plásticos técnicos de alto rendimiento"
+                "Special steels and alloys",
+                "Corrosion-resistant materials",
+                "Non-ferrous metals for specific applications",
+                "High-performance technical plastics"
               ]
             },
             {
-              title: "Soluciones Personalizadas",
-              description: "Desarrollamos soluciones a medida para resolver problemas específicos en equipos industriales.",
+              title: "Customized Solutions",
+              description: "We develop tailored solutions to solve specific problems in industrial equipment.",
               icon: "fa-tools",
               items: [
-                "Diseño de piezas de reemplazo mejoradas",
-                "Modificación de componentes para mejor rendimiento",
-                "Optimización de sistemas mecánicos"
+                "Design of improved replacement parts",
+                "Component modification for better performance",
+                "Optimization of mechanical systems"
               ]
             }
           ]
         },
         gallery: {
-          titlePrefix: "Nuestra",
-          titleHighlight: "Galería",
-          description: "Explora algunos de nuestros proyectos y componentes fabricados para la industria general.",
-          showMoreButtonText: "Ver Más Proyectos",
+          titlePrefix: "Our",
+          titleHighlight: "Gallery",
+          description: "Explore some of our projects and components manufactured for the general industry.",
+          showMoreButtonText: "View More Projects",
           galleryCategories: [
-            { id: 'all', name: 'Todos' }
+            { id: 'all', name: 'All' }
           ],
           galleryItems: [
             {
               id: 1,
               imageUrl: "/images/industries/galleryindustrial/Industrial 1.webp",
-              title: "Componentes para Maquinaria Pesada",
+              title: "Components for Heavy Machinery",
               category: "maquinaria"
             },
             {
               id: 2,
               imageUrl: "/images/industries/galleryindustrial/Industrial 2.webp",
-              title: "Sistemas Hidráulicos Industriales",
+              title: "Industrial Hydraulic Systems",
               category: "hidraulica"
             },
             {
               id: 3,
               imageUrl: "/images/industries/galleryindustrial/Industrial 3.webp",
-              title: "Piezas para Automatización",
+              title: "Parts for Automation",
               category: "automatizacion"
             },
             {
               id: 4,
               imageUrl: "/images/industries/galleryindustrial/Industrial 4.webp",
-              title: "Herramientas Especializadas",
+              title: "Specialized Tools",
               category: "herramientas"
             },
             {
               id: 5,
               imageUrl: "/images/industries/galleryindustrial/Industrial 5.webp",
-              title: "Componentes de Transmisión",
+              title: "Transmission Components",
               category: "transmision"
             },
             {
               id: 6,
               imageUrl: "/images/industries/galleryindustrial/Industrial 6.webp",
-              title: "Ensambles Industriales",
+              title: "Industrial Assemblies",
               category: "ensambles"
             }
           ]
         },
         cta: {
-          title: "¿Necesitas Componentes Industriales de Alta Calidad?",
-          subtitle: "Contáctanos hoy para discutir tus requerimientos específicos",
-          buttonText: "Solicitar Información",
+          title: "Need High-Quality Industrial Components?",
+          subtitle: "Contact us today to discuss your specific requirements",
+          buttonText: "Request Information",
           buttonLink: "../contact"
         }
       }
@@ -190,9 +190,9 @@ export default {
   },
   head() {
     return {
-      title: 'Maquinaria y Equipos Industriales | OMA - Servicios de Manufactura',
+      title: 'Industrial Machinery and Equipment | OMA - Manufacturing Services',
       meta: [
-        { hid: 'description', name: 'description', content: 'Diseño y fabricación de componentes para maquinaria industrial y equipos especializados.' }
+        { hid: 'description', name: 'description', content: 'Design and manufacturing of components for industrial machinery and specialized equipment.' }
       ]
     }
   }

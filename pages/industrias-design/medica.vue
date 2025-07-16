@@ -50,7 +50,7 @@ import CTASection from '../../components/common/CTASection.vue'
 import { IndustryModel } from '../../models/IndustryModel'
 
 export default {
-  name: 'IndustriaMedica',
+  name: 'MedicalIndustry',
   components: {
     BannerV3,
     DetallesIndustria,
@@ -67,126 +67,126 @@ export default {
   data() {
     return {
       industry: this.getDefaultIndustryData(),
-      slug: 'medica'
+      slug: 'medical'
     }
   },
   methods: {
     getDefaultIndustryData() {
       return {
         banner: {
-          title: "Industria Médica",
-          subtitle: "Fabricación especializada para dispositivos e instrumentos médicos con altos estándares de calidad",
+          title: "Medical Industry",
+          subtitle: "Specialized manufacturing for medical devices and instruments with high quality standards",
           buttons: [
-            { text: 'Ver Servicios', href: '#servicios', class: 'primary-btn' },
-            { text: 'Contáctanos', href: '../contact', class: 'secondary-btn' }
+            { text: 'View Services', href: '#servicios', class: 'primary-btn' },
+            { text: 'Contact Us', href: '../contact', class: 'secondary-btn' }
           ]
         },
         details: {
-          titlePrefix: "Soluciones para la",
-          titleHighlight: "Industria Médica",
-          description: "Ofrecemos servicios especializados de manufactura para el sector médico, con altos estándares de calidad y precisión. Nuestros procesos cumplen con los rigurosos requisitos de la industria médica, garantizando la fiabilidad y seguridad de cada componente.",
+          titlePrefix: "Solutions for the",
+          titleHighlight: "Medical Industry",
+          description: "We offer specialized manufacturing services for the medical sector, with high standards of quality and precision. Our processes meet the rigorous requirements of the medical industry, ensuring the reliability and safety of each component.",
           features: [
-            "Componentes para equipos de diagnóstico",
-            "Instrumental médico de precisión",
-            "Piezas para equipos de laboratorio",
-            "Componentes para dispositivos implantables",
-            "Prótesis y componentes ortopédicos"
+            "Components for diagnostic equipment",
+            "Precision medical instruments",
+            "Parts for laboratory equipment",
+            "Components for implantable devices",
+            "Prosthetics and orthopedic components"
           ],
           imageUrl: "/images/industries/gallerymedic/Medica 3.webp"
         },
         capabilities: {
-          titlePrefix: "Nuestras",
-          titleHighlight: "Capacidades",
-          description: "Contamos con tecnología de punta y personal altamente capacitado para ofrecer soluciones integrales al sector médico.",
+          titlePrefix: "Our",
+          titleHighlight: "Capabilities",
+          description: "We have cutting-edge technology and highly trained personnel to offer comprehensive solutions to the medical sector.",
           capacities: [
             {
-              title: "Mecanizado de alta precisión",
-              description: "Fabricación de componentes con tolerancias estrictas para aplicaciones médicas.",
-              items: ["Tolerancias micrométricas", "Acabados superficiales de grado médico", "Materiales biocompatibles"]
+              title: "High-precision machining",
+              description: "Manufacturing of components with strict tolerances for medical applications.",
+              items: ["Micrometric tolerances", "Medical-grade surface finishes", "Biocompatible materials"]
             },
             {
-              title: "Validación y verificación",
-              description: "Procesos rigurosos de verificación para garantizar la calidad de los productos médicos.",
-              items: ["Inspección dimensional avanzada", "Trazabilidad completa", "Documentación para certificaciones médicas"]
+              title: "Validation and verification",
+              description: "Rigorous verification processes to ensure the quality of medical products.",
+              items: ["Advanced dimensional inspection", "Complete traceability", "Documentation for medical certifications"]
             },
             {
-              title: "Fabricación en salas limpias",
-              description: "Entorno controlado para la producción de componentes médicos sensibles.",
-              items: ["Control de partículas", "Monitoreo ambiental", "Protocolos de esterilidad"]
+              title: "Clean room manufacturing",
+              description: "Controlled environment for the production of sensitive medical components.",
+              items: ["Particle control", "Environmental monitoring", "Sterility protocols"]
             }
           ]
         },
         gallery: {
-          titlePrefix: "Nuestra",
-          titleHighlight: "Galería",
-          description: "Explora algunos de nuestros proyectos y componentes fabricados para la industria médica.",
-          showMoreButtonText: "Ver Más Proyectos",
+          titlePrefix: "Our",
+          titleHighlight: "Gallery",
+          description: "Explore some of our projects and components manufactured for the medical industry.",
+          showMoreButtonText: "View More Projects",
           galleryCategories: [
-            { id: 'all', name: 'Todos' }
+            { id: 'all', name: 'All' }
           ],
           galleryItems: [
             {
-              title: "Instrumental quirúrgico",
-              description: "Herramientas de precisión para procedimientos quirúrgicos.",
+              title: "Surgical instruments",
+              description: "Precision tools for surgical procedures.",
               category: "instruments",
               imageUrl: "/images/industries/gallerymedic/Medica 3.webp"
             },
             {
-              title: "Componentes para prótesis",
-              description: "Piezas mecanizadas para prótesis de alta durabilidad.",
+              title: "Prosthetic components",
+              description: "Machined parts for high-durability prosthetics.",
               category: "implants",
               imageUrl: "/images/industries/gallerymedic/Medica 4.webp"
             },
             {
-              title: "Equipos de laboratorio",
-              description: "Componentes precisos para equipos de análisis clínico.",
+              title: "Laboratory equipment",
+              description: "Precise components for clinical analysis equipment.",
               category: "equipment",
               imageUrl: "/images/industries/gallerymedic/Medica 5.webp"
             },
             {
-              title: "Dispositivos de diagnóstico",
-              description: "Piezas para equipos de diagnóstico médico avanzado.",
+              title: "Diagnostic devices",
+              description: "Parts for advanced medical diagnostic equipment.",
               category: "equipment",
               imageUrl: "/images/industries/gallerymedic/Medica 6.webp"
             },
             {
-              title: "Componentes dentales",
-              description: "Piezas de precisión para aplicaciones odontológicas.",
+              title: "Dental components",
+              description: "Precision parts for dental applications.",
               category: "implants",
               imageUrl: "/images/industries/gallerymedic/Medica 7.webp"
             },
             {
-              title: "Instrumental de precisión",
-              description: "Herramientas especializadas para procedimientos delicados.",
+              title: "Precision instruments",
+              description: "Specialized tools for delicate procedures.",
               category: "instruments",
               imageUrl: "/images/industries/gallerymedic/Medica 8.webp"
             },
             {
-              title: "Dispositivos implantables",
-              description: "Componentes biocompatibles para implantes médicos.",
+              title: "Implantable devices",
+              description: "Biocompatible components for medical implants.",
               category: "implants",
               imageUrl: "/images/industries/gallerymedic/Medica 9.webp"
             },
             {
-              title: "Equipos de monitoreo",
-              description: "Componentes para sistemas de monitoreo de pacientes.",
+              title: "Monitoring equipment",
+              description: "Components for patient monitoring systems.",
               category: "equipment",
               imageUrl: "/images/industries/gallerymedic/Medica 10.webp"
             }
           ]
         },
         cta: {
-          title: "¿Listo para comenzar tu proyecto médico?",
-          subtitle: "Contáctanos hoy mismo para discutir tus necesidades específicas y obtener una cotización personalizada.",
-          buttonText: "Contactar ahora",
+          title: "Ready to start your medical project?",
+          subtitle: "Contact us today to discuss your specific needs and get a personalized quote.",
+          buttonText: "Contact now",
           buttonLink: "../contact"
         }
       }
     },
   },
   head() {
-    const defaultTitle = 'Industria Médica | OMA - Servicios de Manufactura'
-    const defaultDescription = 'Soluciones de manufactura de precisión para la industria médica.'
+    const defaultTitle = 'Medical Industry | OMA - Manufacturing Services'
+    const defaultDescription = 'Precision manufacturing solutions for the medical industry.'
     
     return {
       title: this.industry?.seo?.title || defaultTitle,

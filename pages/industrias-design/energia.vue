@@ -50,7 +50,7 @@ import CTASection from '../../components/common/CTASection.vue'
 import { IndustryModel } from '../../models/IndustryModel'
 
 export default {
-  name: 'IndustriaEnergia',
+  name: 'EnergyIndustry',
   layout: 'industry',
   components: {
     BannerV3,
@@ -67,133 +67,133 @@ export default {
   data() {
     return {
       industry: this.getDefaultIndustryData(),
-      slug: 'energia'
+      slug: 'energy'
     }
   },
   methods: {
     getDefaultIndustryData() {
       return {
         banner: {
-          title: "Industria Energética",
-          subtitle: "Soluciones de precisión para componentes del sector energético",
+          title: "Energy Industry",
+          subtitle: "Precision solutions for energy sector components",
           buttons: [
-            { text: 'Ver Soluciones', href: '#soluciones', class: 'primary-btn' },
-            { text: 'Contáctanos', href: '/contact', class: 'secondary-btn' }
+            { text: 'View Solutions', href: '#soluciones', class: 'primary-btn' },
+            { text: 'Contact Us', href: '/contact', class: 'secondary-btn' }
           ]
         },
         details: {
-          titlePrefix: "Soluciones para la",
-          titleHighlight: "Industria Energética",
-          description: "Ofrecemos servicios especializados de manufactura para el sector energético, con altos estándares de calidad y precisión. Nuestros procesos están diseñados para cumplir con los exigentes requisitos de la industria energética, garantizando componentes duraderos y eficientes.",
+          titlePrefix: "Solutions for the",
+          titleHighlight: "Energy Industry",
+          description: "We offer specialized manufacturing services for the energy sector, with high standards of quality and precision. Our processes are designed to meet the demanding requirements of the energy industry, ensuring durable and efficient components.",
           features: [
-            "Componentes para sistemas de generación convencional",
-            "Piezas para equipos de energía renovable",
-            "Elementos para sistemas de transmisión",
-            "Componentes para equipos de eficiencia energética",
-            "Piezas para infraestructura energética"
+            "Components for conventional generation systems",
+            "Parts for renewable energy equipment",
+            "Elements for transmission systems",
+            "Components for energy efficiency equipment",
+            "Parts for energy infrastructure"
           ],
           imageUrl: "/images/industries/galleryenergy/Energia 1.webp"
         },
         capabilities: {
-          titlePrefix: "Nuestras",
-          titleHighlight: "Especialidades",
-          description: "Nuestra experiencia en la industria energética nos permite ofrecer soluciones que combinan precisión, durabilidad y conformidad con las normativas para componentes críticos en diferentes sistemas energéticos.",
+          titlePrefix: "Our",
+          titleHighlight: "Specialties",
+          description: "Our experience in the energy industry allows us to offer solutions that combine precision, durability, and compliance with regulations for critical components in different energy systems.",
           capacities: [
             {
-              title: 'Energía Convencional',
-              description: 'Fabricación de componentes de precisión para sistemas de generación y distribución de energía convencional.',
+              title: 'Conventional Energy',
+              description: 'Manufacturing of precision components for conventional energy generation and distribution systems.',
               icon: 'fa-industry',
               items: [
-                'Componentes para turbinas y generadores',
-                'Piezas para sistemas de distribución',
-                'Elementos para subestaciones eléctricas'
+                'Components for turbines and generators',
+                'Parts for distribution systems',
+                'Elements for electrical substations'
               ]
             },
             {
-              title: 'Energías Renovables',
-              description: 'Desarrollo de componentes especializados para equipos de energía solar, eólica e hidroeléctrica.',
+              title: 'Renewable Energy',
+              description: 'Development of specialized components for solar, wind, and hydroelectric energy equipment.',
               icon: 'fa-solar-panel',
               items: [
-                'Componentes para paneles solares y seguidores',
-                'Piezas para aerogeneradores',
-                'Elementos para sistemas hidroeléctricos'
+                'Components for solar panels and trackers',
+                'Parts for wind turbines',
+                'Elements for hydroelectric systems'
               ]
             },
             {
-              title: 'Sistemas de Eficiencia',
-              description: 'Soluciones para mejorar la eficiencia y rendimiento de sistemas energéticos existentes.',
+              title: 'Efficiency Systems',
+              description: 'Solutions to improve the efficiency and performance of existing energy systems.',
               icon: 'fa-bolt',
               items: [
-                'Componentes para sistemas de recuperación de calor',
-                'Piezas para equipos de monitoreo y control',
-                'Elementos para reducción de pérdidas energéticas'
+                'Components for heat recovery systems',
+                'Parts for monitoring and control equipment',
+                'Elements for reducing energy losses'
               ]
             }
           ]
         },
         gallery: {
-          titlePrefix: "Nuestra",
-          titleHighlight: "Galería",
-          description: "Explora algunos de nuestros proyectos y componentes fabricados para la industria energética.",
-          showMoreButtonText: "Ver Más Proyectos",
+          titlePrefix: "Our",
+          titleHighlight: "Gallery",
+          description: "Explore some of our projects and components manufactured for the energy industry.",
+          showMoreButtonText: "View More Projects",
           galleryCategories: [
-            { id: 'all', name: 'Todos' }
+            { id: 'all', name: 'All' }
           ],
           galleryItems: [
             {
               id: 1,
-              title: 'Componentes para turbinas',
+              title: 'Turbine components',
               category: 'energia-convencional',
               imageUrl: '/images/industries/galleryenergy/Energia 1.webp'
             },
             {
               id: 2,
-              title: 'Piezas para paneles solares',
+              title: 'Solar panel parts',
               category: 'energia-renovable',
               imageUrl: '/images/industries/galleryenergy/Energia 2.webp'
             },
             {
               id: 3,
-              title: 'Componentes para aerogeneradores',
+              title: 'Wind turbine components',
               category: 'energia-renovable',
               imageUrl: '/images/industries/galleryenergy/Energia 3.webp'
             },
             {
               id: 4,
-              title: 'Sistemas de refrigeración',
+              title: 'Cooling systems',
               category: 'eficiencia',
               imageUrl: '/images/industries/galleryenergy/Energia 4.webp'
             },
             {
               id: 5,
-              title: 'Componentes para plantas eléctricas',
+              title: 'Power plant components',
               category: 'energia-convencional',
               imageUrl: '/images/industries/galleryenergy/Energia 7.webp'
             },
             {
               id: 6,
-              title: 'Sistemas de transmisión de energía',
+              title: 'Energy transmission systems',
               category: 'eficiencia',
               imageUrl: '/images/industries/galleryenergy/Energia 8.webp'
             }
           ]
         },
         cta: {
-          title: "¿Listo para potenciar sus proyectos energéticos?",
-          subtitle: "Contáctenos hoy para discutir sus necesidades específicas y descubrir cómo nuestros servicios de manufactura pueden ayudar a su empresa a optimizar sus componentes y sistemas energéticos.",
-          buttonText: "Solicitar Información",
+          title: "Ready to power up your energy projects?",
+          subtitle: "Contact us today to discuss your specific needs and discover how our manufacturing services can help your company optimize its energy components and systems.",
+          buttonText: "Request Information",
           buttonLink: "/contact"
         },
         seo: {
-          title: "Industria Energética | OMA - Servicios de Manufactura",
-          description: "Soluciones de manufactura de precisión para componentes del sector energético convencional y renovable."
+          title: "Energy Industry | OMA - Manufacturing Services",
+          description: "Precision manufacturing solutions for components in the conventional and renewable energy sector."
         }
       }
     }
   },
   head() {
-    const defaultTitle = 'Industria Energética | OMA - Servicios de Manufactura'
-    const defaultDescription = 'Soluciones de manufactura de precisión para componentes del sector energético convencional y renovable.'
+    const defaultTitle = 'Energy Industry | OMA - Manufacturing Services'
+    const defaultDescription = 'Precision manufacturing solutions for components in the conventional and renewable energy sector.'
     
     return {
       title: this.industry?.seo?.title || defaultTitle,

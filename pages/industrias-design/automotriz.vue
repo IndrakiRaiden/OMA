@@ -50,7 +50,7 @@ import CTASection from '../../components/common/CTASection.vue'
 import { IndustryModel } from '../../models/IndustryModel'
 
 export default {
-  name: 'IndustriaAutomotriz',
+  name: 'AutomotiveIndustry',
   layout: 'industry',
   components: {
     BannerV3,
@@ -67,126 +67,126 @@ export default {
   data() {
     return {
       industry: this.getDefaultIndustryData(),
-      slug: 'automotriz'
+      slug: 'automotive'
     }
   },
   methods: {
     getDefaultIndustryData() {
       return {
         banner: {
-          title: "Industria Automotriz",
-          subtitle: "Soluciones de manufactura de precisión para componentes y piezas del sector automotriz",
+          title: "Automotive Industry",
+          subtitle: "Precision manufacturing solutions for components and parts in the automotive sector",
           buttons: [
-            { text: 'Ver Servicios', href: '#servicios', class: 'primary-btn' },
-            { text: 'Contáctanos', href: '../contact', class: 'secondary-btn' }
+            { text: 'View Services', href: '#servicios', class: 'primary-btn' },
+            { text: 'Contact Us', href: '../contact', class: 'secondary-btn' }
           ]
         },
         details: {
-          titlePrefix: "Soluciones para la",
-          titleHighlight: "Industria Automotriz",
-          description: "Ofrecemos servicios especializados de manufactura para el sector automotriz, con altos estándares de calidad y precisión. Nuestros procesos están diseñados para cumplir con los exigentes requisitos de la industria automotriz, garantizando componentes duraderos y con tolerancias exactas.",
+          titlePrefix: "Solutions for the",
+          titleHighlight: "Automotive Industry",
+          description: "We offer specialized manufacturing services for the automotive sector, with high standards of quality and precision. Our processes are designed to meet the demanding requirements of the automotive industry, ensuring durable components with exact tolerances.",
           features: [
-            "Componentes para sistemas de dirección y suspensión",
-            "Piezas para transmisiones y cajas de cambio",
-            "Componentes para sistemas de frenos",
-            "Piezas estructurales de alta resistencia",
-            "Moldes y herramentales para autopartes"
+            "Components for steering and suspension systems",
+            "Parts for transmissions and gearboxes",
+            "Components for brake systems",
+            "High-strength structural parts",
+            "Molds and tooling for auto parts"
           ],
           imageUrl: "/images/industries/galleryautomobile/Automotriz+1.webp"
         },
         capabilities: {
-          titlePrefix: "Nuestras",
-          titleHighlight: "Capacidades",
-          description: "Contamos con tecnología de punta y personal altamente capacitado para ofrecer soluciones integrales al sector automotriz.",
+          titlePrefix: "Our",
+          titleHighlight: "Capabilities",
+          description: "We have cutting-edge technology and highly trained personnel to offer comprehensive solutions to the automotive sector.",
           capacities: [
             {
-              title: "Mecanizado CNC de alta precisión",
-              description: "Fabricación de componentes con tolerancias estrictas.",
-              items: ["Tolerancias de hasta ±0.01mm", "Acabados superficiales de alta calidad", "Fabricación de piezas complejas"]
+              title: "High-precision CNC machining",
+              description: "Manufacturing of components with strict tolerances.",
+              items: ["Tolerances up to ±0.01mm", "High-quality surface finishes", "Manufacturing of complex parts"]
             },
             {
-              title: "Prototipos rápidos",
-              description: "Desarrollo y fabricación rápida de prototipos para validación.",
-              items: ["Iteraciones rápidas", "Validación de diseño", "Pruebas funcionales"]
+              title: "Rapid prototyping",
+              description: "Quick development and manufacturing of prototypes for validation.",
+              items: ["Rapid iterations", "Design validation", "Functional testing"]
             },
             {
-              title: "Producción en serie",
-              description: "Fabricación de componentes en serie con control de calidad riguroso.",
-              items: ["Control estadístico de procesos", "Trazabilidad completa", "Documentación PPAP"]
+              title: "Serial production",
+              description: "Manufacturing of components in series with rigorous quality control.",
+              items: ["Statistical process control", "Complete traceability", "PPAP documentation"]
             }
           ]
         },
         gallery: {
-          titlePrefix: "Nuestra",
-          titleHighlight: "Galería",
-          description: "Explora algunos de nuestros proyectos y componentes fabricados para la industria automotriz.",
-          showMoreButtonText: "Ver Más Proyectos",
+          titlePrefix: "Our",
+          titleHighlight: "Gallery",
+          description: "Explore some of our projects and components manufactured for the automotive industry.",
+          showMoreButtonText: "View More Projects",
           galleryCategories: [
-            { id: 'all', name: 'Todos' }
+            { id: 'all', name: 'All' }
           ],
           galleryItems: [
             {
-              title: "Componentes de transmisión",
-              description: "Fabricación de engranajes y ejes para sistemas de transmisión.",
+              title: "Transmission components",
+              description: "Manufacturing of gears and shafts for transmission systems.",
               category: "components",
               imageUrl: "/images/industries/galleryautomobile/Automotriz+1.webp"
             },
             {
-              title: "Moldes para autopartes",
-              description: "Diseño y fabricación de moldes para inyección de plástico.",
+              title: "Molds for auto parts",
+              description: "Design and manufacturing of molds for plastic injection.",
               category: "molds",
               imageUrl: "/images/industries/galleryautomobile/Automotriz+2.webp"
             },
             {
-              title: "Piezas de suspensión",
-              description: "Componentes mecanizados para sistemas de suspensión.",
+              title: "Suspension parts",
+              description: "Machined components for suspension systems.",
               category: "components",
               imageUrl: "/images/industries/galleryautomobile/Automotriz+3.webp"
             },
             {
-              title: "Herramentales de precisión",
-              description: "Fabricación de herramientas especiales para líneas de producción.",
+              title: "Precision tooling",
+              description: "Manufacturing of special tools for production lines.",
               category: "tooling",
               imageUrl: "/images/industries/galleryautomobile/Automotriz+4.webp"
             },
             {
-              title: "Componentes de frenos",
-              description: "Piezas mecanizadas para sistemas de frenos de alto rendimiento.",
+              title: "Brake components",
+              description: "Machined parts for high-performance brake systems.",
               category: "components",
               imageUrl: "/images/industries/galleryautomobile/Automotriz+5.webp"
             },
             {
-              title: "Matrices de estampado",
-              description: "Matrices para conformado de piezas metálicas.",
+              title: "Stamping dies",
+              description: "Dies for forming metal parts.",
               category: "tooling",
               imageUrl: "/images/industries/galleryautomobile/Automotriz+6.webp"
             },
             {
-              title: "Moldes multi-cavidad",
-              description: "Moldes de alta productividad para componentes plásticos.",
+              title: "Multi-cavity molds",
+              description: "High-productivity molds for plastic components.",
               category: "molds",
               imageUrl: "/images/industries/galleryautomobile/Automotriz+7.webp"
             },
             {
-              title: "Prototipos funcionales",
-              description: "Fabricación rápida de prototipos para validación de diseño.",
+              title: "Functional prototypes",
+              description: "Rapid manufacturing of prototypes for design validation.",
               category: "components",
               imageUrl: "/images/industries/galleryautomobile/Automotriz+8.webp"
             }
           ]
         },
         cta: {
-          title: "¿Listo para comenzar tu proyecto?",
-          subtitle: "Contáctanos hoy mismo para discutir tus necesidades específicas y obtener una cotización personalizada.",
-          buttonText: "Contactar ahora",
+          title: "Ready to start your project?",
+          subtitle: "Contact us today to discuss your specific needs and get a personalized quote.",
+          buttonText: "Contact now",
           buttonLink: "../contact"
         }
       }
     },
   },
   head() {
-    const defaultTitle = 'Industria Automotriz | OMA - Servicios de Manufactura'
-    const defaultDescription = 'Soluciones de manufactura de precisión para la industria automotriz.'
+    const defaultTitle = 'Automotive Industry | OMA - Manufacturing Services'
+    const defaultDescription = 'Precision manufacturing solutions for the automotive industry.'
     
     return {
       title: this.industry?.seo?.title || defaultTitle,

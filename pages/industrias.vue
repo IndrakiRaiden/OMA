@@ -2,21 +2,21 @@
   <div>
     <main class="industries-page">
       <BannerV2 
-        title="Industrias" 
-        subtitle="Soluciones especializadas para diferentes sectores"
+        title="Industries" 
+        subtitle="Specialized solutions for different sectors"
         :buttons="[
-          { text: 'Ver Industrias', href: '#industrias', class: 'primary-btn' },
-          { text: 'Contáctanos', href: './contact', class: 'secondary-btn' }
+          { text: 'View Industries', href: '#industrias', class: 'primary-btn' },
+          { text: 'Contact Us', href: './contact', class: 'secondary-btn' }
         ]"
       />
       <div id="industrias" class="industries-content py-16">
         <div class="container mx-auto px-4">
           <h2 class="text-4xl font-bold text-center mb-4">
-            Nuestras <span class="text-primary">Especialidades</span>
+            Our <span class="text-primary">Specialties</span>
           </h2>
           <p class="text-center text-gray-600 mb-16 max-w-3xl mx-auto">
-            Ofrecemos una amplia gama de servicios especializados en manufactura y tecnología CNC, 
-            adaptados a las necesidades específicas de cada industria.
+            We offer a wide range of specialized services in manufacturing and CNC technology, 
+            tailored to the specific needs of each industry.
           </p>
           <div class="industries-grid">
             <NuxtLink 
@@ -40,7 +40,7 @@
                   <p>{{ industry.description }}</p>
                   <div class="learn-more-wrapper">
                     <span class="learn-more">
-                      Ver más <i class="fas fa-arrow-right"></i>
+                      Learn more <i class="fas fa-arrow-right"></i>
                     </span>
                   </div>
                 </div>
@@ -57,7 +57,7 @@
 import BannerV2 from '../components/BannerV2.vue'
 
 export default {
-  name: 'IndustriasPage',
+  name: 'IndustriesPage',
   components: {
     BannerV2
   },
@@ -65,71 +65,71 @@ export default {
     return {
       industries: [
         {
-          name: 'Automotriz',
-          description: 'Soluciones de manufactura de precisión para componentes y piezas del sector automotriz.',
+          name: 'Automotive',
+          description: 'Precision manufacturing solutions for components and parts in the automotive sector.',
           icon: 'fa-car',
           imageUrl: '/images/industries/Automotriz-5 (1).webp',
           path: '/industrias-design/automotriz'
         },
         {
-          name: 'Médica',
-          description: 'Fabricación especializada para dispositivos e instrumentos médicos con altos estándares de calidad.',
+          name: 'Medical',
+          description: 'Specialized manufacturing for medical devices and instruments with high quality standards.',
           icon: 'fa-heartbeat',
           imageUrl: '/images/industries/Medica-10 (1).webp',
           path: '/industrias-design/medica'
         },
         {
-          name: 'Construcción',
-          description: 'Servicios de manufactura para elementos estructurales y componentes utilizados en la industria de la construcción.',
+          name: 'Construction',
+          description: 'Manufacturing services for structural elements and components used in the construction industry.',
           icon: 'fa-hard-hat',
           imageUrl: '/images/industries/Construccion-2 (1).webp',
           path: '/industrias-design/construccion'
         },
         {
-          name: 'Minera',
-          description: 'Soluciones robustas para equipos y componentes utilizados en la exigente industria minera.',
+          name: 'Mining',
+          description: 'Robust solutions for equipment and components used in the demanding mining industry.',
           icon: 'fa-mountain',
           imageUrl: '/images/industries/Minera-5 (1).webp',
           path: '/industrias-design/minera'
         },
         {
-          name: 'Aeroespacial',
-          description: 'Componentes de alta precisión para la industria aeroespacial, cumpliendo con estrictos estándares de calidad.',
+          name: 'Aerospace',
+          description: 'High-precision components for the aerospace industry, meeting strict quality standards.',
           icon: 'fa-plane',
           imageUrl: '/images/industries/Aeroespacial-6 (1).webp',
           path: '/industrias-design/aeroespacial'
         },
         {
-          name: 'Alimentos',
-          description: 'Soluciones de manufactura para equipos y maquinaria utilizados en la industria alimenticia.',
+          name: 'Food',
+          description: 'Manufacturing solutions for equipment and machinery used in the food industry.',
           icon: 'fa-utensils',
           imageUrl: '/images/industries/Alimentos-4 (1).webp',
           path: '/industrias-design/alimentos'
         },
         {
-          name: 'Electrónica',
-          description: 'Fabricación de componentes y piezas precisas para la industria electrónica y de telecomunicaciones.',
+          name: 'Electronics',
+          description: 'Manufacturing of precise components and parts for the electronics and telecommunications industry.',
           icon: 'fa-microchip',
           imageUrl: '/images/industries/Electronica-4 (1).webp',
           path: '/industrias-design/electronica'
         },
         {
-          name: 'Energía',
-          description: 'Componentes y soluciones para generación, transmisión y distribución de energía.',
+          name: 'Energy',
+          description: 'Components and solutions for energy generation, transmission, and distribution.',
           icon: 'fa-bolt',
           imageUrl: '/images/industries/Energia-2 (1).webp',
           path: '/industrias-design/energia'
         },
         {
-          name: 'Agrícola',
-          description: 'Fabricación de piezas y componentes para maquinaria y equipos utilizados en el sector agrícola.',
+          name: 'Agricultural',
+          description: 'Manufacturing of parts and components for machinery and equipment used in the agricultural sector.',
           icon: 'fa-tractor',
           imageUrl: '/images/industries/Minera-5 (1).webp',
           path: '/industrias-design/agricola'
         },
         {
           name: 'Industrial',
-          description: 'Soluciones integrales para el sector industrial, incluyendo maquinaria, equipos y componentes personalizados.',
+          description: 'Comprehensive solutions for the industrial sector, including customized machinery, equipment, and components.',
           icon: 'fa-industry',
           imageUrl: '/images/industries/Industrial-2 (1).webp',
           path: '/industrias-design/industrial'

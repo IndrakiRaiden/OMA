@@ -50,7 +50,7 @@ import CTASection from '../../components/common/CTASection.vue'
 import { IndustryModel } from '../../models/IndustryModel'
 
 export default {
-  name: 'IndustriaAgricola',
+  name: 'AgriculturalIndustry',
   components: {
     BannerV3,
     DetallesIndustria,
@@ -68,124 +68,124 @@ export default {
     return {
       industry: {
         banner: {
-          title: "Industria Agrícola",
-          subtitle: "Soluciones de manufactura robustas para equipos y maquinaria agrícola",
+          title: "Agricultural Industry",
+          subtitle: "Robust manufacturing solutions for agricultural equipment and machinery",
           buttons: [
-            { text: 'Ver Servicios', href: '#servicios', class: 'primary-btn' },
-            { text: 'Contáctanos', href: '../contact', class: 'secondary-btn' }
+            { text: 'View Services', href: '#servicios', class: 'primary-btn' },
+            { text: 'Contact Us', href: '../contact', class: 'secondary-btn' }
           ]
         },
         details: {
-          titlePrefix: "Soluciones para la",
-          titleHighlight: "Industria Agrícola",
-          description: "Ofrecemos servicios de manufactura especializada para el sector agrícola, diseñando y fabricando componentes duraderos y eficientes que satisfacen las exigentes demandas del campo. Nuestras soluciones están orientadas a incrementar la productividad y reducir los tiempos de inactividad de su maquinaria.",
+          titlePrefix: "Solutions for the",
+          titleHighlight: "Agricultural Industry",
+          description: "We offer specialized manufacturing services for the agricultural sector, designing and manufacturing durable and efficient components that meet the demanding requirements of the field. Our solutions are aimed at increasing productivity and reducing downtime of your machinery.",
           features: [
-            "Componentes para maquinaria de siembra y cosecha",
-            "Piezas de desgaste para equipos agrícolas",
-            "Componentes hidráulicos resistentes a la corrosión",
-            "Soluciones personalizadas para implementos agrícolas",
-            "Piezas de alta durabilidad para entornos exigentes"
+            "Components for planting and harvesting machinery",
+            "Wear parts for agricultural equipment",
+            "Corrosion-resistant hydraulic components",
+            "Customized solutions for agricultural implements",
+            "High durability parts for demanding environments"
           ],
           imageUrl: "/images/industries/galleryaagricultural/Agricola 1.webp"
         },
         capabilities: {
-          titlePrefix: "Nuestras",
-          titleHighlight: "Capacidades",
-          description: "Contamos con la experiencia y tecnología para fabricar componentes clave que maximizan el rendimiento y la durabilidad de su equipo agrícola.",
+          titlePrefix: "Our",
+          titleHighlight: "Capabilities",
+          description: "We have the experience and technology to manufacture key components that maximize the performance and durability of your agricultural equipment.",
           capacities: [
             {
-              title: "Componentes de Alta Resistencia",
-              description: "Fabricación de piezas resistentes a la abrasión, impacto y corrosión para aplicaciones agrícolas.",
+              title: "High-Resistance Components",
+              description: "Manufacturing of parts resistant to abrasion, impact, and corrosion for agricultural applications.",
               icon: "fa-tractor",
               items: [
-                "Rejas y cuchillas para arados",
-                "Discos y componentes para sembradoras",
-                "Piezas para sistemas de riego"
+                "Plowshares and blades for plows",
+                "Discs and components for seeders",
+                "Parts for irrigation systems"
               ]
             },
             {
-              title: "Repuestos Especializados",
-              description: "Desarrollo y fabricación de repuestos con especificaciones precisas para equipos agrícolas.",
+              title: "Specialized Spare Parts",
+              description: "Development and manufacturing of spare parts with precise specifications for agricultural equipment.",
               icon: "fa-cogs",
               items: [
-                "Componentes para transmisiones",
-                "Ejes y elementos de fijación",
-                "Elementos para sistemas hidráulicos"
+                "Components for transmissions",
+                "Shafts and fastening elements",
+                "Elements for hydraulic systems"
               ]
             },
             {
-              title: "Soluciones Personalizadas",
-              description: "Diseño y fabricación de soluciones a medida para necesidades específicas del sector agrícola.",
+              title: "Customized Solutions",
+              description: "Design and manufacturing of tailored solutions for specific needs in the agricultural sector.",
               icon: "fa-tools",
               items: [
-                "Adaptaciones para equipos existentes",
-                "Mejoras de rendimiento para implementos",
-                "Sistemas de conexión rápida para herramientas"
+                "Adaptations for existing equipment",
+                "Performance improvements for implements",
+                "Quick connection systems for tools"
               ]
             }
           ]
         },
         gallery: {
-          titlePrefix: "Nuestra",
-          titleHighlight: "Galería",
-          description: "Explora algunos de nuestros proyectos y componentes fabricados para la industria agrícola.",
-          showMoreButtonText: "Ver Más Proyectos",
+          titlePrefix: "Our",
+          titleHighlight: "Gallery",
+          description: "Explore some of our projects and components manufactured for the agricultural industry.",
+          showMoreButtonText: "View More Projects",
           galleryCategories: [
-            { id: 'all', name: 'Todos' }
+            { id: 'all', name: 'All' }
           ],
           galleryItems: [
             {
               id: 1,
-              title: "Componentes para arados",
-              description: "Piezas de alta resistencia para arados y labranza.",
+              title: "Plow components",
+              description: "High-resistance parts for plows and tillage.",
               category: "components",
               imageUrl: "/images/industries/galleryaagricultural/Agricola 1.webp"
             },
             {
               id: 2,
-              title: "Sistemas de siembra",
-              description: "Componentes precisos para sembradoras de precisión.",
+              title: "Seeding systems",
+              description: "Precise components for precision seeders.",
               category: "systems",
               imageUrl: "/images/industries/galleryaagricultural/Agricola 2.webp"
             },
             {
               id: 3,
-              title: "Implementos para tractores",
-              description: "Accesorios y herramientas para diversas aplicaciones agrícolas.",
+              title: "Tractor implements",
+              description: "Accessories and tools for various agricultural applications.",
               category: "implements",
               imageUrl: "/images/industries/galleryaagricultural/Agricola 3.webp"
             },
             {
               id: 4,
-              title: "Sistemas de riego",
-              description: "Componentes para sistemas de irrigación eficientes.",
+              title: "Irrigation systems",
+              description: "Components for efficient irrigation systems.",
               category: "systems",
               imageUrl: "/images/industries/galleryaagricultural/Agricola 4.webp"
             },
             {
               id: 5,
-              title: "Componentes para cosechadoras",
-              description: "Piezas de precisión para equipos de cosecha.",
+              title: "Harvester components",
+              description: "Precision parts for harvesting equipment.",
               category: "components",
               imageUrl: "/images/industries/galleryaagricultural/Agricola 5.webp"
             },
             {
               id: 6,
-              title: "Implementos especializados",
-              description: "Soluciones a medida para cultivos específicos.",
+              title: "Specialized implements",
+              description: "Tailored solutions for specific crops.",
               category: "implements",
               imageUrl: "/images/industries/galleryaagricultural/Agricola 6.webp"
             }
           ]
         },
         cta: {
-          title: "¿Listo para optimizar su operación agrícola?",
-          subtitle: "Contáctenos hoy para conocer cómo nuestras soluciones de manufactura pueden incrementar la eficiencia y durabilidad de su equipo agrícola.",
-          buttonText: "Solicitar Información",
+          title: "Ready to optimize your agricultural operation?",
+          subtitle: "Contact us today to learn how our manufacturing solutions can increase the efficiency and durability of your agricultural equipment.",
+          buttonText: "Request Information",
           buttonLink: "../contact"
         }
       },
-      slug: 'agricola'
+      slug: 'agricultural'
     }
   },
   methods: {
@@ -200,9 +200,9 @@ export default {
   },
   head() {
     return {
-      title: 'Industria Agrícola | OMA - Servicios de Manufactura',
+      title: 'Agricultural Industry | OMA - Manufacturing Services',
       meta: [
-        { hid: 'description', name: 'description', content: 'Soluciones de manufactura especializadas para el sector agrícola, diseñando y fabricando componentes duraderos y eficientes para las exigentes demandas del campo.' }
+        { hid: 'description', name: 'description', content: 'Specialized manufacturing solutions for the agricultural sector, designing and manufacturing durable and efficient components for the demanding requirements of the field.' }
       ]
     }
   }

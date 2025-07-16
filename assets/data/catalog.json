@@ -1,10 +1,10 @@
 [
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 1,
-    "Product Name": "Rodillo transporte recubierto neopreno",
-    "Material": "Acero 1045 y neopreno",
-    "Additional Info": "Rodamiento 6202, Tolerancia ¬±0.1 mm",
+    "Product Name": "Neoprene Coated Transport Roller",
+    "Material": "1045 Steel and neoprene",
+    "Additional Info": "Bearing 6202, Tolerance ±0.1 mm",
     "": "",
     "__1": "",
     "__2": "",
@@ -12,11 +12,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 2,
-    "Product Name": "Rodillo soporte cuna",
-    "Material": "Acero galvanizado",
-    "Additional Info": "Para bandas de 400-450 mm, triple labio",
+    "Product Name": "Cradle Support Roller",
+    "Material": "Galvanized steel",
+    "Additional Info": "For 400-450 mm belts, triple lip",
     "": "",
     "__1": "",
     "__2": "",
@@ -24,11 +24,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 3,
-    "Product Name": "Rodillo motorizado 24V",
-    "Material": "Acero al carbon y motor DC",
-    "Additional Info": "Incluye sensor de posicion, 50W",
+    "Product Name": "24V Motorized Roller",
+    "Material": "Carbon steel and DC motor",
+    "Additional Info": "Includes position sensor, 50W",
     "": "",
     "__1": "",
     "__2": "",
@@ -36,11 +36,11 @@
     "__4": "cuantas piezas"
   },
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 4,
-    "Product Name": "Rodillo antiestatico",
-    "Material": "Acero Inox 304 recubierto ESD",
-    "Additional Info": "Descarga estatica, rodamientos inox",
+    "Product Name": "Anti-static Roller",
+    "Material": "304 Stainless steel with ESD coating",
+    "Additional Info": "Static discharge, stainless bearings",
     "": "",
     "__1": "",
     "__2": "",
@@ -48,11 +48,11 @@
     "__4": "que medida"
   },
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 5,
-    "Product Name": "Rodillo recubrimiento uretano",
-    "Material": "Acero + poliuretano",
-    "Additional Info": "Dureza Shore A 85, banda de arrastre",
+    "Product Name": "Urethane Coated Roller",
+    "Material": "Steel + polyurethane",
+    "Additional Info": "Shore A 85 hardness, drive belt",
     "": "",
     "__1": "",
     "__2": "",
@@ -60,11 +60,11 @@
     "__4": "acabados"
   },
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 6,
-    "Product Name": "Rodillo con ranura ancha",
-    "Material": "Acero 1045",
-    "Additional Info": "Para correas tipo V, triple rodamiento",
+    "Product Name": "Wide Groove Roller",
+    "Material": "1045 Steel",
+    "Additional Info": "For V-type belts, triple bearing",
     "": "",
     "__1": "",
     "__2": "",
@@ -72,11 +72,11 @@
     "__4": "recubrimientos"
   },
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 7,
-    "Product Name": "Rodillo alveolar polipropileno",
-    "Material": "PP eje acero",
-    "Additional Info": "Estructura alveolar interior, peso ligero",
+    "Product Name": "Polypropylene Honeycomb Roller",
+    "Material": "PP with steel shaft",
+    "Additional Info": "Honeycomb interior structure, lightweight",
     "": "",
     "__1": "",
     "__2": "",
@@ -84,11 +84,11 @@
     "__4": "Material"
   },
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 8,
-    "Product Name": "Rodillo cople hexagonal",
-    "Material": "Acero",
-    "Additional Info": "Lubricacion por engrasador, cople interno",
+    "Product Name": "Hexagonal Coupling Roller",
+    "Material": "Steel",
+    "Additional Info": "Grease lubrication, internal coupling",
     "": "",
     "__1": "",
     "__2": "",
@@ -96,11 +96,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 9,
-    "Product Name": "Rodillo antidesgaste recubierto ceramico",
-    "Material": "Acero recubierto ceramico",
-    "Additional Info": "Para entornos abrasivos, alta friccion",
+    "Product Name": "Ceramic Coated Wear-Resistant Roller",
+    "Material": "Ceramic coated steel",
+    "Additional Info": "For abrasive environments, high friction",
     "": "",
     "__1": "",
     "__2": "",
@@ -108,11 +108,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 10,
-    "Product Name": "Rodillo de retorno banda ancha",
-    "Material": "Acero galvanizado",
-    "Additional Info": "Uso en transportadores mineros",
+    "Product Name": "Wide Belt Return Roller",
+    "Material": "Galvanized steel",
+    "Additional Info": "Used in mining conveyors",
     "": "",
     "__1": "",
     "__2": "",
@@ -120,11 +120,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 11,
-    "Product Name": "Rodillo autocentrante",
-    "Material": "Acero",
-    "Additional Info": "Conico en extremos, centra banda automaticamente",
+    "Product Name": "Self-Centering Roller",
+    "Material": "Steel",
+    "Additional Info": "Conical at ends, automatically centers belt",
     "": "",
     "__1": "",
     "__2": "",
@@ -132,11 +132,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 12,
-    "Product Name": "Rodillo eje roscado",
-    "Material": "Acero al carbon",
-    "Additional Info": "Fijacion con tuerca, rodamientos 6203",
+    "Product Name": "Threaded Shaft Roller",
+    "Material": "Carbon steel",
+    "Additional Info": "Nut fixation, 6203 bearings",
     "": "",
     "__1": "",
     "__2": "",
@@ -144,11 +144,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 13,
-    "Product Name": "Rodillo recubierto caucho nitrilo",
-    "Material": "Acero 4140 nitrurado",
-    "Additional Info": "Resistente a aceites, Dureza Shore A 70",
+    "Product Name": "Nitrile Rubber Coated Roller",
+    "Material": "Nitrided 4140 steel",
+    "Additional Info": "Oil resistant, Shore A 70 hardness",
     "": "",
     "__1": "",
     "__2": "",
@@ -156,11 +156,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 14,
-    "Product Name": "Rodillo con anillos de impacto",
-    "Material": "Acero + anillos rubber",
-    "Additional Info": "Absorbe choque en zona de carga",
+    "Product Name": "Impact Ring Roller",
+    "Material": "Steel + rubber rings",
+    "Additional Info": "Absorbs shock in loading zone",
     "": "",
     "__1": "",
     "__2": "",
@@ -168,11 +168,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 15,
-    "Product Name": "Rodillo telescopico ajustable",
-    "Material": "Acero",
-    "Additional Info": "Muelle interno, ajusta longitud",
+    "Product Name": "Adjustable Telescopic Roller",
+    "Material": "Steel",
+    "Additional Info": "Internal spring, adjustable length",
     "": "",
     "__1": "",
     "__2": "",
@@ -180,11 +180,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 16,
-    "Product Name": "Rodillo ultra-liviano",
-    "Material": "Aluminio",
-    "Additional Info": "Peso reducido, rodamientos miniatura",
+    "Product Name": "Ultra-Lightweight Roller",
+    "Material": "Aluminum",
+    "Additional Info": "Reduced weight, miniature bearings",
     "": "",
     "__1": "",
     "__2": "",
@@ -192,11 +192,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 17,
-    "Product Name": "Rodillo triple labio sellado",
-    "Material": "Acero galvanizado",
-    "Additional Info": "Proteccion IP65 contra polvo y agua",
+    "Product Name": "Triple Lip Sealed Roller",
+    "Material": "Galvanized steel",
+    "Additional Info": "IP65 protection against dust and water",
     "": "",
     "__1": "",
     "__2": "",
@@ -204,11 +204,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 18,
-    "Product Name": "Rodillo cuna biconico",
-    "Material": "Acero",
-    "Additional Info": "Ayuda a alinear banda, rodamientos 6204",
+    "Product Name": "Biconical Cradle Roller",
+    "Material": "Steel",
+    "Additional Info": "Helps align belt, 6204 bearings",
     "": "",
     "__1": "",
     "__2": "",
@@ -216,11 +216,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 19,
-    "Product Name": "Rodillo alta temperatura",
-    "Material": "Acero Inox 316",
-    "Additional Info": "Soporta hasta 200¬∞C, rodamientos ceramicos",
+    "Product Name": "High Temperature Roller",
+    "Material": "316 Stainless steel",
+    "Additional Info": "Withstands up to 200°C, ceramic bearings",
     "": "",
     "__1": "",
     "__2": "",
@@ -228,11 +228,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 20,
-    "Product Name": "Rodillo recubrimiento teflon (PTFE)",
-    "Material": "Acero y PTFE",
-    "Additional Info": "Anti-adherente, para transportes pegajosos",
+    "Product Name": "Teflon (PTFE) Coated Roller",
+    "Material": "Steel and PTFE",
+    "Additional Info": "Non-stick, for sticky transports",
     "": "",
     "__1": "",
     "__2": "",
@@ -240,11 +240,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 21,
-    "Product Name": "Rodillo con sensor inductivo",
-    "Material": "Acero",
-    "Additional Info": "Sensor detecta paso de objetos",
+    "Product Name": "Roller with Inductive Sensor",
+    "Material": "Steel",
+    "Additional Info": "Sensor detects object passage",
     "": "",
     "__1": "",
     "__2": "",
@@ -252,11 +252,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 22,
-    "Product Name": "Rodillo banda modular",
-    "Material": "Acero 1045",
-    "Additional Info": "Para cadenas plasticas tipo modular",
+    "Product Name": "Modular Belt Roller",
+    "Material": "1045 Steel",
+    "Additional Info": "For modular plastic chains",
     "": "",
     "__1": "",
     "__2": "",
@@ -264,11 +264,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 23,
-    "Product Name": "Rodillo con valona",
-    "Material": "Acero al carbon",
-    "Additional Info": "Gu√≠a lateral en banda",
+    "Product Name": "Flanged Roller",
+    "Material": "Carbon steel",
+    "Additional Info": "Lateral guide for belt",
     "": "",
     "__1": "",
     "__2": "",
@@ -276,11 +276,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 24,
-    "Product Name": "Rodillo antirretorno",
-    "Material": "Acero",
-    "Additional Info": "Evita retroceso en pendientes",
+    "Product Name": "Anti-Return Roller",
+    "Material": "Steel",
+    "Additional Info": "Prevents backsliding on slopes",
     "": "",
     "__1": "",
     "__2": "",
@@ -288,11 +288,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 25,
-    "Product Name": "Rodillo recubierto silicona",
-    "Material": "Acero + silicona",
-    "Additional Info": "Uso alimenticio, tolerancia alta de temp",
+    "Product Name": "Silicone Coated Roller",
+    "Material": "Steel + silicone",
+    "Additional Info": "Food-grade, high temperature tolerance",
     "": "",
     "__1": "",
     "__2": "",
@@ -300,11 +300,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 26,
-    "Product Name": "Rodillo con anillo hule",
-    "Material": "Acero",
-    "Additional Info": "Amortigua impacto, sujecion rodamientos",
+    "Product Name": "Rubber Ring Roller",
+    "Material": "Steel",
+    "Additional Info": "Dampens impact, bearing support",
     "": "",
     "__1": "",
     "__2": "",
@@ -312,11 +312,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 27,
-    "Product Name": "Rodillo canal triple",
-    "Material": "Acero galvanizado",
-    "Additional Info": "Transportador poliv, rodamientos 6203",
+    "Product Name": "Triple Channel Roller",
+    "Material": "Galvanized steel",
+    "Additional Info": "Multi-V conveyor, 6203 bearings",
     "": "",
     "__1": "",
     "__2": "",
@@ -324,11 +324,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 28,
-    "Product Name": "Rodillo neumatico inflable",
-    "Material": "Acero",
-    "Additional Info": "Control de presion, absorbe vibraciones",
+    "Product Name": "Inflatable Pneumatic Roller",
+    "Material": "Steel",
+    "Additional Info": "Pressure control, absorbs vibrations",
     "": "",
     "__1": "",
     "__2": "",
@@ -336,11 +336,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 29,
-    "Product Name": "Rodillo industrial reforzado",
-    "Material": "Acero 4140",
-    "Additional Info": "Eje 25 mm, uso rudo, rodamientos conicos",
+    "Product Name": "Reinforced Industrial Roller",
+    "Material": "4140 Steel",
+    "Additional Info": "25 mm shaft, heavy duty, tapered bearings",
     "": "",
     "__1": "",
     "__2": "",
@@ -348,11 +348,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodillos",
+    "Category": "Rollers",
     "Item #": 30,
-    "Product Name": "Rodillo recubrimiento poliacetal",
-    "Material": "Acero y POM",
-    "Additional Info": "Baja friccion, entornos humedos",
+    "Product Name": "Polyacetal Coated Roller",
+    "Material": "Steel and POM",
+    "Additional Info": "Low friction, wet environments",
     "": "",
     "__1": "",
     "__2": "",
@@ -372,11 +372,11 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 31,
-    "Product Name": "Pin recto DIN7 grado duro",
-    "Material": "Acero templado",
-    "Additional Info": "Tolerancia m6, dureza 58 HRC",
+    "Product Name": "Straight DIN7 Hard Grade Pin",
+    "Material": "Hardened steel",
+    "Additional Info": "m6 tolerance, 58 HRC hardness",
     "": "",
     "__1": "",
     "__2": "",
@@ -384,11 +384,11 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 32,
-    "Product Name": "Pin elastico SPIROL",
-    "Material": "Acero al carbon",
-    "Additional Info": "Tipo slit coil, sujecion en orificios",
+    "Product Name": "SPIROL Spring Pin",
+    "Material": "Carbon steel",
+    "Additional Info": "Slit coil type, hole fastening",
     "": "",
     "__1": "",
     "__2": "",
@@ -396,11 +396,11 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 33,
-    "Product Name": "Pin conico rectificado",
-    "Material": "Acero 1045",
-    "Additional Info": "Angulo conicidad 1:50, sujeta engranes",
+    "Product Name": "Ground Tapered Pin",
+    "Material": "1045 Steel",
+    "Additional Info": "1:50 taper, fine grinding",
     "": "",
     "__1": "",
     "__2": "",
@@ -408,11 +408,11 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 34,
-    "Product Name": "Pin chavetero cabeza normal",
-    "Material": "Acero templado",
-    "Additional Info": "Para ejes con ranura lateral",
+    "Product Name": "Standard Head Groove Pin",
+    "Material": "Hardened steel",
+    "Additional Info": "Standard head, DIN 1471",
     "": "",
     "__1": "",
     "__2": "",
@@ -420,11 +420,11 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 35,
-    "Product Name": "Pin de retencion rapida bola",
-    "Material": "Acero aleado",
-    "Additional Info": "Mecanismo de bola con pulsador",
+    "Product Name": "Quick Release Ball Pin",
+    "Material": "Alloy steel",
+    "Additional Info": "Ball retention, quick extraction",
     "": "",
     "__1": "",
     "__2": "",
@@ -432,11 +432,11 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 36,
-    "Product Name": "Pin bisagra abisagrado",
-    "Material": "Acero Inox 303",
-    "Additional Info": "Uso en puertas, pivot",
+    "Product Name": "Hinged Hinge Pin",
+    "Material": "303 Stainless steel",
+    "Additional Info": "For industrial hinges, high strength",
     "": "",
     "__1": "",
     "__2": "",
@@ -444,11 +444,11 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 37,
-    "Product Name": "Pin soporte ranurado",
-    "Material": "Acero al carbon",
-    "Additional Info": "Ranura transversal, retencion con clip",
+    "Product Name": "Slotted Support Pin",
+    "Material": "Carbon steel",
+    "Additional Info": "With slot for retaining ring",
     "": "",
     "__1": "",
     "__2": "",
@@ -456,11 +456,11 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 38,
-    "Product Name": "Pin prisionero hex",
-    "Material": "Acero aleado",
-    "Additional Info": "Cabeza interna allen, rosca UNC",
+    "Product Name": "Hex Set Pin",
+    "Material": "Alloy steel",
+    "Additional Info": "Hexagonal head, flat tip",
     "": "",
     "__1": "",
     "__2": "",
@@ -468,11 +468,11 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 39,
-    "Product Name": "Pin con anilla retencion",
-    "Material": "Acero zincado",
-    "Additional Info": "Permite liberar rapido en ejes",
+    "Product Name": "Retention Ring Pin",
+    "Material": "Zinc-plated steel",
+    "Additional Info": "Ring included, quick extraction",
     "": "",
     "__1": "",
     "__2": "",
@@ -480,11 +480,11 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 40,
-    "Product Name": "Pin resortado",
-    "Material": "Acero templado",
-    "Additional Info": "Accion muelle interior",
+    "Product Name": "Spring-Loaded Pin",
+    "Material": "Hardened steel",
+    "Additional Info": "Internal spring, automatic locking",
     "": "",
     "__1": "",
     "__2": "",
@@ -492,7 +492,7 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 41,
     "Product Name": "Pin cabeza esferica",
     "Material": "Acero templado",
@@ -504,7 +504,7 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 42,
     "Product Name": "Pin cilindrico roscado",
     "Material": "Acero al carbon",
@@ -516,7 +516,7 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 43,
     "Product Name": "Pin indexador con perilla",
     "Material": "Acero",
@@ -528,7 +528,7 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 44,
     "Product Name": "Pin pasador con hueco",
     "Material": "Acero galvanizado",
@@ -540,7 +540,7 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 45,
     "Product Name": "Pin de alineacion conico",
     "Material": "Acero 4140",
@@ -552,7 +552,7 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 46,
     "Product Name": "Pin esparrago doble rosca",
     "Material": "Acero templado",
@@ -564,7 +564,7 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 47,
     "Product Name": "Pin roscado UNC cabezal",
     "Material": "Acero al carbon",
@@ -576,7 +576,7 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 48,
     "Product Name": "Pin estriado sujecion",
     "Material": "Acero",
@@ -588,7 +588,7 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 49,
     "Product Name": "Pin bisagra desarmable",
     "Material": "Acero Inox",
@@ -600,7 +600,7 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 50,
     "Product Name": "Pin pivot cabeza troncoconica",
     "Material": "Acero aleado",
@@ -612,7 +612,7 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 51,
     "Product Name": "Pin bloqueo con bola de acero",
     "Material": "Acero al carbon",
@@ -624,7 +624,7 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 52,
     "Product Name": "Pin pasador codo",
     "Material": "Acero templado",
@@ -636,7 +636,7 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 53,
     "Product Name": "Pin macho-hembra ajustable",
     "Material": "Acero",
@@ -648,7 +648,7 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 54,
     "Product Name": "Pin tope con pestillo",
     "Material": "Acero galvanizado",
@@ -660,7 +660,7 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 55,
     "Product Name": "Pin dowel tolerancia H7",
     "Material": "Acero templado",
@@ -672,7 +672,7 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 56,
     "Product Name": "Pin autoblocante con muelle",
     "Material": "Acero al carbon",
@@ -684,7 +684,7 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 57,
     "Product Name": "Pin cuello roscado M10",
     "Material": "Acero",
@@ -696,7 +696,7 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 58,
     "Product Name": "Pin brida lateral",
     "Material": "Acero 1045",
@@ -708,7 +708,7 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 59,
     "Product Name": "Pin reten esferico bola",
     "Material": "Acero templado",
@@ -720,7 +720,7 @@
     "__4": ""
   },
   {
-    "Category": "Pines",
+    "Category": "Pins",
     "Item #": 60,
     "Product Name": "Pin allen M6",
     "Material": "Acero aleado",
@@ -744,11 +744,11 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 61,
-    "Product Name": "Buje bronce sinterizado",
-    "Material": "Bronce poroso",
-    "Additional Info": "Autolubricado, absorbe aceite",
+    "Product Name": "Phosphor Bronze Bushing",
+    "Material": "SAE 660 Bronze",
+    "Additional Info": "Self-lubricating, low friction coefficient",
     "": "",
     "__1": "",
     "__2": "",
@@ -756,7 +756,7 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 62,
     "Product Name": "Buje poliamida (PA6)",
     "Material": "Plastico PA6",
@@ -768,11 +768,11 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 63,
-    "Product Name": "Buje grafitado",
-    "Material": "Bronce grafitado",
-    "Additional Info": "Autolubricante solido",
+    "Product Name": "Graphite Bronze Bushing",
+    "Material": "Bronze + graphite",
+    "Additional Info": "Graphite particles, dry use",
     "": "",
     "__1": "",
     "__2": "",
@@ -780,7 +780,7 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 64,
     "Product Name": "Buje PTFE recubierto",
     "Material": "Acero + PTFE",
@@ -792,7 +792,7 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 65,
     "Product Name": "Buje poliacetal (POM)",
     "Material": "Acetal",
@@ -804,11 +804,11 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 66,
-    "Product Name": "Buje autolubricado",
-    "Material": "Acero al carbon poroso",
-    "Additional Info": "Impregnado aceite, reduce friccion",
+    "Product Name": "Sintered Bushing",
+    "Material": "Sintered bronze",
+    "Additional Info": "Oil impregnated, controlled porosity",
     "": "",
     "__1": "",
     "__2": "",
@@ -816,7 +816,7 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 67,
     "Product Name": "Buje con ranura lubricacion",
     "Material": "Bronce SAE660",
@@ -828,7 +828,7 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 68,
     "Product Name": "Buje hex interior",
     "Material": "Poliuretano",
@@ -840,7 +840,7 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 69,
     "Product Name": "Buje laminado metal-polimero",
     "Material": "Acero+Bronce+PTFE",
@@ -852,11 +852,11 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 70,
-    "Product Name": "Buje UHMWPE",
-    "Material": "Polietileno UHMW",
-    "Additional Info": "Resistencia quimica, bajo coef. de friccion",
+    "Product Name": "PTFE Polymer Bushing",
+    "Material": "PTFE + fiber",
+    "Additional Info": "No lubrication needed, low friction coefficient",
     "": "",
     "__1": "",
     "__2": "",
@@ -864,7 +864,7 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 71,
     "Product Name": "Buje con valona",
     "Material": "Acero",
@@ -876,7 +876,7 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 72,
     "Product Name": "Buje bronce grafito rascador",
     "Material": "Bronce",
@@ -888,7 +888,7 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 73,
     "Product Name": "Buje fibroso",
     "Material": "Fibra fenolica",
@@ -900,7 +900,7 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 74,
     "Product Name": "Buje con perno integrado",
     "Material": "Acero templado",
@@ -912,7 +912,7 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 75,
     "Product Name": "Buje recubierto nitrurado",
     "Material": "Acero nitrurado",
@@ -924,7 +924,7 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 76,
     "Product Name": "Buje roscado interno M10",
     "Material": "Acero",
@@ -936,11 +936,11 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 77,
-    "Product Name": "Buje excentrico",
-    "Material": "Acero al carbon",
-    "Additional Info": "Regula posicion eje",
+    "Product Name": "Steel Sleeve Bushing",
+    "Material": "Carbon steel",
+    "Additional Info": "Interior grinding, heat treatment",
     "": "",
     "__1": "",
     "__2": "",
@@ -948,11 +948,11 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 78,
-    "Product Name": "Buje esferico",
-    "Material": "Bronce",
-    "Additional Info": "Permite angulos basculantes",
+    "Product Name": "Split Bushing",
+    "Material": "Bronze",
+    "Additional Info": "Facilitates assembly without shaft removal",
     "": "",
     "__1": "",
     "__2": "",
@@ -960,7 +960,7 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 79,
     "Product Name": "Buje ceramico",
     "Material": "Oxido de zirconio",
@@ -972,7 +972,7 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 80,
     "Product Name": "Buje doble ranura",
     "Material": "Bronce",
@@ -984,7 +984,7 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 81,
     "Product Name": "Buje dentado interno",
     "Material": "Acero",
@@ -996,11 +996,11 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 82,
-    "Product Name": "Buje chavetero",
-    "Material": "Acero",
-    "Additional Info": "Para poleas o engranes",
+    "Product Name": "Keyed Bushing",
+    "Material": "Steel",
+    "Additional Info": "For pulleys or gears",
     "": "",
     "__1": "",
     "__2": "",
@@ -1008,11 +1008,11 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 83,
-    "Product Name": "Buje recambio rodillo",
-    "Material": "Bronce sinter",
-    "Additional Info": "Fijacion por anillo elastico",
+    "Product Name": "Taper Lock Bushing",
+    "Material": "Cast iron",
+    "Additional Info": "Screw fixing, 1:12 taper",
     "": "",
     "__1": "",
     "__2": "",
@@ -1020,11 +1020,11 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 84,
-    "Product Name": "Buje hembra roscado M8",
-    "Material": "Acero",
-    "Additional Info": "Sujeta pasadores o ejes",
+    "Product Name": "M8 Female Threaded Bushing",
+    "Material": "Steel",
+    "Additional Info": "Secures pins or shafts",
     "": "",
     "__1": "",
     "__2": "",
@@ -1032,11 +1032,11 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 85,
-    "Product Name": "Buje teflonado",
-    "Material": "Acero + PTFE",
-    "Additional Info": "Coeficiente de friccion bajo 0.05",
+    "Product Name": "QD Tapered Bushing",
+    "Material": "Cast iron",
+    "Additional Info": "Quick Disconnect system, keyless fixing",
     "": "",
     "__1": "",
     "__2": "",
@@ -1044,11 +1044,11 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 86,
-    "Product Name": "Buje lineal LM8UU",
-    "Material": "Acero+bolas",
-    "Additional Info": "Rodamiento lineal, carril eje 8 mm",
+    "Product Name": "LM8UU Linear Bushing",
+    "Material": "Steel+balls",
+    "Additional Info": "Linear bearing, 8 mm shaft rail",
     "": "",
     "__1": "",
     "__2": "",
@@ -1056,11 +1056,11 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 87,
-    "Product Name": "Buje estriado 6 canales",
-    "Material": "Acero al carbon",
-    "Additional Info": "Transmite torque en ejes estriados",
+    "Product Name": "6-Channel Splined Bushing",
+    "Material": "Carbon steel",
+    "Additional Info": "Transmits torque in splined shafts",
     "": "",
     "__1": "",
     "__2": "",
@@ -1068,11 +1068,11 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 88,
-    "Product Name": "Buje cople flexible",
-    "Material": "Aluminio",
-    "Additional Info": "Compensa desalineaciones",
+    "Product Name": "Flexible Coupling Bushing",
+    "Material": "Aluminum",
+    "Additional Info": "Compensates for misalignments",
     "": "",
     "__1": "",
     "__2": "",
@@ -1080,11 +1080,11 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 89,
-    "Product Name": "Buje globo",
-    "Material": "Bronce",
-    "Additional Info": "Permite cierta inclinacion",
+    "Product Name": "Globe Bushing",
+    "Material": "Bronze",
+    "Additional Info": "Allows some inclination",
     "": "",
     "__1": "",
     "__2": "",
@@ -1092,11 +1092,11 @@
     "__4": ""
   },
   {
-    "Category": "Bujes",
+    "Category": "Bushings",
     "Item #": 90,
-    "Product Name": "Buje telescopico interno",
-    "Material": "Bronce",
-    "Additional Info": "Se expande con resorte",
+    "Product Name": "Internal Telescopic Bushing",
+    "Material": "Bronze",
+    "Additional Info": "Expands with spring",
     "": "",
     "__1": "",
     "__2": "",
@@ -1118,9 +1118,9 @@
   {
     "Category": "Sprockets",
     "Item #": 91,
-    "Product Name": "Sprocket simplex ANSI40 12D",
-    "Material": "Acero 1045",
-    "Additional Info": "Para cadena ANSI40, tratamiento fosfatado",
+    "Product Name": "Simplex ANSI40 12T Sprocket",
+    "Material": "1045 Steel",
+    "Additional Info": "For ANSI40 chain, phosphate treatment",
     "": "",
     "__1": "",
     "__2": "",
@@ -1130,9 +1130,9 @@
   {
     "Category": "Sprockets",
     "Item #": 92,
-    "Product Name": "Sprocket duplex ANSI60 15D",
-    "Material": "Acero al carbon",
-    "Additional Info": "Para cadenas dobles, bru√±ido superficial",
+    "Product Name": "Duplex ANSI60 15T Sprocket",
+    "Material": "Carbon steel",
+    "Additional Info": "For double chains, surface burnishing",
     "": "",
     "__1": "",
     "__2": "",
@@ -1142,9 +1142,9 @@
   {
     "Category": "Sprockets",
     "Item #": 93,
-    "Product Name": "Sprocket taper bush",
-    "Material": "Acero 1045",
-    "Additional Info": "Compatible con sistema QD, chavetero",
+    "Product Name": "Taper Bush Sprocket",
+    "Material": "1045 Steel",
+    "Additional Info": "Compatible with QD system, keyway",
     "": "",
     "__1": "",
     "__2": "",
@@ -1154,9 +1154,9 @@
   {
     "Category": "Sprockets",
     "Item #": 94,
-    "Product Name": "Sprocket soldable blank",
-    "Material": "Acero al carbon",
-    "Additional Info": "Se suelda cubo o brida segun aplicacion",
+    "Product Name": "Weldable Blank Sprocket",
+    "Material": "Carbon steel",
+    "Additional Info": "Hub or flange welded according to application",
     "": "",
     "__1": "",
     "__2": "",
@@ -1166,9 +1166,9 @@
   {
     "Category": "Sprockets",
     "Item #": 95,
-    "Product Name": "Sprocket inoxidable ANSI50 10D",
-    "Material": "Acero Inox 304",
-    "Additional Info": "Resistente corrosion, uso alimenticio",
+    "Product Name": "Stainless ANSI50 10T Sprocket",
+    "Material": "304 Stainless steel",
+    "Additional Info": "Corrosion resistant, food-grade use",
     "": "",
     "__1": "",
     "__2": "",
@@ -1178,9 +1178,9 @@
   {
     "Category": "Sprockets",
     "Item #": 96,
-    "Product Name": "Sprocket triple ANSI40 12D",
-    "Material": "Acero 4140",
-    "Additional Info": "Transmision triple, alta potencia",
+    "Product Name": "Triple ANSI40 12T Sprocket",
+    "Material": "4140 Steel",
+    "Additional Info": "Triple transmission, high power",
     "": "",
     "__1": "",
     "__2": "",
@@ -1190,9 +1190,9 @@
   {
     "Category": "Sprockets",
     "Item #": 97,
-    "Product Name": "Sprocket cubo QD 8D",
-    "Material": "Acero 1045",
-    "Additional Info": "Cambio rapido de buje QD",
+    "Product Name": "QD Hub 8T Sprocket",
+    "Material": "1045 Steel",
+    "Additional Info": "Quick change QD bushing",
     "": "",
     "__1": "",
     "__2": "",
@@ -1202,9 +1202,9 @@
   {
     "Category": "Sprockets",
     "Item #": 98,
-    "Product Name": "Sprocket banda modular",
+    "Product Name": "Modular Belt Sprocket",
     "Material": "Acetal",
-    "Additional Info": "Engranaje interno para bandas plasticas",
+    "Additional Info": "Internal gear for plastic belts",
     "": "",
     "__1": "",
     "__2": "",
@@ -1214,9 +1214,9 @@
   {
     "Category": "Sprockets",
     "Item #": 99,
-    "Product Name": "Sprocket reduce ruido composite",
-    "Material": "Acero+nylon",
-    "Additional Info": "Inserto nylon amortigua vibraciones",
+    "Product Name": "Noise-Reducing Composite Sprocket",
+    "Material": "Steel+nylon",
+    "Additional Info": "Nylon insert dampens vibrations",
     "": "",
     "__1": "",
     "__2": "",
@@ -1226,9 +1226,9 @@
   {
     "Category": "Sprockets",
     "Item #": 100,
-    "Product Name": "Sprocket rectificado precision",
-    "Material": "Acero 4140",
-    "Additional Info": "Alta exactitud en circularidad",
+    "Product Name": "Precision Ground Sprocket",
+    "Material": "4140 Steel",
+    "Additional Info": "High circularity accuracy",
     "": "",
     "__1": "",
     "__2": "",
@@ -1238,9 +1238,9 @@
   {
     "Category": "Sprockets",
     "Item #": 101,
-    "Product Name": "Sprocket ASA80 8D",
-    "Material": "Acero 1045",
-    "Additional Info": "Uso pesado, chavetero y tornillo prisionero",
+    "Product Name": "ASA80 8T Sprocket",
+    "Material": "1045 Steel",
+    "Additional Info": "Heavy duty, keyway and set screw",
     "": "",
     "__1": "",
     "__2": "",
@@ -1250,9 +1250,9 @@
   {
     "Category": "Sprockets",
     "Item #": 102,
-    "Product Name": "Sprocket duplex ANSI100 12D",
-    "Material": "Acero 4140",
-    "Additional Info": "Para cadenas grandes, par elevado",
+    "Product Name": "Duplex ANSI100 12T Sprocket",
+    "Material": "4140 Steel",
+    "Additional Info": "For large chains, high torque",
     "": "",
     "__1": "",
     "__2": "",
@@ -1262,9 +1262,9 @@
   {
     "Category": "Sprockets",
     "Item #": 103,
-    "Product Name": "Sprocket chavetero interno",
-    "Material": "Acero al carbon",
-    "Additional Info": "Fija en ejes standard",
+    "Product Name": "Internal Keyway Sprocket",
+    "Material": "Carbon steel",
+    "Additional Info": "Fixes on standard shafts",
     "": "",
     "__1": "",
     "__2": "",
@@ -1274,9 +1274,9 @@
   {
     "Category": "Sprockets",
     "Item #": 104,
-    "Product Name": "Sprocket 40D grande",
-    "Material": "Acero",
-    "Additional Info": "Reduccion significativa, perforado universal",
+    "Product Name": "Large 40T Sprocket",
+    "Material": "Steel",
+    "Additional Info": "Significant reduction, universal drilling",
     "": "",
     "__1": "",
     "__2": "",
@@ -1286,9 +1286,9 @@
   {
     "Category": "Sprockets",
     "Item #": 105,
-    "Product Name": "Sprocket mini 6D",
-    "Material": "Acero templado",
-    "Additional Info": "Dimensiones compactas, ejes reducidos",
+    "Product Name": "Mini 6T Sprocket",
+    "Material": "Hardened steel",
+    "Additional Info": "Compact dimensions, reduced shafts",
     "": "",
     "__1": "",
     "__2": "",
@@ -1298,9 +1298,9 @@
   {
     "Category": "Sprockets",
     "Item #": 106,
-    "Product Name": "Sprocket con valona",
-    "Material": "Acero 1045",
-    "Additional Info": "Protege cadena ante desplazamiento",
+    "Product Name": "Flanged Sprocket",
+    "Material": "1045 Steel",
+    "Additional Info": "Protects chain from displacement",
     "": "",
     "__1": "",
     "__2": "",
@@ -1310,9 +1310,9 @@
   {
     "Category": "Sprockets",
     "Item #": 107,
-    "Product Name": "Sprocket parted universal",
-    "Material": "Acero",
-    "Additional Info": "Se desmonta sin quitar eje",
+    "Product Name": "Universal Split Sprocket",
+    "Material": "Steel",
+    "Additional Info": "Can be removed without shaft removal",
     "": "",
     "__1": "",
     "__2": "",
@@ -1322,9 +1322,9 @@
   {
     "Category": "Sprockets",
     "Item #": 108,
-    "Product Name": "Sprocket flama endurecido",
-    "Material": "Acero al carbon",
-    "Additional Info": "Dureza superficial alta (HRC 50-55)",
+    "Product Name": "Flame Hardened Sprocket",
+    "Material": "Carbon steel",
+    "Additional Info": "High surface hardness (HRC 50-55)",
     "": "",
     "__1": "",
     "__2": "",
@@ -1334,9 +1334,9 @@
   {
     "Category": "Sprockets",
     "Item #": 109,
-    "Product Name": "Sprocket mini ANSI25 10D",
-    "Material": "Acero 4140",
-    "Additional Info": "Aplicaciones de precision, drones",
+    "Product Name": "Mini ANSI25 10T Sprocket",
+    "Material": "4140 Steel",
+    "Additional Info": "Precision applications, drones",
     "": "",
     "__1": "",
     "__2": "",
@@ -1346,9 +1346,9 @@
   {
     "Category": "Sprockets",
     "Item #": 110,
-    "Product Name": "Sprocket doble ancho",
-    "Material": "Acero",
-    "Additional Info": "Mayor area de contacto con cadena",
+    "Product Name": "Double Width Sprocket",
+    "Material": "Steel",
+    "Additional Info": "Greater chain contact surface",
     "": "",
     "__1": "",
     "__2": "",
@@ -1356,11 +1356,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 111,
-    "Product Name": "Engrane recto mod 2",
-    "Material": "Acero 1045",
-    "Additional Info": "Eje 10 mm, acabado fresado",
+    "Product Name": "Mod 2 Spur Gear",
+    "Material": "1045 Steel",
+    "Additional Info": "10 mm shaft, milled finish",
     "": "",
     "__1": "",
     "__2": "",
@@ -1368,11 +1368,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 112,
-    "Product Name": "Engrane helicoidal 4140",
-    "Material": "Acero 4140",
-    "Additional Info": "Rectificado, transmision suave",
+    "Product Name": "4140 Helical Gear",
+    "Material": "4140 Steel",
+    "Additional Info": "Ground finish, smooth transmission",
     "": "",
     "__1": "",
     "__2": "",
@@ -1380,11 +1380,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 113,
-    "Product Name": "Engrane conico 1:1",
-    "Material": "Acero aleado",
-    "Additional Info": "Ang 90¬∞, par medio",
+    "Product Name": "1:1 Bevel Gear",
+    "Material": "Alloy steel",
+    "Additional Info": "90° angle, medium torque",
     "": "",
     "__1": "",
     "__2": "",
@@ -1392,11 +1392,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 114,
-    "Product Name": "Engrane planetario simple",
-    "Material": "Acero al carbon",
-    "Additional Info": "Uso en reductor de motor DC",
+    "Product Name": "Simple Planetary Gear",
+    "Material": "Carbon steel",
+    "Additional Info": "Used in DC motor reducer",
     "": "",
     "__1": "",
     "__2": "",
@@ -1404,11 +1404,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 115,
-    "Product Name": "Engrane sin fin bronce",
-    "Material": "Bronce SAE660",
-    "Additional Info": "Usar con tornillo sin fin acero",
+    "Product Name": "Bronze Worm Gear",
+    "Material": "SAE660 Bronze",
+    "Additional Info": "Use with steel worm screw",
     "": "",
     "__1": "",
     "__2": "",
@@ -1416,11 +1416,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 116,
-    "Product Name": "Cremallera recta mod 1",
-    "Material": "Acero 1045",
-    "Additional Info": "Convierte mov rot a lineal",
+    "Product Name": "Mod 1 Straight Rack",
+    "Material": "1045 Steel",
+    "Additional Info": "Converts rotary to linear motion",
     "": "",
     "__1": "",
     "__2": "",
@@ -1428,11 +1428,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 117,
-    "Product Name": "Engrane helicoidal doble",
-    "Material": "Acero 4140",
-    "Additional Info": "Mayor contacto y par",
+    "Product Name": "Double Helical Gear",
+    "Material": "4140 Steel",
+    "Additional Info": "Greater contact and torque",
     "": "",
     "__1": "",
     "__2": "",
@@ -1440,11 +1440,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 118,
-    "Product Name": "Engrane conico espiral 2:1",
-    "Material": "Acero 8620",
-    "Additional Info": "Rectificado final, endurecido superficial",
+    "Product Name": "2:1 Spiral Bevel Gear",
+    "Material": "8620 Steel",
+    "Additional Info": "Final grinding, surface hardened",
     "": "",
     "__1": "",
     "__2": "",
@@ -1452,11 +1452,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 119,
-    "Product Name": "Engrane interno anillo",
-    "Material": "Acero 1045",
-    "Additional Info": "Para planetarios, alto par",
+    "Product Name": "Ring Internal Gear",
+    "Material": "1045 Steel",
+    "Additional Info": "For planetary systems, high torque",
     "": "",
     "__1": "",
     "__2": "",
@@ -1464,11 +1464,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 120,
-    "Product Name": "Engrane recto C45",
-    "Material": "Acero C45",
-    "Additional Info": "Capa de fosfatado anticorrosion",
+    "Product Name": "C45 Spur Gear",
+    "Material": "C45 Steel",
+    "Additional Info": "Anti-corrosion phosphate coating",
     "": "",
     "__1": "",
     "__2": "",
@@ -1476,11 +1476,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 121,
-    "Product Name": "Engrane recto mod 3",
-    "Material": "Acero 1045",
-    "Additional Info": "Fresado, sin rectificar",
+    "Product Name": "Mod 3 Spur Gear",
+    "Material": "1045 Steel",
+    "Additional Info": "Milled, not ground",
     "": "",
     "__1": "",
     "__2": "",
@@ -1488,11 +1488,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 122,
-    "Product Name": "Engrane helicoidal GLEASON",
-    "Material": "Acero 4140",
-    "Additional Info": "Especial ejes perpendiculares",
+    "Product Name": "GLEASON Helical Gear",
+    "Material": "4140 Steel",
+    "Additional Info": "Special for perpendicular shafts",
     "": "",
     "__1": "",
     "__2": "",
@@ -1500,11 +1500,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 123,
-    "Product Name": "Engrane doble herringbone",
-    "Material": "Acero",
-    "Additional Info": "Elimina fuerza axial, uso en reductores",
+    "Product Name": "Double Herringbone Gear",
+    "Material": "Steel",
+    "Additional Info": "Eliminates axial force, used in reducers",
     "": "",
     "__1": "",
     "__2": "",
@@ -1512,11 +1512,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 124,
-    "Product Name": "Engrane conico 90 deg",
-    "Material": "Acero 4140",
-    "Additional Info": "Se monta en ejes ortogonales",
+    "Product Name": "90 deg Bevel Gear",
+    "Material": "4140 Steel",
+    "Additional Info": "Mounts on orthogonal shafts",
     "": "",
     "__1": "",
     "__2": "",
@@ -1524,11 +1524,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 125,
-    "Product Name": "Engrane planetario 10:1",
-    "Material": "Acero",
-    "Additional Info": "Reduccion alta en espacio reducido",
+    "Product Name": "10:1 Planetary Gear",
+    "Material": "Steel",
+    "Additional Info": "High reduction in compact space",
     "": "",
     "__1": "",
     "__2": "",
@@ -1536,11 +1536,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 126,
-    "Product Name": "Engrane sin fin eje hueco",
-    "Material": "Acero+bronce",
-    "Additional Info": "Montaje en ejes pasantes",
+    "Product Name": "Hollow Shaft Worm Gear",
+    "Material": "Steel+bronze",
+    "Additional Info": "Mounts on through shafts",
     "": "",
     "__1": "",
     "__2": "",
@@ -1548,11 +1548,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 127,
-    "Product Name": "Cremallera helicoidal",
-    "Material": "Acero C45",
-    "Additional Info": "Menor ruido que recta, amarre con pi√±on",
+    "Product Name": "Helical Rack",
+    "Material": "C45 Steel",
+    "Additional Info": "Less noise than straight rack, pinion engagement",
     "": "",
     "__1": "",
     "__2": "",
@@ -1560,11 +1560,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 128,
-    "Product Name": "Engrane rectificado modulo 1.5",
-    "Material": "Acero templado",
-    "Additional Info": "Tolerancia de 5 micras en diente",
+    "Product Name": "Ground Module 1.5 Gear",
+    "Material": "Hardened steel",
+    "Additional Info": "5 micron tooth tolerance",
     "": "",
     "__1": "",
     "__2": "",
@@ -1572,11 +1572,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 129,
-    "Product Name": "Engrane planetario 8:1",
-    "Material": "Acero",
-    "Additional Info": "Montaje en motor servo",
+    "Product Name": "8:1 Planetary Gear",
+    "Material": "Steel",
+    "Additional Info": "Servo motor mounting",
     "": "",
     "__1": "",
     "__2": "",
@@ -1584,11 +1584,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 130,
-    "Product Name": "Engrane anular 40D",
-    "Material": "Acero 1045",
-    "Additional Info": "Uso en tren planetario",
+    "Product Name": "40T Ring Gear",
+    "Material": "1045 Steel",
+    "Additional Info": "Used in planetary gear train",
     "": "",
     "__1": "",
     "__2": "",
@@ -1596,11 +1596,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 131,
-    "Product Name": "Engrane spiro dalhander",
-    "Material": "Acero 8620",
-    "Additional Info": "Dientes en espiral compuesta",
+    "Product Name": "Dalhander Spiro Gear",
+    "Material": "8620 Steel",
+    "Additional Info": "Compound spiral teeth",
     "": "",
     "__1": "",
     "__2": "",
@@ -1608,11 +1608,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 132,
-    "Product Name": "Engrane cigueñal",
-    "Material": "Acero 4140",
-    "Additional Info": "Sincroniza con barra de valvulas",
+    "Product Name": "Crankshaft Gear",
+    "Material": "4140 Steel",
+    "Additional Info": "Synchronizes with valve bar",
     "": "",
     "__1": "",
     "__2": "",
@@ -1620,11 +1620,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 133,
-    "Product Name": "Engrane conico liso",
-    "Material": "Acero al carbon",
-    "Additional Info": "Torno mecanizado, sin rectificar",
+    "Product Name": "Smooth Bevel Gear",
+    "Material": "Carbon steel",
+    "Additional Info": "Lathe machined, not ground",
     "": "",
     "__1": "",
     "__2": "",
@@ -1632,11 +1632,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 134,
-    "Product Name": "Engrane reductor ZK",
-    "Material": "Acero templado",
-    "Additional Info": "Incluye tratamiento nitrurado",
+    "Product Name": "ZK Reducer Gear",
+    "Material": "Hardened steel",
+    "Additional Info": "Includes nitriding treatment",
     "": "",
     "__1": "",
     "__2": "",
@@ -1644,11 +1644,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 135,
-    "Product Name": "Engrane recto mod 5",
-    "Material": "Acero",
-    "Additional Info": "Alto par, fresado sin rectificar",
+    "Product Name": "Mod 5 Spur Gear",
+    "Material": "Steel",
+    "Additional Info": "High torque, milled without grinding",
     "": "",
     "__1": "",
     "__2": "",
@@ -1656,11 +1656,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 136,
-    "Product Name": "Engrane satelite bronce",
-    "Material": "Bronce",
-    "Additional Info": "Ensamble en planetario con corona",
+    "Product Name": "Bronze Satellite Gear",
+    "Material": "Bronze",
+    "Additional Info": "Assembly in planetary with ring gear",
     "": "",
     "__1": "",
     "__2": "",
@@ -1668,11 +1668,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 137,
-    "Product Name": "Engrane sector 90¬∞",
-    "Material": "Acero",
-    "Additional Info": "Mecanismos de giro parcial",
+    "Product Name": "90° Sector Gear",
+    "Material": "Steel",
+    "Additional Info": "Partial rotation mechanisms",
     "": "",
     "__1": "",
     "__2": "",
@@ -1680,11 +1680,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 138,
-    "Product Name": "Engrane estribo doble",
-    "Material": "Acero 4140",
-    "Additional Info": "Transmision con doble herringbone",
+    "Product Name": "Double Stirrup Gear",
+    "Material": "4140 Steel",
+    "Additional Info": "Transmission with double herringbone",
     "": "",
     "__1": "",
     "__2": "",
@@ -1692,11 +1692,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 139,
-    "Product Name": "Engrane tornado",
-    "Material": "Acero",
-    "Additional Info": "Desfase en ejes a 45¬∞, reductor especial",
+    "Product Name": "Tornado Gear",
+    "Material": "Steel",
+    "Additional Info": "45° shaft offset, special reducer",
     "": "",
     "__1": "",
     "__2": "",
@@ -1704,11 +1704,11 @@
     "__4": ""
   },
   {
-    "Category": "Engranes",
+    "Category": "Gears",
     "Item #": 140,
-    "Product Name": "Engrane hipoide",
-    "Material": "Acero",
-    "Additional Info": "Combina helicoidal y conico en ejes no ortogonales",
+    "Product Name": "Hypoid Gear",
+    "Material": "Steel",
+    "Additional Info": "Combines helical and bevel in non-orthogonal shafts",
     "": "",
     "__1": "",
     "__2": "",
@@ -1728,11 +1728,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 141,
-    "Product Name": "Cil hid simple efecto",
-    "Material": "Acero camisa rectificada",
-    "Additional Info": "Retorno por muelle interno",
+    "Product Name": "Single-Acting Hydraulic Cylinder",
+    "Material": "Ground steel barrel",
+    "Additional Info": "Return by internal spring",
     "": "",
     "__1": "",
     "__2": "",
@@ -1740,11 +1740,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 142,
-    "Product Name": "Cil hid doble efecto",
-    "Material": "Acero al carbon",
-    "Additional Info": "Puertos G1/2, presion max 200 bar",
+    "Product Name": "Double-Acting Hydraulic Cylinder",
+    "Material": "Carbon steel",
+    "Additional Info": "G1/2 ports, max pressure 200 bar",
     "": "",
     "__1": "",
     "__2": "",
@@ -1752,11 +1752,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 143,
-    "Product Name": "Cil telescopico 3 etapas",
-    "Material": "Acero + sellos nitrilo",
-    "Additional Info": "Uso en volquetes",
+    "Product Name": "3-Stage Telescopic Cylinder",
+    "Material": "Steel + nitrile seals",
+    "Additional Info": "Used in dump trucks",
     "": "",
     "__1": "",
     "__2": "",
@@ -1764,11 +1764,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 144,
-    "Product Name": "Cil empuje tipo barra",
-    "Material": "Acero 1045",
-    "Additional Info": "Biela endurecida, rosca UNF punta",
+    "Product Name": "Rod-Type Push Cylinder",
+    "Material": "1045 Steel",
+    "Additional Info": "Hardened rod, UNF thread tip",
     "": "",
     "__1": "",
     "__2": "",
@@ -1776,11 +1776,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 145,
-    "Product Name": "Cil agarre con mordaza",
-    "Material": "Acero 4140",
-    "Additional Info": "Pres up to 250 bar, sujecion lateral",
+    "Product Name": "Clamp Grip Cylinder",
+    "Material": "4140 Steel",
+    "Additional Info": "Pressure up to 250 bar, side clamping",
     "": "",
     "__1": "",
     "__2": "",
@@ -1788,11 +1788,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 146,
-    "Product Name": "Cil sensor interno magnetico",
-    "Material": "Acero y sensor",
-    "Additional Info": "Lectura de posicion absoluta",
+    "Product Name": "Cylinder with Internal Magnetic Sensor",
+    "Material": "Steel and sensor",
+    "Additional Info": "Absolute position reading",
     "": "",
     "__1": "",
     "__2": "",
@@ -1800,11 +1800,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 147,
-    "Product Name": "Cil o-ring Viton",
-    "Material": "Acero aleado",
-    "Additional Info": "Sellos viton alta temp",
+    "Product Name": "Viton O-ring Cylinder",
+    "Material": "Alloy steel",
+    "Additional Info": "High temperature Viton seals",
     "": "",
     "__1": "",
     "__2": "",
@@ -1812,11 +1812,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 148,
-    "Product Name": "Cil dos etapas",
-    "Material": "Acero 1020",
-    "Additional Info": "Menor longitud replegada",
+    "Product Name": "Two-Stage Cylinder",
+    "Material": "1020 Steel",
+    "Additional Info": "Reduced retracted length",
     "": "",
     "__1": "",
     "__2": "",
@@ -1824,11 +1824,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 149,
-    "Product Name": "Cil prensas honed",
-    "Material": "Acero",
-    "Additional Info": "Interior pulido Ra 0.2, pres 300 bar",
+    "Product Name": "Honed Press Cylinder",
+    "Material": "Steel",
+    "Additional Info": "Polished interior Ra 0.2, pressure 300 bar",
     "": "",
     "__1": "",
     "__2": "",
@@ -1836,11 +1836,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 150,
-    "Product Name": "Cil rotativo hid",
-    "Material": "Acero forjado",
-    "Additional Info": "Pistones en paletas, valvulas integradas",
+    "Product Name": "Rotary Hydraulic Cylinder",
+    "Material": "Forged steel",
+    "Additional Info": "Vane pistons, integrated valves",
     "": "",
     "__1": "",
     "__2": "",
@@ -1848,11 +1848,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 151,
-    "Product Name": "Cil subcompacto",
-    "Material": "Acero",
-    "Additional Info": "Uso en espacios reducidos, 150 bar",
+    "Product Name": "Subcompact Cylinder",
+    "Material": "Steel",
+    "Additional Info": "Used in confined spaces, 150 bar",
     "": "",
     "__1": "",
     "__2": "",
@@ -1860,11 +1860,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 152,
-    "Product Name": "Cil brida delantera",
-    "Material": "Acero al carbon",
-    "Additional Info": "Montaje frontal con brida rectangular",
+    "Product Name": "Front Flange Cylinder",
+    "Material": "Carbon steel",
+    "Additional Info": "Front mounting with rectangular flange",
     "": "",
     "__1": "",
     "__2": "",
@@ -1872,11 +1872,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 153,
-    "Product Name": "Cil brida trasera",
-    "Material": "Acero",
-    "Additional Info": "Flujo max 20 L/min",
+    "Product Name": "Rear Flange Cylinder",
+    "Material": "Steel",
+    "Additional Info": "Max flow 20 L/min",
     "": "",
     "__1": "",
     "__2": "",
@@ -1884,11 +1884,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 154,
-    "Product Name": "Cil final de carrera sensor",
-    "Material": "Acero templado",
-    "Additional Info": "Incluye 2 sensores inductivos",
+    "Product Name": "Limit Switch Sensor Cylinder",
+    "Material": "Hardened steel",
+    "Additional Info": "Includes 2 inductive sensors",
     "": "",
     "__1": "",
     "__2": "",
@@ -1896,11 +1896,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 155,
-    "Product Name": "Cil extralargo",
-    "Material": "Acero 4140",
-    "Additional Info": "Eje cromado, uso telescopico manual",
+    "Product Name": "Extra-Long Cylinder",
+    "Material": "4140 Steel",
+    "Additional Info": "Chrome-plated shaft, manual telescopic use",
     "": "",
     "__1": "",
     "__2": "",
@@ -1908,11 +1908,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 156,
-    "Product Name": "Cil con acumulador",
-    "Material": "Acero",
-    "Additional Info": "Minimiza pulsaciones en linea",
+    "Product Name": "Cylinder with Accumulator",
+    "Material": "Steel",
+    "Additional Info": "Minimizes line pulsations",
     "": "",
     "__1": "",
     "__2": "",
@@ -1920,11 +1920,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 157,
-    "Product Name": "Cil anticorrosivo",
-    "Material": "Acero Inox",
-    "Additional Info": "Uso alimenticio, sellos PTFE",
+    "Product Name": "Corrosion-Resistant Cylinder",
+    "Material": "Stainless Steel",
+    "Additional Info": "Food-grade use, PTFE seals",
     "": "",
     "__1": "",
     "__2": "",
@@ -1932,11 +1932,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 158,
-    "Product Name": "Cil cartucho",
-    "Material": "Acero",
-    "Additional Info": "Sella con oring, rosca 3/4-16",
+    "Product Name": "Cartridge Cylinder",
+    "Material": "Steel",
+    "Additional Info": "O-ring seal, 3/4-16 thread",
     "": "",
     "__1": "",
     "__2": "",
@@ -1944,11 +1944,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 159,
-    "Product Name": "Cil mini power",
-    "Material": "Acero",
-    "Additional Info": "Pres 250 bar, brida universal",
+    "Product Name": "Mini Power Cylinder",
+    "Material": "Steel",
+    "Additional Info": "Pressure 250 bar, universal flange",
     "": "",
     "__1": "",
     "__2": "",
@@ -1956,11 +1956,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 160,
-    "Product Name": "Cil lock valve interno",
-    "Material": "Acero+valv \"Diam 40 mm",
-    "Additional Info": "Bloquea posicion al cortar presion",
+    "Product Name": "Internal Lock Valve Cylinder",
+    "Material": "Steel+valve, 40 mm diameter",
+    "Additional Info": "Locks position when pressure is cut",
     "": "",
     "__1": "",
     "__2": "",
@@ -1968,11 +1968,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 161,
-    "Product Name": "Cil con ventilador enfriamiento",
-    "Material": "Acero",
-    "Additional Info": "Uso continuo, evita sobrecalentamiento",
+    "Product Name": "Cylinder with Cooling Fan",
+    "Material": "Steel",
+    "Additional Info": "Continuous use, prevents overheating",
     "": "",
     "__1": "",
     "__2": "",
@@ -1980,11 +1980,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 162,
-    "Product Name": "Cil rod lock",
-    "Material": "Acero templado",
-    "Additional Info": "Mantiene posicion sin presion",
+    "Product Name": "Rod Lock Cylinder",
+    "Material": "Hardened steel",
+    "Additional Info": "Maintains position without pressure",
     "": "",
     "__1": "",
     "__2": "",
@@ -1992,11 +1992,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 163,
-    "Product Name": "Cil transductor pos",
-    "Material": "Acero",
-    "Additional Info": "Lectura analog 4-20 mA",
+    "Product Name": "Position Transducer Cylinder",
+    "Material": "Steel",
+    "Additional Info": "Analog reading 4-20 mA",
     "": "",
     "__1": "",
     "__2": "",
@@ -2004,11 +2004,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 164,
-    "Product Name": "Cil tandem doble piston",
-    "Material": "Acero",
-    "Additional Info": "Doble fuerza con la misma carrera",
+    "Product Name": "Tandem Double Piston Cylinder",
+    "Material": "Steel",
+    "Additional Info": "Double force with same stroke",
     "": "",
     "__1": "",
     "__2": "",
@@ -2016,11 +2016,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 165,
-    "Product Name": "Cil valvula check interna",
-    "Material": "Acero",
-    "Additional Info": "Evita retroceso",
+    "Product Name": "Cylinder with Internal Check Valve",
+    "Material": "Steel",
+    "Additional Info": "Prevents backflow",
     "": "",
     "__1": "",
     "__2": "",
@@ -2028,11 +2028,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 166,
-    "Product Name": "Cil rosca UNF",
-    "Material": "Acero",
-    "Additional Info": "Estilo americano, cabezal redondo",
+    "Product Name": "UNF Thread Cylinder",
+    "Material": "Steel",
+    "Additional Info": "American style, round head",
     "": "",
     "__1": "",
     "__2": "",
@@ -2040,11 +2040,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 167,
-    "Product Name": "Cil varilla endurecida",
-    "Material": "Acero cromado",
-    "Additional Info": "HRC > 55 en la varilla",
+    "Product Name": "Hardened Rod Cylinder",
+    "Material": "Chrome-plated steel",
+    "Additional Info": "HRC > 55 on the rod",
     "": "",
     "__1": "",
     "__2": "",
@@ -2052,11 +2052,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 168,
-    "Product Name": "Cil cabezal esferico",
-    "Material": "Acero",
-    "Additional Info": "Compensa desalineaciones",
+    "Product Name": "Spherical Head Cylinder",
+    "Material": "Steel",
+    "Additional Info": "Compensates for misalignments",
     "": "",
     "__1": "",
     "__2": "",
@@ -2064,11 +2064,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 169,
-    "Product Name": "Cil slim sectional",
-    "Material": "Acero",
-    "Additional Info": "Perfil delgado, 150 bar max",
+    "Product Name": "Slim Sectional Cylinder",
+    "Material": "Steel",
+    "Additional Info": "Thin profile, 150 bar max",
     "": "",
     "__1": "",
     "__2": "",
@@ -2076,11 +2076,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros hidraulicos",
+    "Category": "Hydraulic Cylinders",
     "Item #": 170,
-    "Product Name": "Cil retorno muelle",
-    "Material": "Acero",
-    "Additional Info": "Auto-retraccion al liberar presion",
+    "Product Name": "Spring Return Cylinder",
+    "Material": "Steel",
+    "Additional Info": "Auto-retraction when pressure is released",
     "": "",
     "__1": "",
     "__2": "",
@@ -2100,11 +2100,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 171,
-    "Product Name": "Cil ISO 15552",
-    "Material": "Aluminio/acero",
-    "Additional Info": "Estandar ISO, vastago roscado M14",
+    "Product Name": "ISO 15552 Cylinder",
+    "Material": "Aluminum/steel",
+    "Additional Info": "ISO standard, M14 threaded rod",
     "": "",
     "__1": "",
     "__2": "",
@@ -2112,11 +2112,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 172,
-    "Product Name": "Cil mini ISO 6432",
-    "Material": "Aluminio",
-    "Additional Info": "Con pinza sujecion, rosca M8",
+    "Product Name": "Mini ISO 6432 Cylinder",
+    "Material": "Aluminum",
+    "Additional Info": "With mounting clamp, M8 thread",
     "": "",
     "__1": "",
     "__2": "",
@@ -2124,11 +2124,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 173,
-    "Product Name": "Cil guia paralelo",
-    "Material": "Aluminio/guia acero",
-    "Additional Info": "Doble barra, antirrotacion",
+    "Product Name": "Parallel Guide Cylinder",
+    "Material": "Aluminum/steel guide",
+    "Additional Info": "Double rod, anti-rotation",
     "": "",
     "__1": "",
     "__2": "",
@@ -2136,11 +2136,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 174,
-    "Product Name": "Cil sin vastago",
-    "Material": "Aluminio",
-    "Additional Info": "Carro desliza en la misma base",
+    "Product Name": "Rodless Cylinder",
+    "Material": "Aluminum",
+    "Additional Info": "Carriage slides on the same base",
     "": "",
     "__1": "",
     "__2": "",
@@ -2148,11 +2148,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 175,
-    "Product Name": "Cil compacto",
-    "Material": "Aluminio",
-    "Additional Info": "Espacio reducido, anclaje directo",
+    "Product Name": "Compact Cylinder",
+    "Material": "Aluminum",
+    "Additional Info": "Reduced space, direct mounting",
     "": "",
     "__1": "",
     "__2": "",
@@ -2160,11 +2160,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 176,
-    "Product Name": "Cil con freno interno",
-    "Material": "Aluminio/acero",
-    "Additional Info": "Bloquea vastago neumaticamente",
+    "Product Name": "Cylinder with Internal Brake",
+    "Material": "Aluminum/steel",
+    "Additional Info": "Pneumatically locks the rod",
     "": "",
     "__1": "",
     "__2": "",
@@ -2172,11 +2172,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 177,
-    "Product Name": "Cil doble vastago",
-    "Material": "Aluminio",
-    "Additional Info": "Mayor estabilidad, 2 vastagos paralelos",
+    "Product Name": "Double Rod Cylinder",
+    "Material": "Aluminum",
+    "Additional Info": "Greater stability, 2 parallel rods",
     "": "",
     "__1": "",
     "__2": "",
@@ -2184,11 +2184,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 178,
-    "Product Name": "Cil rodless magnetico",
-    "Material": "Aluminio",
-    "Additional Info": "Evita vastago largo, sensor integrable",
+    "Product Name": "Magnetic Rodless Cylinder",
+    "Material": "Aluminum",
+    "Additional Info": "Avoids long rod, integrable sensor",
     "": "",
     "__1": "",
     "__2": "",
@@ -2196,11 +2196,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 179,
-    "Product Name": "Cil pivotante 90¬∞",
-    "Material": "Aluminio",
-    "Additional Info": "Brazo giratorio, torque 10 Nm",
+    "Product Name": "90° Pivot Cylinder",
+    "Material": "Aluminum",
+    "Additional Info": "Rotating arm, 10 Nm torque",
     "": "",
     "__1": "",
     "__2": "",
@@ -2208,11 +2208,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 180,
-    "Product Name": "Cil tandem",
-    "Material": "Aluminio",
-    "Additional Info": "Fuerza duplicada en empuje",
+    "Product Name": "Tandem Cylinder",
+    "Material": "Aluminum",
+    "Additional Info": "Doubled pushing force",
     "": "",
     "__1": "",
     "__2": "",
@@ -2220,11 +2220,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 181,
-    "Product Name": "Cil cartucho neumatico",
-    "Material": "Aluminio",
-    "Additional Info": "Se instala embutido en manifolds",
+    "Product Name": "Pneumatic Cartridge Cylinder",
+    "Material": "Aluminum",
+    "Additional Info": "Installed embedded in manifolds",
     "": "",
     "__1": "",
     "__2": "",
@@ -2232,11 +2232,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 182,
-    "Product Name": "Cil brida delantera",
-    "Material": "Aluminio",
-    "Additional Info": "ISO 15552 con brida frontal",
+    "Product Name": "Front Flange Cylinder",
+    "Material": "Aluminum",
+    "Additional Info": "ISO 15552 with front flange",
     "": "",
     "__1": "",
     "__2": "",
@@ -2244,11 +2244,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 183,
-    "Product Name": "Cil mordazas paralelo",
-    "Material": "Aluminio",
-    "Additional Info": "Para pinzado de piezas en robotica",
+    "Product Name": "Parallel Gripper Cylinder",
+    "Material": "Aluminum",
+    "Additional Info": "For clamping parts in robotics",
     "": "",
     "__1": "",
     "__2": "",
@@ -2256,11 +2256,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 184,
-    "Product Name": "Cil triple barra",
-    "Material": "Aluminio",
-    "Additional Info": "Alto torque y antirrotacion",
+    "Product Name": "Triple Rod Cylinder",
+    "Material": "Aluminum",
+    "Additional Info": "High torque and anti-rotation",
     "": "",
     "__1": "",
     "__2": "",
@@ -2268,11 +2268,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 185,
-    "Product Name": "Cil autocentrante",
-    "Material": "Aluminio",
-    "Additional Info": "Pinza de centrado automatico",
+    "Product Name": "Self-Centering Cylinder",
+    "Material": "Aluminum",
+    "Additional Info": "Automatic centering gripper",
     "": "",
     "__1": "",
     "__2": "",
@@ -2280,11 +2280,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 186,
-    "Product Name": "Cil clamp giratorio",
-    "Material": "Acero/aluminio",
-    "Additional Info": "Sujeta y gira la pieza",
+    "Product Name": "Rotary Clamp Cylinder",
+    "Material": "Steel/aluminum",
+    "Additional Info": "Holds and rotates the workpiece",
     "": "",
     "__1": "",
     "__2": "",
@@ -2292,11 +2292,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 187,
-    "Product Name": "Cil baja friccion",
-    "Material": "Aluminio+teflon",
-    "Additional Info": "Sellos teflon, arranque suave",
+    "Product Name": "Low Friction Cylinder",
+    "Material": "Aluminum+Teflon",
+    "Additional Info": "Teflon seals, smooth startup",
     "": "",
     "__1": "",
     "__2": "",
@@ -2304,11 +2304,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 188,
-    "Product Name": "Cil sumergible Inox",
-    "Material": "Acero Inox",
-    "Additional Info": "Sellos IP67, uso alimenticio",
+    "Product Name": "Submersible Stainless Cylinder",
+    "Material": "Stainless Steel",
+    "Additional Info": "IP67 seals, food-grade use",
     "": "",
     "__1": "",
     "__2": "",
@@ -2316,11 +2316,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 189,
-    "Product Name": "Cil con valvula 5/2",
-    "Material": "Aluminio",
-    "Additional Info": "Integrado block valv, simplifica neumatica",
+    "Product Name": "Cylinder with 5/2 Valve",
+    "Material": "Aluminum",
+    "Additional Info": "Integrated valve block, simplifies pneumatics",
     "": "",
     "__1": "",
     "__2": "",
@@ -2328,11 +2328,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 190,
-    "Product Name": "Cil rod pivot extremo",
-    "Material": "Acero",
-    "Additional Info": "Pivot en la cabeza, reduce vibraciones",
+    "Product Name": "End Pivot Rod Cylinder",
+    "Material": "Steel",
+    "Additional Info": "Pivot at the head, reduces vibrations",
     "": "",
     "__1": "",
     "__2": "",
@@ -2340,11 +2340,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 191,
-    "Product Name": "Cil tabique intermedio",
-    "Material": "Aluminio",
-    "Additional Info": "Fuerza distinta en cada camara",
+    "Product Name": "Intermediate Partition Cylinder",
+    "Material": "Aluminum",
+    "Additional Info": "Different force in each chamber",
     "": "",
     "__1": "",
     "__2": "",
@@ -2352,11 +2352,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 192,
-    "Product Name": "Cil sensor T-ranura",
-    "Material": "Aluminio",
-    "Additional Info": "Ranura para sensor reed o magnetico",
+    "Product Name": "T-Slot Sensor Cylinder",
+    "Material": "Aluminum",
+    "Additional Info": "Slot for reed or magnetic sensor",
     "": "",
     "__1": "",
     "__2": "",
@@ -2364,11 +2364,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 193,
-    "Product Name": "Cil resorte interno",
-    "Material": "Acero/aluminio",
-    "Additional Info": "Uso en sujecion rapida",
+    "Product Name": "Internal Spring Cylinder",
+    "Material": "Steel/aluminum",
+    "Additional Info": "Used for quick clamping",
     "": "",
     "__1": "",
     "__2": "",
@@ -2376,11 +2376,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 194,
-    "Product Name": "Cil personalizable",
-    "Material": "Aluminio",
-    "Additional Info": "Se ajusta la carrera segun necesidad",
+    "Product Name": "Customizable Cylinder",
+    "Material": "Aluminum",
+    "Additional Info": "Stroke adjustable according to needs",
     "": "",
     "__1": "",
     "__2": "",
@@ -2388,11 +2388,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 195,
-    "Product Name": "Cil paralever",
-    "Material": "Acero",
-    "Additional Info": "Transforma mov lineal en angular",
+    "Product Name": "Paralever Cylinder",
+    "Material": "Steel",
+    "Additional Info": "Transforms linear motion into angular",
     "": "",
     "__1": "",
     "__2": "",
@@ -2400,11 +2400,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 196,
-    "Product Name": "Cil alta velocidad",
-    "Material": "Aluminio",
-    "Additional Info": "Hasta 1500 mm/s, valvula interna",
+    "Product Name": "High-Speed Cylinder",
+    "Material": "Aluminum",
+    "Additional Info": "Up to 1500 mm/s, internal valve",
     "": "",
     "__1": "",
     "__2": "",
@@ -2412,11 +2412,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 197,
-    "Product Name": "Cil con fuelle protector",
-    "Material": "Aluminio",
-    "Additional Info": "Evita ingreso polvo y agua",
+    "Product Name": "Cylinder with Protective Bellows",
+    "Material": "Aluminum",
+    "Additional Info": "Prevents dust and water ingress",
     "": "",
     "__1": "",
     "__2": "",
@@ -2424,11 +2424,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 198,
-    "Product Name": "Cil compensador flotante",
-    "Material": "Aluminio",
-    "Additional Info": "Se ajusta en ejes no coaxiales",
+    "Product Name": "Floating Compensator Cylinder",
+    "Material": "Aluminum",
+    "Additional Info": "Adjusts to non-coaxial axes",
     "": "",
     "__1": "",
     "__2": "",
@@ -2436,11 +2436,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 199,
-    "Product Name": "Cil pinza angular 30¬∞",
-    "Material": "Acero",
-    "Additional Info": "Pinza rotacional para robots",
+    "Product Name": "30° Angular Gripper Cylinder",
+    "Material": "Steel",
+    "Additional Info": "Rotational gripper for robots",
     "": "",
     "__1": "",
     "__2": "",
@@ -2448,11 +2448,11 @@
     "__4": ""
   },
   {
-    "Category": "Cilindros neumaticos",
+    "Category": "Pneumatic Cylinders",
     "Item #": 200,
-    "Product Name": "Cil giro 180¬∞",
-    "Material": "Aluminio",
-    "Additional Info": "Paleta interna, eje giratorio",
+    "Product Name": "180° Rotary Cylinder",
+    "Material": "Aluminum",
+    "Additional Info": "Internal vane, rotating shaft",
     "": "",
     "__1": "",
     "__2": "",
@@ -2472,11 +2472,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 201,
-    "Product Name": "Rodamiento rigido 6204",
-    "Material": "Acero cromo",
-    "Additional Info": "Sellado 2RS, velocidad max 12000 RPM",
+    "Product Name": "Rigid Bearing 6204",
+    "Material": "Chrome steel",
+    "Additional Info": "2RS sealed, max speed 12000 RPM",
     "": "",
     "__1": "",
     "__2": "",
@@ -2484,11 +2484,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 202,
-    "Product Name": "Rodamiento rodillos conicos 30206",
-    "Material": "Acero cromo",
-    "Additional Info": "Ajuste pre-carga para ejes automotrices",
+    "Product Name": "Tapered Roller Bearing 30206",
+    "Material": "Chrome steel",
+    "Additional Info": "Pre-load adjustment for automotive axles",
     "": "",
     "__1": "",
     "__2": "",
@@ -2496,11 +2496,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 203,
-    "Product Name": "Rodamiento axial bolas 51106",
-    "Material": "Acero cromo",
-    "Additional Info": "Soporta carga axial unidireccional",
+    "Product Name": "Thrust Ball Bearing 51106",
+    "Material": "Chrome steel",
+    "Additional Info": "Supports unidirectional axial load",
     "": "",
     "__1": "",
     "__2": "",
@@ -2508,11 +2508,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 204,
-    "Product Name": "Rodamiento oscilante 2205",
-    "Material": "Acero cromo",
-    "Additional Info": "Autoalineable, 2 hileras de bolas",
+    "Product Name": "Self-Aligning Bearing 2205",
+    "Material": "Chrome steel",
+    "Additional Info": "Self-aligning, 2 rows of balls",
     "": "",
     "__1": "",
     "__2": "",
@@ -2520,11 +2520,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 205,
-    "Product Name": "Rodamiento agujas NA4906",
-    "Material": "Acero cromo",
-    "Additional Info": "Gran capacidad de carga radial",
+    "Product Name": "Needle Bearing NA4906",
+    "Material": "Chrome steel",
+    "Additional Info": "High radial load capacity",
     "": "",
     "__1": "",
     "__2": "",
@@ -2532,11 +2532,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 206,
-    "Product Name": "Rodamiento contacto angular 7205",
-    "Material": "Acero cromo",
-    "Additional Info": "Soporta cargas combinadas, 40¬∞ angulo",
+    "Product Name": "Angular Contact Bearing 7205",
+    "Material": "Chrome steel",
+    "Additional Info": "Supports combined loads, 40° angle",
     "": "",
     "__1": "",
     "__2": "",
@@ -2544,11 +2544,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 207,
-    "Product Name": "Rodamiento autoalineable 1206",
-    "Material": "Acero cromo",
-    "Additional Info": "2 hileras de bolas, error de alineacion",
+    "Product Name": "Self-Aligning Bearing 1206",
+    "Material": "Chrome steel",
+    "Additional Info": "2 rows of balls, alignment error compensation",
     "": "",
     "__1": "",
     "__2": "",
@@ -2556,11 +2556,11 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 208,
-    "Product Name": "Rodamiento ceramico Si3N4",
-    "Material": "Si3N4 + acero",
-    "Additional Info": "Alta velocidad, bajo rozamiento",
+    "Product Name": "Ceramic Bearing Si3N4",
+    "Material": "Si3N4 + steel",
+    "Additional Info": "High speed, low friction",
     "": "",
     "__1": "",
     "__2": "",
@@ -2568,7 +2568,7 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 209,
     "Product Name": "Rodamiento magneto M",
     "Material": "Acero cromo",
@@ -2580,7 +2580,7 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 210,
     "Product Name": "Rodamiento cilindrico NU205",
     "Material": "Acero cromo",
@@ -2592,7 +2592,7 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 211,
     "Product Name": "Rodamiento rigido 6000",
     "Material": "Acero cromo",
@@ -2604,7 +2604,7 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 212,
     "Product Name": "Rodamiento conico 30305",
     "Material": "Acero cromo",
@@ -2616,7 +2616,7 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 213,
     "Product Name": "Rodamiento axial bolas 51205",
     "Material": "Acero cromo",
@@ -2628,7 +2628,7 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 214,
     "Product Name": "Rodamiento oscilante 2206",
     "Material": "Acero cromo",
@@ -2640,7 +2640,7 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 215,
     "Product Name": "Rodamiento agujas NA4907",
     "Material": "Acero cromo",
@@ -2652,7 +2652,7 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 216,
     "Product Name": "Rodamiento angular 7206",
     "Material": "Acero cromo",
@@ -2664,7 +2664,7 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 217,
     "Product Name": "Rodamiento autoalineable 1207",
     "Material": "Acero cromo",
@@ -2676,7 +2676,7 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 218,
     "Product Name": "Rodamiento super precision 7002C",
     "Material": "Acero alta pureza",
@@ -2688,7 +2688,7 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 219,
     "Product Name": "Rodamiento insertado Y20",
     "Material": "Acero",
@@ -2700,7 +2700,7 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 220,
     "Product Name": "Rodamiento rodillos esfericos 23022",
     "Material": "Acero cromo",
@@ -2712,7 +2712,7 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 221,
     "Product Name": "Rodamiento lineal LM8UU",
     "Material": "Acero con bolas",
@@ -2724,7 +2724,7 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 222,
     "Product Name": "Rodamiento conico 32010",
     "Material": "Acero",
@@ -2736,7 +2736,7 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 223,
     "Product Name": "Rodamiento axial rodillos 81206",
     "Material": "Acero",
@@ -2748,7 +2748,7 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 224,
     "Product Name": "Rodamiento magnetico hibrido",
     "Material": "Acero+imanes",
@@ -2760,7 +2760,7 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 225,
     "Product Name": "Rodamiento triple labio 6205",
     "Material": "Acero cromo",
@@ -2772,7 +2772,7 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 226,
     "Product Name": "Rodamiento seccion delgada 6804",
     "Material": "Acero",
@@ -2784,7 +2784,7 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 227,
     "Product Name": "Rodamiento alta temp 6205T",
     "Material": "Acero",
@@ -2796,7 +2796,7 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 228,
     "Product Name": "Rodamiento baril esferico 22206",
     "Material": "Acero",
@@ -2808,7 +2808,7 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 229,
     "Product Name": "Rodamiento ranura 608ZZ",
     "Material": "Acero",
@@ -2820,7 +2820,7 @@
     "__4": ""
   },
   {
-    "Category": "Rodamientos",
+    "Category": "Bearings",
     "Item #": 230,
     "Product Name": "Rodamiento combi axial/radial ZKLDF",
     "Material": "Acero",
@@ -2844,7 +2844,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 231,
     "Product Name": "Eyector tubular recto",
     "Material": "Acero H13",
@@ -2856,7 +2856,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 232,
     "Product Name": "Eyector tubular escalonado",
     "Material": "Acero H13",
@@ -2868,7 +2868,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 233,
     "Product Name": "Poste guia con valona",
     "Material": "Acero SUJ2",
@@ -2880,7 +2880,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 234,
     "Product Name": "Casquillo guia liso",
     "Material": "Bronce",
@@ -2892,7 +2892,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 235,
     "Product Name": "Inserto cavidad",
     "Material": "Acero inox 420",
@@ -2904,7 +2904,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 236,
     "Product Name": "Nucleo intercambiable",
     "Material": "Acero P20",
@@ -2916,7 +2916,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 237,
     "Product Name": "Resorte compresion molde",
     "Material": "Acero cromo silicio",
@@ -2928,7 +2928,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 238,
     "Product Name": "Botador plano rectangular",
     "Material": "Acero SKD61",
@@ -2940,7 +2940,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 239,
     "Product Name": "Placa soporte eyector",
     "Material": "Acero 1045",
@@ -2952,7 +2952,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 240,
     "Product Name": "Tornillo fijacion cavidad",
     "Material": "Acero 12.9",
@@ -2964,7 +2964,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 241,
     "Product Name": "Punzon cilindrico recto",
     "Material": "Acero D2",
@@ -2976,7 +2976,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 242,
     "Product Name": "Matriz corte estandar",
     "Material": "Acero A2",
@@ -2988,7 +2988,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 243,
     "Product Name": "Guia de punzon",
     "Material": "Acero SUJ2",
@@ -3000,7 +3000,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 244,
     "Product Name": "Poste guia columna",
     "Material": "Acero templado",
@@ -3012,7 +3012,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 245,
     "Product Name": "Resorte gas nitrogeno",
     "Material": "Acero nitrurado",
@@ -3024,7 +3024,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 246,
     "Product Name": "Casquillo grafito troquel",
     "Material": "Bronce grafitado",
@@ -3036,7 +3036,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 247,
     "Product Name": "Punzon rectangular",
     "Material": "Acero M2",
@@ -3048,7 +3048,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 248,
     "Product Name": "Inserto troquel corte",
     "Material": "Acero D2",
@@ -3060,7 +3060,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 249,
     "Product Name": "Portamatriz modular",
     "Material": "Acero 1045",
@@ -3072,7 +3072,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 250,
     "Product Name": "Expulsor neumatico troquel",
     "Material": "Acero+aluminio",
@@ -3084,7 +3084,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 251,
     "Product Name": "Eyector de bebederos",
     "Material": "Acero SKD61",
@@ -3096,7 +3096,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 252,
     "Product Name": "Placa base troquel",
     "Material": "Acero 4140",
@@ -3108,7 +3108,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 253,
     "Product Name": "Insertos guiado conico",
     "Material": "Acero templado",
@@ -3120,7 +3120,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 254,
     "Product Name": "Enfriador canal conico",
     "Material": "Acero",
@@ -3132,7 +3132,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 255,
     "Product Name": "Guia ranurada",
     "Material": "Acero templado",
@@ -3144,7 +3144,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 256,
     "Product Name": "Tornillo fijacion troquel",
     "Material": "Acero 10.9",
@@ -3156,7 +3156,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 257,
     "Product Name": "Muelle nitrogeno 1500N",
     "Material": "Acero",
@@ -3168,7 +3168,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 258,
     "Product Name": "Expulsor cuchilla",
     "Material": "Acero",
@@ -3180,7 +3180,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 259,
     "Product Name": "Botador step cabeza",
     "Material": "Acero al carbon",
@@ -3192,7 +3192,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 260,
     "Product Name": "Base porta molde",
     "Material": "Acero 4140",
@@ -3204,7 +3204,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 261,
     "Product Name": "Chaveta troquel rectangular",
     "Material": "Acero",
@@ -3216,7 +3216,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 262,
     "Product Name": "Inserto roscado M8",
     "Material": "Acero",
@@ -3228,7 +3228,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 263,
     "Product Name": "Guia lineal troquel",
     "Material": "Acero rectificado",
@@ -3240,7 +3240,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 264,
     "Product Name": "Expulsor interno hueco",
     "Material": "Acero",
@@ -3252,7 +3252,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 265,
     "Product Name": "Perno tope troquel",
     "Material": "Acero templado",
@@ -3264,7 +3264,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 266,
     "Product Name": "Soporte strip",
     "Material": "Acero 1045",
@@ -3276,7 +3276,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 267,
     "Product Name": "Eyector anular",
     "Material": "Acero SKD61",
@@ -3288,7 +3288,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 268,
     "Product Name": "Limitador carrera troquel",
     "Material": "Acero",
@@ -3300,7 +3300,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 269,
     "Product Name": "Mango roscado E",
     "Material": "Acero",
@@ -3312,7 +3312,7 @@
     "__4": ""
   },
   {
-    "Category": "Refacciones para moldes y troqueles",
+    "Category": "Mold and Die Parts",
     "Item #": 270,
     "Product Name": "Ajustador altura roscado",
     "Material": "Acero",
@@ -3336,7 +3336,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 271,
     "Product Name": "Boquilla aspersion conica",
     "Material": "Acero Inox 316",
@@ -3348,7 +3348,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 272,
     "Product Name": "Boquilla refrigeracion CNC",
     "Material": "Laton",
@@ -3360,7 +3360,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 273,
     "Product Name": "Boquilla rociadora aire",
     "Material": "Aluminio",
@@ -3372,7 +3372,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 274,
     "Product Name": "Boquilla inyeccion plastico",
     "Material": "Acero H13",
@@ -3384,7 +3384,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 275,
     "Product Name": "Boquilla de soplete",
     "Material": "Cobre",
@@ -3396,7 +3396,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 276,
     "Product Name": "Boquilla chorro plano",
     "Material": "Acero Inox 304",
@@ -3408,7 +3408,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 277,
     "Product Name": "Boquilla nebulizacion",
     "Material": "Laton niquelado",
@@ -3420,7 +3420,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 278,
     "Product Name": "Boquilla venturi aire",
     "Material": "Aluminio",
@@ -3432,7 +3432,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 279,
     "Product Name": "Boquilla rociadora multiple",
     "Material": "Acero 1020",
@@ -3444,7 +3444,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 280,
     "Product Name": "Boquilla calibrada micro",
     "Material": "Acero Inox 316",
@@ -3456,7 +3456,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 281,
     "Product Name": "Boquilla rosca fina M5",
     "Material": "Laton",
@@ -3468,7 +3468,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 282,
     "Product Name": "Boquilla difusor polimero",
     "Material": "PP",
@@ -3480,7 +3480,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 283,
     "Product Name": "Boquilla aspirante",
     "Material": "Acero",
@@ -3492,7 +3492,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 284,
     "Product Name": "Boquilla roscada BSP",
     "Material": "Inox",
@@ -3504,7 +3504,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 285,
     "Product Name": "Boquilla deflector ajustable",
     "Material": "Acero",
@@ -3516,7 +3516,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 286,
     "Product Name": "Boquilla gotero control",
     "Material": "Laton",
@@ -3528,7 +3528,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 287,
     "Product Name": "Boquilla presion alta",
     "Material": "Acero",
@@ -3540,7 +3540,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 288,
     "Product Name": "Boquilla extensible",
     "Material": "Acero+manguera",
@@ -3552,7 +3552,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 289,
     "Product Name": "Boquilla mezcla liquida",
     "Material": "Acero",
@@ -3564,7 +3564,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 290,
     "Product Name": "Boquilla granular",
     "Material": "Aluminio",
@@ -3576,7 +3576,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 291,
     "Product Name": "Boquilla rociadora anular",
     "Material": "Inox 304",
@@ -3588,7 +3588,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 292,
     "Product Name": "Boquilla micropulverizado",
     "Material": "Laton",
@@ -3600,7 +3600,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 293,
     "Product Name": "Boquilla turbina aire",
     "Material": "Aluminio",
@@ -3612,7 +3612,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 294,
     "Product Name": "Boquilla chorro concentrado",
     "Material": "Acero",
@@ -3624,7 +3624,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 295,
     "Product Name": "Boquilla multiangulo",
     "Material": "Inox 316",
@@ -3636,7 +3636,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 296,
     "Product Name": "Boquilla Y-division",
     "Material": "Laton",
@@ -3648,7 +3648,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 297,
     "Product Name": "Boquilla expandida",
     "Material": "Acero",
@@ -3660,7 +3660,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 298,
     "Product Name": "Boquilla refrigerante flexible",
     "Material": "Acetal",
@@ -3672,7 +3672,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 299,
     "Product Name": "Boquilla punta aguja",
     "Material": "Acero templado",
@@ -3684,7 +3684,7 @@
     "__4": ""
   },
   {
-    "Category": "Boquillas",
+    "Category": "Nozzles",
     "Item #": 300,
     "Product Name": "Boquilla bruma difusa",
     "Material": "Laton",
@@ -3708,7 +3708,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 301,
     "Product Name": "Resorte compresion estandar",
     "Material": "Acero al carbon",
@@ -3720,7 +3720,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 302,
     "Product Name": "Resorte extension ganchos",
     "Material": "Acero templado",
@@ -3732,7 +3732,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 303,
     "Product Name": "Resorte torsion doble",
     "Material": "Acero al carbon",
@@ -3744,7 +3744,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 304,
     "Product Name": "Resorte plano",
     "Material": "Acero templado",
@@ -3756,7 +3756,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 305,
     "Product Name": "Resorte matricero",
     "Material": "Acero cromo silicio",
@@ -3768,7 +3768,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 306,
     "Product Name": "Resorte compresion heavy",
     "Material": "Acero templado",
@@ -3780,7 +3780,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 307,
     "Product Name": "Resorte gas troquel",
     "Material": "Acero nitrurado",
@@ -3792,7 +3792,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 308,
     "Product Name": "Resorte helicoidal ligero",
     "Material": "Acero al carbon",
@@ -3804,7 +3804,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 309,
     "Product Name": "Resorte ondulado",
     "Material": "Acero templado",
@@ -3816,7 +3816,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 310,
     "Product Name": "Resorte espiral reloj",
     "Material": "Acero al carbon",
@@ -3828,7 +3828,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 311,
     "Product Name": "Resorte conico",
     "Material": "Acero",
@@ -3840,7 +3840,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 312,
     "Product Name": "Resorte extension variable",
     "Material": "Acero",
@@ -3852,7 +3852,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 313,
     "Product Name": "Resorte plato disco",
     "Material": "Acero templado",
@@ -3864,7 +3864,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 314,
     "Product Name": "Resorte laminar paquete",
     "Material": "Acero",
@@ -3876,7 +3876,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 315,
     "Product Name": "Resorte con guia interna",
     "Material": "Acero",
@@ -3888,7 +3888,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 316,
     "Product Name": "Resorte anticorrosion Inox304",
     "Material": "Acero Inox 304",
@@ -3900,7 +3900,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 317,
     "Product Name": "Resorte valvula motor",
     "Material": "Acero templado",
@@ -3912,7 +3912,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 318,
     "Product Name": "Resorte gas mini cilindro",
     "Material": "Acero",
@@ -3924,7 +3924,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 319,
     "Product Name": "Resorte precision calibrado",
     "Material": "Acero",
@@ -3936,7 +3936,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 320,
     "Product Name": "Resorte amortiguador caucho",
     "Material": "Acero+caucho",
@@ -3948,7 +3948,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 321,
     "Product Name": "Resorte en C ranurado",
     "Material": "Acero",
@@ -3960,7 +3960,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 322,
     "Product Name": "Resorte retencion rectangular",
     "Material": "Acero al carbon",
@@ -3972,7 +3972,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 323,
     "Product Name": "Resorte mordaza pinza",
     "Material": "Acero",
@@ -3984,7 +3984,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 324,
     "Product Name": "Resorte clip en U",
     "Material": "Acero templado",
@@ -3996,7 +3996,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 325,
     "Product Name": "Resorte bota troquel",
     "Material": "Acero",
@@ -4008,7 +4008,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 326,
     "Product Name": "Resorte guia tipo flan",
     "Material": "Acero",
@@ -4020,7 +4020,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 327,
     "Product Name": "Resorte helicoidal con tope",
     "Material": "Acero",
@@ -4032,7 +4032,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 328,
     "Product Name": "Resorte mordaza invertida",
     "Material": "Acero",
@@ -4044,7 +4044,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 329,
     "Product Name": "Resorte plato belleville",
     "Material": "Acero",
@@ -4056,7 +4056,7 @@
     "__4": ""
   },
   {
-    "Category": "Resortes",
+    "Category": "Springs",
     "Item #": 330,
     "Product Name": "Resorte micro extension",
     "Material": "Acero",
