@@ -9,6 +9,9 @@
     <ClientOnly>
       <Footer />
     </ClientOnly>
+    <ClientOnly>
+      <ShoppingCart />
+    </ClientOnly>
   </div>
 </template>
 
@@ -16,6 +19,7 @@
 import { useRoute } from 'vue-router'
 import NavBar from '~/components/NavBar.vue'
 import Footer from '~/components/Footer.vue'
+import ShoppingCart from '~/components/ShoppingCart.vue'
 
 // Use route to help with component re-rendering
 const route = useRoute()

@@ -17,6 +17,9 @@
           <p class="text-gray-600 max-w-2xl mx-auto">
             Discover our wide range of CNC manufacturing products and solutions, designed to meet the needs of various industries.
           </p>
+          <div class="mt-6 flex justify-center">
+            <NuxtLink to="/checkout" class="checkout-btn">Request Quote for Selected Items</NuxtLink>
+          </div>
         </div>
         
         <!-- Expandable Category Cards -->
@@ -108,5 +111,26 @@ onMounted(() => {
   background-color: var(--content-primary, #0056b3);
   color: white;
   border-color: var(--content-primary, #0056b3);
+}
+
+/* Checkout button */
+.checkout-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--content-primary, #0056b3);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.checkout-btn:hover {
+  background-color: var(--content-secondary, #004494);
+  transform: translateY(-2px);
 }
 </style>

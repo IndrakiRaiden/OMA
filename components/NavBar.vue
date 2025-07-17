@@ -7,6 +7,10 @@
       </NuxtLink>
 
       <div class="nav-right">
+        <button class="cart-btn" @click="toggleCart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span v-if="cartItemCount > 0" class="cart-item-count">{{ cartItemCount }}</span>
+        </button>
         <NuxtLink to="/cotiza" class="contact-btn">Quote Your Project</NuxtLink>
         <button class="menu-btn" @click="toggleMenu" :class="{ 'active': isMenuOpen }">
           <span></span>
@@ -25,10 +29,13 @@ import { useHead } from '@unhead/vue'
 import { useRoute } from 'vue-router'
 import { ref, onMounted, onBeforeUnmount, watch } from 'vue'
 import SideBar from './SideBar.vue'
+import { useCart } from '~/composables/useCart'
 
 useHead({
   title: 'OMA'
 })
+
+const { toggleCart, cartItemCount } = useCart()
 
 const isMenuOpen = ref(false)
 const isScrolled = ref(false)
@@ -125,8 +132,48 @@ function handleScroll() {
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem; /* Adjusted gap */
   margin-right: 2rem;
+}
+
+.cart-btn {
+  position: relative;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: var(--color-secondary);
+}
+
+.navbar.scrolled .cart-btn {
+  color: var(--color-primary);
+}
+
+.cart-btn svg {
+  width: 28px;
+  height: 28px;
+  stroke-width: 1.5;
+}
+
+.cart-item-count {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background-color: var(--color-accent);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border: 2px solid var(--color-primary);
+}
+
+.navbar.scrolled .cart-item-count {
+  border-color: var(--color-light);
 }
 
 .menu-btn {
