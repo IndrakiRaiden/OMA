@@ -4,7 +4,7 @@
     <div class="hero-bg"></div>
     <div class="hero-content">
       <span class="pre-title">WELCOME TO</span>
-      <h1 class="hero-title">OMA SOLUTIONS</h1>
+      <h1 class="hero-title">OMA SOLUTION</h1>
       <div class="hero-text">
         <p class="main-text">Comprehensive solutions for industrial projects</p>
       </div>

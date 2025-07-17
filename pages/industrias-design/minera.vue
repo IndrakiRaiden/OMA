@@ -189,7 +189,7 @@ export default {
   },
   head() {
     return {
-      title: 'Mining Industry | OMA - Manufacturing Services',
+      title: 'Mining Industry | OMA Solution',
       meta: [
         { hid: 'description', name: 'description', content: 'Robust solutions for equipment and components used in the demanding mining industry.' }
       ]

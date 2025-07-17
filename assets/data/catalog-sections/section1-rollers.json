@@ -1,0 +1,212 @@
+[
+  {
+    "Category": "Rollers",
+    "Item #": 1,
+    "Product Name": "Neoprene Coated Transport Roller",
+    "Material": "1045 Steel and neoprene",
+    "Additional Info": "Bearing 6202, Tolerance ±0.1 mm"
+  },
+  {
+    "Category": "Rollers",
+    "Item #": 2,
+    "Product Name": "Cradle Support Roller",
+    "Material": "Galvanized steel",
+    "Additional Info": "For 400-450 mm belts, triple lip"
+  },
+  {
+    "Category": "Rollers",
+    "Item #": 3,
+    "Product Name": "24V Motorized Roller",
+    "Material": "Carbon steel and DC motor",
+    "Additional Info": "Includes position sensor, 50W"
+  },
+  {
+    "Category": "Rollers",
+    "Item #": 4,
+    "Product Name": "Anti-static Roller",
+    "Material": "304 Stainless steel with ESD coating",
+    "Additional Info": "Static discharge, stainless bearings"
+  },
+  {
+    "Category": "Rollers",
+    "Item #": 5,
+    "Product Name": "Urethane Coated Roller",
+    "Material": "Steel + polyurethane",
+    "Additional Info": "Shore A 85 hardness, drive belt"
+  },
+  {
+    "Category": "Rollers",
+    "Item #": 6,
+    "Product Name": "Grooved Conveyor Roller",
+    "Material": "Aluminum",
+    "Additional Info": "V-groove for tracking, sealed bearings"
+  },
+  {
+    "Category": "Rollers",
+    "Item #": 7,
+    "Product Name": "Tapered Roller",
+    "Material": "Carbon steel",
+    "Additional Info": "For curved conveyors, 2° taper"
+  },
+  {
+    "Category": "Rollers",
+    "Item #": 8,
+    "Product Name": "Impact Roller",
+    "Material": "Steel with rubber discs",
+    "Additional Info": "For loading zones, shock absorption"
+  },
+  {
+    "Category": "Rollers",
+    "Item #": 9,
+    "Product Name": "Return Idler Roller",
+    "Material": "Steel with HDPE coating",
+    "Additional Info": "Self-cleaning, anti-stick surface"
+  },
+  {
+    "Category": "Rollers",
+    "Item #": 10,
+    "Product Name": "Knurled Drive Roller",
+    "Material": "Hardened steel",
+    "Additional Info": "Diamond pattern, high grip"
+  },
+  {
+    "Category": "Rollers",
+    "Item #": 11,
+    "Product Name": "Spiral Roller",
+    "Material": "Aluminum with spiral grooves",
+    "Additional Info": "For material alignment, low friction"
+  },
+  {
+    "Category": "Rollers",
+    "Item #": 12,
+    "Product Name": "Gravity Roller",
+    "Material": "Zinc plated steel",
+    "Additional Info": "Precision bearings, low resistance"
+  },
+  {
+    "Category": "Rollers",
+    "Item #": 13,
+    "Product Name": "Flanged Roller",
+    "Material": "Cast iron",
+    "Additional Info": "Edge guides, heavy duty"
+  },
+  {
+    "Category": "Rollers",
+    "Item #": 14,
+    "Product Name": "Accumulation Roller",
+    "Material": "Steel with plastic sleeves",
+    "Additional Info": "Zero pressure accumulation"
+  },
+  {
+    "Category": "Rollers",
+    "Item #": 15,
+    "Product Name": "Concave Roller",
+    "Material": "Steel",
+    "Additional Info": "For belt tracking, 10mm crown"
+  },
+  {
+    "Category": "Rollers",
+    "Item #": 16,
+    "Product Name": "Telescoping Roller",
+    "Material": "Aluminum with steel shaft",
+    "Additional Info": "Adjustable width, locking mechanism"
+  },
+  {
+    "Category": "Rollers",
+    "Item #": 17,
+    "Product Name": "Ceramic Coated Roller",
+    "Material": "Steel with ceramic coating",
+    "Additional Info": "Abrasion resistant, high temperature"
+  },
+  {
+    "Category": "Rollers",
+    "Item #": 18,
+    "Product Name": "Magnetic Roller",
+    "Material": "Stainless steel with neodymium",
+    "Additional Info": "For metal separation, adjustable strength"
+  },
+  {
+    "Category": "Rollers",
+    "Item #": 19,
+    "Product Name": "High Temperature Roller",
+    "Material": "316 Stainless steel",
+    "Additional Info": "Heat resistant bearings, up to 400°C"
+  },
+  {
+    "Category": "Rollers",
+    "Item #": 20,
+    "Product Name": "Snub Roller",
+    "Material": "Steel with rubber lagging",
+    "Additional Info": "Increases belt wrap, improves traction"
+  },
+  {
+    "Category": "Rollers",
+    "Item #": 21,
+    "Product Name": "Spiral Brush Roller",
+    "Material": "Aluminum with nylon bristles",
+    "Additional Info": "Self-cleaning, removes debris"
+  },
+  {
+    "Category": "Rollers",
+    "Item #": 22,
+    "Product Name": "Expanding Roller",
+    "Material": "Steel with rubber segments",
+    "Additional Info": "Air-actuated expansion, for winding"
+  },
+  {
+    "Category": "Rollers",
+    "Item #": 23,
+    "Product Name": "Timing Belt Roller",
+    "Material": "Aluminum with polyurethane teeth",
+    "Additional Info": "Synchronized drive, no slip"
+  },
+  {
+    "Category": "Rollers",
+    "Item #": 24,
+    "Product Name": "Eccentric Roller",
+    "Material": "Steel",
+    "Additional Info": "Adjustable height, tensioning"
+  },
+  {
+    "Category": "Rollers",
+    "Item #": 25,
+    "Product Name": "Spiral Wrap Roller",
+    "Material": "Steel with UHMW spiral",
+    "Additional Info": "Anti-static, prevents material sticking"
+  },
+  {
+    "Category": "Rollers",
+    "Item #": 26,
+    "Product Name": "Cushioned Roller",
+    "Material": "Steel with foam padding",
+    "Additional Info": "For delicate materials, gentle handling"
+  },
+  {
+    "Category": "Rollers",
+    "Item #": 27,
+    "Product Name": "Sprocket Roller",
+    "Material": "Steel with machined sprockets",
+    "Additional Info": "For chain driven systems, keyed shaft"
+  },
+  {
+    "Category": "Rollers",
+    "Item #": 28,
+    "Product Name": "Heated Roller",
+    "Material": "Aluminum with internal heater",
+    "Additional Info": "Temperature controlled, 50-200°C"
+  },
+  {
+    "Category": "Rollers",
+    "Item #": 29,
+    "Product Name": "Segmented Roller",
+    "Material": "Steel with removable segments",
+    "Additional Info": "Modular design, easy maintenance"
+  },
+  {
+    "Category": "Rollers",
+    "Item #": 30,
+    "Product Name": "Vibrating Roller",
+    "Material": "Steel with eccentric weight",
+    "Additional Info": "Settles material, prevents bridging"
+  }
+]

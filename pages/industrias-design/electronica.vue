@@ -194,7 +194,7 @@ export default {
     }
   },
   head() {
-    const defaultTitle = 'Electronics Industry | OMA - Manufacturing Services'
+    const defaultTitle = 'Electronics Industry | OMA Solution'
     const defaultDescription = 'Precision manufacturing solutions for the electronics industry.'
     
     return {

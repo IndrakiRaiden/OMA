@@ -194,7 +194,7 @@ export default {
     }
   },
   head() {
-    const defaultTitle = 'Food Industry | OMA - Manufacturing Services'
+    const defaultTitle = 'Food Industry | OMA Solution'
     const defaultDescription = 'Precision manufacturing solutions for the food industry and food processing.'
     
     return {

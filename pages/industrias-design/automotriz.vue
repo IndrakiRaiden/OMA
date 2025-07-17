@@ -185,7 +185,7 @@ export default {
     },
   },
   head() {
-    const defaultTitle = 'Automotive Industry | OMA - Manufacturing Services'
+    const defaultTitle = 'Automotive Industry | OMA Solution'
     const defaultDescription = 'Precision manufacturing solutions for the automotive industry.'
     
     return {

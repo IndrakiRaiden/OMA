@@ -19,54 +19,19 @@
           </p>
         </div>
         
-        <!-- Category filter -->
-        <div class="mb-8">
-          <div class="flex flex-wrap justify-center gap-3 mb-4">
-            <button 
-              @click="selectedCategory = ''"
-              :class="['category-btn', !selectedCategory ? 'active' : '']"
-            >
-              All
-            </button>
-            <button 
-              v-for="category in categories" 
-              :key="category"
-              @click="selectedCategory = category"
-              :class="['category-btn', selectedCategory === category ? 'active' : '']"
-            >
-              {{ category }}
-            </button>
-          </div>
-        </div>
-        
-        <!-- Catalog grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Catalog items using component -->
-          <CatalogItem 
-            v-for="item in filteredItems" 
-            :key="item['Item #']" 
-            :item="item"
-            @view-details="openItemDetail"
-          />
-        </div>
+        <!-- Expandable Category Cards -->
+        <CatalogCards />
       </div>
     </section>
 
     <FeaturesSection :features="features" />
     <CTASection />
-    
-    <!-- Item Detail Modal using component -->
-    <CatalogItemDetail 
-      :item="selectedItem" 
-      :show="showModal"
-      @close="closeModal"
-    />
   </main>
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue';
-import catalogData from '~/assets/data/catalog.json';
+import { ref, onMounted } from 'vue';
+import CatalogCards from '~/components/CatalogCards.vue';
 
 definePageMeta({
   layout: 'default',
@@ -76,84 +41,25 @@ definePageMeta({
   }
 })
 
-// Reactive state
-const catalogItems = ref([]);
-const selectedCategory = ref('');
-
-// Compute unique categories from catalog data
-const categories = computed(() => {
-  const uniqueCategories = new Set();
-  catalogItems.value.forEach(item => {
-    if (item.Category && item.Category.trim() !== '') {
-      uniqueCategories.add(item.Category);
-    }
-  });
-  return Array.from(uniqueCategories).sort();
-});
-
-// Filter items by selected category
-const filteredItems = computed(() => {
-  if (!selectedCategory.value) {
-    return catalogItems.value.filter(item => item.Category && item.Category.trim() !== '');
-  }
-  return catalogItems.value.filter(item => item.Category === selectedCategory.value);
-});
-
 const features = ref([
   {
-    id: 1,
-    title: 'Guaranteed Quality',
-    description: 'All our products meet the highest quality standards',
-    icon: 'fa-award'
+    title: "High Precision",
+    description: "All our products are manufactured to the highest precision standards.",
+    icon: "precision"
   },
   {
-    id: 2,
-    title: 'Complete Customization',
-    description: 'We adapt our products to your specific needs',
-    icon: 'fa-sliders-h'
+    title: "Quality Materials",
+    description: "We use only the best materials to ensure durability and performance.",
+    icon: "quality"
   },
   {
-    id: 3,
-    title: 'Technical Support',
-    description: 'Team of experts available to advise you',
-    icon: 'fa-headset'
-  },
-  {
-    id: 4,
-    title: 'Punctual Delivery',
-    description: 'We meet agreed delivery deadlines',
-    icon: 'fa-shipping-fast'
+    title: "Custom Solutions",
+    description: "Need something specific? We can create custom solutions for your needs.",
+    icon: "custom"
   }
 ]);
 
-// Modal state
-const showModal = ref(false);
-const selectedItem = ref(null);
-
-// Modal functions
-const openItemDetail = (item) => {
-  selectedItem.value = item;
-  showModal.value = true;
-  // Prevent body scrolling when modal is open
-  document.body.style.overflow = 'hidden';
-  // Save scroll position
-  document.body.dataset.scrollY = window.scrollY;
-};
-
-const closeModal = () => {
-  showModal.value = false;
-  // Re-enable body scrolling
-  document.body.style.overflow = 'auto';
-  // Restore scroll position
-  if (document.body.dataset.scrollY) {
-    window.scrollTo(0, parseInt(document.body.dataset.scrollY || '0'));
-  }
-};
-
 onMounted(() => {
-  // Load catalog data from JSON file
-  catalogItems.value = catalogData.filter(item => item.Category && item.Category.trim() !== '');
-  
   // Handle hash navigation
   if (window.location.hash === '#catalogo') {
     setTimeout(() => {

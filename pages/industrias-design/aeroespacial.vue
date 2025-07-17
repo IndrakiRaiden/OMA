@@ -195,7 +195,7 @@ export default {
     }
   },
   head() {
-    const defaultTitle = 'Aerospace Industry | OMA - Manufacturing Services'
+    const defaultTitle = 'Aerospace Industry | OMA Solution'
     const defaultDescription = 'Precision manufacturing solutions for the aerospace industry.'
     
     return {

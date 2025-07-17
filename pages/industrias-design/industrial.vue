@@ -190,7 +190,7 @@ export default {
   },
   head() {
     return {
-      title: 'Industrial Machinery and Equipment | OMA - Manufacturing Services',
+      title: 'Industrial Machinery and Equipment | OMA Solution',
       meta: [
         { hid: 'description', name: 'description', content: 'Design and manufacturing of components for industrial machinery and specialized equipment.' }
       ]

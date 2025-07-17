@@ -3,7 +3,7 @@
     <div class="nav-container">
       <NuxtLink to="/" class="nav-brand">
         <span class="brand-text">OMA</span>
-        <span class="brand-subtext">SOLUTIONS</span>
+        <span class="brand-subtext">SOLUTION</span>
       </NuxtLink>
 
       <div class="nav-right">

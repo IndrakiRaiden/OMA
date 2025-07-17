@@ -1,0 +1,709 @@
+[
+  {
+    "Category": "Bearings",
+    "Item #": 201,
+    "Product Name": "Deep Groove Ball Bearing",
+    "Material": "Chrome steel",
+    "Additional Info": "Single row, sealed"
+  },
+  {
+    "Category": "Bearings",
+    "Item #": 202,
+    "Product Name": "Tapered Roller Bearing",
+    "Material": "Hardened steel",
+    "Additional Info": "Single row, separable"
+  },
+  {
+    "Category": "Bearings",
+    "Item #": 203,
+    "Product Name": "Spherical Roller Bearing",
+    "Material": "Chrome steel",
+    "Additional Info": "Self-aligning, double row"
+  },
+  {
+    "Category": "Bearings",
+    "Item #": 204,
+    "Product Name": "Needle Roller Bearing",
+    "Material": "Hardened steel",
+    "Additional Info": "High load, compact design"
+  },
+  {
+    "Category": "Bearings",
+    "Item #": 205,
+    "Product Name": "Thrust Ball Bearing",
+    "Material": "Chrome steel",
+    "Additional Info": "For axial loads, single direction"
+  },
+  {
+    "Category": "Bearings",
+    "Item #": 206,
+    "Product Name": "Angular Contact Bearing",
+    "Material": "Chrome steel",
+    "Additional Info": "40° contact angle, high speed"
+  },
+  {
+    "Category": "Bearings",
+    "Item #": 207,
+    "Product Name": "Cylindrical Roller Bearing",
+    "Material": "Hardened steel",
+    "Additional Info": "High radial load capacity"
+  },
+  {
+    "Category": "Bearings",
+    "Item #": 208,
+    "Product Name": "Self-Aligning Ball Bearing",
+    "Material": "Chrome steel",
+    "Additional Info": "Double row, compensates misalignment"
+  },
+  {
+    "Category": "Bearings",
+    "Item #": 209,
+    "Product Name": "Linear Ball Bearing",
+    "Material": "Hardened steel",
+    "Additional Info": "For linear motion, recirculating"
+  },
+  {
+    "Category": "Bearings",
+    "Item #": 210,
+    "Product Name": "Ceramic Hybrid Bearing",
+    "Material": "Steel rings, ceramic balls",
+    "Additional Info": "High speed, electrical isolation"
+  },
+  {
+    "Category": "Bearings",
+    "Item #": 211,
+    "Product Name": "Plastic Bearing",
+    "Material": "PTFE composite",
+    "Additional Info": "Self-lubricating, corrosion resistant"
+  },
+  {
+    "Category": "Bearings",
+    "Item #": 212,
+    "Product Name": "Split Pillow Block Bearing",
+    "Material": "Cast iron housing, steel bearing",
+    "Additional Info": "Easy installation, regreasable"
+  },
+  {
+    "Category": "Bearings",
+    "Item #": 213,
+    "Product Name": "Thrust Needle Bearing",
+    "Material": "Hardened steel",
+    "Additional Info": "Compact, high axial load"
+  },
+  {
+    "Category": "Bearings",
+    "Item #": 214,
+    "Product Name": "Cam Follower Bearing",
+    "Material": "Hardened steel",
+    "Additional Info": "Crowned outer race, stud type"
+  },
+  {
+    "Category": "Bearings",
+    "Item #": 215,
+    "Product Name": "Crossed Roller Bearing",
+    "Material": "Chrome steel",
+    "Additional Info": "High rigidity, precision rotation"
+  },
+  {
+    "Category": "Bearings",
+    "Item #": 216,
+    "Product Name": "Miniature Bearing",
+    "Material": "Stainless steel",
+    "Additional Info": "Precision grade, low noise"
+  },
+  {
+    "Category": "Bearings",
+    "Item #": 217,
+    "Product Name": "Spherical Plain Bearing",
+    "Material": "Steel with PTFE liner",
+    "Additional Info": "Oscillating motion, maintenance free"
+  },
+  {
+    "Category": "Bearings",
+    "Item #": 218,
+    "Product Name": "Four-Point Contact Bearing",
+    "Material": "Chrome steel",
+    "Additional Info": "For combined loads, slewing"
+  },
+  {
+    "Category": "Bearings",
+    "Item #": 219,
+    "Product Name": "Track Roller Bearing",
+    "Material": "Hardened steel",
+    "Additional Info": "For cam and rail guides"
+  },
+  {
+    "Category": "Bearings",
+    "Item #": 220,
+    "Product Name": "Thin Section Bearing",
+    "Material": "Chrome steel",
+    "Additional Info": "Compact design, light weight"
+  },
+  {
+    "Category": "Bearings",
+    "Item #": 221,
+    "Product Name": "Slewing Ring Bearing",
+    "Material": "Hardened steel with internal gear",
+    "Additional Info": "Large diameter, rotary connection"
+  },
+  {
+    "Category": "Bearings",
+    "Item #": 222,
+    "Product Name": "Rod End Bearing",
+    "Material": "Steel with bronze insert",
+    "Additional Info": "Spherical plain, male thread"
+  },
+  {
+    "Category": "Bearings",
+    "Item #": 223,
+    "Product Name": "Ceramic Bearing",
+    "Material": "Silicon nitride",
+    "Additional Info": "High temperature, non-magnetic"
+  },
+  {
+    "Category": "Bearings",
+    "Item #": 224,
+    "Product Name": "Magnetic Bearing",
+    "Material": "Electromagnetic components",
+    "Additional Info": "Non-contact, active control"
+  },
+  {
+    "Category": "Bearings",
+    "Item #": 225,
+    "Product Name": "Solid Polymer Bearing",
+    "Material": "UHMW-PE",
+    "Additional Info": "Self-lubricating, water resistant"
+  },
+  {
+    "Category": "Mold and Die Parts",
+    "Item #": 226,
+    "Product Name": "Ejector Pin",
+    "Material": "H13 tool steel",
+    "Additional Info": "Hardened, ground finish"
+  },
+  {
+    "Category": "Mold and Die Parts",
+    "Item #": 227,
+    "Product Name": "Core Pin",
+    "Material": "D2 tool steel",
+    "Additional Info": "Nitrided, wear resistant"
+  },
+  {
+    "Category": "Mold and Die Parts",
+    "Item #": 228,
+    "Product Name": "Sprue Bushing",
+    "Material": "H13 tool steel",
+    "Additional Info": "Hardened, polished"
+  },
+  {
+    "Category": "Mold and Die Parts",
+    "Item #": 229,
+    "Product Name": "Guide Pin",
+    "Material": "Hardened steel",
+    "Additional Info": "Ground finish, for alignment"
+  },
+  {
+    "Category": "Mold and Die Parts",
+    "Item #": 230,
+    "Product Name": "Guide Bushing",
+    "Material": "Bronze",
+    "Additional Info": "For guide pins, precision bore"
+  },
+  {
+    "Category": "Mold and Die Parts",
+    "Item #": 231,
+    "Product Name": "Mold Base",
+    "Material": "P20 steel",
+    "Additional Info": "Pre-machined, standard size"
+  },
+  {
+    "Category": "Mold and Die Parts",
+    "Item #": 232,
+    "Product Name": "Cavity Insert",
+    "Material": "H13 tool steel",
+    "Additional Info": "Hardened, precision ground"
+  },
+  {
+    "Category": "Mold and Die Parts",
+    "Item #": 233,
+    "Product Name": "Core Insert",
+    "Material": "S7 tool steel",
+    "Additional Info": "Heat treated, wear resistant"
+  },
+  {
+    "Category": "Mold and Die Parts",
+    "Item #": 234,
+    "Product Name": "Slide",
+    "Material": "D2 tool steel",
+    "Additional Info": "For undercuts, hardened"
+  },
+  {
+    "Category": "Mold and Die Parts",
+    "Item #": 235,
+    "Product Name": "Lifter",
+    "Material": "H13 tool steel",
+    "Additional Info": "Angled ejection, hardened"
+  },
+  {
+    "Category": "Mold and Die Parts",
+    "Item #": 236,
+    "Product Name": "Ejector Sleeve",
+    "Material": "H13 tool steel",
+    "Additional Info": "Tubular ejector, hardened"
+  },
+  {
+    "Category": "Mold and Die Parts",
+    "Item #": 237,
+    "Product Name": "Locating Ring",
+    "Material": "Steel",
+    "Additional Info": "For mold alignment to machine"
+  },
+  {
+    "Category": "Mold and Die Parts",
+    "Item #": 238,
+    "Product Name": "Support Pillar",
+    "Material": "Steel",
+    "Additional Info": "For cavity support, precision ground"
+  },
+  {
+    "Category": "Mold and Die Parts",
+    "Item #": 239,
+    "Product Name": "Return Pin",
+    "Material": "Hardened steel",
+    "Additional Info": "For ejector plate return"
+  },
+  {
+    "Category": "Mold and Die Parts",
+    "Item #": 240,
+    "Product Name": "Date Insert",
+    "Material": "H13 tool steel",
+    "Additional Info": "Interchangeable date stamps"
+  },
+  {
+    "Category": "Mold and Die Parts",
+    "Item #": 241,
+    "Product Name": "Wear Plate",
+    "Material": "D2 tool steel",
+    "Additional Info": "Hardened, for sliding surfaces"
+  },
+  {
+    "Category": "Mold and Die Parts",
+    "Item #": 242,
+    "Product Name": "Hot Runner Nozzle",
+    "Material": "Tool steel with copper",
+    "Additional Info": "Heated, thermal control"
+  },
+  {
+    "Category": "Mold and Die Parts",
+    "Item #": 243,
+    "Product Name": "Cooling Channel Plug",
+    "Material": "Brass",
+    "Additional Info": "NPT thread, sealing"
+  },
+  {
+    "Category": "Mold and Die Parts",
+    "Item #": 244,
+    "Product Name": "Mold Clamp",
+    "Material": "Hardened steel",
+    "Additional Info": "For securing mold to machine"
+  },
+  {
+    "Category": "Mold and Die Parts",
+    "Item #": 245,
+    "Product Name": "Ejector Plate",
+    "Material": "Steel",
+    "Additional Info": "Pre-machined, for pin mounting"
+  },
+  {
+    "Category": "Nozzles",
+    "Item #": 246,
+    "Product Name": "Spray Nozzle",
+    "Material": "Brass",
+    "Additional Info": "Full cone pattern, 60° spray angle"
+  },
+  {
+    "Category": "Nozzles",
+    "Item #": 247,
+    "Product Name": "Flat Fan Nozzle",
+    "Material": "Stainless steel",
+    "Additional Info": "Even distribution, 110° spray angle"
+  },
+  {
+    "Category": "Nozzles",
+    "Item #": 248,
+    "Product Name": "Air Atomizing Nozzle",
+    "Material": "Stainless steel",
+    "Additional Info": "Fine mist, compressed air assisted"
+  },
+  {
+    "Category": "Nozzles",
+    "Item #": 249,
+    "Product Name": "Hollow Cone Nozzle",
+    "Material": "Brass",
+    "Additional Info": "Ring pattern spray, 80° angle"
+  },
+  {
+    "Category": "Nozzles",
+    "Item #": 250,
+    "Product Name": "Solid Stream Nozzle",
+    "Material": "Stainless steel",
+    "Additional Info": "High impact, concentrated flow"
+  },
+  {
+    "Category": "Nozzles",
+    "Item #": 251,
+    "Product Name": "Fog Nozzle",
+    "Material": "Brass",
+    "Additional Info": "Ultra fine droplets, low flow"
+  },
+  {
+    "Category": "Nozzles",
+    "Item #": 252,
+    "Product Name": "Adjustable Nozzle",
+    "Material": "Brass",
+    "Additional Info": "Variable pattern, twist adjustment"
+  },
+  {
+    "Category": "Nozzles",
+    "Item #": 253,
+    "Product Name": "Quick Connect Nozzle",
+    "Material": "Stainless steel",
+    "Additional Info": "Tool-free installation, bayonet mount"
+  },
+  {
+    "Category": "Nozzles",
+    "Item #": 254,
+    "Product Name": "Spiral Nozzle",
+    "Material": "PVC",
+    "Additional Info": "Spiral spray pattern, low pressure"
+  },
+  {
+    "Category": "Nozzles",
+    "Item #": 255,
+    "Product Name": "High Pressure Nozzle",
+    "Material": "Hardened stainless steel",
+    "Additional Info": "5000 PSI rating, wear resistant"
+  },
+  {
+    "Category": "Nozzles",
+    "Item #": 256,
+    "Product Name": "Ceramic Nozzle",
+    "Material": "Alumina ceramic",
+    "Additional Info": "Abrasion resistant, long life"
+  },
+  {
+    "Category": "Nozzles",
+    "Item #": 257,
+    "Product Name": "Carbide Nozzle",
+    "Material": "Tungsten carbide",
+    "Additional Info": "For abrasive materials, extreme wear resistance"
+  },
+  {
+    "Category": "Nozzles",
+    "Item #": 258,
+    "Product Name": "Fogging Nozzle",
+    "Material": "Stainless steel",
+    "Additional Info": "Humidification, 5-10 micron droplets"
+  },
+  {
+    "Category": "Nozzles",
+    "Item #": 259,
+    "Product Name": "Tank Washing Nozzle",
+    "Material": "Stainless steel",
+    "Additional Info": "360° coverage, rotating head"
+  },
+  {
+    "Category": "Nozzles",
+    "Item #": 260,
+    "Product Name": "Air Knife Nozzle",
+    "Material": "Aluminum",
+    "Additional Info": "Flat air stream, drying applications"
+  },
+  {
+    "Category": "Nozzles",
+    "Item #": 261,
+    "Product Name": "Plastic Nozzle",
+    "Material": "Polypropylene",
+    "Additional Info": "Chemical resistant, economical"
+  },
+  {
+    "Category": "Nozzles",
+    "Item #": 262,
+    "Product Name": "Heated Nozzle",
+    "Material": "Stainless steel with heater",
+    "Additional Info": "Temperature controlled, for viscous fluids"
+  },
+  {
+    "Category": "Nozzles",
+    "Item #": 263,
+    "Product Name": "Dual Fluid Nozzle",
+    "Material": "Stainless steel",
+    "Additional Info": "Internal mixing, two inputs"
+  },
+  {
+    "Category": "Nozzles",
+    "Item #": 264,
+    "Product Name": "Whisper Nozzle",
+    "Material": "Stainless steel",
+    "Additional Info": "Noise reducing design, OSHA compliant"
+  },
+  {
+    "Category": "Nozzles",
+    "Item #": 265,
+    "Product Name": "Cluster Nozzle",
+    "Material": "Brass",
+    "Additional Info": "Multiple orifices, wide coverage"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 266,
+    "Product Name": "Compression Spring",
+    "Material": "Music wire",
+    "Additional Info": "Constant rate, closed ends"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 267,
+    "Product Name": "Extension Spring",
+    "Material": "Stainless steel",
+    "Additional Info": "With hooks, initial tension"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 268,
+    "Product Name": "Torsion Spring",
+    "Material": "Chrome silicon",
+    "Additional Info": "Double torsion, straight legs"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 269,
+    "Product Name": "Constant Force Spring",
+    "Material": "301 Stainless steel",
+    "Additional Info": "Flat coil, constant output force"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 270,
+    "Product Name": "Wave Spring",
+    "Material": "17-7 PH stainless",
+    "Additional Info": "Low profile, multiple waves"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 271,
+    "Product Name": "Belleville Spring",
+    "Material": "Spring steel",
+    "Additional Info": "Conical disc, high force"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 272,
+    "Product Name": "Variable Rate Spring",
+    "Material": "Chrome silicon",
+    "Additional Info": "Progressive rate, barrel shaped"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 273,
+    "Product Name": "Conical Spring",
+    "Material": "Music wire",
+    "Additional Info": "Tapered diameter, space saving"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 274,
+    "Product Name": "Gas Spring",
+    "Material": "Steel with nitrogen",
+    "Additional Info": "Damped extension, adjustable force"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 275,
+    "Product Name": "Flat Spring",
+    "Material": "Blue tempered steel",
+    "Additional Info": "Cantilever design, constant section"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 276,
+    "Product Name": "Volute Spring",
+    "Material": "Spring steel",
+    "Additional Info": "Spiral flat coil, high load"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 277,
+    "Product Name": "Die Spring",
+    "Material": "Chrome vanadium",
+    "Additional Info": "Heavy duty, color coded"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 278,
+    "Product Name": "Garter Spring",
+    "Material": "Stainless steel",
+    "Additional Info": "Continuous loop, radial force"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 279,
+    "Product Name": "Leaf Spring",
+    "Material": "SAE 5160 steel",
+    "Additional Info": "Multi-leaf, progressive rate"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 280,
+    "Product Name": "Disc Spring Stack",
+    "Material": "Spring steel",
+    "Additional Info": "Multiple Belleville washers, series"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 281,
+    "Product Name": "Micro Spring",
+    "Material": "Stainless steel",
+    "Additional Info": "Miniature size, precision rate"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 282,
+    "Product Name": "Drawbar Spring",
+    "Material": "Chrome silicon",
+    "Additional Info": "High load, tool holding"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 283,
+    "Product Name": "Torsion Bar",
+    "Material": "Spring steel",
+    "Additional Info": "Solid rod, twist resistance"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 284,
+    "Product Name": "Serpentine Spring",
+    "Material": "Stainless steel",
+    "Additional Info": "Zigzag form, space efficient"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 285,
+    "Product Name": "Finger Spring",
+    "Material": "Beryllium copper",
+    "Additional Info": "Multiple fingers, electrical contact"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 286,
+    "Product Name": "Nested Spring",
+    "Material": "Music wire",
+    "Additional Info": "Spring within spring, dual rate"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 287,
+    "Product Name": "Machined Spring",
+    "Material": "17-4 PH stainless",
+    "Additional Info": "CNC machined, precise rate"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 288,
+    "Product Name": "Rubber Spring",
+    "Material": "Natural rubber",
+    "Additional Info": "Vibration damping, progressive"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 289,
+    "Product Name": "Air Spring",
+    "Material": "Reinforced rubber with air",
+    "Additional Info": "Adjustable pressure, load leveling"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 290,
+    "Product Name": "Clock Spring",
+    "Material": "High carbon steel",
+    "Additional Info": "Spiral power spring, constant torque"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 291,
+    "Product Name": "Snap Ring",
+    "Material": "Spring steel",
+    "Additional Info": "Retaining ring, radial assembly"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 292,
+    "Product Name": "Magnetic Spring",
+    "Material": "Neodymium magnets",
+    "Additional Info": "Non-contact, adjustable force"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 293,
+    "Product Name": "Wire Form Spring",
+    "Material": "Music wire",
+    "Additional Info": "Custom shape, multi-function"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 294,
+    "Product Name": "Valve Spring",
+    "Material": "Chrome silicon",
+    "Additional Info": "High fatigue life, engine use"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 295,
+    "Product Name": "Precision Compression Spring",
+    "Material": "302 Stainless steel",
+    "Additional Info": "±2% rate tolerance, ground ends"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 296,
+    "Product Name": "Heavy Duty Extension Spring",
+    "Material": "Oil tempered wire",
+    "Additional Info": "High load, machine side hooks"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 297,
+    "Product Name": "Double Torsion Spring",
+    "Material": "Music wire",
+    "Additional Info": "Balanced torque, symmetrical coils"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 298,
+    "Product Name": "Composite Spring",
+    "Material": "Fiberglass",
+    "Additional Info": "Lightweight, corrosion proof"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 299,
+    "Product Name": "Titanium Spring",
+    "Material": "Ti-6Al-4V",
+    "Additional Info": "Lightweight, high strength"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 300,
+    "Product Name": "Hot Wound Spring",
+    "Material": "Chrome vanadium",
+    "Additional Info": "Large diameter, heavy load"
+  },
+  {
+    "Category": "Springs",
+    "Item #": 301,
+    "Product Name": "Shaped Wire Spring",
+    "Material": "Stainless steel",
+    "Additional Info": "Non-round wire, special characteristics"
+  }
+]

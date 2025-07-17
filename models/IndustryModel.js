@@ -82,7 +82,7 @@ export class IndustryModel {
     
     // SEO metadata
     this.seo = {
-      title: getStrapiValue(attributes, 'seo.title', `${this.title} | OMA - Servicios de Manufactura`),
+      title: getStrapiValue(attributes, 'seo.title', `${this.title} | OMA Solution`),
       description: getStrapiValue(attributes, 'seo.description', this.description)
     };
   }

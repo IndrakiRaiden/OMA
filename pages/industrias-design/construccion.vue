@@ -185,7 +185,7 @@ export default {
     },
   },
   head() {
-    const defaultTitle = 'Construction Industry | OMA - Manufacturing Services'
+    const defaultTitle = 'Construction Industry | OMA Solution'
     const defaultDescription = 'Manufacturing services for structural elements and components used in the construction industry.'
     
     return {

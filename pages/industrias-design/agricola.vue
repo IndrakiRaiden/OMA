@@ -200,7 +200,7 @@ export default {
   },
   head() {
     return {
-      title: 'Agricultural Industry | OMA - Manufacturing Services',
+      title: 'Agricultural Industry | OMA Solution',
       meta: [
         { hid: 'description', name: 'description', content: 'Specialized manufacturing solutions for the agricultural sector, designing and manufacturing durable and efficient components for the demanding requirements of the field.' }
       ]

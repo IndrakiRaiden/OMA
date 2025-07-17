@@ -30,8 +30,8 @@
                 <i class="fas fa-envelope"></i>
               </div>
               <h3>Email Us</h3>
-              <p>OMASOLUTIONSRH@GMAIL.COM</p>
-              <a href="mailto:OMASOLUTIONSRH@GMAIL.COM" class="card-link">
+              <p>OMASOLUTIONRH@GMAIL.COM</p>
+              <a href="mailto:OMASOLUTIONRH@GMAIL.COM" class="card-link">
                 Send Email
                 <i class="fas fa-arrow-right"></i>
               </a>
@@ -125,7 +125,7 @@
                   ></textarea>
                 </div>
 
-                <input type="hidden" name="_next" value="https://omasolutions.netlify.app/thank-you">
+                <input type="hidden" name="_next" value="https://omasolution.netlify.app/thank-you">
                 <input type="hidden" name="_subject" value="New message from the website">
                 <button 
                   type="submit" 

@@ -1,0 +1,352 @@
+[
+  {
+    "Category": "Sprockets",
+    "Item #": 91,
+    "Product Name": "ANSI 40 Chain Sprocket",
+    "Material": "Carbon steel",
+    "Additional Info": "17 teeth, 1/2\" pitch"
+  },
+  {
+    "Category": "Sprockets",
+    "Item #": 92,
+    "Product Name": "Duplex ANSI60 15T Sprocket",
+    "Material": "Carbon steel",
+    "Additional Info": "Double strand, 3/4\" pitch"
+  },
+  {
+    "Category": "Sprockets",
+    "Item #": 93,
+    "Product Name": "Idler Sprocket",
+    "Material": "Stainless steel",
+    "Additional Info": "With bearings, tensioner"
+  },
+  {
+    "Category": "Sprockets",
+    "Item #": 94,
+    "Product Name": "Split Sprocket",
+    "Material": "Cast iron",
+    "Additional Info": "Two-piece design, easy installation"
+  },
+  {
+    "Category": "Sprockets",
+    "Item #": 95,
+    "Product Name": "Taper Bore Sprocket",
+    "Material": "Carbon steel",
+    "Additional Info": "1610 taper lock bushing"
+  },
+  {
+    "Category": "Sprockets",
+    "Item #": 96,
+    "Product Name": "Hardened Tooth Sprocket",
+    "Material": "Alloy steel",
+    "Additional Info": "Induction hardened teeth, 45-50 HRC"
+  },
+  {
+    "Category": "Sprockets",
+    "Item #": 97,
+    "Product Name": "Conveyor Drive Sprocket",
+    "Material": "Carbon steel",
+    "Additional Info": "For welded chain, heavy duty"
+  },
+  {
+    "Category": "Sprockets",
+    "Item #": 98,
+    "Product Name": "Metric Sprocket",
+    "Material": "Carbon steel",
+    "Additional Info": "08B-1, 25 teeth, 12.7mm pitch"
+  },
+  {
+    "Category": "Sprockets",
+    "Item #": 99,
+    "Product Name": "QD Bushing Sprocket",
+    "Material": "Cast iron",
+    "Additional Info": "Quick detachable, E-style bushing"
+  },
+  {
+    "Category": "Sprockets",
+    "Item #": 100,
+    "Product Name": "Roller Chain Sprocket",
+    "Material": "Carbon steel",
+    "Additional Info": "ANSI 50, 1/2\" bore, keyway"
+  },
+  {
+    "Category": "Sprockets",
+    "Item #": 101,
+    "Product Name": "Triplex Sprocket",
+    "Material": "Carbon steel",
+    "Additional Info": "Three strand, ANSI 40"
+  },
+  {
+    "Category": "Sprockets",
+    "Item #": 102,
+    "Product Name": "Stainless Sprocket",
+    "Material": "304 Stainless steel",
+    "Additional Info": "Corrosion resistant, food grade"
+  },
+  {
+    "Category": "Sprockets",
+    "Item #": 103,
+    "Product Name": "Plastic Sprocket",
+    "Material": "Acetal",
+    "Additional Info": "Lightweight, noise reducing"
+  },
+  {
+    "Category": "Sprockets",
+    "Item #": 104,
+    "Product Name": "Weld-On Hub Sprocket",
+    "Material": "Carbon steel",
+    "Additional Info": "For shaft mounting, pre-machined hub"
+  },
+  {
+    "Category": "Sprockets",
+    "Item #": 105,
+    "Product Name": "Segmental Rim Sprocket",
+    "Material": "Cast iron",
+    "Additional Info": "Replaceable teeth segments"
+  },
+  {
+    "Category": "Sprockets",
+    "Item #": 106,
+    "Product Name": "Self-Cleaning Sprocket",
+    "Material": "Hardened steel",
+    "Additional Info": "Special tooth profile, debris ejection"
+  },
+  {
+    "Category": "Sprockets",
+    "Item #": 107,
+    "Product Name": "Elevator Bucket Sprocket",
+    "Material": "Cast iron",
+    "Additional Info": "For bucket elevators, reinforced"
+  },
+  {
+    "Category": "Sprockets",
+    "Item #": 108,
+    "Product Name": "Plate Wheel Sprocket",
+    "Material": "Carbon steel",
+    "Additional Info": "For engineered steel chain"
+  },
+  {
+    "Category": "Sprockets",
+    "Item #": 109,
+    "Product Name": "Flanged Sprocket",
+    "Material": "Carbon steel",
+    "Additional Info": "With guide flanges, chain alignment"
+  },
+  {
+    "Category": "Sprockets",
+    "Item #": 110,
+    "Product Name": "Double Width Sprocket",
+    "Material": "Steel",
+    "Additional Info": "For double width chain"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 111,
+    "Product Name": "Spur Gear",
+    "Material": "Carbon steel",
+    "Additional Info": "20° pressure angle, module 2"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 112,
+    "Product Name": "Helical Gear",
+    "Material": "Alloy steel",
+    "Additional Info": "23° helix angle, quiet operation"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 113,
+    "Product Name": "Bevel Gear",
+    "Material": "Case hardened steel",
+    "Additional Info": "90° shaft angle, spiral teeth"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 114,
+    "Product Name": "Worm Gear",
+    "Material": "Bronze",
+    "Additional Info": "50:1 ratio, self-locking"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 115,
+    "Product Name": "Rack and Pinion",
+    "Material": "Hardened steel",
+    "Additional Info": "Linear motion, module 1.5"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 116,
+    "Product Name": "Internal Gear",
+    "Material": "Alloy steel",
+    "Additional Info": "Inward facing teeth, compact design"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 117,
+    "Product Name": "Herringbone Gear",
+    "Material": "Carbon steel",
+    "Additional Info": "Double helical, axial thrust elimination"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 118,
+    "Product Name": "Miter Gear",
+    "Material": "Hardened steel",
+    "Additional Info": "Equal size bevel gears, 90° drive"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 119,
+    "Product Name": "Planetary Gear Set",
+    "Material": "Alloy steel",
+    "Additional Info": "Sun, planet, ring configuration"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 120,
+    "Product Name": "Face Gear",
+    "Material": "Hardened steel",
+    "Additional Info": "90° drive, high torque capacity"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 121,
+    "Product Name": "Plastic Gear",
+    "Material": "Nylon",
+    "Additional Info": "Noise reduction, lightweight"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 122,
+    "Product Name": "Precision Ground Gear",
+    "Material": "Tool steel",
+    "Additional Info": "AGMA quality 12, low backlash"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 123,
+    "Product Name": "Hypoid Gear",
+    "Material": "Hardened steel",
+    "Additional Info": "Offset axes, high ratio"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 124,
+    "Product Name": "Timing Gear",
+    "Material": "Alloy steel",
+    "Additional Info": "For engine timing, precision machined"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 125,
+    "Product Name": "Spiral Bevel Gear",
+    "Material": "Case hardened steel",
+    "Additional Info": "Curved teeth, smooth engagement"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 126,
+    "Product Name": "Gear Rack",
+    "Material": "Hardened steel",
+    "Additional Info": "1 meter length, module 2"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 127,
+    "Product Name": "Cycloidal Gear",
+    "Material": "Alloy steel",
+    "Additional Info": "High reduction ratio, compact"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 128,
+    "Product Name": "Harmonic Drive Gear",
+    "Material": "Special steel alloy",
+    "Additional Info": "Zero backlash, high precision"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 129,
+    "Product Name": "8:1 Planetary Gear",
+    "Material": "Steel",
+    "Additional Info": "Compact design, high torque"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 130,
+    "Product Name": "Straight Bevel Gear",
+    "Material": "Carbon steel",
+    "Additional Info": "Straight teeth, 45° shaft angle"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 131,
+    "Product Name": "Crowned Spur Gear",
+    "Material": "Alloy steel",
+    "Additional Info": "Barrel shaped teeth, better alignment"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 132,
+    "Product Name": "Non-Circular Gear",
+    "Material": "Hardened steel",
+    "Additional Info": "Variable speed ratio, elliptical"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 133,
+    "Product Name": "Cluster Gear",
+    "Material": "Carbon steel",
+    "Additional Info": "Multiple gears on single shaft"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 134,
+    "Product Name": "Idler Gear",
+    "Material": "Steel",
+    "Additional Info": "Direction reversal, intermediate"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 135,
+    "Product Name": "Differential Gear Set",
+    "Material": "Hardened steel",
+    "Additional Info": "Automotive type, complete assembly"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 136,
+    "Product Name": "Ratchet Gear",
+    "Material": "Carbon steel",
+    "Additional Info": "One-way rotation, with pawl"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 137,
+    "Product Name": "Worm Wheel",
+    "Material": "Phosphor bronze",
+    "Additional Info": "Matches with steel worm"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 138,
+    "Product Name": "Anti-Backlash Gear",
+    "Material": "Hardened steel",
+    "Additional Info": "Spring loaded, zero play"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 139,
+    "Product Name": "Segmental Gear",
+    "Material": "Cast iron",
+    "Additional Info": "Partial gear, oscillating motion"
+  },
+  {
+    "Category": "Gears",
+    "Item #": 140,
+    "Product Name": "Metric Module Gear",
+    "Material": "Alloy steel",
+    "Additional Info": "Module 3, 30 teeth, keyway"
+  }
+]

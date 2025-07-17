@@ -107,7 +107,7 @@ export default {
     return {
       contactInfo: {
         phone: '+52 6651219080',
-        email: 'OMASOLUTIONSRH@GMAIL.COM',
+        email: 'OMASOLUTIONRH@GMAIL.COM',
         address: 'JOSE MARIA PINO SUAREZ #4000 TECATE BAJA CALIFORNIA',
         businessHours: '6 AM to 6 PM',
         mapUrl: 'https://www.google.com.mx/maps/place/Jos%C3%A9+Mar%C3%ADa+Pino+Su%C3%A1rez+4000,+Bellavista,+21440+Tecate,+B.C./@32.5659613,-116.654308,21z/data=!4m6!3m5!1s0x80d912d89712366d:0x14caa25fcba81ed8!8m2!3d32.5659763!4d-116.6544206!16s%2Fg%2F11dxlbk6dr?entry=ttu'

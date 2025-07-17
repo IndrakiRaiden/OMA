@@ -120,13 +120,13 @@ export function richTextToPlainText(richText) {
 export function getServiceSeoMetadata(service) {
   if (!service || !service.seo) {
     return {
-      title: 'OMA Manufacturing Services',
+      title: 'OMA Solution',
       description: 'Servicios de manufactura de alta precisión'
     };
   }
   
   return {
-    title: service.seo.title || 'OMA Manufacturing Services',
+    title: service.seo.title || 'OMA Solution',
     description: service.seo.description || 'Servicios de manufactura de alta precisión'
   };
 }

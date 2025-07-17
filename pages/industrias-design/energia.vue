@@ -185,14 +185,14 @@ export default {
           buttonLink: "/contact"
         },
         seo: {
-          title: "Energy Industry | OMA - Manufacturing Services",
+          title: "Energy Industry | OMA Solution",
           description: "Precision manufacturing solutions for components in the conventional and renewable energy sector."
         }
       }
     }
   },
   head() {
-    const defaultTitle = 'Energy Industry | OMA - Manufacturing Services'
+    const defaultTitle = 'Energy Industry | OMA Solution'
     const defaultDescription = 'Precision manufacturing solutions for components in the conventional and renewable energy sector.'
     
     return {

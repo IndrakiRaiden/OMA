@@ -1,0 +1,422 @@
+[
+  {
+    "Category": "Pins",
+    "Item #": 31,
+    "Product Name": "Hardened Dowel Pin",
+    "Material": "4140 Steel",
+    "Additional Info": "Ground finish, h6 tolerance"
+  },
+  {
+    "Category": "Pins",
+    "Item #": 32,
+    "Product Name": "Taper Pin",
+    "Material": "Carbon steel",
+    "Additional Info": "1:50 taper, self-locking"
+  },
+  {
+    "Category": "Pins",
+    "Item #": 33,
+    "Product Name": "Spring Alignment Pin",
+    "Material": "Stainless steel",
+    "Additional Info": "Slotted, self-retaining"
+  },
+  {
+    "Category": "Pins",
+    "Item #": 34,
+    "Product Name": "Grooved Pin",
+    "Material": "Carbon steel",
+    "Additional Info": "Three grooves, press fit"
+  },
+  {
+    "Category": "Pins",
+    "Item #": 35,
+    "Product Name": "Clevis Pin",
+    "Material": "Stainless steel",
+    "Additional Info": "With cotter pin hole"
+  },
+  {
+    "Category": "Pins",
+    "Item #": 36,
+    "Product Name": "Quick Release Pin",
+    "Material": "Alloy steel",
+    "Additional Info": "Ball detent, T-handle"
+  },
+  {
+    "Category": "Pins",
+    "Item #": 37,
+    "Product Name": "Slotted Support Pin",
+    "Material": "Carbon steel",
+    "Additional Info": "For retaining rings, hardened"
+  },
+  {
+    "Category": "Pins",
+    "Item #": 38,
+    "Product Name": "Knurled Pin",
+    "Material": "Stainless steel",
+    "Additional Info": "Diamond knurl, press fit"
+  },
+  {
+    "Category": "Pins",
+    "Item #": 39,
+    "Product Name": "Coiled Spring Pin",
+    "Material": "Spring steel",
+    "Additional Info": "Slotted, self-expanding"
+  },
+  {
+    "Category": "Pins",
+    "Item #": 40,
+    "Product Name": "Hollow Dowel Pin",
+    "Material": "Hardened steel",
+    "Additional Info": "For oil flow, precision ground"
+  },
+  {
+    "Category": "Pins",
+    "Item #": 41,
+    "Product Name": "Ejector Pin",
+    "Material": "H13 tool steel",
+    "Additional Info": "Nitrided, wear resistant"
+  },
+  {
+    "Category": "Pins",
+    "Item #": 42,
+    "Product Name": "Hitch Pin",
+    "Material": "Carbon steel",
+    "Additional Info": "Zinc plated, with clip"
+  },
+  {
+    "Category": "Pins",
+    "Item #": 43,
+    "Product Name": "Threaded Alignment Pin",
+    "Material": "Alloy steel",
+    "Additional Info": "M8 thread, shoulder design"
+  },
+  {
+    "Category": "Pins",
+    "Item #": 44,
+    "Product Name": "Taper-Loc Pin",
+    "Material": "Stainless steel",
+    "Additional Info": "Self-locking, vibration resistant"
+  },
+  {
+    "Category": "Pins",
+    "Item #": 45,
+    "Product Name": "Indexing Pin",
+    "Material": "Tool steel",
+    "Additional Info": "Spring loaded, ball end"
+  },
+  {
+    "Category": "Pins",
+    "Item #": 46,
+    "Product Name": "Shoulder Pin",
+    "Material": "Alloy steel",
+    "Additional Info": "Precision ground, stepped diameter"
+  },
+  {
+    "Category": "Pins",
+    "Item #": 47,
+    "Product Name": "Headless Clevis Pin",
+    "Material": "Stainless steel",
+    "Additional Info": "For yoke connections"
+  },
+  {
+    "Category": "Pins",
+    "Item #": 48,
+    "Product Name": "Locking Pin",
+    "Material": "Carbon steel",
+    "Additional Info": "Positive lock, spring loaded"
+  },
+  {
+    "Category": "Pins",
+    "Item #": 49,
+    "Product Name": "Precision Locating Pin",
+    "Material": "Tool steel",
+    "Additional Info": "±0.005mm tolerance, hardened"
+  },
+  {
+    "Category": "Pins",
+    "Item #": 50,
+    "Product Name": "Shear Pin",
+    "Material": "Brass",
+    "Additional Info": "Designed failure point, safety"
+  },
+  {
+    "Category": "Pins",
+    "Item #": 51,
+    "Product Name": "Hardened Core Pin",
+    "Material": "D2 tool steel",
+    "Additional Info": "For mold cores, heat treated"
+  },
+  {
+    "Category": "Pins",
+    "Item #": 52,
+    "Product Name": "Headed Alignment Pin",
+    "Material": "Stainless steel",
+    "Additional Info": "Flanged head, precision ground"
+  },
+  {
+    "Category": "Pins",
+    "Item #": 53,
+    "Product Name": "Spiral Coiled Pin",
+    "Material": "Carbon steel",
+    "Additional Info": "Three coils, uniform strength"
+  },
+  {
+    "Category": "Pins",
+    "Item #": 54,
+    "Product Name": "Tapered Locating Pin",
+    "Material": "Hardened steel",
+    "Additional Info": "Self-centering, 3° taper"
+  },
+  {
+    "Category": "Pins",
+    "Item #": 55,
+    "Product Name": "Ball Lock Pin",
+    "Material": "Stainless steel",
+    "Additional Info": "Double ball detent, quick release"
+  },
+  {
+    "Category": "Pins",
+    "Item #": 56,
+    "Product Name": "Self-Locking Spring Pin",
+    "Material": "Carbon steel",
+    "Additional Info": "Slotted, vibration resistant"
+  },
+  {
+    "Category": "Pins",
+    "Item #": 57,
+    "Product Name": "Hardened Guide Pin",
+    "Material": "A2 tool steel",
+    "Additional Info": "For die sets, wear resistant"
+  },
+  {
+    "Category": "Pins",
+    "Item #": 58,
+    "Product Name": "Detent Pin",
+    "Material": "Stainless steel",
+    "Additional Info": "Spring loaded ball, adjustable"
+  },
+  {
+    "Category": "Pins",
+    "Item #": 59,
+    "Product Name": "Keeper Pin",
+    "Material": "Carbon steel",
+    "Additional Info": "With retaining ring groove"
+  },
+  {
+    "Category": "Pins",
+    "Item #": 60,
+    "Product Name": "Precision Dowel Pin",
+    "Material": "M2 tool steel",
+    "Additional Info": "Ground, h5 tolerance"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 61,
+    "Product Name": "Bronze Sleeve Bushing",
+    "Material": "SAE 660 bronze",
+    "Additional Info": "Oil impregnated, self-lubricating"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 62,
+    "Product Name": "Flanged Bushing",
+    "Material": "Sintered bronze",
+    "Additional Info": "Thrust bearing capability"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 63,
+    "Product Name": "Split Bushing",
+    "Material": "Steel backed PTFE",
+    "Additional Info": "Easy installation, low friction"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 64,
+    "Product Name": "Hardened Steel Bushing",
+    "Material": "4140 steel",
+    "Additional Info": "Through hardened, precision ground"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 65,
+    "Product Name": "Threaded Bushing",
+    "Material": "Brass",
+    "Additional Info": "Internal/external threads"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 66,
+    "Product Name": "Linear Motion Bushing",
+    "Material": "Hardened steel",
+    "Additional Info": "Ball bearing insert, smooth travel"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 67,
+    "Product Name": "Oilite Bushing",
+    "Material": "Sintered bronze",
+    "Additional Info": "90% oil impregnated"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 68,
+    "Product Name": "Plastic Bushing",
+    "Material": "Nylon",
+    "Additional Info": "Self-lubricating, corrosion resistant"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 69,
+    "Product Name": "Tapered Bushing",
+    "Material": "Cast iron",
+    "Additional Info": "For pulley mounting, keyway"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 70,
+    "Product Name": "Drill Bushing",
+    "Material": "Tool steel",
+    "Additional Info": "Hardened, for jig applications"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 71,
+    "Product Name": "Graphite Impregnated Bushing",
+    "Material": "Bronze with graphite",
+    "Additional Info": "High temperature capability"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 72,
+    "Product Name": "Eccentric Bushing",
+    "Material": "Steel",
+    "Additional Info": "For alignment adjustment"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 73,
+    "Product Name": "Spherical Bushing",
+    "Material": "Steel with PTFE liner",
+    "Additional Info": "Self-aligning, ±15° movement"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 74,
+    "Product Name": "Bushing with Integrated Bolt",
+    "Material": "Hardened steel",
+    "Additional Info": "One-piece design, high strength"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 75,
+    "Product Name": "Needle Roller Bushing",
+    "Material": "Hardened steel",
+    "Additional Info": "High load capacity, compact"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 76,
+    "Product Name": "Ceramic Bushing",
+    "Material": "Alumina ceramic",
+    "Additional Info": "High temperature, corrosion resistant"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 77,
+    "Product Name": "Shoulder Bushing",
+    "Material": "Stainless steel",
+    "Additional Info": "With flange, precision machined"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 78,
+    "Product Name": "Composite Bushing",
+    "Material": "Fiber reinforced polymer",
+    "Additional Info": "High load, low maintenance"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 79,
+    "Product Name": "Hydraulic Bushing",
+    "Material": "Steel with rubber",
+    "Additional Info": "Vibration damping, fluid filled"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 80,
+    "Product Name": "Wear Plate Bushing",
+    "Material": "Hardened steel",
+    "Additional Info": "For sliding surfaces, replaceable"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 81,
+    "Product Name": "Grooved Bushing",
+    "Material": "Bronze",
+    "Additional Info": "Internal spiral groove for lubrication"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 82,
+    "Product Name": "Tolerance Ring Bushing",
+    "Material": "Spring steel",
+    "Additional Info": "For press fit applications"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 83,
+    "Product Name": "Splined Bushing",
+    "Material": "Hardened steel",
+    "Additional Info": "Internal splines, torque transfer"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 84,
+    "Product Name": "Insulating Bushing",
+    "Material": "Phenolic",
+    "Additional Info": "Electrical isolation, heat resistant"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 85,
+    "Product Name": "Cam Follower Bushing",
+    "Material": "Steel with bronze",
+    "Additional Info": "For cam mechanisms, wear resistant"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 86,
+    "Product Name": "Precision Sleeve Bushing",
+    "Material": "Stainless steel",
+    "Additional Info": "±0.01mm tolerance, fine finish"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 87,
+    "Product Name": "Pivot Bushing",
+    "Material": "Bronze",
+    "Additional Info": "For oscillating motion, self-lubricating"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 88,
+    "Product Name": "Stepped Bushing",
+    "Material": "Carbon steel",
+    "Additional Info": "Multiple diameters, precision machined"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 89,
+    "Product Name": "Thrust Bushing",
+    "Material": "Brass",
+    "Additional Info": "For axial loads, wide flange"
+  },
+  {
+    "Category": "Bushings",
+    "Item #": 90,
+    "Product Name": "Floating Bushing",
+    "Material": "Steel with PTFE",
+    "Additional Info": "Self-centering, compensates misalignment"
+  }
+]

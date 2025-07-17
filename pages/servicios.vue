@@ -580,7 +580,7 @@ export default {
   },
   head() {
     return {
-      title: 'Servicios | OMA - Servicios de Manufactura',
+      title: 'Servicios | OMA Solution',
       meta: [
         { hid: 'description', name: 'description', content: 'Soluciones integrales de manufactura CNC y servicios industriales de alta precisión.' }
       ],
@@ -653,33 +653,62 @@ export default {
 }
 
 .icon-wrapper {
-  width: 80px;
-  height: 80px;
-  background-color: var(--content-primary);
-  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  /* iOS app icon style with subtle gradient background */
+  background: linear-gradient(145deg, #f2f6fc, #e6edf7);
+  /* iOS app icon corner radius - precisely 22.5% of the icon size */
+  border-radius: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   z-index: 1;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 4px solid rgba(255, 255, 255, 0.1);
+  /* iOS-style subtle shadow */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08), 
+              inset 0 -2px 0 rgba(0, 0, 0, 0.05),
+              inset 0 2px 0 rgba(255, 255, 255, 0.15);
+  /* Add subtle inner border */
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  /* iOS-style frosted glass effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  /* Ensure smooth edges */
+  -webkit-font-smoothing: antialiased;
 }
 
 .service-card:hover .icon-wrapper {
-  transform: scale(1.1) rotate(5deg);
-  background: var(--content-secondary);
-  border-color: rgba(255, 255, 255, 0.2);
+  /* iOS-style hover effect - subtle change in gradient */
+  background: linear-gradient(145deg, #e6edf7, #d9e3f1);
+  /* iOS-style enhanced shadow on hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12), 
+              inset 0 -2px 0 rgba(0, 0, 0, 0.08),
+              inset 0 2px 0 rgba(255, 255, 255, 0.2);
+  /* Subtle lift effect like iOS when pressing an app */
+  transform: translateY(-5px) scale(1.02);
 }
 
 .icon-wrapper i {
-  color: white;
-  font-size: 2rem;
+  font-size: 2.75rem;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  /* iOS-style app icon gradient */
+  background: linear-gradient(135deg, var(--content-primary), var(--content-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* Add subtle 3D effect with text shadow */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  /* iOS icon style */
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.15));
 }
 
 .service-card:hover .icon-wrapper i {
-  transform: rotate(-5deg);
+  transform: scale(1.1);
+  background: linear-gradient(135deg, var(--content-secondary), var(--content-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .card-content {
@@ -792,12 +821,13 @@ export default {
   }
   
   .icon-wrapper {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
+    border-radius: 18px;
   }
   
   .icon-wrapper i {
-    font-size: 1.5rem;
+    font-size: 2.25rem;
   }
   
   .card-content {
@@ -901,17 +931,40 @@ export default {
 }
 
 .service-icon {
-  width: 80px;
-  height: 80px;
-  background-color: var(--content-primary);
-  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  /* iOS app icon style with subtle gradient background */
+  background: linear-gradient(145deg, #f2f6fc, #e6edf7);
+  /* iOS app icon corner radius - precisely 22.5% of the icon size */
+  border-radius: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  font-size: 2rem;
   margin-bottom: 1rem;
-  border: 4px solid rgba(255, 255, 255, 0.1);
+  /* iOS-style subtle shadow */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08), 
+              inset 0 -2px 0 rgba(0, 0, 0, 0.05),
+              inset 0 2px 0 rgba(255, 255, 255, 0.15);
+  /* Add subtle inner border */
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  /* iOS-style frosted glass effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  /* Ensure smooth edges */
+  -webkit-font-smoothing: antialiased;
+}
+
+.service-icon i {
+  font-size: 2.75rem;
+  /* iOS-style app icon gradient */
+  background: linear-gradient(135deg, var(--content-primary), var(--content-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* Add subtle 3D effect with text shadow */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  /* iOS icon style */
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.15));
 }
 
 .modal-body {
