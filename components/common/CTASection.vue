@@ -40,16 +40,16 @@ export default {
   props: {
     title: {
       type: String,
-      default: '¿Listo para empezar tu proyecto?'
+      default: 'Ready to start your project?'
     },
     description: {
       type: String,
-      default: 'Contáctanos hoy mismo y descubre cómo podemos ayudarte a llevar tu idea a la realidad.'
+      default: 'Contact us today and discover how we can help you bring your idea to reality.'
     },
     primaryButton: {
       type: Object,
       default: () => ({
-        text: 'Contactar ahora',
+        text: 'Contact now',
         href: '/contact',
         icon: 'fas fa-arrow-right'
       })
@@ -57,7 +57,7 @@ export default {
     secondaryButton: {
       type: Object,
       default: () => ({
-        text: 'Solicitar cotización',
+        text: 'Request a quote',
         href: '/cotiza',
         icon: 'fas fa-file-invoice-dollar'
       })

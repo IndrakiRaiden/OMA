@@ -1,35 +1,35 @@
 <template>
   <section ref="timelineSection" class="timeline-section" :class="{ 'is-visible': isVisible }">
     <div class="section-header">
-      <span class="subtitle">PROCESO DE PRODUCCIÓN</span>
-      <h2>De la idea a la entrega</h2>
-      <p>Orquestamos todo el proceso productivo</p>
+      <span class="subtitle">PRODUCTION PROCESS</span>
+      <h2>From idea to delivery</h2>
+      <p>We orchestrate the entire production process</p>
     </div>
     <div class="timeline-container">
       <div class="timeline">
         <div class="timeline-step" style="--step-index: 1">
           <i class="fas fa-comments"></i>
-          <span>Consulta Inicial</span>
+          <span>Initial Consultation</span>
         </div>
         <div class="timeline-step" style="--step-index: 2">
           <i class="fas fa-clipboard-list"></i>
-          <span>Definición del Proyecto</span>
+          <span>Project Definition</span>
         </div>
         <div class="timeline-step" style="--step-index: 3">
           <i class="fas fa-drafting-compass"></i>
-          <span>Diseño y Prototipado</span>
+          <span>Design and Prototyping</span>
         </div>
         <div class="timeline-step" style="--step-index: 4">
           <i class="fas fa-cogs"></i>
-          <span>Producción</span>
+          <span>Production</span>
         </div>
         <div class="timeline-step" style="--step-index: 5">
           <i class="fas fa-check-double"></i>
-          <span>Acabados y Control de Calidad</span>
+          <span>Finishing and Quality Control</span>
         </div>
         <div class="timeline-step" style="--step-index: 6">
           <i class="fas fa-truck"></i>
-          <span>Entrega Final</span>
+          <span>Final Delivery</span>
         </div>
       </div>
     </div>
