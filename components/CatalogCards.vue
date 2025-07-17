@@ -23,23 +23,36 @@
         <h3 class="product-list-title">Products in {{ selectedCategoryName }}</h3>
         <div class="product-list">
           <div v-for="product in getProductsBySection(selectedSection)" :key="product['Item #']" class="product-item">
-            <div class="product-info">
-              <h4>{{ product['Product Name'] }}</h4>
-              <div class="product-details">
-                <p><strong>Item #:</strong> {{ product['Item #'] }}</p>
-                <p><strong>Material:</strong> {{ product['Material'] }}</p>
-                <p><strong>Additional Info:</strong> {{ product['Additional Info'] }}</p>
+            <div class="product-card">
+              <div class="product-header">
+                <h4>{{ product['Product Name'] }}</h4>
+                <div class="product-id">Item #: {{ product['Item #'] }}</div>
               </div>
-            </div>
-            <div class="product-actions">
-              <input 
-                type="number" 
-                min="1" 
-                v-model.number="productQuantities[product['Item #']]" 
-                class="quantity-input"
-                placeholder="1"
-              >
-              <button @click="addToCart(product)" class="add-to-cart-btn">Add to Cart</button>
+              <div class="product-body">
+                <div class="product-details">
+                  <p><strong>Material:</strong> {{ product['Material'] }}</p>
+                  <p><strong>Additional Info:</strong> {{ product['Additional Info'] }}</p>
+                </div>
+                <div class="product-actions">
+                  <div class="quantity-control">
+                    <label for="quantity-input">Quantity:</label>
+                    <input 
+                      id="quantity-input"
+                      type="number" 
+                      min="1" 
+                      v-model.number="productQuantities[product['Item #']]" 
+                      class="quantity-input"
+                      placeholder="1"
+                    >
+                  </div>
+                  <button @click="addToCart(product)" class="add-to-cart-btn">
+                    <span class="btn-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    </span>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -237,37 +250,39 @@ const addToCart = (product) => {
 }
 
 .product-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .product-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
-  padding: 15px 0;
-  gap: 20px;
-  transition: all 0.2s ease;
   position: relative;
+  transition: all 0.2s ease;
+}
+
+.product-card {
+  border-radius: 10px;
   overflow: hidden;
+  background-color: var(--color-light);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.product-item:hover {
-  background-color: rgba(0, 0, 0, 0.01);
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(var(--primary-rgb), 0.2);
 }
 
-.product-item:hover .product-actions {
-  opacity: 1;
-  transform: translateX(0);
+.product-header {
+  padding: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  background-color: rgba(var(--primary-rgb), 0.03);
 }
 
-.product-item:last-child {
-  border-bottom: none;
-}
-
-.product-info h4 {
+.product-header h4 {
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--content-dark);
@@ -275,44 +290,86 @@ const addToCart = (product) => {
   margin-bottom: 5px;
 }
 
+.product-id {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.product-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
 .product-details {
   font-size: 0.9rem;
   color: #666;
-  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.product-details p {
+  margin-bottom: 8px;
 }
 
 .product-actions {
   display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.quantity-control {
+  display: flex;
   align-items: center;
   gap: 10px;
-  opacity: 0;
-  transform: translateX(20px);
-  transition: all 0.3s ease;
+  margin-bottom: 5px;
+}
+
+.quantity-control label {
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 500;
 }
 
 .quantity-input {
-  width: 50px;
-  padding: 6px;
+  width: 60px;
+  padding: 8px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   text-align: center;
   transition: all 0.2s ease;
+  font-size: 0.9rem;
 }
 
 .quantity-input:focus {
   border-color: var(--content-primary);
   outline: none;
+  box-shadow: 0 0 0 2px rgba(var(--primary-rgb), 0.1);
 }
 
 .add-to-cart-btn {
-  padding: 8px 12px;
+  padding: 10px 12px;
   background-color: var(--content-primary);
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s ease;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .add-to-cart-btn:hover {

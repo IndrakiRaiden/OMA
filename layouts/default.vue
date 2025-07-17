@@ -37,6 +37,6 @@ const isBrowser = typeof window !== 'undefined'
 
 .main-content {
   flex: 1;
-  padding-top: 64px; /* Height of the navbar */
+  padding-top: 100px; /* Increased padding to prevent navbar overlap */
 }
 </style>

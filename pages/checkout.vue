@@ -1,5 +1,5 @@
 <template>
-  <main class="checkout-page">
+  <div class="checkout-page">
     <div class="container mx-auto px-4 py-16">
       <div class="checkout-header text-center mb-12">
         <h1 class="text-3xl md:text-4xl font-bold mb-4">Checkout</h1>
@@ -102,9 +102,6 @@
                 >
                   <option value="" disabled selected>Select a service type</option>
                   <option value="Manufacturing">Manufacturing</option>
-                  <option value="Repair">Repair</option>
-                  <option value="Custom Design">Custom Design</option>
-                  <option value="Other">Other</option>
                 </select>
               </div>
               
@@ -162,22 +159,7 @@
                 ></textarea>
               </div>
               
-              <div class="form-group">
-                <label for="Presupuesto" class="block text-sm font-medium text-gray-700 mb-1">
-                  Budget Range (USD)
-                </label>
-                <select 
-                  id="Presupuesto" 
-                  v-model="formData.Presupuesto" 
-                  class="form-select w-full rounded-md border-gray-300 shadow-sm"
-                >
-                  <option value="" disabled selected>Select a budget range (optional)</option>
-                  <option value="Less than $1,000">Less than $1,000</option>
-                  <option value="$1,000 - $5,000">$1,000 - $5,000</option>
-                  <option value="$5,000 - $10,000">$5,000 - $10,000</option>
-                  <option value="$10,000+">$10,000+</option>
-                </select>
-              </div>
+
               
               <div class="form-actions">
                 <button 
@@ -215,7 +197,7 @@
         </div>
       </div>
     </div>
-  </main>
+  </div>
 </template>
 
 <script setup>
@@ -246,8 +228,7 @@ const formData = ref({
   Cantidad: '',
   field: '',
   PlanosEspecificaciones: 'No',
-  Descripcion: '',
-  Presupuesto: ''
+  Descripcion: ''
 });
 
 onMounted(() => {
