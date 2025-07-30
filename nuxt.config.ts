@@ -10,7 +10,9 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       strapiApiUrl: process.env.STRAPI_API_URL || 'https://strapi.fiesco.computoespacial.com/api',
-      strapiUrl: process.env.STRAPI_URL || 'https://strapi.fiesco.computoespacial.com'
+      strapiUrl: process.env.STRAPI_URL || 'https://strapi.fiesco.computoespacial.com',
+      supabaseUrl: process.env.SUPABASE_URL,
+      supabaseAnonKey: process.env.SUPABASE_ANON_KEY
     }
   },
   // @ts-ignore

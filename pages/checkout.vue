@@ -27,6 +27,7 @@
                   <div>
                     <p class="font-medium">{{ item.name }}</p>
                     <p class="text-sm text-gray-600">Quantity: {{ item.quantity }}</p>
+                    <p class="text-xs text-gray-500">ID: {{ item.id }}</p>
                   </div>
                 </div>
               </div>
@@ -188,12 +189,21 @@
           </div>
           <h3 class="text-xl font-bold mb-2">Quote Request Submitted!</h3>
           <p class="mb-6">Thank you for your request. Our team will contact you shortly.</p>
-          <button 
-            @click="closeSuccessModal" 
-            class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition duration-300"
-          >
-            Continue Shopping
-          </button>
+          <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3 justify-center">
+            <button 
+              @click="closeSuccessModal" 
+              class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition duration-300"
+            >
+              Continue Shopping
+            </button>
+            <NuxtLink 
+              v-if="submittedQuoteId && isAdmin" 
+              :to="`/quotes/${submittedQuoteId}`"
+              class="bg-gray-600 text-white px-6 py-2 rounded hover:bg-gray-700 transition duration-300 text-center"
+            >
+              View Quote Details
+            </NuxtLink>
+          </div>
         </div>
       </div>
     </div>
@@ -203,7 +213,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useCart } from '~/composables/useCart';
-import PocketBase from 'pocketbase';
+import { useSupabase } from '~/utils/supabaseClient';
 
 definePageMeta({
   layout: 'default',
@@ -216,9 +226,11 @@ definePageMeta({
 const { cart, cartItemCount } = useCart();
 const isSubmitting = ref(false);
 const showSuccessModal = ref(false);
-const pb = new PocketBase('https://pocketbase.fiesco.computoespacial.com');
+const submittedQuoteId = ref(null);
+const isAdmin = ref(true); // For testing purposes, set to true
+const supabase = useSupabase();
 
-// Form data structure matching the PocketBase 'formulario' collection
+// Form data structure matching the Supabase 'quote_requests' table
 const formData = ref({
   nombre: '',
   email: '',
@@ -234,23 +246,51 @@ const formData = ref({
 onMounted(() => {
   // Pre-fill quantity from cart
   formData.value.Cantidad = cartItemCount.value.toString();
-  
-  // Add cart items to description
-  if (cart.value.length > 0) {
-    const cartItemsText = cart.value.map(item => 
-      `${item.name} (Quantity: ${item.quantity})`
-    ).join('\n');
-    
-    formData.value.Descripcion = `Cart Items:\n${cartItemsText}\n\nAdditional Details:`;
-  }
 });
 
 const submitForm = async () => {
   try {
     isSubmitting.value = true;
     
-    // Create a record in the 'formulario' collection
-    await pb.collection('formulario').create(formData.value);
+    // Create a record in the 'quote_requests' table
+    const { data: quoteData, error: quoteError } = await supabase
+      .from('quote_requests')
+      .insert([{
+        nombre: formData.value.nombre,
+        email: formData.value.email,
+        telefono: formData.value.telefono,
+        empresa: formData.value.empresa,
+        tipodeservicio: formData.value.tipodeservicio,
+        cantidad: formData.value.Cantidad,
+        field: formData.value.field,
+        planos_especificaciones: formData.value.PlanosEspecificaciones,
+        descripcion: formData.value.Descripcion
+      }])
+      .select();
+    
+    if (quoteError) throw quoteError;
+    
+    // Get the newly created quote request ID
+    const quoteRequestId = quoteData[0].id;
+    
+    // Insert cart items into the cart_items table
+    if (cart.value.length > 0) {
+      const cartItemsToInsert = cart.value.map(item => ({
+        quote_request_id: quoteRequestId,
+        product_id: item.id,
+        name: item.name,
+        quantity: item.quantity
+      }));
+      
+      const { error: cartError } = await supabase
+        .from('cart_items')
+        .insert(cartItemsToInsert);
+      
+      if (cartError) throw cartError;
+    }
+    
+    // Store the submitted quote ID for reference
+    submittedQuoteId.value = quoteRequestId;
     
     // Show success modal
     showSuccessModal.value = true;
